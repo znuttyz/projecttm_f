@@ -1,0 +1,30 @@
+.news {
+	position: relative;
+	top: 80px;
+	.tab {
+		overflow: hidden;
+		background: $black;
+		button {
+			background: inherit;
+			float: left;
+			border: none;
+			outline: none;
+			cursor: pointer;
+			padding: 5px 15px;
+			transition: 0.3s;
+			color: $white;
+			&:hover {
+				background: $gray;
+			}
+			&.active {
+				background: $gray;
+			}
+		}
+	}
+	.tabcontent {
+		display: none;
+		padding: 20px 40px;
+		border: 1px solid $gray;
+		border-top: none;
+	}
+}

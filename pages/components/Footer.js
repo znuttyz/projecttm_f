@@ -6,19 +6,19 @@ const Footer = () => (
 				<ul>
 					<li>
 						<a href="">
-							<i class="fab fa-line" />
+							<i className="fab fa-line" />
 							<h2>@tummouroriginal</h2>
 						</a>
 					</li>
 					<li>
 						<a href="">
-							<i class="fab fa-facebook-square" />
+							<i className="fab fa-facebook-square" />
 							<h2>ตำมั่วต้นตำรับ</h2>
 						</a>
 					</li>
 					<li>
 						<a href="">
-							<i class="fab fa-instagram" />
+							<i className="fab fa-instagram" />
 							<h2>spicygang</h2>
 						</a>
 					</li>

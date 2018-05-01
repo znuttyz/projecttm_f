@@ -1,0 +1,59 @@
+.sidebarLogoAdmin {
+	padding: 18px 30px;
+	border-bottom: 1px solid hsla(0,0%,100%,.2);
+	text-align: center;
+
+	a {
+		cursor: pointer;
+		text-transform: uppercase;
+		font-size: 18px;
+		color: #fff;
+		font-weight: 400;
+		letter-spacing: 2px;
+	}
+}
+
+.sidebarWrapperAdmin {
+	position: relative;
+	height: calc(100vh - 75px);
+	overflow: auto;
+	width: 260px;
+	padding-bottom: 30px;
+
+	ul {
+		list-style: none;
+		margin-top: 20px;
+		margin-bottom: 0;
+		padding: 0;
+
+		li {
+			position: relative;
+			display: block;
+
+			a {
+				position: relative;
+				display: block;
+				color: #fff;
+				margin: 5px 15px;
+				opacity: .86;
+				border-radius: 4px;
+				padding: 16px 45px;
+				font-size: 16px;
+				font-weight: 600;
+				letter-spacing: 1px;
+				cursor: pointer;
+
+				&:hover {
+					color: #fff;
+					background: hsla(0,0%,100%,.13);
+				}
+
+				&.active {
+					color: #fff;
+					opacity: 1;
+					background: hsla(0,0%,100%,.23);
+				}
+			}
+		}
+	}
+}

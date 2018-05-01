@@ -1,0 +1,12 @@
+# Build Output
+dist
+/build
+.next
+.vscode
+.DS_Store
+.env
+npm-debug.log*
+
+# Dependencies
+node_modules/
+package-lock.json

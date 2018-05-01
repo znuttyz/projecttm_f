@@ -1,0 +1,45 @@
+.headerContainerAdmin {
+	display: flex;
+	justify-content: space-between;
+	background-color: hsla(0,0%,100%,.96);
+	border-bottom: 1px solid rgba(0,0,0,.1);
+	letter-spacing: 2px;
+
+	.headerTitleAdmin {
+		font-weight: 400;
+		margin: 3px 0;
+		padding: 15px 5px;
+		font-size: 20px;
+		color: #777;
+
+		a {
+			margin: 5px 0;
+			padding: 10px 15px;
+			cursor: pointer;
+
+			&:hover {
+				color: #5e5e5e;
+			}
+		}
+	}
+
+	ul {
+		margin-right: 15px;
+
+		li {
+			display: inline-block;
+			font-size: 16px;
+			color: #777;
+			padding-top: 6px;
+
+			a {
+				cursor: pointer;
+				padding: 10px 15px;
+				margin: 10px 6px;
+				&:hover {
+					color: #1dc7ea;
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,24 @@
+.cardAdmin {
+	border-radius: 4px;
+	box-shadow: 0 1px 2px rgba(0,0,0,.05),0 0 0 1px rgba(63,63,68,.1);
+	background-color: #fff;
+	margin-bottom: 30px;
+
+	.cardHeader {
+		padding: 15px 15px 0;
+	}
+
+	.title {
+		margin: 0;
+		color: #333;
+		font-weight: 300;
+		font-size: 22px;
+	}
+	.sub-title {
+		font-size: 14px;
+		font-weight: 400;
+		color: #9a9a9a;
+		line-height: 1.5;
+		margin-top: 0;
+	}
+}

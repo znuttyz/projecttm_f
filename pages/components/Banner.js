@@ -1,5 +1,5 @@
 const Banner = () => (
-	<div className="banner-inner">
+	<div className="banner clear">
 		<img src="static/images/01-home/banner.jpg" />
 	</div>
 )

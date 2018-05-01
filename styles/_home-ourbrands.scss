@@ -1,0 +1,33 @@
+.home-ourbrands {
+	background: $black;
+	position: relative;
+	top: 314px;
+	padding: 50px 0;
+	.title {
+		width: 22%;
+		margin: 0 auto;
+	}
+	.home-ourbrands-inner {
+		ul {
+			text-align: center;
+			li {
+				display: inline-block;
+				width: 22%;
+				margin: 0 auto;
+				padding: 0 8px;
+				ul {
+					li.each-brand {
+						display: block;
+						width: 100%;
+						margin-bottom: 20px;
+						&:first-child {
+							img {
+								width: 70%;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

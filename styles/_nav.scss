@@ -1,5 +1,5 @@
 .header {
-	background: url("/static/images/00-global/bg-header.jpg");
+	position: relative;
 	.logo {
 		width: 35%;
 		position: relative;
@@ -12,15 +12,16 @@
 		background: url('/static/images/00-global/bg-header.jpg');
 		background-size: cover;
 		position: relative;
-		top: -238px;
-		padding: 14px 0;
+		top: -192px;
 		.navbar {
-			width: 64%;
-			margin-left: 472px;
+			width: 100%;
+			text-align: right;
+			padding-bottom: 10px;
 			ul {
+				margin: 0;
 				li {
 					display: inline-block;
-					width: 15%;
+					width: 11%;
 					padding: 0 18px;
 					cursor: pointer;
 					&:nth-child(1) {

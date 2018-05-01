@@ -32,8 +32,13 @@ ul {
 h1,h2,h3,h4,h5,h6,p {margin: 0;}
 
 .container {
-	width: 1150px;
+	width: 996px;
 	margin: 0 auto;
+	overflow: hidden;
+}
+
+.clear {
+	clear: both;
 }
 
 // color

@@ -1,4 +1,9 @@
-.banner-inner {
-	position: relative;
-	top: -254px;
+.banner {
+	position: absolute;
+	top: 111px;
+	// position: relative;
+	// top: -192px;
+	img {
+		margin-bottom: -5px;
+	}
 }

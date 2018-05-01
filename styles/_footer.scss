@@ -1,0 +1,36 @@
+.footer {
+	position: relative;
+	top: 258px;
+	img {
+		margin-bottom: -5px;
+	}
+	.footer-info {
+		position: absolute;
+		top: 90px;
+		width: 100%;
+		margin: 0 auto;
+		ul {
+			text-align: center;
+			li {
+				display: inline-block;
+				padding: 0 15px;
+				i {
+					display: inline;
+					color: $white;
+					margin-right: 10px;
+					@include font-size(12);
+				}
+				h2 {
+					display: inline;
+					color: $white;
+					font-weight: 100;
+				}
+			}
+		}
+		.copyright {
+			text-align: center;
+			text-transform: uppercase;
+			font-weight: bold;
+		}
+	}
+}

@@ -1,3 +1,4 @@
+export * from './SoonElements'
 export * from './Nav'
 export * from './HomeBanner'
 export * from './HomeOurbrands'

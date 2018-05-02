@@ -1,0 +1,51 @@
+.soon {
+	background: $black;
+	text-align: center;
+	width: 100vw;
+	height: 100vh;
+	.soon-inner {
+		width: 410px;
+		height: 306px;
+		position: fixed;
+		top: 50%;
+		left: 50%;
+		margin-top: -153px;
+		margin-left: -205px;
+		img {
+			width: 190px;
+			@include breakpoint(mobile) {
+				width: 300px;
+			}
+		}
+		h2 {
+			color: $white;
+			font-weight: 100;
+			@include font-size(24);
+			margin: 8px 0;
+		}
+		h1 {
+			color: $white;
+			font-weight: bold;
+			@include font-size(36);
+			margin: 20px 0 50px;
+		}
+		ul.social-icons {
+			li {
+				display: inline-block;
+				padding: 0 15px;
+				i {
+					display: inline;
+					color: $white;
+					margin-right: 10px;
+					@include font-size(10);
+				}
+				h2 {
+					display: inline;
+					color: $white;
+					font-weight: 100;
+					@include font-size(14);
+				}
+			}
+		}
+	}
+}

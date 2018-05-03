@@ -13,9 +13,9 @@
 		margin-left: -205px;
 		img {
 			width: 190px;
-			@include breakpoint(mobile) {
-				width: 300px;
-			}
+			// @include breakpoint(mobile) {
+			// 	width: 300px;
+			// }
 		}
 		h2 {
 			color: $white;

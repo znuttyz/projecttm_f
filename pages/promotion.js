@@ -8,7 +8,7 @@ class Promotion extends Component {
 		return (
 			<div>
 				<Nav isActive="หน้าแรก"/>
-				<AllBanner source="static/images/04-promotion/banner.jpg"/>
+				<AllBanner source="https://firebasestorage.googleapis.com/v0/b/tummour-original.appspot.com/o/static%2Fimages%2F04-promotion%2Fbanner.jpg?alt=media&token=3b780257-265f-46d7-ae9f-b7992b23a858"/>
 				<News />
 				<Footer />
 			</div>

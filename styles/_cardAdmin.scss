@@ -5,7 +5,29 @@
 	margin-bottom: 30px;
 
 	.cardHeader {
+		display: flex;
+		flex-direction: row;
 		padding: 15px 15px 0;
+		justify-content: space-between;
+
+		.cardMenu {
+			margin: 15px;
+			padding-right: 13px;
+			font-size: 30px;
+			font-weight: bold;
+			color: rgb(0, 162, 0);
+
+			a {
+				cursor: pointer;
+
+				&:hover {
+					text-decoration: underline;
+				}
+				&:visited {
+					color: rgb(0, 162, 0);
+				}
+			}
+		}
 	}
 
 	.title {

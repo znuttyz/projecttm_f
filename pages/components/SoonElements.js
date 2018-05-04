@@ -3,7 +3,7 @@ import Link from 'next/link'
 const SoonElements = () => (
 	<div className="soon clear">
 		<div className="container soon-inner">
-			<img src="static/images/00-global/tm.png"/>
+			<img src="https://firebasestorage.googleapis.com/v0/b/tummour-original.appspot.com/o/static%2Fimages%2F00-global%2Ftm.png?alt=media&token=ac35c520-2402-422d-ba6b-c28a94eab001"/>
 			<h2>tummouroriginal.com</h2>
 			<h1>เร็วๆ นี้</h1>
 			<ul className="social-icons">

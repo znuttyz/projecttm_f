@@ -2,7 +2,7 @@ import Link from 'next/link'
 
 const Footer = () => (
 	<div className="footer clear">
-		<img src="static/images/00-global/footer.png"/>
+		<img src="https://firebasestorage.googleapis.com/v0/b/tummour-original.appspot.com/o/static%2Fimages%2F00-global%2Ffooter.png?alt=media&token=e53f8032-a891-4305-9adf-d3db0e3c35ed"/>
 		<div className="footer-info">
 			<div className="container">
 				<ul className="social-icons">

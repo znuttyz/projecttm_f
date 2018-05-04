@@ -1,6 +1,7 @@
 # Build Output
 dist
 /build
+/out
 .next
 .vscode
 .DS_Store
@@ -10,3 +11,10 @@ npm-debug.log*
 # Dependencies
 node_modules/
 package-lock.json
+
+#firebase
+/functions
+.firebaserc
+database.rules.json
+firebase.json
+storage.rules

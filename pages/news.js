@@ -1,19 +1,19 @@
 import React, { Component } from 'react'
-import { Nav, AllBanner, News, Footer } from './components'
+import { Nav, AllBanner, NewsInfo, Footer } from './components'
 
 import '../styles/index.scss'
 
-class Promotion extends Component {
+class News extends Component {
 	render() {
 		return (
 			<div>
-				<Nav isActive="หน้าแรก"/>
+				<Nav />
 				<AllBanner source="https://firebasestorage.googleapis.com/v0/b/tummour-original.appspot.com/o/static%2Fimages%2F04-promotion%2Fbanner.jpg?alt=media&token=3b780257-265f-46d7-ae9f-b7992b23a858"/>
-				<News />
+				<NewsInfo />
 				<Footer />
 			</div>
 		)
 	}
 }
 
-export default Promotion;
+export default News;

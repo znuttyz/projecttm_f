@@ -26,6 +26,19 @@ class Banner_edit extends Component {
 	    });
 	}
 
+	// fileUploadHandler = () => {
+	//     const fd = new FormData()
+	//     fd.append('image', this.state.selectedFile, this.state.selectedFile.name)
+	//     axios.post('https://us-central1-tummour-16152.cloudfunctions.net/uploadFile', fd, {
+	//       onUploadProgress: progressEvent => {
+	//         console.log('Upload Progress: ' + Math.round(progressEvent.loaded / progressEvent.total * 100) + '%')
+	//       }
+	//     })
+	//     .then(res => {
+	//         console.log(res)
+	//     })
+	// }
+
 	render() {
 		return (
 			<div className="wrapperAdmin">
@@ -53,6 +66,7 @@ class Banner_edit extends Component {
 					        ref={fileInput => this.fileInput = fileInput}
 						/>
 						<button onClick={() => this.fileInput.click()} className="formFile">Pick File</button>
+						{this.state.selectedFile && this.state.selectedFile.name}
 					</div>
 				</Card>	
 			    	

@@ -1,52 +1,76 @@
 .header {
 	position: relative;
-	.logo {
-		width: 35%;
-		position: relative;
-		z-index: 100;
-		img {
-			width: 50%;
-		}
-	}
 	.bg-navbar {
 		background: url('https://firebasestorage.googleapis.com/v0/b/tummour-original.appspot.com/o/static%2Fimages%2F00-global%2Fbg-header.jpg?alt=media&token=690a92ea-6f42-470f-8a90-930210f4a551');
 		background-size: cover;
 		position: relative;
-		top: -192px;
 		.navbar {
 			width: 100%;
 			text-align: right;
-			padding-bottom: 10px;
 			ul {
 				margin: 0;
+				position: relative;
 				li {
 					display: inline-block;
-					width: 11%;
-					padding: 0 18px;
-					cursor: pointer;
+					width: 100px;
 					&:nth-child(1) {
-						&:hover, &:active {
-							content: url('https://firebasestorage.googleapis.com/v0/b/tummour-original.appspot.com/o/static%2Fimages%2F00-nav%2F01h.png?alt=media&token=6a099434-a569-4ef6-9aec-670aab363940');
+						a {
+							width: 100px;
+							&:hover {
+								content: url('https://firebasestorage.googleapis.com/v0/b/tummour-original.appspot.com/o/static%2Fimages%2F00-nav%2F01h.png?alt=media&token=6a099434-a569-4ef6-9aec-670aab363940');
+							}
+							&.active {
+								content: url('https://firebasestorage.googleapis.com/v0/b/tummour-original.appspot.com/o/static%2Fimages%2F00-nav%2F01h.png?alt=media&token=6a099434-a569-4ef6-9aec-670aab363940');
+								background: $gray;
+							}
 						}
 					}
 					&:nth-child(2) {
-						&:hover, &:active {
-							content: url('https://firebasestorage.googleapis.com/v0/b/tummour-original.appspot.com/o/static%2Fimages%2F00-nav%2F02h.png?alt=media&token=da88cfa2-b5e2-47f3-80bf-ac6d13eaacfe');
+						a {
+							width: 100px;
+							&:hover {
+								content: url('https://firebasestorage.googleapis.com/v0/b/tummour-original.appspot.com/o/static%2Fimages%2F00-nav%2F02h.png?alt=media&token=da88cfa2-b5e2-47f3-80bf-ac6d13eaacfe');
+							}
+							&.active {
+								content: url('https://firebasestorage.googleapis.com/v0/b/tummour-original.appspot.com/o/static%2Fimages%2F00-nav%2F02h.png?alt=media&token=da88cfa2-b5e2-47f3-80bf-ac6d13eaacfe');
+								background: $gray;
+							}
 						}
 					}
 					&:nth-child(3) {
-						&:hover, &:active {
-							content: url('https://firebasestorage.googleapis.com/v0/b/tummour-original.appspot.com/o/static%2Fimages%2F00-nav%2F03h.png?alt=media&token=a0e9fbdc-4536-4f88-b29e-bbb2be2be935');
+						a {
+							width: 100px;
+							&:hover {
+								content: url('https://firebasestorage.googleapis.com/v0/b/tummour-original.appspot.com/o/static%2Fimages%2F00-nav%2F03h.png?alt=media&token=a0e9fbdc-4536-4f88-b29e-bbb2be2be935');
+							}
+							&.active {
+								content: url('https://firebasestorage.googleapis.com/v0/b/tummour-original.appspot.com/o/static%2Fimages%2F00-nav%2F03h.png?alt=media&token=a0e9fbdc-4536-4f88-b29e-bbb2be2be935');
+								background: $gray;
+							}
 						}
 					}
 					&:nth-child(4) {
-						&:hover, &:active {
-							content: url('https://firebasestorage.googleapis.com/v0/b/tummour-original.appspot.com/o/static%2Fimages%2F00-nav%2F04h.png?alt=media&token=2e39d3af-ab62-4993-add0-2728b3275837');
+						a {
+							width: 100px;
+							&:hover {
+								content: url('https://firebasestorage.googleapis.com/v0/b/tummour-original.appspot.com/o/static%2Fimages%2F00-nav%2F04h.png?alt=media&token=2e39d3af-ab62-4993-add0-2728b3275837');
+							}
+							&.active {
+								content: url('https://firebasestorage.googleapis.com/v0/b/tummour-original.appspot.com/o/static%2Fimages%2F00-nav%2F04h.png?alt=media&token=2e39d3af-ab62-4993-add0-2728b3275837');
+								background: $gray;
+							}
 						}
 					}
 					&:nth-child(5) {
-						&:hover, &:active {
-							content: url('https://firebasestorage.googleapis.com/v0/b/tummour-original.appspot.com/o/static%2Fimages%2F00-nav%2F05h.png?alt=media&token=91ca3ec8-6b60-4f48-b452-dc5f5b59dc37');
+						a {
+							width: 100px;
+							&:hover {
+								content: url('https://firebasestorage.googleapis.com/v0/b/tummour-original.appspot.com/o/static%2Fimages%2F00-nav%2F05h.png?alt=media&token=91ca3ec8-6b60-4f48-b452-dc5f5b59dc37');
+							}
+							&.active {
+								content: url('https://firebasestorage.googleapis.com/v0/b/tummour-original.appspot.com/o/static%2Fimages%2F00-nav%2F05h.png?alt=media&token=91ca3ec8-6b60-4f48-b452-dc5f5b59dc37');
+								background: $gray;
+							}
 						}
 					}
 				}

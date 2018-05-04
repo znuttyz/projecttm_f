@@ -18,3 +18,4 @@ package-lock.json
 database.rules.json
 firebase.json
 storage.rules
+cors.json

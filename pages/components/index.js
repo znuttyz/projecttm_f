@@ -1,5 +1,6 @@
 export * from './SoonElements'
 export * from './Nav'
+export * from './Logo'
 export * from './HomeBanner'
 export * from './HomeOurbrands'
 export * from './HomePromotion'

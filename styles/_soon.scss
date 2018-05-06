@@ -4,17 +4,23 @@
 	width: 100vw;
 	height: 100vh;
 	.soon-inner {
-		width: 410px;
+		width: 450px;
 		height: 306px;
 		position: fixed;
 		top: 50%;
 		left: 50%;
 		margin-top: -153px;
-		margin-left: -205px;
+		margin-left: -225px;
+		@include breakpoint(mobile) {
+			width: 350px;
+			height: 380px;
+			margin-top: -190px;
+			margin-left: -175px;
+		}
 		img {
 			width: 190px;
 			@include breakpoint(mobile) {
-				width: 250px;
+				width: 220px;
 			}
 		}
 		h2 {
@@ -28,11 +34,18 @@
 			font-weight: bold;
 			@include font-size(36);
 			margin: 20px 0 50px;
+			@include breakpoint(mobile) {
+				@include font-size(28);
+			}
 		}
 		ul.social-icons {
 			li {
 				display: inline-block;
 				padding: 0 15px;
+				@include breakpoint(mobile) {
+					display: block;
+					margin: 5px 0;
+				}
 				i {
 					display: inline;
 					color: $white;
@@ -43,7 +56,7 @@
 					display: inline;
 					color: $white;
 					font-weight: 100;
-					@include font-size(14);
+					@include font-size(16);
 				}
 			}
 		}

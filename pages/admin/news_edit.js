@@ -11,15 +11,21 @@ class News_edit extends Component {
 			name: "",
 			subbody: "",
 			body: "",
-			selectedFile: null
+			selectedFile1: null,
+			selectedFile2: null,
+			selectedFile3: null,
+			selectedFile4: null,
+			selectedFile5: null,
+			selectedFile6: null
 		}
 	}
 
-	fileSelectedHandler = event => {
+	fileSelectedHandler(event) {
+		console.log(event.target.name)
 	    this.setState({ 
-	    	selectedFile: event.target.files[0]
+	    	[event.target.name]: event.target.files[0]
 	    })
-	}
+	};
 
 	_onHandleChange(event) {
 		this.setState({
@@ -28,6 +34,7 @@ class News_edit extends Component {
 	}
 
 	render() {
+		console.log("test", this.state.selectedFile1)
 		return (
 			<div className="wrapperAdmin">
 
@@ -37,7 +44,18 @@ class News_edit extends Component {
 
 				
 				<Card title="Edit News" subTitle="" isEdit={true}>
-					<Form handleChange={(event) => this._onHandleChange(event)} handleFile={this.fileSelectedHandler}/>
+					<Form 
+						title="News"
+						handleChange={(event) => this._onHandleChange(event)} 
+						handleFile={event => this.fileSelectedHandler(event)}
+						file1={this.state.selectedFile1}
+						file2={this.state.selectedFile2}
+						file3={this.state.selectedFile3}
+						file4={this.state.selectedFile4}
+						file5={this.state.selectedFile5}
+						file6={this.state.selectedFile6}
+					/>
+					
 				</Card>	
 			    	
 			</div>

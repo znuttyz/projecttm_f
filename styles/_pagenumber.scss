@@ -1,14 +1,16 @@
 .pagenumber {
 	ul {
+		margin: 25px 0;
 		li {
 			display: inline-block;
 			margin: 0 10px;
 			a {
 				color: $white;
 				padding: 5px 10px;
+				@include font-size(12);
 				&.active, &:hover, &:active {
-					background: $white;
-					color: $gray;
+					border: 1px solid $white;
+					transition: 0s;
 				}
 			}
 		}

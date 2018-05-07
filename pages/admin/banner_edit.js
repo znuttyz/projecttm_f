@@ -48,7 +48,7 @@ class Banner_edit extends Component {
 				</div>
 
 				
-				<Card title="Edit Banners" subTitle="" isEdit={true}>
+				<Card title="Banners" subTitle="Edit Banners" isEdit={true}>
 					<div className="formContainer">
 						<label className="formLabel">Name</label>
 						<input type="text" className="formControl" name="name" onChange={(event) => this._onHandleChange(event)} value={this.state.name} />

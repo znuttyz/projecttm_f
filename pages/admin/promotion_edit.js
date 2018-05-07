@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Sidebar, Card, Form } from './components'
+import { Sidebar, Card, Form, Header } from './components'
 
 import '../../styles/index.scss'
 
@@ -37,16 +37,20 @@ class Promotion_edit extends Component {
 					<Sidebar active="Promotions" />
 				</div>
 
-				
-				<Card title="Promotion" subTitle="Edit Promotion" isEdit={true}>
-					<Form 
-						title="Promotion"
-						handleChange={(event) => this._onHandleChange(event)} 
-						handleFile={event => this.fileSelectedHandler(event)}
-						file1={this.state.selectedFile1}
-					/>
-					
-				</Card>	
+				<div className="contentAdmin">
+					<Header title="Promotions" user={"tmp"} />
+
+					<Card title="Promotion" subTitle="Edit Promotion" isEdit={true}>
+						<Form 
+							title="Promotion"
+							handleChange={(event) => this._onHandleChange(event)} 
+							handleFile={event => this.fileSelectedHandler(event)}
+							file1={this.state.selectedFile1}
+						/>
+						
+					</Card>	
+
+				</div>
 			    	
 			</div>
 		)

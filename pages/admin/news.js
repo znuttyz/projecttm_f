@@ -13,12 +13,16 @@ class News extends Component {
 					<Sidebar active="News" />
 				</div>
 
-				
-				<Card title="News" subTitle="List of News">
-					
-					<Table />
+				<div className="contentAdmin">
+					<Header title="News" user={"tmp"} />
 
-				</Card>
+					<Card title="News" subTitle="List of News">
+						
+						<Table />
+
+					</Card>
+
+				</div>
 						
 			    	
 			</div>

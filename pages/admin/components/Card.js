@@ -14,9 +14,7 @@ const menu = (title, isEdit) => {
 }
 
 const Card = ({ children, title, subTitle, isEdit }) => (
-	<div className="contentAdmin">
-
-		<Header title={title} user="Admin" />
+	
 
 		<div className="subContentAdmin">
 			<div className="row">
@@ -36,7 +34,6 @@ const Card = ({ children, title, subTitle, isEdit }) => (
 				</div>
 			</div>
 		</div>
-	</div>
 )
 
 export { Card }

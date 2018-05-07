@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Sidebar, Card } from './components'
+import { Sidebar, Card, Header } from './components'
 
 import '../../styles/index.scss'
 
@@ -47,28 +47,32 @@ class Banner_edit extends Component {
 					<Sidebar active="Banners" />
 				</div>
 
-				
-				<Card title="Banners" subTitle="Edit Banners" isEdit={true}>
-					<div className="formContainer">
-						<label className="formLabel">Name</label>
-						<input type="text" className="formControl" name="name" onChange={(event) => this._onHandleChange(event)} value={this.state.name} />
-					</div>
-					<div className="formContainer">
-						<label className="formLabel">Tag</label>
-						<input type="text" className="formControl" name="tag" onChange={(event) => this._onHandleChange(event)} value={this.state.tag} />
-					</div>
-					<div className="formContainer">
-						<label className="formLabel">Browse Image</label>
-						<input 
-							type="file"
-							style={{display: 'none'}}
-					        onChange={this.fileSelectedHandler}
-					        ref={fileInput => this.fileInput = fileInput}
-						/>
-						<button onClick={() => this.fileInput.click()} className="formFile">Pick File</button>
-						{this.state.selectedFile && this.state.selectedFile.name}
-					</div>
-				</Card>	
+				<div className="contentAdmin">
+					<Header title="Banners" user={"temp"} />
+
+					<Card title="Banners" subTitle="Edit Banners" isEdit={true}>
+						<div className="formContainer">
+							<label className="formLabel">Name</label>
+							<input type="text" className="formControl" name="name" onChange={(event) => this._onHandleChange(event)} value={this.state.name} />
+						</div>
+						<div className="formContainer">
+							<label className="formLabel">Tag</label>
+							<input type="text" className="formControl" name="tag" onChange={(event) => this._onHandleChange(event)} value={this.state.tag} />
+						</div>
+						<div className="formContainer">
+							<label className="formLabel">Browse Image</label>
+							<input 
+								type="file"
+								style={{display: 'none'}}
+						        onChange={this.fileSelectedHandler}
+						        ref={fileInput => this.fileInput = fileInput}
+							/>
+							<button onClick={() => this.fileInput.click()} className="formFile">Pick File</button>
+							{this.state.selectedFile && this.state.selectedFile.name}
+						</div>
+					</Card>	
+
+				</div>
 			    	
 			</div>
 		)

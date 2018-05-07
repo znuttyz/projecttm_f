@@ -13,12 +13,16 @@ class Promotion extends Component {
 					<Sidebar active="Promotions" />
 				</div>
 
-				
-				<Card title="Promotions" subTitle="All Promotions">
-					
-					<Table />
+				<div className="contentAdmin">
+					<Header title="Promotions" user={"tmp"} />
 
-				</Card>
+					<Card title="Promotions" subTitle="All Promotions">
+						
+						<Table />
+
+					</Card>
+					
+				</div>
 						
 			    	
 			</div>

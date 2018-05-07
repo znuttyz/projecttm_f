@@ -22,7 +22,6 @@ class Login extends Component {
 	}
 
 	_onLogin() {
-		// console.log('login')
 		const { username, password } = this.state;
 		this.props.loginUser(username, password); 
 	}

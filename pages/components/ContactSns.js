@@ -4,7 +4,7 @@ import React, { Component } from "react";
 const ContactSns = () => (
 	<div className="contactsns clear">
 		<div className="container">
-			<img src="/static/images/05-contact/line-social.png" />
+			<img src="https://firebasestorage.googleapis.com/v0/b/tummour-original.appspot.com/o/static%2Fimages%2F05-contact%2Fline-social.png?alt=media&token=07a7af26-e9fe-438c-9405-e68a7a502956" />
 			<ul>
 				<li>
 					<ul>

@@ -1,6 +1,6 @@
 const withSass = require('@zeit/next-sass')
 module.exports = withSass({
-<<<<<<< HEAD
+
 		poweredByHeader: false,
 		// exportPathMap: function () {
 		//     return {
@@ -13,7 +13,7 @@ module.exports = withSass({
 		//       // '/a/promotion': { page: '/admin/promotion' }
 		//     }
 		// }
-=======
+
 	poweredByHeader: false,
 	// exportPathMap: function () {
 	//     return {
@@ -30,5 +30,5 @@ module.exports = withSass({
 	//       '/a/promotion/edit': { page: '/admin/banner_edit' }
 	//     }
 	// }
->>>>>>> master
+
 })

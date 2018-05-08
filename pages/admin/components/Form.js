@@ -89,10 +89,42 @@ const news = (props) => (
 	</div>
 )
 
+const promotion = (props) => (
+	<div>
+		<div className="formContainer">
+			<label className="formLabel">Name</label>
+			<input type="text" className="formControl" name="name" onChange={(event) => props.handleChange(event)}  />
+		</div>
+		<div className="formContainer">
+			<label className="formLabel">Sub-body</label>
+			<textarea className="formControl textarea" name="subbody" onChange={(event) => props.handleChange(event)}  rows="3"/>
+		</div>
+		<div className="formContainer">
+			<label className="formLabel">body</label>
+			<textarea className="formControl textarea" name="body" onChange={(event) => props.handleChange(event)}  rows="5"/>
+		</div>
+
+		<div className="formContainer">
+			<label className="formLabel">Browse Image (Banner)</label>
+			<input 
+				name="selectedFile1"
+				type="file"
+				style={{display: 'none'}}
+		        onChange={event => props.handleFile(event)}
+		        ref={fileInput1 => this.fileInput1 = fileInput1}
+			/>
+			<button onClick={() => this.fileInput1.click()} className="formFile">Pick File</button>
+			{ props.file1 && props.file1.name }
+		</div>
+	</div>
+)
+
 
 const Form = (props) => {
 	if(props.title === "News") {
 		return news(props)
+	} else if (props.title === "Promotion") {
+		return promotion(props)
 	}
 	return null;
 }

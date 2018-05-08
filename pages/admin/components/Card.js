@@ -5,16 +5,16 @@ const menu = (title, isEdit) => {
 	if(!isEdit) {
 		if (title === "Banners") {
 			return <Link href="/admin/banner_edit"><a>EDIT</a></Link>
-		} else {
+		} else if (title === "News") {
 			return <Link href="/admin/news_edit"><a>ADD</a></Link>
+		} else {
+			return <Link href="/admin/promotion_edit"><a>ADD</a></Link>
 		}
 	}
 }
 
 const Card = ({ children, title, subTitle, isEdit }) => (
-	<div className="contentAdmin">
-
-		<Header title={title} user="Admin" />
+	
 
 		<div className="subContentAdmin">
 			<div className="row">
@@ -34,7 +34,6 @@ const Card = ({ children, title, subTitle, isEdit }) => (
 				</div>
 			</div>
 		</div>
-	</div>
 )
 
 export { Card }

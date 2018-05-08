@@ -3,7 +3,7 @@ import { Sidebar, Card, Form, Header } from './components'
 
 import '../../styles/index.scss'
 
-class News_edit extends Component {
+class Promotion_edit extends Component {
 
 	constructor(props) {
 		super(props)
@@ -11,12 +11,7 @@ class News_edit extends Component {
 			name: "",
 			subbody: "",
 			body: "",
-			selectedFile1: null,
-			selectedFile2: null,
-			selectedFile3: null,
-			selectedFile4: null,
-			selectedFile5: null,
-			selectedFile6: null
+			selectedFile1: null
 		}
 	}
 
@@ -39,32 +34,27 @@ class News_edit extends Component {
 			<div className="wrapperAdmin">
 
 				<div className="sidebarAdmin">
-					<Sidebar active="News" />
+					<Sidebar active="Promotions" />
 				</div>
 
 				<div className="contentAdmin">
-					<Header title="News" user={"tmp"} />
+					<Header title="Promotions" user={"tmp"} />
 
-					<Card title="News" subTitle="Edit News" isEdit={true}>
+					<Card title="Promotion" subTitle="Edit Promotion" isEdit={true}>
 						<Form 
-							title="News"
+							title="Promotion"
 							handleChange={(event) => this._onHandleChange(event)} 
 							handleFile={event => this.fileSelectedHandler(event)}
 							file1={this.state.selectedFile1}
-							file2={this.state.selectedFile2}
-							file3={this.state.selectedFile3}
-							file4={this.state.selectedFile4}
-							file5={this.state.selectedFile5}
-							file6={this.state.selectedFile6}
 						/>
 						
-					</Card>
+					</Card>	
 
-				</div>	
+				</div>
 			    	
 			</div>
 		)
 	}
 }
 
-export default News_edit
+export default Promotion_edit

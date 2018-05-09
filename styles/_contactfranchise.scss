@@ -1,3 +1,35 @@
-.contactinfo {
-	
+.contactfranchise {
+	background: url('https://firebasestorage.googleapis.com/v0/b/tummour-original.appspot.com/o/static%2Fimages%2F05-contact%2Fbg-fc.jpg?alt=media&token=6403debe-3cba-4072-8d96-11ad50a4b2fe');
+	background-size: cover;
+	color: $white;
+	text-align: center;
+	padding: 25px 0;
+	img {
+		width: 180px;
+	}
+	h1 {
+		@include font-size(16);
+		font-weight: 100;
+		margin: 40px 0;
+	}
+	h2 {
+		@include font-size(14);
+		font-weight: 100;
+		margin: 40px 0 80px;
+	}
+	.franchise-btn {
+		a {
+			color: $white;
+			@include font-size(14);
+			border: 1px solid $green;
+			display: block;
+			width: 20%;
+			margin: 0 10px;
+			display: inline-block;
+			padding: 8px 0;
+			&:hover {
+				background: $green;
+			}
+		}
+	}
 }

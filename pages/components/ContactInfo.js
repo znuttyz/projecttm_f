@@ -15,23 +15,20 @@ const ContactInfo = () => (
 				<li className="contact-form">
 					<img src="https://firebasestorage.googleapis.com/v0/b/tummour-original.appspot.com/o/static%2Fimages%2F05-contact%2Fline-cm.png?alt=media&token=2ea11427-b667-41c0-bf1e-28fc3f0bd061"/>
 					<form>
-						<label for="topic">หัวข้อเรื่อง</label>
 						<input type="text" name="topic" placeholder="หัวข้อเรื่อง" />
-
-						<label for="name">ชื่อของท่าน</label>
+						<br/>
 						<input type="text" name="name" placeholder="ชื่อของท่าน" />
-
-						<label for="email">อีเมล์ของท่าน</label>
+						<br/>
 						<input type="email" name="email" placeholder="อีเมล์ของท่าน" />
-
-						<label for="phonenumber">เบอร์โทรศัพท์ของท่าน</label>
-						<input type="text" name="phonenumber" placeholder="เบอร์โทรศัพท์ของท่าน" />
-
-						<label for="content">เนื้อความ</label>
+						<br/>
+						<input type="number" name="phonenumber" placeholder="เบอร์โทรศัพท์ของท่าน" />
+						<br/>
 						<textarea type="text" placeholder="เนื้อความ"/>
-
-						<button type="button" className="">รีเซ็ท</button>
-      					<button type="submit" className="">ส่ง</button>
+						<br/>
+						<div className="contact-btn">
+							<button type="button" className="btn-reset">รีเซ็ท</button>
+      						<button type="submit" className="btn-submit">ส่ง</button>
+      					</div>
 					</form>
 				</li>
 			</ul>

@@ -1,7 +1,25 @@
-.contactinfo {
+.contactsns {
+	background: $gray;
+	padding: 25px 0;
+	text-align: center;
+	img {
+		width: 185px;
+	}
 	ul {
 		li.each-sns {
 			display: inline-block;
+			margin: 0 50px;
+			ul {
+				li {
+					list-style: none;
+					&.sns-text {
+						margin: 15px 0;
+						a {
+							color: $white;
+						}
+					}
+				}
+			}
 		}
 	}
 }

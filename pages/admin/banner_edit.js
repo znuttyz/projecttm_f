@@ -60,7 +60,7 @@ class Banner_edit extends Component {
 	_onHandleSubmit() {
 		console.log("submit")
 		this.setState({ disableInput: true })
-		// this.fileUploadHandler()
+		this.fileUploadHandler()
 		// https://storage.cloud.google.com/tummour-original.appspot.com/static/images/global/ky.png
 	}
 

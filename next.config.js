@@ -10,8 +10,10 @@ module.exports = withSass({
 	//     return {
 	//       '/': { page: '/soon' },
 	//       '/t/home': { page: '/' },
+	//       '/t/about': { page: '/about' },
 	//       '/t/news': { page: '/news' },
 	//       // '/t/promotion': { page: '/promotion' },
+	//       '/t/contact': { page: '/contact' },
 	//       '/a': { page: '/admin' },
 	//       '/a/banner': { page: '/admin/banner' },
 	//       '/a/banner/edit': { page: '/admin/banner_edit' },

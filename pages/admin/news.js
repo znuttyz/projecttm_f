@@ -1,11 +1,25 @@
 import React, { Component } from 'react'
-import PropTypes from 'prop-types'
 import { Sidebar, Header, Card, Table } from './components'
+
+import withRedux from 'next-redux-wrapper'
+import { initStore, loginUserCheck, logoutUser } from '../actions'
+
 
 import '../../styles/index.scss'
 
 class News extends Component {
+
+	componentWillMount() {
+		this.props.loginUserCheck()
+	}
+
+	_handleLogout() {
+	 	this.props.logoutUser()
+	 }
+
 	render() {
+		if(!this.props.user) return <div></div>;
+
 		return (
 			<div className="wrapperAdmin">
 
@@ -14,7 +28,7 @@ class News extends Component {
 				</div>
 
 				<div className="contentAdmin">
-					<Header title="News" user={"tmp"} />
+					<Header title="News" user={(this.props.user && this.props.user.email)} handleLogout={() => this._handleLogout()} />
 
 					<Card title="News" subTitle="List of News">
 						
@@ -30,4 +44,12 @@ class News extends Component {
 	}
 }
 
-export default News
+const mapStateToProps = ({ auth }) => {
+	return {
+		user: auth.user
+	}
+}
+
+export default withRedux(initStore, mapStateToProps, { 
+	loginUserCheck, logoutUser 
+})(News)

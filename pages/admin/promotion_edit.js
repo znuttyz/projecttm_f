@@ -1,6 +1,10 @@
 import React, { Component } from 'react'
 import { Sidebar, Card, Form, Header } from './components'
 
+import withRedux from 'next-redux-wrapper'
+import { initStore, loginUserCheck, logoutUser } from '../actions'
+
+
 import '../../styles/index.scss'
 
 class Promotion_edit extends Component {
@@ -14,6 +18,14 @@ class Promotion_edit extends Component {
 			selectedFile1: null
 		}
 	}
+
+	componentWillMount() {
+		this.props.loginUserCheck()
+	}
+
+	_handleLogout() {
+	 	this.props.logoutUser()
+	 }
 
 	fileSelectedHandler(event) {
 		console.log(event.target.name)
@@ -29,7 +41,8 @@ class Promotion_edit extends Component {
 	}
 
 	render() {
-		console.log("test", this.state.selectedFile1)
+		if(!this.props.user) return <div></div>;
+
 		return (
 			<div className="wrapperAdmin">
 
@@ -38,7 +51,7 @@ class Promotion_edit extends Component {
 				</div>
 
 				<div className="contentAdmin">
-					<Header title="Promotions" user={"tmp"} />
+					<Header title="Promotions" user={(this.props.user && this.props.user.email)} handleLogout={() => this._handleLogout()} />
 
 					<Card title="Promotion" subTitle="Edit Promotion" isEdit={true}>
 						<Form 
@@ -57,4 +70,12 @@ class Promotion_edit extends Component {
 	}
 }
 
-export default Promotion_edit
+const mapStateToProps = ({ auth }) => {
+	return {
+		user: auth.user
+	}
+}
+
+export default withRedux(initStore, mapStateToProps, { 
+	loginUserCheck, logoutUser 
+})(Promotion_edit)

@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import PropTypes from 'prop-types'
 import { Sidebar, Card, Header } from './components'
 
 import withRedux from 'next-redux-wrapper'

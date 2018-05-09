@@ -1,5 +1,10 @@
 import React, { Component } from 'react'
+import axios from 'axios'
 import { Sidebar, Card, Header } from './components'
+
+import withRedux from 'next-redux-wrapper'
+import { initStore, loginUserCheck, logoutUser } from '../actions'
+
 
 import '../../styles/index.scss'
 
@@ -10,15 +15,16 @@ class Banner_edit extends Component {
 		this.state = {
 			name: "",
 			tag: "",
-			selectedFile: null
+			selectedFile: null,
+			disableInput: false,
+			loading: null
 		}
 	}
 
-	fileSelectedHandler = event => {
-	    this.setState({ 
-	    	selectedFile: event.target.files[0]
-	    })
+	componentWillMount() {
+		this.props.loginUserCheck()
 	}
+
 
 	_onHandleChange(event) {
 		this.setState({
@@ -26,20 +32,41 @@ class Banner_edit extends Component {
 	    });
 	}
 
-	// fileUploadHandler = () => {
-	//     const fd = new FormData()
-	//     fd.append('image', this.state.selectedFile, this.state.selectedFile.name)
-	//     axios.post('https://us-central1-tummour-16152.cloudfunctions.net/uploadFile', fd, {
-	//       onUploadProgress: progressEvent => {
-	//         console.log('Upload Progress: ' + Math.round(progressEvent.loaded / progressEvent.total * 100) + '%')
-	//       }
-	//     })
-	//     .then(res => {
-	//         console.log(res)
-	//     })
-	// }
+	_handleLogout() {
+	 	this.props.logoutUser()
+	 }
+
+	fileSelectedHandler = event => {
+	    this.setState({ 
+	    	selectedFile: event.target.files[0]
+	    })
+	};
+
+	fileUploadHandler() {
+	    const fd = new FormData()
+	    fd.append('image', this.state.selectedFile, this.state.selectedFile.name)
+	    axios.post('https://us-central1-tummour-original.cloudfunctions.net/uploadFile', fd, {
+	      onUploadProgress: progressEvent => {
+	      	let progress = Math.round(progressEvent.loaded / progressEvent.total * 100)
+	        console.log('Upload Progress: ' + progress + '%')
+	        this.setState({ loading: progress })
+	      }
+	    })
+	    .then(res => {
+	    	this.setState({ loading: 100 })
+	    })
+	}
+
+	_onHandleSubmit() {
+		console.log("submit")
+		this.setState({ disableInput: true })
+		// this.fileUploadHandler()
+		// https://storage.cloud.google.com/tummour-original.appspot.com/static/images/global/ky.png
+	}
 
 	render() {
+		if(!this.props.user) return <div></div>;
+		
 		return (
 			<div className="wrapperAdmin">
 
@@ -48,17 +75,20 @@ class Banner_edit extends Component {
 				</div>
 
 				<div className="contentAdmin">
-					<Header title="Banners" user={"temp"} />
+					<Header title="Banners" user={(this.props.user && this.props.user.email)} handleLogout={() => this._handleLogout()}/>
 
 					<Card title="Banners" subTitle="Edit Banners" isEdit={true}>
+
 						<div className="formContainer">
 							<label className="formLabel">Name</label>
-							<input type="text" className="formControl" name="name" onChange={(event) => this._onHandleChange(event)} value={this.state.name} />
+							<input type="text" className="formControl" name="name" onChange={(event) => this._onHandleChange(event)} value={this.state.name} disabled={this.state.disableInput} />
 						</div>
+
 						<div className="formContainer">
 							<label className="formLabel">Tag</label>
-							<input type="text" className="formControl" name="tag" onChange={(event) => this._onHandleChange(event)} value={this.state.tag} />
+							<input type="text" className="formControl" name="tag" onChange={(event) => this._onHandleChange(event)} value={this.state.tag} disabled={this.state.disableInput} />
 						</div>
+
 						<div className="formContainer">
 							<label className="formLabel">Browse Image</label>
 							<input 
@@ -66,9 +96,15 @@ class Banner_edit extends Component {
 								style={{display: 'none'}}
 						        onChange={this.fileSelectedHandler}
 						        ref={fileInput => this.fileInput = fileInput}
+						        disabled={this.state.disableInput}
 							/>
 							<button onClick={() => this.fileInput.click()} className="formFile">Pick File</button>
 							{this.state.selectedFile && this.state.selectedFile.name}
+							<div className="fileLoader">{this.state.loading && this.state.loading + '%'}</div>
+						</div>
+
+						<div className="formContainer">
+							<button className="formFile submitBtn" onClick={() => this._onHandleSubmit()}>SUBMIT</button>
 						</div>
 					</Card>	
 
@@ -79,4 +115,13 @@ class Banner_edit extends Component {
 	}
 }
 
-export default Banner_edit
+const mapStateToProps = ({ auth }) => {
+	return {
+		user: auth.user
+	}
+}
+
+
+export default withRedux(initStore, mapStateToProps, { 
+	loginUserCheck, logoutUser 
+})(Banner_edit)

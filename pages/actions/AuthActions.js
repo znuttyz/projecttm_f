@@ -21,12 +21,14 @@ export const loginUser = (username, password) => {
 	};
 };
 
-export const loginUserCheck = () => {
+export const loginUserCheck = (path = null) => {
 	return (dispatch) => {
 		firebase.auth().onAuthStateChanged(function(user) {
 		  	if (user) {
 			    // User is signed in.
 			    dispatch({ type: LOGIN_USER_CHECK, payload: user })
+		  	} else if (path === "login") {
+		  		// Do nothing
 		  	} else {
 			    // User is signed out.
 			    window.location = "/"

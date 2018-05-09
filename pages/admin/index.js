@@ -1,7 +1,9 @@
 import React, { Component } from 'react'
-import withRedux from 'next-redux-wrapper'
 import { Card } from './components'
-import { initStore, loginUser } from '../actions'
+import Router from 'next/router'
+
+import withRedux from 'next-redux-wrapper'
+import { initStore, loginUser, loginUserCheck } from '../actions'
 
 import '../../styles/index.scss'
 
@@ -13,6 +15,10 @@ class Login extends Component {
 			username: '',
 			password: '',
 		}
+	}
+
+	componentWillMount() {
+		this.props.loginUserCheck("login")
 	}
 
 	_onHandleChange(event) {
@@ -27,6 +33,8 @@ class Login extends Component {
 	}
 
 	render() {
+		if(this.props.user) Router.push('/admin/banner')
+
 		return (
 			<div className="loginContainer">
 				<div className="login">
@@ -58,10 +66,10 @@ class Login extends Component {
 }
 
 const mapStateToProps = ({auth}) => {
-	const { loading, errorLogin } = auth;
+	const { loading, errorLogin, user } = auth;
 	return {
-		loading, errorLogin
+		loading, errorLogin, user
 	};
 }
 
-export default withRedux(initStore, mapStateToProps, { loginUser, })(Login)
+export default withRedux(initStore, mapStateToProps, { loginUser, loginUserCheck })(Login)

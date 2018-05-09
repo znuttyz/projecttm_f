@@ -37,7 +37,7 @@ class PageNumber extends Component {
 	showPage() {
 		let pages = []
 		for(let i = 1; i <= this.state.totalPage; i++) {
-			pages.push(<li><a className={(this.state.selectedPage === i)? "active":""} onClick={()=>this._onSelectPage(i)}>{i}</a></li>)
+			pages.push(<li key={"pagination"+i}><a className={(this.state.selectedPage === i)? "active":""} onClick={()=>this._onSelectPage(i)}>{i}</a></li>)
 		}
 		return pages
 	}

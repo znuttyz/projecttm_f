@@ -1,3 +1,7 @@
 .contactinfo {
-	
+	ul {
+		li.each-sns {
+			display: inline-block;
+		}
+	}
 }

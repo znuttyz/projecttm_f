@@ -3,7 +3,12 @@ import axios from 'axios'
 import { Sidebar, Card, Header } from './components'
 
 import withRedux from 'next-redux-wrapper'
-import { initStore, loginUserCheck, logoutUser } from '../actions'
+import { 
+	initStore, 
+	loginUserCheck, 
+	logoutUser, 
+	bannerUpdate 
+} from '../actions'
 
 
 import '../../styles/index.scss'
@@ -25,6 +30,11 @@ class Banner_edit extends Component {
 		this.props.loginUserCheck()
 	}
 
+	componentWillReceiveProps(nextProps) {
+		if(nextProps.isUpdate) {
+			window.location = '/admin/banner'
+		}
+	}
 
 	_onHandleChange(event) {
 		this.setState({
@@ -53,6 +63,9 @@ class Banner_edit extends Component {
 	      }
 	    })
 	    .then(res => {
+	    	const { name, tag } = this.state
+	    	const src = 'https://storage.cloud.google.com/tummour-original.appspot.com/upload/'+this.state.selectedFile.name
+	    	this.props.bannerUpdate(name, src, tag)
 	    	this.setState({ loading: 100 })
 	    })
 	}
@@ -61,7 +74,6 @@ class Banner_edit extends Component {
 		console.log("submit")
 		this.setState({ disableInput: true })
 		this.fileUploadHandler()
-		// https://storage.cloud.google.com/tummour-original.appspot.com/static/images/global/ky.png
 	}
 
 	render() {
@@ -115,13 +127,14 @@ class Banner_edit extends Component {
 	}
 }
 
-const mapStateToProps = ({ auth }) => {
+const mapStateToProps = ({ auth, banner }) => {
 	return {
-		user: auth.user
+		user: auth.user,
+		isUpdate: banner.isUpdate
 	}
 }
 
 
 export default withRedux(initStore, mapStateToProps, { 
-	loginUserCheck, logoutUser 
+	loginUserCheck, logoutUser, bannerUpdate
 })(Banner_edit)

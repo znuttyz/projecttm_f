@@ -16,14 +16,9 @@ class News_edit extends Component {
 			name: "",
 			subbody: "",
 			body: "",
-			// selectedFile1: null,
-			// selectedFile2: null,
-			// selectedFile3: null,
-			// selectedFile4: null,
-			// selectedFile5: null,
-			// selectedFile6: null
 			selectedFile: [],
-			loading: null
+			loading: null,
+			disableInput: false,
 		}
 	}
 
@@ -32,10 +27,6 @@ class News_edit extends Component {
 	}
 
 	fileSelectedHandler(event) {
-		// console.log(event.target.name)
-	 //    this.setState({ 
-	 //    	[event.target.name]: event.target.files[0]
-	 //    })
 		let tmp = this.state.selectedFile
 		tmp.push(event.target.files[0])
 		this.setState({ selectedFile: tmp })
@@ -52,32 +43,27 @@ class News_edit extends Component {
 	 	this.props.logoutUser()
 	 }
 
-	//  fileUploadHandler() {
-	//     const fd = new FormData()
-	//     let promises = []
-	//     this.state.selectedFile.map((file, index) => {
-	//     	console.log(index, file)
-	//     	fd.append('image', file, file.name)
-	//     	promises.push(axios.post('https://us-central1-tummour-original.cloudfunctions.net/uploadFile', fd))
-	//     })
-	//     axios.all(promises)
-	// 		.then(axios.spread(function (acct, perms) {
-	// 	    	console.log('acct',acct)
-	// 	    	console.log('perms',perms)
-	// 		})
-	// 	);
-
-	//     // axios.post('https://us-central1-tummour-original.cloudfunctions.net/uploadFile', fd)
-	// 	   //  .then(res => {
-	// 	   //  	const { name, tag } = this.state
-	// 	   //  	const src = 'https://storage.cloud.google.com/tummour-original.appspot.com/upload/'+file.name
-	// 	   //  	let loading = Math.round(100/(6-index))
-	// 	   //  	this.setState({ loading })
-	// 	   //  })
-	// }
-
 	 _onHandleSubmit() {
-	 	// this.fileUploadHandler()
+
+	 	console.log('submit')
+	 	this.setState({ disableInput: true })
+
+	 	const promiseSerial = funcs =>
+		  funcs.reduce((promise, func) =>
+		    promise.then(result => func().then(Array.prototype.concat.bind(result))),
+		    Promise.resolve([]))
+
+		const funcs = this.state.selectedFile.map((file, index) => () => {
+			const fd = new FormData()
+	    	fd.append('image', file, file.name)
+	    	this.setState({ loading: Math.round(-100/(index-this.state.selectedFile.length)) })
+	    	return axios.post('https://us-central1-tummour-original.cloudfunctions.net/uploadFile', fd)
+		})
+
+		promiseSerial(funcs)
+		.then(res => console.log(res))
+		.catch(console.error.bind(console))
+
 	 }
 
 	render() {
@@ -104,6 +90,7 @@ class News_edit extends Component {
 							file4={this.state.selectedFile[3]}
 							file5={this.state.selectedFile[4]}
 							file6={this.state.selectedFile[5]}
+							isDisable={this.state.disableInput}
 						/>
 						<div className="formContainer">
 							<button className="formFile submitBtn" onClick={() => this._onHandleSubmit()}>SUBMIT</button>

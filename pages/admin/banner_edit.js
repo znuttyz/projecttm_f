@@ -71,7 +71,6 @@ class Banner_edit extends Component {
 	}
 
 	_onHandleSubmit() {
-		console.log("submit")
 		this.setState({ disableInput: true })
 		this.fileUploadHandler()
 	}

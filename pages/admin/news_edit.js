@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import axios from 'axios'
 import { Sidebar, Card, Form, Header } from './components'
 
 import withRedux from 'next-redux-wrapper'
@@ -15,12 +16,14 @@ class News_edit extends Component {
 			name: "",
 			subbody: "",
 			body: "",
-			selectedFile1: null,
-			selectedFile2: null,
-			selectedFile3: null,
-			selectedFile4: null,
-			selectedFile5: null,
-			selectedFile6: null
+			// selectedFile1: null,
+			// selectedFile2: null,
+			// selectedFile3: null,
+			// selectedFile4: null,
+			// selectedFile5: null,
+			// selectedFile6: null
+			selectedFile: [],
+			loading: null
 		}
 	}
 
@@ -29,10 +32,14 @@ class News_edit extends Component {
 	}
 
 	fileSelectedHandler(event) {
-		console.log(event.target.name)
-	    this.setState({ 
-	    	[event.target.name]: event.target.files[0]
-	    })
+		// console.log(event.target.name)
+	 //    this.setState({ 
+	 //    	[event.target.name]: event.target.files[0]
+	 //    })
+		let tmp = this.state.selectedFile
+		tmp.push(event.target.files[0])
+		this.setState({ selectedFile: tmp })
+		console.log(this.state.selectedFile)
 	};
 
 	_onHandleChange(event) {
@@ -43,6 +50,34 @@ class News_edit extends Component {
 
 	_handleLogout() {
 	 	this.props.logoutUser()
+	 }
+
+	//  fileUploadHandler() {
+	//     const fd = new FormData()
+	//     let promises = []
+	//     this.state.selectedFile.map((file, index) => {
+	//     	console.log(index, file)
+	//     	fd.append('image', file, file.name)
+	//     	promises.push(axios.post('https://us-central1-tummour-original.cloudfunctions.net/uploadFile', fd))
+	//     })
+	//     axios.all(promises)
+	// 		.then(axios.spread(function (acct, perms) {
+	// 	    	console.log('acct',acct)
+	// 	    	console.log('perms',perms)
+	// 		})
+	// 	);
+
+	//     // axios.post('https://us-central1-tummour-original.cloudfunctions.net/uploadFile', fd)
+	// 	   //  .then(res => {
+	// 	   //  	const { name, tag } = this.state
+	// 	   //  	const src = 'https://storage.cloud.google.com/tummour-original.appspot.com/upload/'+file.name
+	// 	   //  	let loading = Math.round(100/(6-index))
+	// 	   //  	this.setState({ loading })
+	// 	   //  })
+	// }
+
+	 _onHandleSubmit() {
+	 	// this.fileUploadHandler()
 	 }
 
 	render() {
@@ -63,14 +98,17 @@ class News_edit extends Component {
 							title="News"
 							handleChange={(event) => this._onHandleChange(event)} 
 							handleFile={event => this.fileSelectedHandler(event)}
-							file1={this.state.selectedFile1}
-							file2={this.state.selectedFile2}
-							file3={this.state.selectedFile3}
-							file4={this.state.selectedFile4}
-							file5={this.state.selectedFile5}
-							file6={this.state.selectedFile6}
+							file1={this.state.selectedFile[0]}
+							file2={this.state.selectedFile[1]}
+							file3={this.state.selectedFile[2]}
+							file4={this.state.selectedFile[3]}
+							file5={this.state.selectedFile[4]}
+							file6={this.state.selectedFile[5]}
 						/>
-						
+						<div className="formContainer">
+							<button className="formFile submitBtn" onClick={() => this._onHandleSubmit()}>SUBMIT</button>
+							<div className="fileLoader">{this.state.loading && this.state.loading + '%'}</div>
+						</div>
 					</Card>
 
 				</div>	

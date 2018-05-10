@@ -5,7 +5,7 @@
 	text-align: center;
 	padding: 25px 0;
 	img {
-		width: 180px;
+		width: 175px;
 	}
 	h1 {
 		@include font-size(16);
@@ -21,7 +21,7 @@
 		a {
 			color: $white;
 			@include font-size(14);
-			border: 1px solid $green;
+			border: 2px solid $green;
 			display: block;
 			width: 20%;
 			margin: 0 10px;

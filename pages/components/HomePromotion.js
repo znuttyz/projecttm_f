@@ -37,7 +37,7 @@ const HomePromotion = () => (
 				</ul>
 			</div>
 			<div className="home-promotion-btn">
-				<a href=""><h3>โปรโมชั่นเพิ่มเติม</h3></a>
+				<a href="">โปรโมชั่นเพิ่มเติม</a>
 			</div>
 		</div>
 	</div>

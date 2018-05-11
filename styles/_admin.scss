@@ -114,6 +114,12 @@
 				&:first-child {
 					padding-left: 15px;
 				}
+
+				a {
+					&:hover {
+						text-decoration: underline;
+					}
+				}
 			}
 		}
 	}

@@ -6,7 +6,7 @@ const menu = (title, isEdit) => {
 		if (title === "Banners") {
 			return <Link href="/admin/banner_edit"><a>EDIT</a></Link>
 		} else if (title === "News") {
-			return <Link href="/admin/news_edit"><a>ADD</a></Link>
+			return <Link href="/admin/news_add"><a>ADD</a></Link>
 		} else {
 			return <Link href="/admin/promotion_edit"><a>ADD</a></Link>
 		}

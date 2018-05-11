@@ -71,6 +71,26 @@
 		font-weight: bold;
 		color: green;
 	}
+
+	.dropzone {
+		width: 300px;
+		height: auto;
+		border: 2px dashed rgb(102, 102, 102);
+		border-top-left-radius: 5px;
+		border-top-right-radius: 5px;
+		border-bottom-right-radius: 5px;
+		border-bottom-left-radius: 5px;
+		margin-top: 10px;
+
+		p {
+			margin:10px;
+			font-size: 22px;
+		}
+
+		.dropzone-list {
+			margin-left: 27px;
+		}
+	}
 }
 
 .textarea {

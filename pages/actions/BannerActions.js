@@ -13,10 +13,8 @@ export const bannerFetch = () => {
 	}
 }
 
-export const bannerUpdate = (name, src, tag) => {
+export const bannerUpdate = (postData) => {
 	return (dispatch) => {
-		let date = new Date().toJSON().slice(0,10).replace(/-/g,'/')
-		let postData = { name, src, tag, date }
 		firebase.database().ref('banner').update(postData)
 		.then(res => dispatch({ type: BANNER_UPDATE, payload: true }))
 	}

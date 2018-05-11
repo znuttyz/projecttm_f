@@ -8,3 +8,4 @@ export const BANNER_FETCH = 'banner_fetch'
 export const BANNER_UPDATE = 'banner_update'
 
 export const NEWS_FETCH = 'news_fetch'
+export const NEWS_CREATE = 'news_create'

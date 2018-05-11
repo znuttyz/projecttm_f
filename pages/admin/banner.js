@@ -49,9 +49,10 @@ class Banner extends Component {
 					<Card title="Banners" subTitle="Home page banner">
 						<div className="bannerContainer">
 							<div className="bannerImage" >
+								<h1>TH</h1>
 								{(this.state.imageStatus === "loading") ? <div>Loading...</div>: ""}
 								<img 
-									src={(this.props.banner && this.props.banner.src)} 
+									src={(this.props.banner && this.props.banner.src_th)} 
 									alt={(this.props.banner && this.props.banner.tag)}
 									width="100%"
 									onLoad={() => this._handleImageLoaded()}

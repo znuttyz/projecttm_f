@@ -1,4 +1,22 @@
-const Table = () => {
+const showNews = (news) => {
+	return news.map((data, index) => {
+		return (
+			<tr key={data.title}>
+				<td>{index+1}</td>
+				<td>{data.title}</td>
+				<td>{data.sub_body}</td>
+				<td>{data.body}</td>
+				<td>
+					<a href="#">Gallery</a>
+					<a href="#">Edit</a>
+					<a href="#">Delete</a>
+				</td>
+			</tr>
+		)
+	})
+}
+
+const Table = ({ news }) => {
 	return (
 		<table className="tableAdmin">
 			<thead>
@@ -11,20 +29,7 @@ const Table = () => {
 				</tr>
 			</thead>
 			<tbody>
-				<tr>
-					<td>1</td>
-					<td>test1</td>
-					<td>asdf</td>
-					<td> fjknasdk;nfjk ansjkdnfjkansk jfnjksndff</td>
-					<td></td>
-				</tr>
-				<tr>
-					<td>2</td>
-					<td>test2</td>
-					<td>asdf</td>
-					<td>eaaefawsef</td>
-					<td></td>
-				</tr>
+				{showNews(news)}
 			</tbody>
 		</table>
 	)

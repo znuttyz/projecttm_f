@@ -2,7 +2,12 @@ import React, { Component } from 'react'
 import { Sidebar, Header, Card, Table } from './components'
 
 import withRedux from 'next-redux-wrapper'
-import { initStore, loginUserCheck, logoutUser } from '../actions'
+import { 
+	initStore, 
+	loginUserCheck, 
+	logoutUser,
+	newsFetch
+} from '../actions'
 
 
 import '../../styles/index.scss'
@@ -11,6 +16,7 @@ class News extends Component {
 
 	componentWillMount() {
 		this.props.loginUserCheck()
+		this.props.newsFetch()
 	}
 
 	_handleLogout() {
@@ -32,7 +38,7 @@ class News extends Component {
 
 					<Card title="News" subTitle="List of News">
 						
-						<Table />
+						<Table news={(this.props.news && this.props.news)}/>
 
 					</Card>
 
@@ -44,12 +50,13 @@ class News extends Component {
 	}
 }
 
-const mapStateToProps = ({ auth }) => {
+const mapStateToProps = ({ auth, news }) => {
 	return {
-		user: auth.user
+		user: auth.user,
+		news: news.news
 	}
 }
 
 export default withRedux(initStore, mapStateToProps, { 
-	loginUserCheck, logoutUser 
+	loginUserCheck, logoutUser, newsFetch
 })(News)

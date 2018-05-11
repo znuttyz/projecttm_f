@@ -20,20 +20,18 @@ class Banner_edit extends Component {
 		this.state = {
 			name: "",
 			tag: "",
-			selectedFile: null,
-			disableInput: false,
-			loading: null
+			selectedFile1: null,
+			selectedFile2: null,
+			selectedFile3: null,
+			loading1: null,
+			loading2: null,
+			loading3: null,
+			disableInput: false
 		}
 	}
 
 	componentWillMount() {
 		this.props.loginUserCheck()
-	}
-
-	componentWillReceiveProps(nextProps) {
-		if(nextProps.isUpdate) {
-			window.location = '/admin/banner'
-		}
 	}
 
 	_onHandleChange(event) {
@@ -48,31 +46,33 @@ class Banner_edit extends Component {
 
 	fileSelectedHandler = event => {
 	    this.setState({ 
-	    	selectedFile: event.target.files[0]
+	    	[event.target.name]: event.target.files[0]
 	    })
 	};
 
-	fileUploadHandler() {
+	fileUploadHandler(file, lang, loading) {
 	    const fd = new FormData()
-	    fd.append('image', this.state.selectedFile, this.state.selectedFile.name)
+	    fd.append('image', file, file.name)
 	    axios.post('https://us-central1-tummour-original.cloudfunctions.net/uploadFile', fd, {
 	      onUploadProgress: progressEvent => {
 	      	let progress = Math.round(progressEvent.loaded / progressEvent.total * 100)
 	        console.log('Upload Progress: ' + progress + '%')
-	        this.setState({ loading: progress })
+	        this.setState({ [loading]: progress })
 	      }
 	    })
 	    .then(res => {
 	    	const { name, tag } = this.state
-	    	const src = 'https://storage.cloud.google.com/tummour-original.appspot.com/upload/'+this.state.selectedFile.name
-	    	this.props.bannerUpdate(name, src, tag)
-	    	this.setState({ loading: 100 })
+	    	const src = 'https://storage.cloud.google.com/tummour-original.appspot.com/upload/'+file.name
+	    	this.props.bannerUpdate({ [lang]: src })
+	    	this.setState({ [loading]: 100 })
 	    })
 	}
 
-	_onHandleSubmit() {
+	_onHandleSubmit(id) {
 		this.setState({ disableInput: true })
-		this.fileUploadHandler()
+		if(id === 1) {
+			this.fileUploadHandler(this.state.selectedFile1, "src_th", "loading1")
+		}
 	}
 
 	render() {
@@ -90,19 +90,11 @@ class Banner_edit extends Component {
 
 					<Card title="Banners" subTitle="Edit Banners" isEdit={true}>
 
+						
 						<div className="formContainer">
-							<label className="formLabel">Name</label>
-							<input type="text" className="formControl" name="name" onChange={(event) => this._onHandleChange(event)} value={this.state.name} disabled={this.state.disableInput} />
-						</div>
-
-						<div className="formContainer">
-							<label className="formLabel">Tag</label>
-							<input type="text" className="formControl" name="tag" onChange={(event) => this._onHandleChange(event)} value={this.state.tag} disabled={this.state.disableInput} />
-						</div>
-
-						<div className="formContainer">
-							<label className="formLabel">Browse Image</label>
+							<label className="formLabel">Browse Image (TH)</label>
 							<input 
+								name="selectedFile1"
 								type="file"
 								style={{display: 'none'}}
 						        onChange={this.fileSelectedHandler}
@@ -110,13 +102,11 @@ class Banner_edit extends Component {
 						        disabled={this.state.disableInput}
 							/>
 							<button onClick={() => this.fileInput.click()} className="formFile">Pick File</button>
-							{this.state.selectedFile && this.state.selectedFile.name}
-							<div className="fileLoader">{this.state.loading && this.state.loading + '%'}</div>
+							{this.state.selectedFile1 && this.state.selectedFile1.name}
+							<button className="formFile submitBtn" onClick={() => this._onHandleSubmit(1)}>SUBMIT</button>
+							<div className="fileLoader">{this.state.loading1 && this.state.loading1 + '%'}</div>
 						</div>
-
-						<div className="formContainer">
-							<button className="formFile submitBtn" onClick={() => this._onHandleSubmit()}>SUBMIT</button>
-						</div>
+							
 					</Card>	
 
 				</div>

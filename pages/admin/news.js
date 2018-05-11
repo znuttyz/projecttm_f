@@ -14,9 +14,26 @@ import '../../styles/index.scss'
 
 class News extends Component {
 
+	constructor(props) {
+		super(props)
+		this.state = {
+			news: [],
+			user: null
+		}
+	}
+
 	componentWillMount() {
 		this.props.loginUserCheck()
 		this.props.newsFetch()
+	}
+
+	componentWillReceiveProps(nextProps) {
+		if(nextProps.news) {
+			this.setState({ news: nextProps.news })
+		}
+		if(nextProps.user) {
+			this.setState({ user: nextProps.user })
+		}
 	}
 
 	_handleLogout() {
@@ -34,11 +51,11 @@ class News extends Component {
 				</div>
 
 				<div className="contentAdmin">
-					<Header title="News" user={(this.props.user && this.props.user.email)} handleLogout={() => this._handleLogout()} />
+					<Header title="News" user={(this.state.user && this.state.user.email)} handleLogout={() => this._handleLogout()} />
 
 					<Card title="News" subTitle="List of News">
 						
-						<Table news={(this.props.news && this.props.news)}/>
+						<Table news={this.state.news}/>
 
 					</Card>
 

@@ -79,7 +79,7 @@ class News_add extends Component {
 				title: this.state.title,
 				sub_body: this.state.subbody,
 				body: this.state.body,
-				date: new Date,
+				date: Date.now(),
 				banner_th: this.state.selectedFile[0].name
 			}
 			this.props.newsCreate(postData)

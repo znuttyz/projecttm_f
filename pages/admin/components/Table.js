@@ -1,14 +1,18 @@
+import Link from 'next/link'
+
 const showNews = (news) => {
 	return news.map((data, index) => {
+		let d = new Date(data.date)
+		let date = d.getDate()+"/"+(d.getMonth()+1)+"/"+d.getFullYear()
 		return (
 			<tr key={data.title}>
-				<td>{index+1}</td>
+				<td>{date}</td>
 				<td>{data.title}</td>
 				<td>{data.sub_body}</td>
 				<td>{data.body}</td>
 				<td>
 					<a href="#">Gallery</a>
-					<a href="#">Edit</a>
+					<Link href={{ pathname: '/admin/news_edit', query: { id: data.id } }}><a>Edit</a></Link>
 					<a href="#">Delete</a>
 				</td>
 			</tr>

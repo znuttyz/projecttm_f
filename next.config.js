@@ -23,22 +23,22 @@ module.exports = withSass({
 	//       '/a/promotion/edit': { page: '/admin/banner_edit' }
 	//     }
 	// },
-	// exportPathMap: function () {
-	//     return {
-	//       '/': { page: '/' },
-	//       '/about': { page: '/about' },
-	//       '/news': { page: '/news' },
-	//       // '/t/promotion': { page: '/promotion' },
-	//       '/contact': { page: '/contact' },
-	//       '/admin': { page: '/admin' },
-	//       '/admin/banner': { page: '/admin/banner' },
-	//       '/admin/banner/edit': { page: '/admin/banner_edit' },
-	//       '/admin/news': { page: '/admin/news' },
-	//       '/admin/news/edit': { page: '/admin/banner_edit' },
-	//       '/admin/promotion': { page: '/admin/promotion' },
-	//       '/admin/promotion/edit': { page: '/admin/banner_edit' }
-	//     }
-	// },
+	exportPathMap: function () {
+	    return {
+	      '/': { page: '/' },
+	      '/about': { page: '/about' },
+	      '/news': { page: '/news' },
+	      // '/t/promotion': { page: '/promotion' },
+	      '/contact': { page: '/contact' },
+	      '/admin': { page: '/admin' },
+	      '/admin/banner': { page: '/admin/banner' },
+	      '/admin/banner/edit': { page: '/admin/banner_edit' },
+	      '/admin/news': { page: '/admin/news' },
+	      '/admin/news/edit': { page: '/admin/banner_edit' },
+	      '/admin/promotion': { page: '/admin/promotion' },
+	      '/admin/promotion/edit': { page: '/admin/banner_edit' }
+	    }
+	},
 	webpack(config, options) {
 		config.plugins = config.plugins || []                                         
 	    config.plugins = [                                                            

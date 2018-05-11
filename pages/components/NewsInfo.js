@@ -7,7 +7,7 @@ const NewsInfo = () => (
 			<div className="tabtopic">
 				<ul>
 					<li><Link href=""><a>ข่าวสาร</a></Link></li>
-					<li><Link href=""><a>โปรโมชั่น</a></Link></li>
+					<li><Link href="/promotion"><a>โปรโมชั่น</a></Link></li>
 				</ul>
 			</div>
 			<div className="tabcontent">

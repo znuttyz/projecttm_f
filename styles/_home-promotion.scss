@@ -13,17 +13,25 @@
 			width: 100%;
 			margin: 0 auto;
 			text-align: center;
-			li {
+			li.each-promotion {
 				display: inline-block;
-				padding: 0 8px;
-				h3 {
-					color: $red;
-					text-align: left;
-					@include font-size(14);
-				}
-				p {
-					color: $white;
-					text-align: left;
+				width: calc(100%/3);
+				margin: 0 auto;
+				a {
+					.promotion-text {
+						width: 75%;
+						margin: 0 auto;
+						padding: 5px 0;
+						h3 {
+							color: $red;
+							text-align: left;
+							@include font-size(14);
+						}
+						p {
+							color: $white;
+							text-align: left;
+						}
+					}
 				}
 			}
 		}

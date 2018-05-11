@@ -19,6 +19,7 @@
 				h3 {
 					color: $red;
 					text-align: left;
+					@include font-size(14);
 				}
 				p {
 					color: $white;
@@ -33,9 +34,13 @@
 			margin: 0 auto;
 			border: 1px solid $white;
 			padding: 5px 15px;
-			h3 {
-				color: $white;
-				text-align: center;
+			color: $white;
+			text-align: center;
+			@include font-size(12);
+			&:hover {
+				background: $white;
+				color: $black;
+				transition: 0.5s;
 			}
 		}
 	}

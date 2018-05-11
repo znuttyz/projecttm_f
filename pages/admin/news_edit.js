@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import axios from 'axios'
 import { Sidebar, Card, Form, Header } from './components'
 
 import withRedux from 'next-redux-wrapper'
@@ -15,12 +16,9 @@ class News_edit extends Component {
 			name: "",
 			subbody: "",
 			body: "",
-			selectedFile1: null,
-			selectedFile2: null,
-			selectedFile3: null,
-			selectedFile4: null,
-			selectedFile5: null,
-			selectedFile6: null
+			selectedFile: [],
+			loading: null,
+			disableInput: false,
 		}
 	}
 
@@ -29,10 +27,10 @@ class News_edit extends Component {
 	}
 
 	fileSelectedHandler(event) {
-		console.log(event.target.name)
-	    this.setState({ 
-	    	[event.target.name]: event.target.files[0]
-	    })
+		let tmp = this.state.selectedFile
+		tmp.push(event.target.files[0])
+		this.setState({ selectedFile: tmp })
+		console.log(this.state.selectedFile)
 	};
 
 	_onHandleChange(event) {
@@ -43,6 +41,29 @@ class News_edit extends Component {
 
 	_handleLogout() {
 	 	this.props.logoutUser()
+	 }
+
+	 _onHandleSubmit() {
+
+	 	console.log('submit')
+	 	this.setState({ disableInput: true })
+
+	 	const promiseSerial = funcs =>
+		  funcs.reduce((promise, func) =>
+		    promise.then(result => func().then(Array.prototype.concat.bind(result))),
+		    Promise.resolve([]))
+
+		const funcs = this.state.selectedFile.map((file, index) => () => {
+			const fd = new FormData()
+	    	fd.append('image', file, file.name)
+	    	this.setState({ loading: Math.round(-100/(index-this.state.selectedFile.length)) })
+	    	return axios.post('https://us-central1-tummour-original.cloudfunctions.net/uploadFile', fd)
+		})
+
+		promiseSerial(funcs)
+		.then(res => console.log(res))
+		.catch(console.error.bind(console))
+
 	 }
 
 	render() {
@@ -63,14 +84,18 @@ class News_edit extends Component {
 							title="News"
 							handleChange={(event) => this._onHandleChange(event)} 
 							handleFile={event => this.fileSelectedHandler(event)}
-							file1={this.state.selectedFile1}
-							file2={this.state.selectedFile2}
-							file3={this.state.selectedFile3}
-							file4={this.state.selectedFile4}
-							file5={this.state.selectedFile5}
-							file6={this.state.selectedFile6}
+							file1={this.state.selectedFile[0]}
+							file2={this.state.selectedFile[1]}
+							file3={this.state.selectedFile[2]}
+							file4={this.state.selectedFile[3]}
+							file5={this.state.selectedFile[4]}
+							file6={this.state.selectedFile[5]}
+							isDisable={this.state.disableInput}
 						/>
-						
+						<div className="formContainer">
+							<button className="formFile submitBtn" onClick={() => this._onHandleSubmit()}>SUBMIT</button>
+							<div className="fileLoader">{this.state.loading && this.state.loading + '%'}</div>
+						</div>
 					</Card>
 
 				</div>	

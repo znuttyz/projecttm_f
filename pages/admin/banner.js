@@ -2,7 +2,12 @@ import React, { Component } from 'react'
 import { Sidebar, Card, Header } from './components'
 
 import withRedux from 'next-redux-wrapper'
-import { initStore, loginUserCheck, logoutUser } from '../actions'
+import { 
+	initStore, 
+	loginUserCheck, 
+	logoutUser,
+	bannerFetch
+} from '../actions'
 
 
 import '../../styles/index.scss'
@@ -17,6 +22,7 @@ class Banner extends Component {
 
 	componentWillMount() {
 		this.props.loginUserCheck()
+		this.props.bannerFetch()
 	}
 
 	_handleImageLoaded() {
@@ -45,7 +51,8 @@ class Banner extends Component {
 							<div className="bannerImage" >
 								{(this.state.imageStatus === "loading") ? <div>Loading...</div>: ""}
 								<img 
-									src="https://firebasestorage.googleapis.com/v0/b/tummour-original.appspot.com/o/static%2Fimages%2F01-home%2Fbanner.jpg?alt=media&token=c15713cb-1ed0-4c9a-8822-db4f7eb231b3" 
+									src={(this.props.banner && this.props.banner.src)} 
+									alt={(this.props.banner && this.props.banner.tag)}
 									width="100%"
 									onLoad={() => this._handleImageLoaded()}
 								/>
@@ -60,13 +67,15 @@ class Banner extends Component {
 	}
 }
 
-const mapStateToProps = ({ auth }) => {
+const mapStateToProps = ({ auth, banner }) => {
+	const { user } = auth
 	return {
-		user: auth.user
+		user,
+		banner: banner.banner
 	}
 }
 
 
 export default withRedux(initStore, mapStateToProps, { 
-	loginUserCheck, logoutUser 
+	loginUserCheck, logoutUser, bannerFetch
 })(Banner)

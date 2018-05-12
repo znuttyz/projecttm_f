@@ -13,7 +13,7 @@ const NewsInfo = () => (
 			<div className="tabcontent">
 	 			<ul>
 					<li className="eachcontent">
-						<Link href=""><a>
+						<Link href="/newsdetail"><a>
 							<ul>
 								<li className="content-img">
 									<img src="http://placehold.it/600x400" />
@@ -27,7 +27,7 @@ const NewsInfo = () => (
 		 				</a></Link>
 	 				</li>
 	 				<li className="eachcontent">
-						<Link href=""><a>
+						<Link href="/newsdetail"><a>
 							<ul>
 								<li className="content-img">
 									<img src="http://placehold.it/600x400" />
@@ -41,7 +41,7 @@ const NewsInfo = () => (
 		 				</a></Link>
 	 				</li>
 	 				<li className="eachcontent">
-						<Link href=""><a>
+						<Link href="/newsdetail"><a>
 							<ul>
 								<li className="content-img">
 									<img src="http://placehold.it/600x400" />
@@ -55,7 +55,7 @@ const NewsInfo = () => (
 		 				</a></Link>
 	 				</li>
 	 				<li className="eachcontent">
-						<Link href=""><a>
+						<Link href="/newsdetail"><a>
 							<ul>
 								<li className="content-img">
 									<img src="http://placehold.it/600x400" />

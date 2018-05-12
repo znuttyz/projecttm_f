@@ -9,19 +9,31 @@
 	.home-ourbrands-inner {
 		ul {
 			text-align: center;
-			li {
+			li.each-brand {
 				display: inline-block;
 				width: 22%;
 				margin: 0 auto;
 				padding: 0 8px;
 				ul {
-					li.each-brand {
+					li {
 						display: block;
-						width: 100%;
-						margin-bottom: 20px;
-						&:first-child {
-							img {
-								width: 70%;
+						overflow: hidden;
+						&.brandname {
+							padding-bottom: 20px;
+							a {
+								img {
+									width: 70%;
+								}
+							}
+						}
+						&.brandimg {
+							a {
+								img {
+									transition: transform 0.5s;
+									&:hover {
+										transform: scale(1.2);
+									}
+								}
 							}
 						}
 					}

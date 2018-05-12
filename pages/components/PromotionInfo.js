@@ -19,7 +19,7 @@ const PromotionInfo = () => (
 	 			</select>
 	 			<ul className="all-promotions">
 					<li className="each-promotion">
-						<Link href=""><a>
+						<Link href="/promotiondetail"><a>
 							<img src="http://placehold.it/280X280" />
 							<div className="promotion-text">
 								<h3>
@@ -30,7 +30,7 @@ const PromotionInfo = () => (
 						</a></Link>
 					</li>
 					<li className="each-promotion">
-						<Link href=""><a>
+						<Link href="/promotiondetail"><a>
 							<img src="http://placehold.it/280X280" />
 							<div className="promotion-text">
 								<h3>
@@ -41,7 +41,7 @@ const PromotionInfo = () => (
 						</a></Link>
 					</li>
 					<li className="each-promotion">
-						<Link href=""><a>
+						<Link href="/promotiondetail"><a>
 							<img src="http://placehold.it/280X280" />
 							<div className="promotion-text">
 								<h3>
@@ -52,7 +52,7 @@ const PromotionInfo = () => (
 						</a></Link>
 					</li>
 					<li className="each-promotion">
-						<Link href=""><a>
+						<Link href="/promotiondetail"><a>
 							<img src="http://placehold.it/280X280" />
 							<div className="promotion-text">
 								<h3>
@@ -63,7 +63,7 @@ const PromotionInfo = () => (
 						</a></Link>
 					</li>
 					<li className="each-promotion">
-						<Link href=""><a>
+						<Link href="/promotiondetail"><a>
 							<img src="http://placehold.it/280X280" />
 							<div className="promotion-text">
 								<h3>
@@ -74,7 +74,7 @@ const PromotionInfo = () => (
 						</a></Link>
 					</li>
 					<li className="each-promotion">
-						<Link href=""><a>
+						<Link href="/promotiondetail"><a>
 							<img src="http://placehold.it/280X280" />
 							<div className="promotion-text">
 								<h3>
@@ -85,7 +85,7 @@ const PromotionInfo = () => (
 						</a></Link>
 					</li>
 					<li className="each-promotion">
-						<Link href=""><a>
+						<Link href="/promotiondetail"><a>
 							<img src="http://placehold.it/280X280" />
 							<div className="promotion-text">
 								<h3>
@@ -96,7 +96,7 @@ const PromotionInfo = () => (
 						</a></Link>
 					</li>
 					<li className="each-promotion">
-						<Link href=""><a>
+						<Link href="/promotiondetail"><a>
 							<img src="http://placehold.it/280X280" />
 							<div className="promotion-text">
 								<h3>
@@ -107,7 +107,7 @@ const PromotionInfo = () => (
 						</a></Link>
 					</li>
 					<li className="each-promotion">
-						<Link href=""><a>
+						<Link href="/promotiondetail"><a>
 							<img src="http://placehold.it/280X280" />
 							<div className="promotion-text">
 								<h3>

@@ -1,4 +1,13 @@
 import Link from 'next/link'
+import Slider from "react-slick";
+
+let settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1
+};
 
 const NewsDetailElement = () => (
 	<div className="newsdetailelement clear">
@@ -14,9 +23,26 @@ const NewsDetailElement = () => (
 	 				<h1 className="title-detail">ตำมั่วจัดงาน stranger together</h1>
 	 				<h3 className="date-detail">19 ม.ค. 61</h3>
 	 			</div>
-	 			<div className="image-detail">
-	 				<img src="http://placehold.it/900x600"/>
-	 			</div>
+	 			<Slider {...settings} className="image-detail">
+			        <div>
+			          	<img src="http://placehold.it/900x600"/>
+			        </div>
+			        <div>
+			          	<img src="http://placehold.it/900x600"/>
+			        </div>
+			        <div>
+			          	<img src="http://placehold.it/900x600"/>
+			        </div>
+			        <div>
+			         	<img src="http://placehold.it/900x600"/>
+			        </div>
+			        <div>
+			          	<img src="http://placehold.it/900x600"/>
+			        </div>
+			        <div>
+			          	<img src="http://placehold.it/900x600"/>
+			        </div>
+			    </Slider>
 	 			<div className="content-detail">
 	 				<p>เมื่อวันที่ 19 มกราคม 2561 แบรนด์ตำมั่วได้มีการจัดงาน
 	 				stranger together ณ โรงแรม Miracle Grand

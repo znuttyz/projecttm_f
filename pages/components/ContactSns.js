@@ -9,7 +9,7 @@ const ContactSns = () => (
 				<li className="each-sns">
 					<ul>
 						<li className="sns-text">
-							<Link href=""><a>
+							<Link href="https://www.facebook.com/tummouroriginal"><a target="_blank">
 								<i className="fab fa-facebook-square" />
 								<h2>ตำมั่ว ต้นตำรับ</h2>
 							</a></Link>
@@ -20,7 +20,7 @@ const ContactSns = () => (
 				<li className="each-sns">
 					<ul>
 						<li className="sns-text">
-							<Link href=""><a>
+							<Link href="http://line.me/ti/p/%40aiq4603n"><a target="_blank">
 								<i className="fab fa-line" />
 								<h2>@tummouroriginal</h2>
 							</a></Link>
@@ -31,7 +31,7 @@ const ContactSns = () => (
 				<li className="each-sns">
 					<ul>
 						<li className="sns-text">
-							<Link href=""><a>
+							<Link href="https://www.instagram.com/spicygang"><a target="_blank">
 								<i className="fab fa-instagram" />
 								<h2>spicygang</h2>
 							</a></Link>

@@ -37,12 +37,16 @@
 						vertical-align: top;
 						padding-right: 25px;
 						&.content-img {
-							width: 29%;
+							width: 300px;
+							height: 200px;
 						}
 						&.content-text {
 							width: 64%;
 							text-align: left;
 							color: $white;
+							h2 {
+								@include font-size(18);
+							}
 							p {
 								@include font-size(14);
 							}

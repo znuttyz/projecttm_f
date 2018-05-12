@@ -7,7 +7,7 @@ const PromotionInfo = () => (
 			<div className="tabtopic">
 				<ul>
 					<li><Link href="/news"><a>ข่าวสาร</a></Link></li>
-					<li><Link href=""><a>โปรโมชั่น</a></Link></li>
+					<li><Link href="/promotion"><a>โปรโมชั่น</a></Link></li>
 				</ul>
 			</div>
 			<div className="tabcontent">
@@ -19,82 +19,100 @@ const PromotionInfo = () => (
 	 			</select>
 	 			<ul className="all-promotions">
 					<li className="each-promotion">
-						<Link href=""><a>
+						<Link href="/promotiondetail"><a>
 							<img src="http://placehold.it/280X280" />
 							<div className="promotion-text">
-								<h3>โปรโมชั่นตำมั่ว 50%</h3>
+								<h3>
+									<span>ตำมั่ว</span> ฟรีเมนูตำมั่ว เพียงเช็คอินภายในร้าน
+								</h3>
 								<p>30 เม.ย. - 15 พ.ค. 61</p>
 							</div>
 						</a></Link>
 					</li>
 					<li className="each-promotion">
-						<Link href=""><a>
+						<Link href="/promotiondetail"><a>
 							<img src="http://placehold.it/280X280" />
 							<div className="promotion-text">
-								<h3>โปรโมชั่นตำมั่ว 50%</h3>
+								<h3>
+									<span>ตำมั่ว</span> ฟรีเมนูตำมั่ว เพียงเช็คอินภายในร้าน
+								</h3>
 								<p>30 เม.ย. - 15 พ.ค. 61</p>
 							</div>
 						</a></Link>
 					</li>
 					<li className="each-promotion">
-						<Link href=""><a>
+						<Link href="/promotiondetail"><a>
 							<img src="http://placehold.it/280X280" />
 							<div className="promotion-text">
-								<h3>โปรโมชั่นตำมั่ว 50%</h3>
+								<h3>
+									<span>ตำมั่ว</span> ฟรีเมนูตำมั่ว เพียงเช็คอินภายในร้าน
+								</h3>
 								<p>30 เม.ย. - 15 พ.ค. 61</p>
 							</div>
 						</a></Link>
 					</li>
 					<li className="each-promotion">
-						<Link href=""><a>
+						<Link href="/promotiondetail"><a>
 							<img src="http://placehold.it/280X280" />
 							<div className="promotion-text">
-								<h3>โปรโมชั่นตำมั่ว 50%</h3>
+								<h3>
+									<span>ตำมั่ว</span> ฟรีเมนูตำมั่ว เพียงเช็คอินภายในร้าน
+								</h3>
 								<p>30 เม.ย. - 15 พ.ค. 61</p>
 							</div>
 						</a></Link>
 					</li>
 					<li className="each-promotion">
-						<Link href=""><a>
+						<Link href="/promotiondetail"><a>
 							<img src="http://placehold.it/280X280" />
 							<div className="promotion-text">
-								<h3>โปรโมชั่นตำมั่ว 50%</h3>
+								<h3>
+									<span>ตำมั่ว</span> ฟรีเมนูตำมั่ว เพียงเช็คอินภายในร้าน
+								</h3>
 								<p>30 เม.ย. - 15 พ.ค. 61</p>
 							</div>
 						</a></Link>
 					</li>
 					<li className="each-promotion">
-						<Link href=""><a>
+						<Link href="/promotiondetail"><a>
 							<img src="http://placehold.it/280X280" />
 							<div className="promotion-text">
-								<h3>โปรโมชั่นตำมั่ว 50%</h3>
+								<h3>
+									<span>ตำมั่ว</span> ฟรีเมนูตำมั่ว เพียงเช็คอินภายในร้าน
+								</h3>
 								<p>30 เม.ย. - 15 พ.ค. 61</p>
 							</div>
 						</a></Link>
 					</li>
 					<li className="each-promotion">
-						<Link href=""><a>
+						<Link href="/promotiondetail"><a>
 							<img src="http://placehold.it/280X280" />
 							<div className="promotion-text">
-								<h3>โปรโมชั่นตำมั่ว 50%</h3>
+								<h3>
+									<span>ตำมั่ว</span> ฟรีเมนูตำมั่ว เพียงเช็คอินภายในร้าน
+								</h3>
 								<p>30 เม.ย. - 15 พ.ค. 61</p>
 							</div>
 						</a></Link>
 					</li>
 					<li className="each-promotion">
-						<Link href=""><a>
+						<Link href="/promotiondetail"><a>
 							<img src="http://placehold.it/280X280" />
 							<div className="promotion-text">
-								<h3>โปรโมชั่นตำมั่ว 50%</h3>
+								<h3>
+									<span>ตำมั่ว</span> ฟรีเมนูตำมั่ว เพียงเช็คอินภายในร้าน
+								</h3>
 								<p>30 เม.ย. - 15 พ.ค. 61</p>
 							</div>
 						</a></Link>
 					</li>
 					<li className="each-promotion">
-						<Link href=""><a>
+						<Link href="/promotiondetail"><a>
 							<img src="http://placehold.it/280X280" />
 							<div className="promotion-text">
-								<h3>โปรโมชั่นตำมั่ว 50%</h3>
+								<h3>
+									<span>ตำมั่ว</span> ฟรีเมนูตำมั่ว เพียงเช็คอินภายในร้าน
+								</h3>
 								<p>30 เม.ย. - 15 พ.ค. 61</p>
 							</div>
 						</a></Link>

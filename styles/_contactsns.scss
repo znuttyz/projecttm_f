@@ -16,6 +16,10 @@
 						margin: 15px 0;
 						a {
 							color: $white;
+							&:hover {
+								color: $black;
+								transition: 0.5s;
+							}
 							i {
 								display: inline;
 							}

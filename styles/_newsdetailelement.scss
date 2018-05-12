@@ -1,0 +1,61 @@
+.newsdetailelement {
+	overflow: hidden;
+	.tab {
+		.tabtopic {
+			display: inline-block;
+			width: 20%;
+			vertical-align: top;
+			ul {
+				margin: 0;
+				li {
+					&:first-child {
+						background: $gray;
+					}
+					a {
+						color: $white;
+						@include font-size(18);
+						text-align: center;
+						padding: 20px 0;
+						&:hover {
+							background: $gray;
+						}
+					}
+				}
+			}
+		}
+		.tabcontent {
+			display: inline-block;
+			width: 74%;
+			text-align: center;
+			background: $gray;
+			padding: 50px 40px 100px;
+			.head-detail {
+				text-align: left;
+				width: 90%;
+				margin: 0 auto;
+				padding-bottom: 40px;
+				h1.title-detail {
+					color: $white;
+				}
+				h3.date-detail {
+					color: $red;
+				}
+			}
+			.image-detail {
+				width: 900px;
+				height: 600px;
+				margin: 0 auto;
+			}
+			.content-detail {
+				width: 90%;
+				margin: 0 auto;
+				p {
+					color: $white;
+					text-align: left;
+					@include font-size(14);
+					margin-top: 40px;
+				}
+			}
+		}
+	}
+}

@@ -25,12 +25,12 @@ class PageNumber extends Component {
 	}
 
 	nextPage() {
-		if(this.state.selectedPage === this.state.totalPage) return;
+		if(this.state.selectedPage === this.state.totalPage) return <li><a onClick={()=>this._onSelectNextPage()} style={{visibility: "hidden"}}>ต่อไป</a></li>
 		else return <li><a onClick={()=>this._onSelectNextPage()}>ต่อไป</a></li>
 	}
 
 	previousPage() {
-		if(this.state.selectedPage === 1) return;
+		if(this.state.selectedPage === 1) return <li><a onClick={()=>this._onSelectPreviousPage()} style={{visibility: "hidden"}}>ก่อนหน้า</a></li>
 		else return <li><a onClick={()=>this._onSelectPreviousPage()}>ก่อนหน้า</a></li>
 	}
 

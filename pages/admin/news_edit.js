@@ -7,7 +7,8 @@ import {
 	initStore, 
 	loginUserCheck, 
 	logoutUser,
-	newsFetchById
+	newsFetchById,
+	newsUpdate
 } from '../actions'
 
 
@@ -44,7 +45,18 @@ class News_edit extends Component {
 				selectedFile: tmp
 			})
 		}
+		if(nextProps.isUpdate) {
+			this.setState({ loading: 100 })
+			window.location = '/admin/news'
+		}
 	}
+
+	fileSelectedHandler(event, id) {
+		let tmp = this.state.selectedFile
+		tmp[id] = event.target.files[0]
+		this.setState({ selectedFile: tmp })
+		console.log(this.state.selectedFile)
+	};
 
 	_onHandleChange(event) {
 		this.setState({
@@ -54,6 +66,49 @@ class News_edit extends Component {
 
 	_handleLogout() {
 	 	this.props.logoutUser()
+	}
+
+	_onHandleSubmit() {
+		console.log("submit")
+		this.setState({ disableInput: true })
+
+		if(this.state.selectedFile[0].name === this.props.news.banner_th) {
+			let postData = {
+				title: this.state.title,
+				sub_body: this.state.subbody,
+				body: this.state.body,
+				date: Date.now()
+			}
+			const id = this.state.id
+			this.props.newsUpdate(id, postData)
+		} else {
+			// Handle array file upload
+			const promiseSerial = funcs =>
+			  funcs.reduce((promise, func) =>
+			    promise.then(result => func().then(Array.prototype.concat.bind(result))),
+			    Promise.resolve([]))
+			const funcs = this.state.selectedFile.map((file, index) => () => {
+				const fd = new FormData()
+				fd.append('image', file, file.name)
+				this.setState({ loading: Math.round(-100/(index-this.state.selectedFile.length))-20 })
+				return axios.post('https://us-central1-tummour-original.cloudfunctions.net/uploadFile', fd)
+			})
+			promiseSerial(funcs)
+			.then(res => {
+				console.log(res)
+				let postData = {
+					title: this.state.title,
+					sub_body: this.state.subbody,
+					body: this.state.body,
+					date: Date.now(),
+					banner_th: this.state.selectedFile[0].name
+				}
+				const id = this.state.id
+				this.props.newsUpdate(id, postData)
+			})
+			.catch(console.error.bind(console))
+		}
+			
 	}
 
 
@@ -70,7 +125,7 @@ class News_edit extends Component {
 				<div className="contentAdmin">
 					<Header title="News" user={(this.props.user && this.props.user.email)} handleLogout={() => this._handleLogout()} />
 
-					<Card title="News" subTitle="Edit News" isEdit={true}>
+					<Card title={"News's id: " + this.state.id} subTitle="Edit News" isEdit={true}>
 						<Form 
 							title="News"
 							handleChange={(event) => this._onHandleChange(event)} 
@@ -95,7 +150,7 @@ class News_edit extends Component {
 						</div>
 
 						<div className="formContainer">
-							<button className="formFile submitBtn" onClick={() => this._onHandleSubmit()}>SUBMIT</button>
+							<button className="formFile submitBtn" onClick={() => this._onHandleSubmit()}>UPDATE</button>
 							<div className="fileLoader">{this.state.loading && this.state.loading + '%'}</div>
 						</div>
 					</Card>
@@ -110,10 +165,11 @@ class News_edit extends Component {
 const mapStateToProps = ({ auth, news }) => {
 	return {
 		user: auth.user,
-		news: news.news
+		news: news.news,
+		isUpdate: news.isUpdate
 	}
 }
 
 export default withRedux(initStore, mapStateToProps, { 
-	loginUserCheck, logoutUser, newsFetchById
+	loginUserCheck, logoutUser, newsFetchById, newsUpdate
 })(News_edit)

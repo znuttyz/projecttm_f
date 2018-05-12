@@ -9,3 +9,6 @@ export const BANNER_UPDATE = 'banner_update'
 
 export const NEWS_FETCH = 'news_fetch'
 export const NEWS_CREATE = 'news_create'
+export const NEWS_UPDATE = 'news_update'
+export const NEWS_FETCH_IMAGE = 'news_fetch_image'
+export const NEWS_CREATE_IMAGE = 'news_create_image'

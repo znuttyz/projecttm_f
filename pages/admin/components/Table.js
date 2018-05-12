@@ -11,7 +11,7 @@ const showNews = (news) => {
 				<td>{data.sub_body}</td>
 				<td>{data.body}</td>
 				<td>
-					<a href="#">Gallery</a>
+					<Link href={{ pathname: '/admin/news_gallery', query: { id: data.id } }}><a href="#">Gallery</a></Link>
 					<Link href={{ pathname: '/admin/news_edit', query: { id: data.id } }}><a>Edit</a></Link>
 					<a href="#">Delete</a>
 				</td>

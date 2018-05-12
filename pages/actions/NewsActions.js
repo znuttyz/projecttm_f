@@ -1,7 +1,10 @@
 import * as firebase from 'firebase';
 import {
 	NEWS_FETCH,
-	NEWS_CREATE
+	NEWS_CREATE,
+	NEWS_UPDATE,
+	NEWS_FETCH_IMAGE,
+	NEWS_CREATE_IMAGE
 } from './types';
 
 export const newsFetch = () => {
@@ -37,5 +40,36 @@ export const newsCreate = (postData) => {
 		.then(() => {
 			dispatch({ type: NEWS_CREATE, payload: true });
 		});
+	}
+}
+
+export const newsUpdate = (id, postData) => {
+	return (dispatch) => {
+		console.log("newsUpdate", postData)
+		firebase.database().ref('news/'+id).update(postData)
+		.then(res => dispatch({ type: NEWS_UPDATE, payload: true }))
+	}
+}
+
+export const newsCreateImageById = (id, postData) => {
+	return (dispatch) => {
+		firebase.database().ref('news/'+id+'/images/').push(postData)
+		.then(res => dispatch({ type: NEWS_CREATE_IMAGE }))
+	}
+}
+
+export const newsFetchImageById = (id) => {
+	return (dispatch) => {
+		let	newsRef = firebase.database().ref('news/'+id+'/images')
+		newsRef.once('value', function(snapshot) {
+			let images = [];
+			snapshot.forEach(function(childSnapshot) {
+		      let childData = childSnapshot.val();
+		      // childData.key = childSnapshot.key;
+		      images.push(childData);
+		    });
+		    console.log("newsFetchImageById", images)
+			dispatch({ type: NEWS_FETCH_IMAGE, payload: images })
+		})
 	}
 }

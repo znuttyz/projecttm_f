@@ -18,8 +18,8 @@ class Banner_edit extends Component {
 	constructor(props) {
 		super(props)
 		this.state = {
-			name: "",
-			tag: "",
+			// name: "",
+			// tag: "",
 			selectedFile1: null,
 			selectedFile2: null,
 			selectedFile3: null,
@@ -61,10 +61,12 @@ class Banner_edit extends Component {
 	      }
 	    })
 	    .then(res => {
-	    	const { name, tag } = this.state
-	    	const src = 'https://storage.cloud.google.com/tummour-original.appspot.com/upload/'+file.name
-	    	this.props.bannerUpdate({ [lang]: src })
-	    	this.setState({ [loading]: 100 })
+	    	// const { name, tag } = this.state
+	    	axios.get('https://us-central1-tummour-original.cloudfunctions.net/getFile?filename='+file.name)
+	    	.then(res => {
+	    		this.props.bannerUpdate({ [lang]: res.data.url })
+	    		this.setState({ [loading]: 100 })
+	    	})
 	    })
 	}
 

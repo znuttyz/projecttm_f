@@ -6,7 +6,8 @@ import {
 	initStore, 
 	loginUserCheck, 
 	logoutUser,
-	newsFetch
+	newsFetch,
+	newsDeleteById
 } from '../actions'
 
 
@@ -25,6 +26,7 @@ class News extends Component {
 	componentWillMount() {
 		this.props.loginUserCheck()
 		this.props.newsFetch()
+
 	}
 
 	componentWillReceiveProps(nextProps) {
@@ -34,6 +36,16 @@ class News extends Component {
 		if(nextProps.user) {
 			this.setState({ user: nextProps.user })
 		}
+	}
+
+	_handleDelete(id) {
+		let promise = new Promise((resolve, reject) => {
+		  	this.props.newsDeleteById(id)
+		  	resolve()
+		})
+		promise.then(() => {
+			this.props.newsFetch()
+		})
 	}
 
 	_handleLogout() {
@@ -55,7 +67,7 @@ class News extends Component {
 
 					<Card title="News" subTitle="List of News">
 						
-						<Table news={this.state.news}/>
+						<Table title="News" news={this.state.news} handleDelete={(id) => this._handleDelete(id)}/>
 
 					</Card>
 
@@ -75,5 +87,5 @@ const mapStateToProps = ({ auth, news }) => {
 }
 
 export default withRedux(initStore, mapStateToProps, { 
-	loginUserCheck, logoutUser, newsFetch
+	loginUserCheck, logoutUser, newsFetch, newsDeleteById
 })(News)

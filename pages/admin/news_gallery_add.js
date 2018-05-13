@@ -43,10 +43,14 @@ class News_gallery_add extends Component {
 	      }
 	    })
 	    .then(res => {
-	    	const src = 'https://storage.cloud.google.com/tummour-original.appspot.com/upload/'+this.state.selectedFile.name
-	    	this.props.newsCreateImageById(this.state.id, this.state.selectedFile.name)
-	    	this.setState({ loading: 100 })
-	    	window.location = "/admin/news"
+	    	axios.get('https://us-central1-tummour-original.cloudfunctions.net/getFile?filename='+this.state.selectedFile.name)
+	    	.then(res => {
+	    		let src = res.data.url
+	    		this.props.newsCreateImageById(this.state.id, src)
+	    		this.setState({ loading: 100 })
+	    		window.location = "/admin/news"
+	    	})
+	    	
 	    })
 	}
 

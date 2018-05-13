@@ -3,6 +3,7 @@ import {
 	NEWS_FETCH,
 	NEWS_CREATE,
 	NEWS_UPDATE,
+	NEWS_DELETE,
 	NEWS_FETCH_IMAGE,
 	NEWS_CREATE_IMAGE
 } from './types';
@@ -23,7 +24,6 @@ export const newsFetch = () => {
 
 export const newsFetchById = (id) => {
 	return (dispatch) => {
-		console.log('newsFetchById', id)
 		let	newsRef = firebase.database().ref('news/'+id)
 		newsRef.once('value', function(snapshot) {
 			dispatch({ type: NEWS_FETCH, payload: snapshot.val() })
@@ -45,7 +45,6 @@ export const newsCreate = (postData) => {
 
 export const newsUpdate = (id, postData) => {
 	return (dispatch) => {
-		console.log("newsUpdate", postData)
 		firebase.database().ref('news/'+id).update(postData)
 		.then(res => dispatch({ type: NEWS_UPDATE, payload: true }))
 	}
@@ -71,5 +70,11 @@ export const newsFetchImageById = (id) => {
 		    console.log("newsFetchImageById", images)
 			dispatch({ type: NEWS_FETCH_IMAGE, payload: images })
 		})
+	}
+}
+
+export const newsDeleteById = (id) => {
+	return (dispatch) => {
+		firebase.database().ref('news/'+id).remove()
 	}
 }

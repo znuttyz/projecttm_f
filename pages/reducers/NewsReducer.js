@@ -2,6 +2,7 @@ import {
 	NEWS_FETCH,
 	NEWS_CREATE,
 	NEWS_UPDATE,
+	NEWS_DELETE,
 	NEWS_FETCH_IMAGE,
 	NEWS_CREATE_IMAGE
 } from '../actions/types';

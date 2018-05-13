@@ -6,28 +6,23 @@ import withRedux from 'next-redux-wrapper'
 import { 
 	initStore, 
 	loginUserCheck, 
-	logoutUser,
-	newsCreate
+	logoutUser ,
+	promotionCreate
 } from '../actions'
 
 
 import '../../styles/index.scss'
 
-class News_add extends Component {
+class Promotion_add extends Component {
 
 	constructor(props) {
 		super(props)
-		const date = new Date()
 		this.state = {
 			title: "",
-			subbody: "",
 			body: "",
 			selectedFile: [],
 			loading: null,
 			disableInput: false,
-			day: date.getDate(),
-			month: date.getMonth()+1,
-			year: date.getFullYear()
 		}
 	}
 
@@ -38,9 +33,13 @@ class News_add extends Component {
 	componentWillReceiveProps(nextProps) {
 		if(nextProps.isCreate) {
 			this.setState({ loading: 100 })
-			window.location = '/admin/news'
+			window.location = '/admin/promotion'
 		}
 	}
+
+	_handleLogout() {
+	 	this.props.logoutUser()
+	 }
 
 	fileSelectedHandler(event, id) {
 		let tmp = this.state.selectedFile
@@ -54,10 +53,6 @@ class News_add extends Component {
 	    	[event.target.name]: event.target.value
 	    });
 	}
-
-	_handleLogout() {
-	 	this.props.logoutUser()
-	 }
 
 	_onHandleSubmit() {
 	 	console.log('submit')
@@ -83,61 +78,39 @@ class News_add extends Component {
 			.then(res => {
 				let postData = {
 					title: this.state.title,
-					sub_body: this.state.subbody,
 					body: this.state.body,
 					date: Date.now(),
 					banner_th: res.data.url
 				}
-				this.props.newsCreate(postData)
+				this.props.promotionCreate(postData)
 			})
 			
 		})
 		.catch(console.error.bind(console))
 	}
 
-	showDate() {
-		let { day, month, year } = this.state
-		const totalDays = new Date(year, month, 0).getDate()
-		console.log(totalDays, day, month, year)
-
-		let selectDay
-		for(let i = 1; i <= totalDays; i++) {
-			selectDay += <option>{i}</option>
-		}
-		return selectDay
-
-		// return(
-		// 	<select>
-		// 		<option value="volvo">Volvo</option>
-		// 		<option value="saab">Saab</option>
-		// 		<option value="mercedes">Mercedes</option>
-		// 		<option value="audi">Audi</option>
-		// 	</select>
-		// )
-	}
-
 	render() {
 		if(!this.props.user) return <div></div>;
-		
+
 		return (
 			<div className="wrapperAdmin">
 
 				<div className="sidebarAdmin">
-					<Sidebar active="News" />
+					<Sidebar active="Promotions" />
 				</div>
 
 				<div className="contentAdmin">
-					<Header title="News" user={(this.props.user && this.props.user.email)} handleLogout={() => this._handleLogout()} />
+					<Header title="Promotions" user={(this.props.user && this.props.user.email)} handleLogout={() => this._handleLogout()} />
 
-					<Card title="News" subTitle="Edit News" isEdit={true}>
+					<Card title="Promotion" subTitle="Edit Promotion" isEdit={true}>
 						<Form 
-							title="News"
+							title="Promotion"
 							handleChange={(event) => this._onHandleChange(event)} 
 							isDisable={this.state.disableInput}
 						/>
 
 						<div className="formContainer">
-							<label className="formLabel">Browse Image Banner</label>
+							<label className="formLabel">Browse Image</label>
 							<input 
 								type="file"
 								style={{display: 'none'}}
@@ -148,57 +121,27 @@ class News_add extends Component {
 							{ this.state.selectedFile[0] && this.state.selectedFile[0].name }
 						</div>
 
-						<div className="formContainer" style={{display: 'none'}}>
-							<label className="formLabel">Browse Image (BannerEN)</label>
-							<input 
-								type="file"
-								style={{display: 'none'}}
-						        onChange={event => this.fileSelectedHandler(event, 1)}
-						        ref={fileInput2 => this.fileInput2 = fileInput2}
-							/>
-							<button onClick={() => this.fileInput2.click()} className="formFile">Pick File</button>
-							{ this.state.selectedFile[1] && this.state.selectedFile[1].name }
-						</div>
-
-						<div className="formContainer" style={{display: 'none'}}>
-							<label className="formLabel">Browse Image (BannerEN)</label>
-							<input 
-								type="file"
-								style={{display: 'none'}}
-						        onChange={event => this.fileSelectedHandler(event, 2)}
-						        ref={fileInput3 => this.fileInput3 = fileInput3}
-							/>
-							<button onClick={() => this.fileInput3.click()} className="formFile">Pick File</button>
-							{ this.state.selectedFile[2] && this.state.selectedFile[2].name }
-						</div>
-
-						<div className="formContainer">
-							<input type="number" value={this.state.day}/>
-							<input type="number" value={this.state.month}/>
-							<input type="number" value={this.state.year}/>
-							<select>{this.showDate()}</select>
-						</div>
-
 						<div className="formContainer">
 							<button className="formFile submitBtn" onClick={() => this._onHandleSubmit()}>SUBMIT</button>
 							<div className="fileLoader">{this.state.loading && 'Progress: ' + this.state.loading + '%'}</div>
 						</div>
-					</Card>
+						
+					</Card>	
 
-				</div>	
+				</div>
 			    	
 			</div>
 		)
 	}
 }
 
-const mapStateToProps = ({ auth, news }) => {
+const mapStateToProps = ({ auth, promotion }) => {
 	return {
 		user: auth.user,
-		isCreate: news.isCreate
+		isCreate: promotion.isCreate
 	}
 }
 
 export default withRedux(initStore, mapStateToProps, { 
-	loginUserCheck, logoutUser, newsCreate
-})(News_add)
+	loginUserCheck, logoutUser, promotionCreate
+})(Promotion_add)

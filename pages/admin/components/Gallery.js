@@ -4,7 +4,7 @@ const showImages = (images) => {
 	return images.map(src => {
 		return (
 			<li className="each-promotion">
-				<img src={"https://storage.cloud.google.com/tummour-original.appspot.com/upload/"+src} />
+				<img src={src} />
 			</li>
 		)
 	})

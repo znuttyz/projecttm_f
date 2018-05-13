@@ -96,15 +96,19 @@ class News_edit extends Component {
 			promiseSerial(funcs)
 			.then(res => {
 				console.log(res)
-				let postData = {
-					title: this.state.title,
-					sub_body: this.state.subbody,
-					body: this.state.body,
-					date: Date.now(),
-					banner_th: this.state.selectedFile[0].name
-				}
-				const id = this.state.id
-				this.props.newsUpdate(id, postData)
+
+				axios.get('https://us-central1-tummour-original.cloudfunctions.net/getFile?filename='+this.state.selectedFile[0].name)
+				.then(res => {
+					let postData = {
+						title: this.state.title,
+						sub_body: this.state.subbody,
+						body: this.state.body,
+						date: Date.now(),
+						banner_th: res.data.url
+					}
+					const id = this.state.id
+					this.props.newsUpdate(id, postData)
+				})
 			})
 			.catch(console.error.bind(console))
 		}

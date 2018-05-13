@@ -25,22 +25,22 @@ const NewsDetailElement = () => (
 	 			</div>
 	 			<Slider {...settings} className="image-detail">
 			        <div>
-			          	<img src="http://placehold.it/900x600"/>
+			          	<img src="/static/images/imgnews.jpg"/>
 			        </div>
 			        <div>
-			          	<img src="http://placehold.it/900x600"/>
+			          	<img src="/static/images/imgnews.jpg"/>
 			        </div>
 			        <div>
-			          	<img src="http://placehold.it/900x600"/>
+			          	<img src="/static/images/imgnews.jpg"/>
 			        </div>
 			        <div>
-			         	<img src="http://placehold.it/900x600"/>
+			         	<img src="/static/images/imgnews.jpg"/>
 			        </div>
 			        <div>
-			          	<img src="http://placehold.it/900x600"/>
+			          	<img src="/static/images/imgnews.jpg"/>
 			        </div>
 			        <div>
-			          	<img src="http://placehold.it/900x600"/>
+			          	<img src="/static/images/imgnews.jpg"/>
 			        </div>
 			    </Slider>
 	 			<div className="content-detail">

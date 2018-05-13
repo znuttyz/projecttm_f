@@ -16,12 +16,12 @@ const NewsInfo = () => (
 						<Link href="/newsdetail"><a>
 							<ul>
 								<li className="content-img">
-									<img src="http://placehold.it/600x400" />
+									<img src="/static/images/imgnews.jpg" />
 		 						</li>
 		 						<li className="content-text">
-		 							<h2>This is header.</h2>
-		 							<p>content content content content content content content content content
-		 							content content content content content</p>
+		 							<h2 className="topic">ตำมั่วจัดงาน stranger together</h2>
+		 							<h4 className="date">19 มกราคม 2561</h4>
+		 							<p className="sub-content">เมื่อวันที่ 19 มกราคม 2561 แบรนด์ตำมั่วได้มีการจัดงาน stranger together ณ โรงแรม Miracle Grand เพื่อเป็นการกำหนดทิศทางการดำเนินธุรกิจในปี 2561 ภายใต้แบรนด์ตำมั่วทั้งหมด ภายในงานมีการนำพรีเซนเตอร์คนปัจจุบันซึ่งก็คือ “ก้องห้วยไร่” มาร้องเพลงพร้อมกับเปิดตัวเมนู่ใหม่ มีการให้เฟรนไชส์ปรึกษาปัญญาการดำเนินธุรกิจร้านอาหารของเรา และในภาคค่ำได้มีการจัดเลี้ยงเพื่อกระชับความสัมพันธ์กันระหว่างแบรนด์กับลูกค้เฟนไชส์</p>
 		 						</li>
 		 					</ul>
 		 				</a></Link>
@@ -30,12 +30,12 @@ const NewsInfo = () => (
 						<Link href="/newsdetail"><a>
 							<ul>
 								<li className="content-img">
-									<img src="http://placehold.it/600x400" />
+									<img src="/static/images/imgnews.jpg" />
 		 						</li>
 		 						<li className="content-text">
-		 							<h2>This is header.</h2>
-		 							<p>content content content content content content content content content
-		 							content content content content content</p>
+		 							<h2 className="topic">ตำมั่วจัดงาน stranger together</h2>
+		 							<h4 className="date">19 มกราคม 2561</h4>
+		 							<p className="sub-content">เมื่อวันที่ 19 มกราคม 2561 แบรนด์ตำมั่วได้มีการจัดงาน stranger together ณ โรงแรม Miracle Grand เพื่อเป็นการกำหนดทิศทางการดำเนินธุรกิจในปี 2561 ภายใต้แบรนด์ตำมั่วทั้งหมด ภายในงานมีการนำพรีเซนเตอร์คนปัจจุบันซึ่งก็คือ “ก้องห้วยไร่” มาร้องเพลงพร้อมกับเปิดตัวเมนู่ใหม่ มีการให้เฟรนไชส์ปรึกษาปัญญาการดำเนินธุรกิจร้านอาหารของเรา และในภาคค่ำได้มีการจัดเลี้ยงเพื่อกระชับความสัมพันธ์กันระหว่างแบรนด์กับลูกค้เฟนไชส์</p>
 		 						</li>
 		 					</ul>
 		 				</a></Link>
@@ -44,12 +44,12 @@ const NewsInfo = () => (
 						<Link href="/newsdetail"><a>
 							<ul>
 								<li className="content-img">
-									<img src="http://placehold.it/600x400" />
+									<img src="/static/images/imgnews.jpg" />
 		 						</li>
 		 						<li className="content-text">
-		 							<h2>This is header.</h2>
-		 							<p>content content content content content content content content content
-		 							content content content content content</p>
+		 							<h2 className="topic">ตำมั่วจัดงาน stranger together</h2>
+		 							<h4 className="date">19 มกราคม 2561</h4>
+		 							<p className="sub-content">เมื่อวันที่ 19 มกราคม 2561 แบรนด์ตำมั่วได้มีการจัดงาน stranger together ณ โรงแรม Miracle Grand เพื่อเป็นการกำหนดทิศทางการดำเนินธุรกิจในปี 2561 ภายใต้แบรนด์ตำมั่วทั้งหมด ภายในงานมีการนำพรีเซนเตอร์คนปัจจุบันซึ่งก็คือ “ก้องห้วยไร่” มาร้องเพลงพร้อมกับเปิดตัวเมนู่ใหม่ มีการให้เฟรนไชส์ปรึกษาปัญญาการดำเนินธุรกิจร้านอาหารของเรา และในภาคค่ำได้มีการจัดเลี้ยงเพื่อกระชับความสัมพันธ์กันระหว่างแบรนด์กับลูกค้เฟนไชส์</p>
 		 						</li>
 		 					</ul>
 		 				</a></Link>
@@ -58,12 +58,12 @@ const NewsInfo = () => (
 						<Link href="/newsdetail"><a>
 							<ul>
 								<li className="content-img">
-									<img src="http://placehold.it/600x400" />
+									<img src="/static/images/imgnews.jpg" />
 		 						</li>
 		 						<li className="content-text">
-		 							<h2>This is header.</h2>
-		 							<p>content content content content content content content content content
-		 							content content content content content</p>
+		 							<h2 className="topic">ตำมั่วจัดงาน stranger together</h2>
+		 							<h4 className="date">19 มกราคม 2561</h4>
+		 							<p className="sub-content">เมื่อวันที่ 19 มกราคม 2561 แบรนด์ตำมั่วได้มีการจัดงาน stranger together ณ โรงแรม Miracle Grand เพื่อเป็นการกำหนดทิศทางการดำเนินธุรกิจในปี 2561 ภายใต้แบรนด์ตำมั่วทั้งหมด ภายในงานมีการนำพรีเซนเตอร์คนปัจจุบันซึ่งก็คือ “ก้องห้วยไร่” มาร้องเพลงพร้อมกับเปิดตัวเมนู่ใหม่ มีการให้เฟรนไชส์ปรึกษาปัญญาการดำเนินธุรกิจร้านอาหารของเรา และในภาคค่ำได้มีการจัดเลี้ยงเพื่อกระชับความสัมพันธ์กันระหว่างแบรนด์กับลูกค้เฟนไชส์</p>
 		 						</li>
 		 					</ul>
 		 				</a></Link>

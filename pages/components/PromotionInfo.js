@@ -20,7 +20,7 @@ const PromotionInfo = () => (
 	 			<ul className="all-promotions">
 					<li className="each-promotion">
 						<Link href="/promotiondetail"><a>
-							<img src="http://placehold.it/280X280" />
+							<img src="/static/images/imgpromo.jpg" />
 							<div className="promotion-text">
 								<h3>
 									<span>ตำมั่ว</span> ฟรีเมนูตำมั่ว เพียงเช็คอินภายในร้าน
@@ -31,7 +31,7 @@ const PromotionInfo = () => (
 					</li>
 					<li className="each-promotion">
 						<Link href="/promotiondetail"><a>
-							<img src="http://placehold.it/280X280" />
+							<img src="/static/images/imgpromo.jpg" />
 							<div className="promotion-text">
 								<h3>
 									<span>ตำมั่ว</span> ฟรีเมนูตำมั่ว เพียงเช็คอินภายในร้าน
@@ -42,7 +42,7 @@ const PromotionInfo = () => (
 					</li>
 					<li className="each-promotion">
 						<Link href="/promotiondetail"><a>
-							<img src="http://placehold.it/280X280" />
+							<img src="/static/images/imgpromo.jpg" />
 							<div className="promotion-text">
 								<h3>
 									<span>ตำมั่ว</span> ฟรีเมนูตำมั่ว เพียงเช็คอินภายในร้าน
@@ -53,7 +53,7 @@ const PromotionInfo = () => (
 					</li>
 					<li className="each-promotion">
 						<Link href="/promotiondetail"><a>
-							<img src="http://placehold.it/280X280" />
+							<img src="/static/images/imgpromo.jpg" />
 							<div className="promotion-text">
 								<h3>
 									<span>ตำมั่ว</span> ฟรีเมนูตำมั่ว เพียงเช็คอินภายในร้าน
@@ -64,7 +64,7 @@ const PromotionInfo = () => (
 					</li>
 					<li className="each-promotion">
 						<Link href="/promotiondetail"><a>
-							<img src="http://placehold.it/280X280" />
+							<img src="/static/images/imgpromo.jpg" />
 							<div className="promotion-text">
 								<h3>
 									<span>ตำมั่ว</span> ฟรีเมนูตำมั่ว เพียงเช็คอินภายในร้าน
@@ -75,7 +75,7 @@ const PromotionInfo = () => (
 					</li>
 					<li className="each-promotion">
 						<Link href="/promotiondetail"><a>
-							<img src="http://placehold.it/280X280" />
+							<img src="/static/images/imgpromo.jpg" />
 							<div className="promotion-text">
 								<h3>
 									<span>ตำมั่ว</span> ฟรีเมนูตำมั่ว เพียงเช็คอินภายในร้าน
@@ -86,7 +86,7 @@ const PromotionInfo = () => (
 					</li>
 					<li className="each-promotion">
 						<Link href="/promotiondetail"><a>
-							<img src="http://placehold.it/280X280" />
+							<img src="/static/images/imgpromo.jpg" />
 							<div className="promotion-text">
 								<h3>
 									<span>ตำมั่ว</span> ฟรีเมนูตำมั่ว เพียงเช็คอินภายในร้าน
@@ -97,7 +97,7 @@ const PromotionInfo = () => (
 					</li>
 					<li className="each-promotion">
 						<Link href="/promotiondetail"><a>
-							<img src="http://placehold.it/280X280" />
+							<img src="/static/images/imgpromo.jpg" />
 							<div className="promotion-text">
 								<h3>
 									<span>ตำมั่ว</span> ฟรีเมนูตำมั่ว เพียงเช็คอินภายในร้าน
@@ -108,7 +108,7 @@ const PromotionInfo = () => (
 					</li>
 					<li className="each-promotion">
 						<Link href="/promotiondetail"><a>
-							<img src="http://placehold.it/280X280" />
+							<img src="/static/images/imgpromo.jpg" />
 							<div className="promotion-text">
 								<h3>
 									<span>ตำมั่ว</span> ฟรีเมนูตำมั่ว เพียงเช็คอินภายในร้าน

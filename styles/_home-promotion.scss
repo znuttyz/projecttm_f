@@ -18,12 +18,14 @@
 				width: 280px;
 				height: 280px;
 				margin: 25px 20px;
-				overflow: hidden;
 				a {
-					img {
-						transition: transform 0.5s;
-						&:hover {
-							transform: scale(1.2);
+					.promotion-img {
+						overflow: hidden;
+						img {
+							transition: transform 0.5s;
+							&:hover {
+								transform: scale(1.1);
+							}
 						}
 					}
 					.promotion-text {

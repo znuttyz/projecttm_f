@@ -15,7 +15,7 @@ const Footer = () => (
 					<li>
 						<Link href="https://www.facebook.com/tummouroriginal"><a target="_blank">
 							<i className="fab fa-facebook-square" />
-							<h2>ตำมั่วต้นตำรับ</h2>
+							<h2>ตำมั่ว ต้นตำรับ</h2>
 						</a></Link>
 					</li>
 					<li>
@@ -25,7 +25,7 @@ const Footer = () => (
 						</a></Link>
 					</li>
 				</ul>
-				<div className="copyright">© 2016 ZEN & SPICY CO.,LTD All rights Reserved.</div>
+				<div className="copyright"><i class="far fa-copyright"></i> 2018 ZEN & SPICY CO.,LTD All rights Reserved.</div>
 			</div>
 		</div>
 	</div>

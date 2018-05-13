@@ -10,7 +10,9 @@ const HomePromotion = () => (
 				<ul>
 					<li className="each-promotion">
 						<Link href=""><a>
-							<img src="http://placehold.it/280x280" />
+							<div className="promotion-img">
+								<img src="/static/images/imgpromo.jpg" />
+							</div>
 							<div className="promotion-text">
 								<h3>โปรโมชั่นตำมั่ว 50%</h3>
 								<p>30 เม.ย. - 15 พ.ค. 61</p>
@@ -19,7 +21,9 @@ const HomePromotion = () => (
 					</li>
 					<li className="each-promotion">
 						<Link href=""><a>
-							<img src="http://placehold.it/280x280" />
+							<div className="promotion-img">
+								<img src="/static/images/imgpromo.jpg" />
+							</div>
 							<div className="promotion-text">
 								<h3>โปรโมชั่นตำมั่ว 50%</h3>
 								<p>30 เม.ย. - 15 พ.ค. 61</p>
@@ -28,7 +32,9 @@ const HomePromotion = () => (
 					</li>
 					<li className="each-promotion">
 						<Link href=""><a>
-							<img src="http://placehold.it/280x280" />
+							<div className="promotion-img">
+								<img src="/static/images/imgpromo.jpg" />
+							</div>
 							<div className="promotion-text">
 								<h3>โปรโมชั่นตำมั่ว 50%</h3>
 								<p>30 เม.ย. - 15 พ.ค. 61</p>

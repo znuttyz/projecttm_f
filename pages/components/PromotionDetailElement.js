@@ -15,7 +15,7 @@ const PromotionDetailElement = () => (
 	 				<h3 className="date-detail">27-29 เม.ย. 61</h3>
 	 			</div>
 		        <div className="image-detail">
-		          	<img src="http://placehold.it/600x600"/>
+		          	<img src="/static/images/imgpromo.jpg"/>
 		        </div>
 	 			<div className="content-detail">
 	 				<p>เงื่อนไข</p>

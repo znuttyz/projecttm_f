@@ -44,11 +44,22 @@
 							width: 64%;
 							text-align: left;
 							color: $white;
-							h2 {
+							height: 200px;
+							h2.topic {
 								@include font-size(18);
 							}
-							p {
+							h4.date {
+								color: $white;
+								font-weight: 100;
+							}
+							p.sub-content {
 								@include font-size(14);
+								line-height: 1.1;
+								// white-space: nowrap;
+								overflow: hidden;
+								text-overflow: ellipsis;
+								height: 145px;
+								margin-top: 10px;
 							}
 						}
 					}

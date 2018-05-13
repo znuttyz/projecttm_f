@@ -1,0 +1,25 @@
+.aboutinfo {
+	padding: 25px 0;
+	.aboutlogo {
+		text-align: center;
+		img {
+			width: 200px;
+		}
+	}
+	.aboutcontent {
+		padding-bottom: 25px;
+		p {
+			color: $white;
+			@include font-size(14);
+			line-height: 1.2;
+			margin: 25px 0;
+			span {
+				color: $red;
+			}
+		}
+		.lastbox {
+			width: 500px;
+			margin-top: -150px;
+		}
+	}
+}

@@ -1,4 +1,4 @@
-.tummourelement {
+.brands-element {
 	.tab {
 		.tabtopic {
 			display: inline-block;
@@ -91,20 +91,18 @@
 							list-style: none;
 							display: inline-block;
 							color: $white;
-							width: calc(100%/5);
-							margin: 10px 0;
+							width: calc(100%/5 - 10px);
+							margin: 10px 5px;
 							outline: none;
 							h4 {
 								@include font-size(12);
 								font-weight: 100;
+								border-bottom: 1px solid #d8d8d7;
 							}
 							p {
 								@include font-size(12);
 							}
 						}
-					}
-					&.react-tabs__tab--selected {
-
 					}
 				}
 			}

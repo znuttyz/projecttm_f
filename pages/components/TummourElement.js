@@ -2,7 +2,7 @@ import Link from 'next/link'
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 
 const TummourElement = () => (
-	<div className="tummourelement clear">
+	<div className="brands-element clear">
 		<div className="tab">
 			<div className="tabtopic">
 				<ul>

@@ -104,16 +104,55 @@
 							}
 						}
 					}
+					p {
+						color: $white;
+						@include font-size(12);
+					}
 				}
 			}
 		}
 	}
 	&.b-laoyuan {
 		.tab {
+			.tabtopic {
+				ul {
+					li {
+						&:nth-child(1) {
+							background: $black;
+						}
+						&:nth-child(2) {
+							background: $gray;
+						}
+					}
+				}
+			}
 			.tabcontent {
 				.description {
 					img.b-logo {
 						width: 300px;
+					}
+				}
+			}
+		}
+	}
+	&.b-jaewhon {
+		.tab {
+			.tabtopic {
+				ul {
+					li {
+						&:nth-child(1) {
+							background: $black;
+						}
+						&:nth-child(3) {
+							background: $gray;
+						}
+					}
+				}
+			}
+			.tabcontent {
+				.description {
+					img.b-logo {
+						width: 290px;
 					}
 				}
 			}

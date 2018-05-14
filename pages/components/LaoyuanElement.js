@@ -93,7 +93,7 @@ const LaoyuanElement = () => (
 					      	</ul>
 					    </TabPanel>
 					    <TabPanel>
-					      	&nbsp;
+					      	<p>เร็วๆ นี้...</p>
 					    </TabPanel>
 					    <TabPanel>
 					    	<ul>

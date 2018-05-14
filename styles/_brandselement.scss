@@ -1,0 +1,259 @@
+.brands-element {
+	.tab {
+		.tabtopic {
+			display: inline-block;
+			width: 20%;
+			vertical-align: top;
+			ul {
+				margin: 0;
+				li {
+					&:first-child {
+						background: $gray;
+					}
+					a {
+						text-align: center;
+						&:hover {
+							background: $gray;
+						}
+						img {
+							width: 150px;
+						}
+					}
+				}
+			}
+		}
+		.tabcontent {
+			display: inline-block;
+			width: 74%;
+			text-align: center;
+			background: $gray;
+			padding: 25px 40px 100px 40px;
+			min-height: 820px;
+			.description {
+				img.b-logo {
+					width: 120px;
+					display: block;
+				}
+				img.b-line {
+					width: 400px;
+					display: block;
+					margin: 15px 0;
+				}
+				p {
+					text-align: left;
+					text-indent: 50px;
+					color: $white;
+					@include font-size(14);
+					span {
+						color: $red;
+					}
+				}
+			}
+			.btn-menu {
+				width: 80px;
+				a {
+					color: $white;
+					background: $green;
+					@include font-size(14);
+					margin: 20px 0;
+					padding: 5px 0;
+					&:hover {
+						color: $green;
+						background: $white;
+					}
+				}
+			}
+			.branches {
+				width: 100%;
+				margin: 0 auto;
+				text-align: left;
+				.react-tabs__tab {
+					display: inline-block;
+					color: #7d7b7b;
+					@include font-size(18);
+					padding-right: 50px;
+					font-weight: bold;
+					cursor: pointer;
+					outline: none;
+					&:hover {
+						color: $white;
+						transition: 0.5s;
+					}
+					&.react-tabs__tab--selected {
+						text-decoration: underline;
+						color: $white;
+						font-weight: bold;
+					}
+				}
+				.react-tabs__tab-panel {
+					ul {
+						li {
+							list-style: none;
+							display: inline-block;
+							color: $white;
+							width: calc(100%/5 - 10px);
+							margin: 10px 5px;
+							outline: none;
+							h4 {
+								@include font-size(12);
+								font-weight: 100;
+								border-bottom: 1px solid #d8d8d7;
+							}
+							p {
+								@include font-size(12);
+							}
+						}
+					}
+					p {
+						color: $white;
+						@include font-size(12);
+					}
+				}
+			}
+		}
+	}
+	&.b-laoyuan {
+		.tab {
+			.tabtopic {
+				ul {
+					li {
+						&:nth-child(1) {
+							background: $black;
+						}
+						&:nth-child(2) {
+							background: $gray;
+						}
+					}
+				}
+			}
+			.tabcontent {
+				min-height: 500px;
+				.description {
+					img.b-logo {
+						width: 300px;
+					}
+				}
+			}
+		}
+	}
+	&.b-jaewhon {
+		.tab {
+			.tabtopic {
+				ul {
+					li {
+						&:nth-child(1) {
+							background: $black;
+						}
+						&:nth-child(3) {
+							background: $gray;
+						}
+					}
+				}
+			}
+			.tabcontent {
+				min-height: 365px;
+				.description {
+					img.b-logo {
+						width: 290px;
+					}
+				}
+			}
+		}
+	}
+	&.b-pho {
+		.tab {
+			.tabtopic {
+				ul {
+					li {
+						&:nth-child(1) {
+							background: $black;
+						}
+						&:nth-child(4) {
+							background: $gray;
+						}
+					}
+				}
+			}
+			.tabcontent {
+				min-height: 365px;
+				.description {
+					img.b-logo {
+						width: 225px;
+					}
+				}
+			}
+		}
+	}
+	&.b-granny {
+		.tab {
+			.tabtopic {
+				ul {
+					li {
+						&:nth-child(1) {
+							background: $black;
+						}
+						&:nth-child(5) {
+							background: $gray;
+						}
+					}
+				}
+			}
+			.tabcontent {
+				min-height: 365px;
+				.description {
+					img.b-logo {
+						width: 240px;
+					}
+				}
+			}
+		}
+	}
+	&.b-kruathai {
+		.tab {
+			.tabtopic {
+				ul {
+					li {
+						&:nth-child(1) {
+							background: $black;
+						}
+						&:nth-child(6) {
+							background: $gray;
+						}
+					}
+				}
+			}
+			.tabcontent {
+				min-height: 365px;
+				.description {
+					img.b-logo {
+						width: 280px;
+					}
+				}
+			}
+		}
+	}
+	&.b-detummour {
+		.tab {
+			.tabtopic {
+				ul {
+					li {
+						&:nth-child(1) {
+							background: $black;
+						}
+						&:last-child {
+							background: $gray;
+						}
+					}
+				}
+			}
+			.tabcontent {
+				min-height: 365px;
+				.description {
+					img.b-logo {
+						width: 180px;
+					}
+				}
+			}
+		}
+	}
+}

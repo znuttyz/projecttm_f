@@ -49,7 +49,13 @@
 		"03-brands": {
 			"banner.jpg": "https://firebasestorage.googleapis.com/v0/b/tummour-original.appspot.com/o/static%2Fimages%2F03-brands%2Fbanner.jpg?alt=media&token=fc39f037-937e-4bab-9e75-5173327490bb",
 			"line-tm.png": "https://firebasestorage.googleapis.com/v0/b/tummour-original.appspot.com/o/static%2Fimages%2F03-brands%2Fline-tm.png?alt=media&token=fb29474d-a0ee-4673-abb1-2d702ec3c651",
-			"line-horizon": "https://firebasestorage.googleapis.com/v0/b/tummour-original.appspot.com/o/static%2Fimages%2F03-brands%2Fline-horizon.png?alt=media&token=2008b37c-b255-4c02-a4c6-888c560fe437"
+			"line-de": "https://firebasestorage.googleapis.com/v0/b/tummour-original.appspot.com/o/static%2Fimages%2F03-brands%2Fline-de.png?alt=media&token=1faedc30-f77a-43d7-821c-667baf0ffc20",
+			"line-jh": "https://firebasestorage.googleapis.com/v0/b/tummour-original.appspot.com/o/static%2Fimages%2F03-brands%2Fline-jh.png?alt=media&token=1a155bcd-6108-4dcc-8c9a-19127edfb3ac",
+			"line-kt": "https://firebasestorage.googleapis.com/v0/b/tummour-original.appspot.com/o/static%2Fimages%2F03-brands%2Fline-kt.png?alt=media&token=dea967f0-3bdc-4eef-a30f-418260cc2658",
+			"line-ky": "https://firebasestorage.googleapis.com/v0/b/tummour-original.appspot.com/o/static%2Fimages%2F03-brands%2Fline-ky.png?alt=media&token=36ec4928-efc4-4e08-99f0-e3840b84f7ab",
+			"line-ly": "https://firebasestorage.googleapis.com/v0/b/tummour-original.appspot.com/o/static%2Fimages%2F03-brands%2Fline-ly.png?alt=media&token=f0d794dc-1da8-4445-bce2-8bfe5e0afe0f",
+			"line-ph": "https://firebasestorage.googleapis.com/v0/b/tummour-original.appspot.com/o/static%2Fimages%2F03-brands%2Fline-ph.png?alt=media&token=397d7f7a-1a5a-44ba-b4e1-3cf2b2d5a123",
+			"line-horizon": "https://firebasestorage.googleapis.com/v0/b/tummour-original.appspot.com/o/static%2Fimages%2F03-brands%2Fline-horizon.png?alt=media&token=2008b37c-b255-4c02-a4c6-888c560fe437",
 		},
 		"04-promotion": {
 			"banner.jpg": "https://firebasestorage.googleapis.com/v0/b/tummour-original.appspot.com/o/static%2Fimages%2F04-promotion%2Fbanner.jpg?alt=media&token=3b780257-265f-46d7-ae9f-b7992b23a858",

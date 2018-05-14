@@ -25,7 +25,7 @@ const Footer = () => (
 						</a></Link>
 					</li>
 				</ul>
-				<div className="copyright"><i class="far fa-copyright"></i> 2018 ZEN & SPICY CO.,LTD All rights Reserved.</div>
+				<div className="copyright"><i className="far fa-copyright"></i> 2018 ZEN & SPICY CO.,LTD All rights Reserved.</div>
 			</div>
 		</div>
 	</div>

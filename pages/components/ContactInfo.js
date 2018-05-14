@@ -1,5 +1,18 @@
 import Link from 'next/link'
 import React, { Component } from "react";
+import { GMap } from './'
+// import { withScriptjs, withGoogleMap, GoogleMap, Marker } from "react-google-maps"
+
+// const GMap = withScriptjs(withGoogleMap((props) => (
+//   <GoogleMap
+//     defaultZoom={8}
+//     defaultCenter={{ lat: -34.397, lng: 150.644 }}
+//   >
+//     {props.isMarkerShown && <Marker position={{ lat: -34.397, lng: 150.644 }} />}
+//   </GoogleMap>
+// )))
+
+
 
 const ContactInfo = () => (
 	<div className="contactinfo clear">
@@ -10,7 +23,15 @@ const ContactInfo = () => (
 					<h3>บริษัท เซ็น แอนด์ สไปซี่ จำกัด<br/>
 						<span>782/1 ซอยอ่อนนุช 17 แขวงสวนหลวง<br/>เขตสวนหลวง กทม 10250<br/>Tel. 02-719-5000</span>
 					</h3>
-					<div className="ggmap" />
+					<div className="ggmap">
+						<GMap 
+							isMarkerShown 
+							googleMapURL={"https://maps.googleapis.com/maps/api/js?key="+process.env.GMAP_KEY}
+							loadingElement={<div style={{ height: `100%` }} />}
+							containerElement={<div style={{ height: `400px` }} />}
+							mapElement={<div style={{ height: `100%` }} />}
+						/>
+					</div>
 				</li>
 				<li className="contact-form">
 					<img src="https://firebasestorage.googleapis.com/v0/b/tummour-original.appspot.com/o/static%2Fimages%2F05-contact%2Fline-cm.png?alt=media&token=2ea11427-b667-41c0-bf1e-28fc3f0bd061"/>

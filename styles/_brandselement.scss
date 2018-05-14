@@ -127,6 +127,7 @@
 				}
 			}
 			.tabcontent {
+				min-height: 500px;
 				.description {
 					img.b-logo {
 						width: 300px;
@@ -150,9 +151,34 @@
 				}
 			}
 			.tabcontent {
+				min-height: 365px;
 				.description {
 					img.b-logo {
 						width: 290px;
+					}
+				}
+			}
+		}
+	}
+	&.b-pho {
+		.tab {
+			.tabtopic {
+				ul {
+					li {
+						&:nth-child(1) {
+							background: $black;
+						}
+						&:nth-child(4) {
+							background: $gray;
+						}
+					}
+				}
+			}
+			.tabcontent {
+				min-height: 365px;
+				.description {
+					img.b-logo {
+						width: 225px;
 					}
 				}
 			}

@@ -69,7 +69,6 @@ class News_edit extends Component {
 	}
 
 	_onHandleSubmit() {
-		console.log("submit")
 		this.setState({ disableInput: true })
 
 		if(this.state.selectedFile[0].name === this.props.news.banner_th) {
@@ -95,20 +94,21 @@ class News_edit extends Component {
 			})
 			promiseSerial(funcs)
 			.then(res => {
-				console.log(res)
 
-				axios.get('https://us-central1-tummour-original.cloudfunctions.net/getFile?filename='+this.state.selectedFile[0].name)
-				.then(res => {
-					let postData = {
-						title: this.state.title,
-						sub_body: this.state.subbody,
-						body: this.state.body,
-						date: Date.now(),
-						banner_th: res.data.url
-					}
-					const id = this.state.id
-					this.props.newsUpdate(id, postData)
-				})
+				// axios.get('https://us-central1-tummour-original.cloudfunctions.net/getFile?filename='+this.state.selectedFile[0].name)
+				// .then(res => {
+				let src = 'https://firebasestorage.googleapis.com/v0/b/tummour-original.appspot.com/o/upload%2F'+this.state.selectedFile[0].name+'?alt=media'
+
+				let postData = {
+					title: this.state.title,
+					sub_body: this.state.subbody,
+					body: this.state.body,
+					date: Date.now(),
+					banner_th: src
+				}
+				const id = this.state.id
+				this.props.newsUpdate(id, postData)
+				// })
 			})
 			.catch(console.error.bind(console))
 		}

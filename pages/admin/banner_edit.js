@@ -62,11 +62,12 @@ class Banner_edit extends Component {
 	    })
 	    .then(res => {
 	    	// const { name, tag } = this.state
-	    	axios.get('https://us-central1-tummour-original.cloudfunctions.net/getFile?filename='+file.name)
-	    	.then(res => {
-	    		this.props.bannerUpdate({ [lang]: res.data.url })
-	    		this.setState({ [loading]: 100 })
-	    	})
+	    	// axios.get('https://us-central1-tummour-original.cloudfunctions.net/getFile?filename='+file.name)
+	    	// .then(res => {
+    		let src = 'https://firebasestorage.googleapis.com/v0/b/tummour-original.appspot.com/o/upload%2F'+file.name+'?alt=media'
+    		this.props.bannerUpdate({ [lang]: src })
+    		this.setState({ [loading]: 100 })
+	    	// })
 	    })
 	}
 

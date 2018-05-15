@@ -11,6 +11,9 @@ let settings = {
 
 const NewsDetailElement = () => (
 	<div className="newsdetailelement clear">
+		<div className="newsdetailbanner">
+			<img src="https://firebasestorage.googleapis.com/v0/b/tummour-original.appspot.com/o/static%2Fimages%2F00-global%2Fbanner-news.png?alt=media&token=d6a68923-d052-43c3-a510-fe3efca3ed23" />
+		</div>
 		<div className="tab">
 			<div className="tabtopic">
 				<ul>

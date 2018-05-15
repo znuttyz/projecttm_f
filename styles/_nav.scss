@@ -13,8 +13,13 @@
 				li {
 					display: inline-block;
 					margin-bottom: -4px;
+					&:after {
+						content: url("/static/images/00-nav/line-ver.png");
+						position: absolute;
+						top: 15px;
+					}
 					a {
-						padding: 5px 5px 20px 5px;
+						padding: 5px 8px 20px 8px;
 						&:hover {
 							background: #362f2d;
 						}

@@ -8,7 +8,7 @@ class BrandJaewhon extends Component {
 		return (
 			<div>
 				<Head title="tummour original - jaewhon" />
-				<Nav />
+				<Nav isActive="brands" />
 				<JaewhonElement />
 				<Footer />
 			</div>

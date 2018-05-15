@@ -19,7 +19,7 @@ class Home extends Component {
 		return (
 			<div>
 				<Head title="tummour original"/>
-				<Nav isActive="หน้าแรก"/>
+				<Nav isActive="home"/>
 				{(this.props.banner && <HomeBanner image={this.props.banner}/>)}
 				<HomeOurbrands />
 				<HomePromotion />

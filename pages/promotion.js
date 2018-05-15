@@ -8,7 +8,7 @@ class Promotion extends Component {
 		return (
 			<div>
 				<Head title="tummour original - promotion" />
-				<Nav />
+				<Nav isActive="news" />
 				<PromotionInfo />
 				<Footer />
 			</div>

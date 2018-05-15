@@ -12,11 +12,11 @@ const Nav = ({ isActive }) => (
 			<div className="container">
 				<div className="navbar">
 					<ul>
-						<li><Link href="/"><a><div className="nav-index" /></a></Link></li>
-						<li><Link href="/about"><a><div className="nav-about" /></a></Link></li>
-						<li><Link href="/brands/tummour"><a><div className="nav-brands" /></a></Link></li>
-						<li><Link href="/news"><a><div className="nav-news" /></a></Link></li>
-						<li><Link href="/contact"><a><div className="nav-contact" /></a></Link></li>
+						<li><Link href="/"><a className={(isActive === "home")?"active":""}><div className="nav-index" /></a></Link></li>
+						<li><Link href="/about"><a className={(isActive === "about")?"active":""}><div className="nav-about" /></a></Link></li>
+						<li><Link href="/brands/tummour"><a className={(isActive === "brands")?"active":""}><div className="nav-brands" /></a></Link></li>
+						<li><Link href="/news"><a className={(isActive === "news")?"active":""}><div className="nav-news" /></a></Link></li>
+						<li><Link href="/contact"><a className={(isActive === "contact")?"active":""}><div className="nav-contact" /></a></Link></li>
 					</ul>
 				</div>
 			</div>

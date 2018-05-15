@@ -8,7 +8,7 @@ class NewsDetail extends Component {
 		return (
 			<div>
 				<Head title="tummour original - news" />
-				<Nav />
+				<Nav isActive="news" />
 				<NewsDetailElement />
 				<Footer />
 			</div>

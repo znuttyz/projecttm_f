@@ -8,7 +8,7 @@ class BrandPho extends Component {
 		return (
 			<div>
 				<Head title="tummour original - pho" />
-				<Nav />
+				<Nav isActive="brands" />
 				<PhoElement />
 				<Footer />
 			</div>

@@ -8,7 +8,7 @@ class BrandKruathai extends Component {
 		return (
 			<div>
 				<Head title="tummour original - kruathai" />
-				<Nav />
+				<Nav isActive="brands" />
 				<KruathaiElement />
 				<Footer />
 			</div>

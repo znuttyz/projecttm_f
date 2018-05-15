@@ -8,7 +8,7 @@ class BrandDetummour extends Component {
 		return (
 			<div>
 				<Head title="tummour original - de tummour" />
-				<Nav />
+				<Nav isActive="brands"/>
 				<DetummourElement />
 				<Footer />
 			</div>

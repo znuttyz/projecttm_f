@@ -8,7 +8,7 @@ class BrandGranny extends Component {
 		return (
 			<div>
 				<Head title="tummour original - granny's chicken rice" />
-				<Nav />
+				<Nav isActive="brands" />
 				<GrannyElement />
 				<Footer />
 			</div>

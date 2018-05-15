@@ -60,7 +60,6 @@ class News_add extends Component {
 	 }
 
 	_onHandleSubmit() {
-	 	console.log('submit')
 		this.setState({ disableInput: true })
 
 		// Handle array file upload
@@ -79,17 +78,19 @@ class News_add extends Component {
 		promiseSerial(funcs)
 		.then(res => {
 
-			axios.get('https://us-central1-tummour-original.cloudfunctions.net/getFile?filename='+this.state.selectedFile[0].name)
-			.then(res => {
-				let postData = {
-					title: this.state.title,
-					sub_body: this.state.subbody,
-					body: this.state.body,
-					date: Date.now(),
-					banner_th: res.data.url
-				}
-				this.props.newsCreate(postData)
-			})
+			// axios.get('https://us-central1-tummour-original.cloudfunctions.net/getFile?filename='+this.state.selectedFile[0].name)
+			// .then(res => {
+			let src = 'https://firebasestorage.googleapis.com/v0/b/tummour-original.appspot.com/o/upload%2F'+this.state.selectedFile[0].name+'?alt=media'
+
+			let postData = {
+				title: this.state.title,
+				sub_body: this.state.subbody,
+				body: this.state.body,
+				date: Date.now(),
+				banner_th: src
+			}
+			this.props.newsCreate(postData)
+			// })
 			
 		})
 		.catch(console.error.bind(console))

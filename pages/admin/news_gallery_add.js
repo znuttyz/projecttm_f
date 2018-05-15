@@ -43,13 +43,14 @@ class News_gallery_add extends Component {
 	      }
 	    })
 	    .then(res => {
-	    	axios.get('https://us-central1-tummour-original.cloudfunctions.net/getFile?filename='+this.state.selectedFile.name)
-	    	.then(res => {
-	    		let src = res.data.url
-	    		this.props.newsCreateImageById(this.state.id, src)
-	    		this.setState({ loading: 100 })
-	    		window.location = "/admin/news"
-	    	})
+	    	// axios.get('https://us-central1-tummour-original.cloudfunctions.net/getFile?filename='+this.state.selectedFile.name)
+	    	// .then(res => {
+	    	let src = 'https://firebasestorage.googleapis.com/v0/b/tummour-original.appspot.com/o/upload%2F'+this.state.selectedFile.name+'?alt=media'
+    		// let src = res.data.url
+    		this.props.newsCreateImageById(this.state.id, src)
+    		this.setState({ loading: 100 })
+    		window.location = "/admin/news"
+	    	// })
 	    	
 	    })
 	}

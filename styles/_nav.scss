@@ -23,6 +23,9 @@
 						&:hover {
 							background: #362f2d;
 						}
+						&.active {
+							background: #362f2d;
+						}
 						.nav-index {
 							background: url('/static/images/00-nav/01.png');
 							width: 90px;

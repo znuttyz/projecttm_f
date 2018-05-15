@@ -7,9 +7,8 @@ class About extends Component {
 	render() {
 		return (
 			<div>
-				<Head title="tummour original"/>
+				<Head title="tummour original - about"/>
 				<Nav isActive="about"/>
-				<AllBanner source="https://firebasestorage.googleapis.com/v0/b/tummour-original.appspot.com/o/static%2Fimages%2F02-about%2Fbanner.jpg?alt=media&token=bb43a9ee-b522-4e8c-9f68-2015ebea7c52"/>
 				<AboutInfo />
 				<Footer />
 			</div>

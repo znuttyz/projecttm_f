@@ -4,6 +4,9 @@ import { GMap } from './'
 
 const ContactInfo = ({ handleChange, onSubmit}) => (
 	<div className="contactinfo clear">
+		<div className="contactbanner">
+			<img src="https://firebasestorage.googleapis.com/v0/b/tummour-original.appspot.com/o/static%2Fimages%2F00-global%2Fbanner-contact.png?alt=media&token=193e0b2d-cbbc-49de-9c86-d115d44bcb4e" />
+		</div>
 		<div className="container">
 			<ul>
 				<li className="contact-address">

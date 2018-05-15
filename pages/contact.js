@@ -31,9 +31,8 @@ class Contact extends Component {
 	render() {
 		return (
 			<div>
-				<Head title="tummour original"/>
+				<Head title="tummour original - contact"/>
 				<Nav isActive="contact"/>
-				<AllBanner source="https://firebasestorage.googleapis.com/v0/b/tummour-original.appspot.com/o/static%2Fimages%2F05-contact%2Fbanner.jpg?alt=media&token=052ab2c6-d287-4ae5-86b4-38015bd40af6"/>
 				<ContactInfo 
 					handleChange={(event) => this._onHandleChange(event)}
 					onSubmit={(event) => this._onHandleSubmit(event)}

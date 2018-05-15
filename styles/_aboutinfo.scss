@@ -1,5 +1,10 @@
 .aboutinfo {
-	padding: 25px 0;
+	padding-bottom: 25px;
+	.aboutbanner {
+		background: url('https://firebasestorage.googleapis.com/v0/b/tummour-original.appspot.com/o/static%2Fimages%2F00-global%2Fbg-about-brands.jpg?alt=media&token=4aaa6781-1c89-43b2-bc1f-0c6fa03b7d4d');
+		background-size: cover;
+		background-attachment: fixed;
+	}
 	.aboutlogo {
 		text-align: center;
 		img {
@@ -13,6 +18,7 @@
 			@include font-size(14);
 			line-height: 1.2;
 			margin: 25px 0;
+			text-indent: 50px;
 			span {
 				color: $red;
 			}

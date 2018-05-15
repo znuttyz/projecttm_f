@@ -12,11 +12,11 @@ const Nav = ({ isActive }) => (
 			<div className="container">
 				<div className="navbar">
 					<ul>
-						<li><Link href="/"><a className={(isActive === "home")?"active":""}><div className="nav-index" /></a></Link></li>
-						<li><Link href="/about"><a className={(isActive === "about")?"active":""}><div className="nav-about" /></a></Link></li>
-						<li><Link href="/brands/tummour"><a className={(isActive === "brands")?"active":""}><div className="nav-brands" /></a></Link></li>
-						<li><Link href="/news"><a className={(isActive === "news")?"active":""}><div className="nav-news" /></a></Link></li>
-						<li><Link href="/contact"><a className={(isActive === "contact")?"active":""}><div className="nav-contact" /></a></Link></li>
+						<li><Link href="/"><a className={(isActive === "home")?"active":""}><div className={(isActive === "home")?"nav-index active":"nav-index"} /></a></Link></li>
+						<li><Link href="/about"><a className={(isActive === "about")?"active":""}><div className={(isActive === "about")?"nav-about active":"nav-about"} /></a></Link></li>
+						<li><Link href="/brands/tummour"><a className={(isActive === "brands")?"active":""}><div className={(isActive === "brands")?"nav-brands active":"nav-brands"} /></a></Link></li>
+						<li><Link href="/news"><a className={(isActive === "news")?"active":""}><div className={(isActive === "news")?"nav-news active":"nav-news"} /></a></Link></li>
+						<li><Link href="/contact"><a className={(isActive === "contact")?"active":""}><div className={(isActive === "contact")?"nav-contact active":"nav-contact"} /></a></Link></li>
 					</ul>
 				</div>
 			</div>

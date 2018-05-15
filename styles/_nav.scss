@@ -33,12 +33,18 @@
 							&:hover {
 								background: url('/static/images/00-nav/01-h.png');
 							}
+							&.active {
+								background: url('/static/images/00-nav/01-h.png');
+							}
 						}
 						.nav-about {
 							background: url('/static/images/00-nav/02.png');
 							width: 90px;
 							height: 79px;
 							&:hover {
+								background: url('/static/images/00-nav/02-h.png');
+							}
+							&.active {
 								background: url('/static/images/00-nav/02-h.png');
 							}
 						}
@@ -49,6 +55,9 @@
 							&:hover {
 								background: url('/static/images/00-nav/03-h.png');
 							}
+							&.active {
+								background: url('/static/images/00-nav/03-h.png');
+							}
 						}
 						.nav-news {
 							background: url('/static/images/00-nav/04.png');
@@ -57,12 +66,18 @@
 							&:hover {
 								background: url('/static/images/00-nav/04-h.png');
 							}
+							&.active {
+								background: url('/static/images/00-nav/04-h.png');
+							}
 						}
 						.nav-contact {
 							background: url('/static/images/00-nav/05.png');
 							width: 90px;
 							height: 79px;
 							&:hover {
+								background: url('/static/images/00-nav/05-h.png');
+							}
+							&.active {
 								background: url('/static/images/00-nav/05-h.png');
 							}
 						}

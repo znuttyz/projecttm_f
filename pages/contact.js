@@ -1,6 +1,12 @@
 import React, { Component } from 'react'
 import { Head, Nav, AllBanner, ContactInfo, ContactSns, ContactFranchise, Footer } from './components'
 
+import withRedux from 'next-redux-wrapper'
+import { 
+	initStore,
+	messageCreate
+} from './actions'
+
 import '../styles/index.scss'
 
 class Contact extends Component {
@@ -11,8 +17,15 @@ class Contact extends Component {
 			topic: '',
 			name: '',
 			email: '',
-			phonenumber: '',
-			body: ''
+			phone: '',
+			body: '',
+			error: false
+		}
+	}
+
+	componentWillReceiveProps(nextProps) {
+		if(nextProps.isCreate) {
+			location.reload()
 		}
 	}
 
@@ -24,8 +37,15 @@ class Contact extends Component {
 
 	_onHandleSubmit(event) {
 		event.preventDefault()
-	 	console.log('submit')
-
+	 	
+	 	let { topic, name, email, phone, body } = this.state
+	 	let date = Date.now()
+	 	if(topic && name && email && phone && body) {
+	 		let postData = { topic, name, email, phone, body, date }
+	 		this.props.messageCreate(postData)
+	 	} else {
+	 		this.setState({error: true})
+	 	}
 	 }
 
 	render() {
@@ -36,6 +56,7 @@ class Contact extends Component {
 				<ContactInfo 
 					handleChange={(event) => this._onHandleChange(event)}
 					onSubmit={(event) => this._onHandleSubmit(event)}
+					error={this.state.error}
 				/>
 				<ContactSns />
 				<ContactFranchise />
@@ -45,4 +66,11 @@ class Contact extends Component {
 	}
 }
 
-export default Contact;
+const mapStateToProps = ({ message }) => {
+	return {
+		isCreate: message.isCreate
+	}
+}
+
+
+export default withRedux(initStore, mapStateToProps, { messageCreate })(Contact)

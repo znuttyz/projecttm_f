@@ -18,3 +18,6 @@ export const PROMOTION_FETCH = 'promotion_fetch'
 export const PROMOTION_CREATE = 'promotion_create'
 export const PROMOTION_DELETE = 'promotion_delete'
 export const PROMOTION_UPDATE = 'promotion_update'
+
+export const MESSAGE_CREATE = 'message_create'
+export const MESSAGE_FETCH = 'message_fetch'

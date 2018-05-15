@@ -7,8 +7,10 @@ const menu = (title, isEdit) => {
 			return <Link href="/admin/banner_edit"><a>EDIT</a></Link>
 		} else if (title === "News") {
 			return <Link href="/admin/news_add"><a>ADD</a></Link>
-		} else {
+		} else if (title === "Promotions") {
 			return <Link href="/admin/promotion_add"><a>ADD</a></Link>
+		} else {
+			return;
 		}
 	}
 }

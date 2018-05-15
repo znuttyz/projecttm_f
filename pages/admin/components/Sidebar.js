@@ -4,7 +4,8 @@ const menu = (active) => {
 	return [
 		{ name: "Banners", href: "/admin/banner" }, 
 		{ name: "News", href: "/admin/news" }, 
-		{ name: "Promotions", href: "/admin/promotion"} 
+		{ name: "Promotions", href: "/admin/promotion" },
+		{ name: "Messages", href: "/admin/message" }
 	].map(item => 
 		<li key={item.name}>
 			<Link href={item.href}><a className={active === item.name ? 'active' : ''}>{item.name}</a></Link>

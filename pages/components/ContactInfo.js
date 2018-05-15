@@ -2,7 +2,7 @@ import Link from 'next/link'
 import React, { Component } from "react";
 import { GMap } from './'
 
-const ContactInfo = ({ handleChange, onSubmit}) => (
+const ContactInfo = ({ handleChange, onSubmit, error }) => (
 	<div className="contactinfo clear">
 		<div className="contactbanner">
 			<img src="https://firebasestorage.googleapis.com/v0/b/tummour-original.appspot.com/o/static%2Fimages%2F00-global%2Fbanner-contact.png?alt=media&token=193e0b2d-cbbc-49de-9c86-d115d44bcb4e" />
@@ -27,16 +27,17 @@ const ContactInfo = ({ handleChange, onSubmit}) => (
 				<li className="contact-form">
 					<img src="https://firebasestorage.googleapis.com/v0/b/tummour-original.appspot.com/o/static%2Fimages%2F05-contact%2Fline-cm.png?alt=media&token=2ea11427-b667-41c0-bf1e-28fc3f0bd061"/>
 					<form>
-						<input type="text" name="topic" placeholder="หัวข้อเรื่อง" onChange={(event) => handleChange(event)} />
+						<input type="text" name="topic" placeholder="หัวข้อเรื่อง" onChange={(event) => handleChange(event)} required/>
 						<br/>
-						<input type="text" name="name" placeholder="ชื่อของท่าน" onChange={(event) => handleChange(event)} />
+						<input type="text" name="name" placeholder="ชื่อของท่าน" onChange={(event) => handleChange(event)} required/>
 						<br/>
-						<input type="email" name="email" placeholder="อีเมล์ของท่าน" onChange={(event) => handleChange(event)} />
+						<input type="email" name="email" placeholder="อีเมล์ของท่าน" onChange={(event) => handleChange(event)} required/>
 						<br/>
-						<input type="number" name="phonenumber" placeholder="เบอร์โทรศัพท์ของท่าน" onChange={(event) => handleChange(event)} />
+						<input type="number" name="phone" placeholder="เบอร์โทรศัพท์ของท่าน" onChange={(event) => handleChange(event)} required/>
 						<br/>
-						<textarea type="text" placeholder="เนื้อความ" name="body" onChange={(event) => handleChange(event)} />
+						<textarea type="text" placeholder="เนื้อความ" name="body" onChange={(event) => handleChange(event)} required/>
 						<br/>
+						{error && <p style={{color: 'red'}}>* Please fill in all form correctly</p>}
 						<div className="contact-btn">
 							<button type="reset" className="btn-reset">รีเซ็ท</button>
       						<button type="submit" className="btn-submit" onClick={onSubmit}>ส่ง</button>

@@ -37,6 +37,7 @@ const showPromotion = (promotions, handleDelete) => {
 	})
 }
 
+
 const Table = (props) => {
 	return (
 		<table className="tableAdmin">

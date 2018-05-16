@@ -2,36 +2,51 @@
 	background: $black;
 	position: relative;
 	padding: 50px 0;
-	.title {
-		width: 22%;
-		margin: 0 auto;
+	@include breakpoint(mobile) {
+		padding: 30px 0;
 	}
-	.home-ourbrands-inner {
-		ul {
-			text-align: center;
-			li.each-brand {
-				display: inline-block;
-				width: 22%;
-				margin: 0 auto;
-				padding: 0 8px;
-				ul {
-					li {
-						display: block;
-						overflow: hidden;
-						&.brandname {
-							padding-bottom: 20px;
-							a {
-								img {
-									width: 70%;
+	.container {
+		@include breakpoint(tablet) {
+			width: 90%;
+			margin: 0 auto;
+		}
+		.title {
+			width: 22%;
+			margin: 0 auto;
+			@include breakpoint(mobile) {
+				width: 200px;
+			}
+		}
+		.home-ourbrands-inner {
+			ul {
+				text-align: center;
+				li.each-brand {
+					display: inline-block;
+					width: 22%;
+					margin: 0 auto;
+					padding: 0 8px;
+					@include breakpoint(mobile) {
+						width: 128px;
+					}
+					ul {
+						li {
+							display: block;
+							overflow: hidden;
+							&.brandname {
+								padding-bottom: 20px;
+								a {
+									img {
+										width: 70%;
+									}
 								}
 							}
-						}
-						&.brandimg {
-							a {
-								img {
-									transition: transform 0.5s;
-									&:hover {
-										transform: scale(1.1);
+							&.brandimg {
+								a {
+									img {
+										transition: transform 0.5s;
+										&:hover {
+											transform: scale(1.1);
+										}
 									}
 								}
 							}

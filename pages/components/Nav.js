@@ -10,7 +10,7 @@ const Nav = ({ isActive }) => (
 		</div>
 		<div className="bg-navbar">
 			<div className="container">
-				<div className="navbar">
+				<div className="navbar desktop">
 					<ul>
 						<li><Link href="/"><a className={(isActive === "home")?"active":""}><div className={(isActive === "home")?"nav-index active":"nav-index"} /></a></Link></li>
 						<li><Link href="/about"><a className={(isActive === "about")?"active":""}><div className={(isActive === "about")?"nav-about active":"nav-about"} /></a></Link></li>
@@ -18,6 +18,9 @@ const Nav = ({ isActive }) => (
 						<li><Link href="/news"><a className={(isActive === "news")?"active":""}><div className={(isActive === "news")?"nav-news active":"nav-news"} /></a></Link></li>
 						<li><Link href="/contact"><a className={(isActive === "contact")?"active":""}><div className={(isActive === "contact")?"nav-contact active":"nav-contact"} /></a></Link></li>
 					</ul>
+				</div>
+				<div className="navbar mobile">
+					
 				</div>
 			</div>
 		</div>

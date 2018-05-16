@@ -5,27 +5,45 @@
 		background-size: cover;
 		background-attachment: fixed;
 	}
-	.aboutlogo {
-		text-align: center;
-		img {
-			width: 200px;
+	.container {
+		@include breakpoint(tablet) {
+			width: 85%;
+			margin: 0 auto;
 		}
-	}
-	.aboutcontent {
-		padding-bottom: 25px;
-		p {
-			color: $white;
-			@include font-size(14);
-			line-height: 1.2;
-			margin: 25px 0;
-			text-indent: 50px;
-			span {
-				color: $red;
+		.aboutlogo {
+			text-align: center;
+			img {
+				width: 200px;
+				@include breakpoint(tablet) {
+					width: 120px;
+				}
 			}
 		}
-		.lastbox {
-			width: 500px;
-			margin-top: -150px;
+		.aboutcontent {
+			padding-bottom: 25px;
+			p {
+				color: $white;
+				@include font-size(14);
+				line-height: 1.2;
+				margin: 25px 0;
+				text-indent: 50px;
+				@include breakpoint(mobile) {
+					text-indent: 30px;
+				}
+				span {
+					color: $red;
+				}
+			}
+			.lastbox {
+				width: 500px;
+				margin-top: -150px;
+				@include breakpoint(tablet) {
+					margin-top: -90px;
+				}
+				@include breakpoint(mobile) {
+					margin-top: -20px;
+				}
+			}
 		}
 	}
 }

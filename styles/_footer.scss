@@ -9,34 +9,68 @@
 		top: 90px;
 		width: 100%;
 		margin: 0 auto;
-		ul.social-icons {
-			text-align: center;
-			li {
-				display: inline-block;
-				padding: 0 15px;
-				a {
-					color: $white;
-					&:hover {
-						color: $black;
+		@include breakpoint(tablet) {
+			top: 35px;
+		}
+		@include breakpoint(tablet-wide) {
+			top: 55px;
+		}
+		@include breakpoint(mobile) {
+			top: 7px;
+		}
+		.container {
+			@include breakpoint(tablet) {
+				width: 90%;
+				margin: 0 auto;
+			}
+			ul.social-icons {
+				text-align: center;
+				li {
+					display: inline-block;
+					padding: 0 15px;
+					@include breakpoint(mobile) {
+						padding: 0 10px;
 					}
-					i {
-						display: inline;
-						margin-right: 10px;
-						@include font-size(12);
-					}
-					h2 {
-						display: inline;
-						font-weight: 100;
+					a {
+						color: $white;
+						&:hover {
+							color: $black;
+						}
+						i {
+							display: inline;
+							margin-right: 10px;
+							@include font-size(12);
+							@include breakpoint(mobile) {
+								@include font-size(8);
+							}
+						}
+						h2 {
+							display: inline;
+							font-weight: 100;
+							@include breakpoint(mobile) {
+								@include font-size(10);
+							}
+						}
 					}
 				}
 			}
-		}
-		.copyright {
-			text-align: center;
-			text-transform: uppercase;
-			font-weight: bold;
-			i {
-				@include font-size(7);
+			.copyright {
+				text-align: center;
+				text-transform: uppercase;
+				font-weight: bold;
+				@include breakpoint(tablet) {
+					margin-top: -10px;
+				}
+				@include breakpoint(tablet-wide) {
+					margin-top: -5px;
+				}
+				@include breakpoint(mobile) {
+					margin-top: -15px;
+					@include font-size(5);
+				}
+				i {
+					@include font-size(5);
+				}
 			}
 		}
 	}

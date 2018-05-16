@@ -3,62 +3,93 @@
 	background-size: cover;
 	position: relative;
 	padding: 50px 0 120px;
-	.title {
-		width: 15%;
-		margin: 0 auto;
+	@include breakpoint(mobile) {
+		padding: 0 0 100px 0;
 	}
-	.home-promotion-inner {
-		margin: 30px 0;
-		ul {
-			width: 100%;
+	.container {
+		@include breakpoint(tablet) {
+			width: 90%;
 			margin: 0 auto;
-			text-align: center;
-			li.each-promotion {
-				display: inline-block;
-				width: 280px;
-				height: 280px;
-				margin: 25px 20px;
-				a {
-					.promotion-img {
-						overflow: hidden;
-						img {
-							transition: transform 0.5s;
-							&:hover {
-								transform: scale(1.1);
+		}
+		.title {
+			width: 15%;
+			margin: 0 auto;
+			@include breakpoint(mobile) {
+				width: 40%;
+			}
+		}
+		.home-promotion-inner {
+			margin: 30px 0;
+			ul {
+				width: 100%;
+				margin: 0 auto;
+				text-align: center;
+				li.each-promotion {
+					display: inline-block;
+					width: 280px;
+					height: 280px;
+					margin: 25px 20px;
+					@include breakpoint(tablet) {
+						width: 200px;
+						height: 200px;
+						margin: 20px 15px;
+					}
+					@include breakpoint(mobile) {
+						width: 100%;
+						height: 100%;
+						margin: 15px 0;
+					}
+					a {
+						.promotion-img {
+							overflow: hidden;
+							img {
+								transition: transform 0.5s;
+								&:hover {
+									transform: scale(1.1);
+								}
 							}
 						}
-					}
-					.promotion-text {
-						width: 100%;
-						margin: 0 auto;
-						padding: 5px 0;
-						h3 {
-							color: $red;
-							text-align: left;
-							@include font-size(14);
-						}
-						p {
-							color: $white;
-							text-align: left;
+						.promotion-text {
+							width: 100%;
+							margin: 0 auto;
+							padding: 5px 0;
+							@include breakpoint(mobile) {
+								width: 80%;
+							}
+							h3 {
+								color: $red;
+								text-align: left;
+								@include font-size(14);
+							}
+							p {
+								color: $white;
+								text-align: left;
+							}
 						}
 					}
 				}
 			}
 		}
-	}
-	.home-promotion-btn {
-		a {
-			width: 10%;
-			margin: 0 auto;
-			border: 1px solid $white;
-			padding: 5px 15px;
-			color: $white;
-			text-align: center;
-			@include font-size(12);
-			&:hover {
-				background: $white;
-				color: $black;
-				transition: 0.5s;
+		.home-promotion-btn {
+			a {
+				width: 10%;
+				margin: 0 auto;
+				border: 1px solid $white;
+				padding: 5px 15px;
+				color: $white;
+				text-align: center;
+				@include font-size(12);
+				@include breakpoint(tablet) {
+					width: 12%;
+				}
+				@include breakpoint(mobile) {
+					width: 28%;
+				}
+				&:hover {
+					background: $white;
+					color: $black;
+					transition: 0.5s;
+				}
 			}
 		}
 	}

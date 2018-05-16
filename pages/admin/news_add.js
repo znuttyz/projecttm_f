@@ -20,7 +20,6 @@ class News_add extends Component {
 		const date = new Date()
 		this.state = {
 			title: "",
-			subbody: "",
 			body: "",
 			selectedFile: [],
 			loading: null,
@@ -81,12 +80,12 @@ class News_add extends Component {
 			// axios.get('https://us-central1-tummour-original.cloudfunctions.net/getFile?filename='+this.state.selectedFile[0].name)
 			// .then(res => {
 			let src = 'https://firebasestorage.googleapis.com/v0/b/tummour-original.appspot.com/o/upload%2F'+this.state.selectedFile[0].name+'?alt=media'
-
+			let { day, month, year } = this.state
+			let date = new Date(year, month-1, day)
 			let postData = {
 				title: this.state.title,
-				sub_body: this.state.subbody,
 				body: this.state.body,
-				date: Date.now(),
+				date: date.getTime(),
 				banner_th: src
 			}
 			this.props.newsCreate(postData)
@@ -94,27 +93,6 @@ class News_add extends Component {
 			
 		})
 		.catch(console.error.bind(console))
-	}
-
-	showDate() {
-		let { day, month, year } = this.state
-		const totalDays = new Date(year, month, 0).getDate()
-		console.log(totalDays, day, month, year)
-
-		let selectDay
-		for(let i = 1; i <= totalDays; i++) {
-			selectDay += <option>{i}</option>
-		}
-		return selectDay
-
-		// return(
-		// 	<select>
-		// 		<option value="volvo">Volvo</option>
-		// 		<option value="saab">Saab</option>
-		// 		<option value="mercedes">Mercedes</option>
-		// 		<option value="audi">Audi</option>
-		// 	</select>
-		// )
 	}
 
 	render() {
@@ -174,10 +152,12 @@ class News_add extends Component {
 						</div>
 
 						<div className="formContainer">
-							<input type="number" value={this.state.day}/>
-							<input type="number" value={this.state.month}/>
-							<input type="number" value={this.state.year}/>
-							<select>{this.showDate()}</select>
+							<label className="formLabel"> Day </label>
+							<input type="number" value={this.state.day} name="day" onChange={(event) => this._onHandleChange(event)} />
+							<label className="formLabel"> Month </label>
+							<input type="number" value={this.state.month} name="month" onChange={(event) => this._onHandleChange(event)} />
+							<label className="formLabel"> Year </label>
+							<input type="number" value={this.state.year} name="year" onChange={(event) => this._onHandleChange(event)} />
 						</div>
 
 						<div className="formContainer">

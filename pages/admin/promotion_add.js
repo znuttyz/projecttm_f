@@ -17,12 +17,16 @@ class Promotion_add extends Component {
 
 	constructor(props) {
 		super(props)
+		const date = new Date()
 		this.state = {
 			title: "",
 			body: "",
 			selectedFile: [],
 			loading: null,
 			disableInput: false,
+			day: date.getDate(),
+			month: date.getMonth()+1,
+			year: date.getFullYear()
 		}
 	}
 
@@ -76,11 +80,12 @@ class Promotion_add extends Component {
 			// axios.get('https://us-central1-tummour-original.cloudfunctions.net/getFile?filename='+this.state.selectedFile[0].name)
 			// .then(res => {
 			let src = 'https://firebasestorage.googleapis.com/v0/b/tummour-original.appspot.com/o/upload%2F'+this.state.selectedFile[0].name+'?alt=media'
-
+			let { day, month, year } = this.state
+			let date = new Date(year, month-1, day)
 			let postData = {
 				title: this.state.title,
 				body: this.state.body,
-				date: Date.now(),
+				date: date.getTime(),
 				banner_th: src
 			}
 			this.props.promotionCreate(postData)
@@ -120,6 +125,15 @@ class Promotion_add extends Component {
 							/>
 							<button onClick={() => this.fileInput1.click()} className="formFile">Pick File</button>
 							{ this.state.selectedFile[0] && this.state.selectedFile[0].name }
+						</div>
+
+						<div className="formContainer">
+							<label className="formLabel"> Day </label>
+							<input type="number" value={this.state.day} name="day" onChange={(event) => this._onHandleChange(event)} />
+							<label className="formLabel"> Month </label>
+							<input type="number" value={this.state.month} name="month" onChange={(event) => this._onHandleChange(event)} />
+							<label className="formLabel"> Year </label>
+							<input type="number" value={this.state.year} name="year" onChange={(event) => this._onHandleChange(event)} />
 						</div>
 
 						<div className="formContainer">

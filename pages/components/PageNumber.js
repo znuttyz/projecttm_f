@@ -15,12 +15,12 @@ class PageNumber extends Component {
 	}
 
 	_onSelectNextPage() {
-		let selectedPage = this.state.selectedPage + 1
+		let selectedPage = (this.state.selectedPage !== this.state.totalPage)? this.state.selectedPage + 1 : this.state.selectedPage
 		this.setState({ selectedPage })
 	}
 
 	_onSelectPreviousPage() {
-		let selectedPage = this.state.selectedPage - 1
+		let selectedPage = (this.state.selectedPage !== 1)? this.state.selectedPage - 1 : this.state.selectedPage
 		this.setState({ selectedPage })
 	}
 
@@ -46,9 +46,7 @@ class PageNumber extends Component {
 		return (
 			<div className="pagenumber clear">
 				<ul>
-					{this.previousPage()}
-					{this.showPage()}
-					{this.nextPage()}
+					
 				</ul>
 			</div>
 		)
@@ -56,7 +54,9 @@ class PageNumber extends Component {
 }
 
 export { PageNumber }
-
+// {this.previousPage()}
+					// {this.showPage()}
+					// {this.nextPage()}
 // <li><a className={(this.state.selectedPage === 1)? "active":""} onClick={()=>this._onSelectPage(1)}>1</a></li>
-					// <li><a className={(this.state.selectedPage === 2)? "active":""} onClick={()=>this._onSelectPage(2)}>2</a></li>
-					// <li><a className={(this.state.selectedPage === 3)? "active":""} onClick={()=>this._onSelectPage(3)}>3</a></li>
+// <li><a className={(this.state.selectedPage === 2)? "active":""} onClick={()=>this._onSelectPage(2)}>2</a></li>
+// <li><a className={(this.state.selectedPage === 3)? "active":""} onClick={()=>this._onSelectPage(3)}>3</a></li>

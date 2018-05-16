@@ -21,11 +21,13 @@ class News_edit extends Component {
 		this.state = {
 			id: props.url.query.id,
 			title: "",
-			subbody: "",
 			body: "",
 			selectedFile: [],
 			loading: null,
 			disableInput: false,
+			day: '',
+			month: '',
+			year: ''
 		}
 	}
 
@@ -38,11 +40,14 @@ class News_edit extends Component {
 		if(nextProps.news) {
 			let tmp = []
 			tmp[0] = {name: nextProps.news.banner_th}
+			let date = new Date(nextProps.news.date)
 			this.setState({
 				title: nextProps.news.title,
-				subbody: nextProps.news.sub_body,
 				body: nextProps.news.body,
-				selectedFile: tmp
+				selectedFile: tmp,
+				day: date.getDate(),
+				month: date.getMonth()+1,
+				year: date.getFullYear()
 			})
 		}
 		if(nextProps.isUpdate) {
@@ -72,11 +77,12 @@ class News_edit extends Component {
 		this.setState({ disableInput: true })
 
 		if(this.state.selectedFile[0].name === this.props.news.banner_th) {
+			let { day, month, year } = this.state
+			let date = new Date(year, month-1, day)
 			let postData = {
 				title: this.state.title,
-				sub_body: this.state.subbody,
 				body: this.state.body,
-				date: Date.now()
+				date: date.getTime()
 			}
 			const id = this.state.id
 			this.props.newsUpdate(id, postData)
@@ -98,12 +104,12 @@ class News_edit extends Component {
 				// axios.get('https://us-central1-tummour-original.cloudfunctions.net/getFile?filename='+this.state.selectedFile[0].name)
 				// .then(res => {
 				let src = 'https://firebasestorage.googleapis.com/v0/b/tummour-original.appspot.com/o/upload%2F'+this.state.selectedFile[0].name+'?alt=media'
-
+				let { day, month, year } = this.state
+				let date = new Date(year, month-1, day)
 				let postData = {
 					title: this.state.title,
-					sub_body: this.state.subbody,
 					body: this.state.body,
-					date: Date.now(),
+					date: date.getTime(),
 					banner_th: src
 				}
 				const id = this.state.id
@@ -136,7 +142,6 @@ class News_edit extends Component {
 							isDisable={this.state.disableInput}
 							data={{
 								title: this.state.title,
-								subbody: this.state.subbody,
 								body: this.state.body
 							}}
 						/>
@@ -151,6 +156,15 @@ class News_edit extends Component {
 							/>
 							<button onClick={() => this.fileInput1.click()} className="formFile">Pick File</button>
 							{ this.state.selectedFile[0] && this.state.selectedFile[0].name }
+						</div>
+
+						<div className="formContainer">
+							<label className="formLabel"> Day </label>
+							<input type="number" value={this.state.day} name="day" onChange={(event) => this._onHandleChange(event)} />
+							<label className="formLabel"> Month </label>
+							<input type="number" value={this.state.month} name="month" onChange={(event) => this._onHandleChange(event)} />
+							<label className="formLabel"> Year </label>
+							<input type="number" value={this.state.year} name="year" onChange={(event) => this._onHandleChange(event)} />
 						</div>
 
 						<div className="formContainer">

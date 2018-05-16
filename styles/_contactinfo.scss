@@ -5,75 +5,81 @@
 		background-size: cover;
 		background-attachment: fixed;
 	}
-	ul {
-		li {
-			display: inline-block;
-			padding: 0 20px;
-			&.contact-address {
-				width: 60%;
-				vertical-align: top;
-				img {
-					width: 120px;
-				}
-				h3 {
-					color: $white;
-					margin-top: 15px;
-					span {
-						font-weight: 100;
+	.container {
+		@include breakpoint(tablet) {
+			width: 85%;
+			margin: 0 auto;
+		}
+		ul {
+			li {
+				display: inline-block;
+				padding: 0 20px;
+				&.contact-address {
+					width: 60%;
+					vertical-align: top;
+					img {
+						width: 120px;
+					}
+					h3 {
+						color: $white;
+						margin-top: 15px;
+						span {
+							font-weight: 100;
+						}
+					}
+					.ggmap {
+						margin-top: 15px;
 					}
 				}
-				.ggmap {
-					margin-top: 15px;
-				}
-			}
-			&.contact-form {
-				width: 30%;
-				img {
-					width: 220px;
-				}
-				form {
-					margin-top: 20px;
-					input {
-						font-family: psl_kanda;
-						@include font-size(12);
-						width: 96%;
-						margin-bottom: 15px;
-						padding: 5px;
+				&.contact-form {
+					width: 30%;
+					img {
+						width: 220px;
 					}
-					textarea {
-						font-family: psl_kanda;
-						@include font-size(12);
-						width: 96%;
-						padding: 5px;
-					}
-					.contact-btn {
-						float: right;
+					form {
 						margin-top: 20px;
-						button {
+						input {
 							font-family: psl_kanda;
 							@include font-size(12);
-							margin: 5px 0 0 10px;
-							cursor: pointer;
-							&.btn-reset {
-								background: $gray;
-								color: $white;
-								border: 0;
-								padding: 5px 30px;
-								&:hover {
-									background: $white;
-									color: $gray;
-									transition: 0.5s;
+							width: 96%;
+							margin-bottom: 15px;
+							padding: 5px;
+						}
+						textarea {
+							font-family: psl_kanda;
+							@include font-size(12);
+							width: 96%;
+							padding: 5px;
+						}
+						.contact-btn {
+							float: right;
+							margin-top: 20px;
+							button {
+								font-family: psl_kanda;
+								@include font-size(12);
+								margin: 5px 0 0 10px;
+								cursor: pointer;
+								&.btn-reset {
+									background: $gray;
+									color: $white;
+									border: 0;
+									padding: 5px 30px;
+									&:hover {
+										background: $white;
+										color: $gray;
+										transition: 0.5s;
+									}
 								}
-							}
-							&.btn-submit {
-								background: $green;
-								color: $white;
-								padding: 5px 30px;
-								border: 0;
-								&:hover {
-									background: $white;
-									color: $green;
-									transition: 0.5s;
+								&.btn-submit {
+									background: $green;
+									color: $white;
+									padding: 5px 30px;
+									border: 0;
+									&:hover {
+										background: $white;
+										color: $green;
+										transition: 0.5s;
+									}
 								}
 							}
 						}

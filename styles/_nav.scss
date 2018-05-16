@@ -1,5 +1,11 @@
 .header {
 	position: relative;
+	.container {
+		@include breakpoint(tablet) {
+			width: 90%;
+			margin: 0 auto;
+		}
+	}
 	.bg-navbar {
 		background: url('https://firebasestorage.googleapis.com/v0/b/tummour-original.appspot.com/o/static%2Fimages%2F00-global%2Fbg-header.jpg?alt=media&token=690a92ea-6f42-470f-8a90-930210f4a551');
 		background-size: cover;
@@ -7,6 +13,9 @@
 		.navbar {
 			width: 100%;
 			text-align: right;
+			&.mobile {
+				display: none;
+			}
 			ul {
 				margin: 0;
 				position: relative;
@@ -20,6 +29,9 @@
 					}
 					a {
 						padding: 5px 8px 20px 8px;
+						@include breakpoint(tablet) {
+							padding: 2px 2px 12px 2px;
+						}
 						&:hover {
 							background: #362f2d;
 						}
@@ -82,6 +94,14 @@
 							}
 						}
 					}
+				}
+			}
+			@include breakpoint(mobile) {
+				&.desktop {
+					display: none;
+				}
+				&.mobile {
+					display: block;
 				}
 			}
 		}

@@ -4,31 +4,37 @@
 	color: $white;
 	text-align: center;
 	padding: 25px 0;
-	img {
-		width: 175px;
-	}
-	h1 {
-		@include font-size(16);
-		font-weight: 100;
-		margin: 40px 0;
-	}
-	h2 {
-		@include font-size(14);
-		font-weight: 100;
-		margin: 40px 0 80px;
-	}
-	.franchise-btn {
-		a {
-			color: $white;
+	.container {
+		@include breakpoint(tablet) {
+			width: 85%;
+			margin: 0 auto;
+		}
+		img {
+			width: 175px;
+		}
+		h1 {
+			@include font-size(16);
+			font-weight: 100;
+			margin: 40px 0;
+		}
+		h2 {
 			@include font-size(14);
-			border: 2px solid $green;
-			display: block;
-			width: 20%;
-			margin: 0 10px;
-			display: inline-block;
-			padding: 8px 0;
-			&:hover {
-				background: $green;
+			font-weight: 100;
+			margin: 40px 0 80px;
+		}
+		.franchise-btn {
+			a {
+				color: $white;
+				@include font-size(14);
+				border: 2px solid $green;
+				display: block;
+				width: 20%;
+				margin: 0 10px;
+				display: inline-block;
+				padding: 8px 0;
+				&:hover {
+					background: $green;
+				}
 			}
 		}
 	}

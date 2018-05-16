@@ -2,4 +2,10 @@
 	position: absolute;
 	z-index: 1;
 	width: 170px;
+	@include breakpoint(tablet) {
+		width: 150px;
+	}
+	@include breakpoint(mobile) {
+		width: 130px;
+	}
 }

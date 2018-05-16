@@ -7,7 +7,7 @@ class Promotion extends Component {
 	render() {
 		return (
 			<div>
-				<Head title="tummour original - promotion" />
+				<Head title="Tummour Original - Promotion" />
 				<Nav isActive="news" />
 				<PromotionInfo />
 				<Footer />

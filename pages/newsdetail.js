@@ -7,7 +7,7 @@ class NewsDetail extends Component {
 	render() {
 		return (
 			<div>
-				<Head title="tummour original - news" />
+				<Head title="Tummour Original - News" />
 				<Nav isActive="news" />
 				<NewsDetailElement />
 				<Footer />

@@ -7,7 +7,7 @@ class About extends Component {
 	render() {
 		return (
 			<div>
-				<Head title="tummour original - about"/>
+				<Head title="Tummour Original - About"/>
 				<Nav isActive="about"/>
 				<AboutInfo />
 				<Footer />

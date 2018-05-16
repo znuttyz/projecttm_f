@@ -7,7 +7,7 @@ class BrandGranny extends Component {
 	render() {
 		return (
 			<div>
-				<Head title="tummour original - granny's chicken rice" />
+				<Head title="Tummour Original - Granny's Chicken Rice" />
 				<Nav isActive="brands" />
 				<GrannyElement />
 				<Footer />

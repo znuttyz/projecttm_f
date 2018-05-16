@@ -18,7 +18,7 @@ class Home extends Component {
 	render() {
 		return (
 			<div>
-				<Head title="tummour original"/>
+				<Head title="Tummour Original"/>
 				<Nav isActive="home"/>
 				{(this.props.banner && <HomeBanner image={this.props.banner}/>)}
 				<HomeOurbrands />

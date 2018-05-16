@@ -7,7 +7,7 @@ class BrandJaewhon extends Component {
 	render() {
 		return (
 			<div>
-				<Head title="tummour original - jaewhon" />
+				<Head title="Tummour Original - Jaewhon" />
 				<Nav isActive="brands" />
 				<JaewhonElement />
 				<Footer />

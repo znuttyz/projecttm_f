@@ -7,7 +7,7 @@ class BrandTummour extends Component {
 	render() {
 		return (
 			<div>
-				<Head title="tummour original - tummour" />
+				<Head title="Tummour Original - Tummour" />
 				<Nav isActive="brands" />
 				<TummourElement />
 				<Footer />

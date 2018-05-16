@@ -1,7 +1,7 @@
 import NextHead from 'next/head'
 import { string } from 'prop-types'
 
-const defaultDescription = ''
+const defaultDescription = 'นึกถึงส้มตำนึกถึง ตำมั่ว'
 const defaultOGURL = ''
 const defaultOGImage = ''
 

@@ -7,7 +7,7 @@ class BrandLaoyuan extends Component {
 	render() {
 		return (
 			<div>
-				<Head title="tummour original - laoyuan" />
+				<Head title="Tummour Original - Laoyuan" />
 				<Nav isActive="brands" />
 				<LaoyuanElement />
 				<Footer />

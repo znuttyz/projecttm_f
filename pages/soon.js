@@ -7,7 +7,7 @@ class Soon extends Component {
 	render() {
 		return (
 			<div>
-				<Head title="tummour original" />
+				<Head title="Tummour Original" />
 				<SoonElements />
 			</div>
 		)

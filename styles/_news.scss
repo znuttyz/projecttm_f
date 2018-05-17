@@ -53,30 +53,42 @@
 					li {
 						display: inline-block;
 						vertical-align: top;
-						padding-right: 25px;
 						&.content-img {
-							width: 300px;
-							height: 200px;
+							width: 30%;
+							float: left;
+							margin-right: 25px;
 							@include breakpoint(tablet) {
-								width: 220px;
-								height: 147px;
+								width: 40%;
 							}
 							@include breakpoint(tablet-wide) {
-								width: 250px;
-								height: 167px;
+								width: 35%;
 							}
 							@include breakpoint(mobile) {
 								width: 100%;
-								height: auto;
+							}
+							.detail-img {
+								width: 300px;
+								height: 200px;
+								@include breakpoint(tablet) {
+									width: 220px;
+									height: 147px;
+								}
+								@include breakpoint(tablet-wide) {
+									width: 250px;
+									height: 167px;
+								}
+								@include breakpoint(mobile) {
+									width: 100%;
+									height: auto;
+								}
 							}
 						}
 						&.content-text {
 							width: 65%;
 							text-align: left;
 							color: $white;
-							height: 200px;
 							@include breakpoint(tablet) {
-								width: 52%;
+								width: 55%;
 							}
 							@include breakpoint(tablet-wide) {
 								width: 60%;
@@ -85,32 +97,34 @@
 								width: 100%;
 								margin-top: 15px;
 							}
-							h2.topic {
-								@include font-size(18);
-								&:hover {
-									text-decoration: underline;
+							.detail-info {
+								h2.topic {
+									@include font-size(18);
+									&:hover {
+										text-decoration: underline;
+									}
 								}
-							}
-							h4.date {
-								color: $white;
-								font-weight: 100;
-							}
-							p.sub-content {
-								@include font-size(14);
-								line-height: 1.1;
-								overflow: hidden;
-								text-overflow: ellipsis;
-								height: 145px;
-								margin-top: 10px;
-								@include breakpoint(tablet) {
-									@include font-size(12);
-									height: 85px;
+								h4.date {
+									color: $white;
+									font-weight: 100;
 								}
-								@include breakpoint(tablet-wide) {
-									height: 105px;
-								}
-								@include breakpoint(mobile) {
-									height: 125px;
+								p.sub-content {
+									@include font-size(14);
+									line-height: 1.1;
+									overflow: hidden;
+									text-overflow: ellipsis;
+									height: 145px;
+									margin-top: 10px;
+									@include breakpoint(tablet) {
+										@include font-size(12);
+										height: 85px;
+									}
+									@include breakpoint(tablet-wide) {
+										height: 105px;
+									}
+									@include breakpoint(mobile) {
+										height: 125px;
+									}
 								}
 							}
 						}

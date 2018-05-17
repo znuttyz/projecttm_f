@@ -13,20 +13,22 @@ const PromotionDetailElement = () => (
 				</ul>
 			</div>
 			<div className="tabcontent">
-				<div className="head-detail">
-	 				<h1 className="title-detail"><span>ตำมั่ว</span> ฟรีเมนูตำมั่ว เพียงเช็คอินภายในร้าน</h1>
-	 				<h3 className="date-detail">27-29 เม.ย. 61</h3>
-	 			</div>
-		        <div className="image-detail">
-		          	<img src="/static/images/imgpromo.jpg"/>
-		        </div>
-	 			<div className="content-detail">
-	 				<p>เงื่อนไข</p>
-	 				<ul>
-	 					<li>1. โปรโมชั่นนี้เฉพาะลูกค้าที่ทานอาหารที่ร้านตำมั่ว สาขา ....เท่านั้น</li>
-	 					<li>2.ทางร้านขอสงวนสิทธิ์เพียง 1 สิทธิ์ ต่อ 1 โต๊ะ เท่านั้น</li>
-	 				</ul>
-	 			</div>
+				<div className="detail-info">
+					<div className="head-detail">
+		 				<h1 className="title-detail"><span>ตำมั่ว</span> ฟรีเมนูตำมั่ว เพียงเช็คอินภายในร้าน</h1>
+		 				<h3 className="date-detail">27-29 เม.ย. 61</h3>
+		 			</div>
+			        <div className="image-detail">
+			          	<img src="/static/images/imgpromo.jpg"/>
+			        </div>
+		 			<div className="content-detail">
+		 				<p>เงื่อนไข</p>
+		 				<ul>
+		 					<li>1. โปรโมชั่นนี้เฉพาะลูกค้าที่ทานอาหารที่ร้านตำมั่ว สาขา ....เท่านั้น</li>
+		 					<li>2.ทางร้านขอสงวนสิทธิ์เพียง 1 สิทธิ์ ต่อ 1 โต๊ะ เท่านั้น</li>
+		 				</ul>
+		 			</div>
+		 		</div>
 	 		</div>
 	 	</div>
 	</div>

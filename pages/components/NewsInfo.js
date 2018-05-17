@@ -10,12 +10,16 @@ const showNews = (news) => {
 				<Link href={{ pathname: '/newsdetail', query: { id: item.id } }}><a>
 					<ul>
 						<li className="content-img">
-							<img src="/static/images/imgnews.jpg" />
+							<div className="detail-img">
+								<img src="/static/images/imgnews.jpg" />
+							</div>
  						</li>
  						<li className="content-text">
- 							<h2 className="topic">{item.title}</h2>
- 							<h4 className="date">{date.getDate()+" "+month[date.getMonth()]+" "+date.getFullYear()}</h4>
- 							<p className="sub-content">{item.body}</p>
+ 							<div className="detail-info">
+	 							<h2 className="topic">{item.title}</h2>
+	 							<h4 className="date">{date.getDate()+" "+month[date.getMonth()]+" "+date.getFullYear()}</h4>
+	 							<p className="sub-content">{item.body}</p>
+ 							</div>
  						</li>
  					</ul>
  				</a></Link>

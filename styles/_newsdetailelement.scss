@@ -10,9 +10,16 @@
 			display: inline-block;
 			width: 20%;
 			vertical-align: top;
+			@include breakpoint(mobile) {
+				width: 100%;
+			}
 			ul {
 				margin: 0;
 				li {
+					@include breakpoint(mobile) {
+						display: inline-block;
+						width: 50%;
+					}
 					&:first-child {
 						background: $gray;
 					}
@@ -30,35 +37,43 @@
 		}
 		.tabcontent {
 			display: inline-block;
-			width: 74%;
+			width: 80%;
 			text-align: center;
 			background: $gray;
-			padding: 50px 40px 100px;
-			.head-detail {
-				text-align: left;
-				width: 90%;
-				margin: 0 auto;
-				padding-bottom: 40px;
-				h1.title-detail {
-					color: $white;
-				}
-				h3.date-detail {
-					color: $red;
-				}
+			min-height: 100vh;
+			@include breakpoint(mobile) {
+				width: 100%;
 			}
-			.image-detail {
-				width: 900px;
-				height: 600px;
-				margin: 0 auto;
-			}
-			.content-detail {
-				width: 90%;
-				margin: 0 auto;
-				p {
-					color: $white;
+			.detail-info {
+				padding: 30px 90px 100px;
+				@include breakpoint(mobile) {
+					padding: 30px;
+				}
+				.head-detail {
 					text-align: left;
-					@include font-size(14);
-					margin-top: 40px;
+					margin-bottom: 30px;
+					h1.title-detail {
+						color: $white;
+						@include font-size(24);
+						@include breakpoint(tablet) {
+							@include font-size(20);
+						}
+					}
+					h3.date-detail {
+						color: $red;
+					}
+				}
+				.image-detail {
+					width: 100%;
+					height: auto;
+				}
+				.content-detail {
+					p {
+						color: $white;
+						text-align: left;
+						@include font-size(14);
+						margin-top: 30px;
+					}
 				}
 			}
 		}

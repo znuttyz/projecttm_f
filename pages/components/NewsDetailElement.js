@@ -25,20 +25,22 @@ const NewsDetailElement = ({ news }) => {
 					</ul>
 				</div>
 				<div className="tabcontent">
-					<div className="head-detail">
-		 				<h1 className="title-detail">{news.title}</h1>
-		 				<h3 className="date-detail">{date.getDate()+" "+month[date.getMonth()]+" "+date.getFullYear()}</h3>
-		 			</div>
-		 			<Slider {...settings} className="image-detail">
+					<div className="detail-info">
+						<div className="head-detail">
+			 				<h1 className="title-detail">{news.title}</h1>
+			 				<h3 className="date-detail">{date.getDate()+" "+month[date.getMonth()]+" "+date.getFullYear()}</h3>
+			 			</div>
+			 			<Slider {...settings} className="image-detail">
 
-				        <div>
-				          	<img src={news.banner_th}/>
-				        </div>
-				        
-				    </Slider>
-		 			<div className="content-detail">
-		 				<p>{news.body}</p>
-		 			</div>
+					        <div>
+					          	<img src={news.banner_th}/>
+					        </div>
+					        
+					    </Slider>
+			 			<div className="content-detail">
+			 				<p>{news.body}</p>
+			 			</div>
+			 		</div>
 		 		</div>
 		 	</div>
 		</div>

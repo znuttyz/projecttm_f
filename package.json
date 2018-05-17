@@ -7,7 +7,8 @@
     "dev": "next",
     "build": "next build",
     "start": "next start",
-    "export": "next export"
+    "export": "next export",
+    "all": "next build && next export"
   },
   "author": "bonn",
   "license": "MIT",

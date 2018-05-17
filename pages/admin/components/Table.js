@@ -21,11 +21,13 @@ const showNews = (news, handleDelete) => {
 
 const showPromotion = (promotions, handleDelete) => {
 	return promotions.map((data, index) => {
-		let d = new Date(data.date)
-		let date = d.getDate()+"/"+(d.getMonth()+1)+"/"+d.getFullYear()
+		let sd = new Date(data.start_date)
+		let sdate = sd.getDate()+"/"+(sd.getMonth()+1)+"/"+sd.getFullYear()
+		let ed = new Date(data.end_date)
+		let edate = ed.getDate()+"/"+(ed.getMonth()+1)+"/"+ed.getFullYear()
 		return (
 			<tr key={data.title}>
-				<td>{date}</td>
+				<td>{sdate+" - "+edate}</td>
 				<td>{data.title}</td>
 				<td>{data.body}</td>
 				<td>

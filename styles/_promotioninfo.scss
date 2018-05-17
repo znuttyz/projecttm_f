@@ -9,9 +9,16 @@
 			display: inline-block;
 			width: 20%;
 			vertical-align: top;
+			@include breakpoint(mobile) {
+				width: 100%;
+			}
 			ul {
 				margin: 0;
 				li {
+					@include breakpoint(mobile) {
+						display: inline-block;
+						width: 50%;
+					}
 					&:last-child {
 						background: $gray;
 					}
@@ -32,7 +39,14 @@
 			width: 80%;
 			text-align: center;
 			background: $gray;
-			padding: 50px 0 100px;
+			padding: 50px 0 80px;
+			min-height: 100vh;
+			@include breakpoint(tablet) {
+				padding: 25px 0 100px;
+			}
+			@include breakpoint(mobile) {
+				width: 100%;
+			}
 			select.brands-filter {
 				font-family: psl_kanda;
 				@include font-size(14);
@@ -43,19 +57,33 @@
 				padding: 3px 10px;
 			}
 			ul.all-promotions {
-				width: 90%;
+				width: 95%;
 				margin: 0 auto;
 				text-align: left;
+				margin-top: 32px;
+				@include breakpoint(tablet) {
+					margin-top: 10px;
+				}
 				li.each-promotion {
 					display: inline-block;
-					width: 280px;
-					height: 280px;
-					margin: 30px 20px;
+					width: calc(100%/3);
+					margin-top: 20px;
+					@include breakpoint(tablet) {
+						width: calc(100%/2);
+					}
+					@include breakpoint(mobile) {
+						width: 100%;
+					}
 					a {
+						width: 280px;
+						height: 280px;
+						margin: 0 auto;
+						@include breakpoint(tablet) {
+							width: 250px;
+							height: 250px;
+						}
 						.promotion-text {
-							width: 87%;
-							margin: 0 auto;
-							padding: 5px 0;
+							margin-top: 10px;
 							h3 {
 								color: $white;
 								text-align: left;

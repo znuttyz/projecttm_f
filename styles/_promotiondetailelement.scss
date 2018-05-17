@@ -10,9 +10,16 @@
 			display: inline-block;
 			width: 20%;
 			vertical-align: top;
+			@include breakpoint(mobile) {
+				width: 100%;
+			}
 			ul {
 				margin: 0;
 				li {
+					@include breakpoint(mobile) {
+						display: inline-block;
+						width: 50%;
+					}
 					&:last-child {
 						background: $gray;
 					}
@@ -30,45 +37,54 @@
 		}
 		.tabcontent {
 			display: inline-block;
-			width: 74%;
+			width: 80%;
 			text-align: center;
 			background: $gray;
-			padding: 50px 40px 100px;
-			.head-detail {
-				text-align: left;
-				width: 90%;
-				margin: 0 auto;
-				padding-bottom: 40px;
-				h1.title-detail {
-					color: $white;
-					span {
-						color: $green;
+			min-height: 100vh;
+			@include breakpoint(mobile) {
+				width: 100%;
+			}
+			.detail-info {
+				padding: 30px 90px 100px;
+				@include breakpoint(mobile) {
+					padding: 30px;
+				}
+				.head-detail {
+					text-align: left;
+					margin-bottom: 30px;
+					h1.title-detail {
+						color: $white;
+						@include font-size(24);
+						@include breakpoint(tablet) {
+							@include font-size(20);
+						}
+						span {
+							color: $green;
+						}
+					}
+					h3.date-detail {
+						color: $red;
 					}
 				}
-				h3.date-detail {
-					color: $red;
+				.image-detail {
+					width: 280px;
+					height: 280px;
+					margin: 0 auto;
 				}
-			}
-			.image-detail {
-				width: 280px;
-				height: 280px;
-				margin: 0 auto;
-			}
-			.content-detail {
-				width: 90%;
-				margin: 0 auto;
-				p {
-					color: $white;
-					text-align: left;
-					@include font-size(14);
-					margin-top: 40px;
-				}
-				ul {
-					li {
-						list-style: none;
+				.content-detail {
+					p {
 						color: $white;
-						@include font-size(14);
 						text-align: left;
+						@include font-size(14);
+						margin-top: 40px;
+					}
+					ul {
+						li {
+							list-style: none;
+							color: $white;
+							@include font-size(14);
+							text-align: left;
+						}
 					}
 				}
 			}

@@ -11,12 +11,26 @@
 			margin: 0 auto;
 		}
 		ul {
+			padding-top: 20px;
 			li {
 				display: inline-block;
 				padding: 0 20px;
+				@include breakpoint(mobile) {
+					display: block;
+					padding: 0;
+				}
 				&.contact-address {
 					width: 60%;
 					vertical-align: top;
+					@include breakpoint(tablet) {
+						width: 57%;
+					}
+					@include breakpoint(tablet-wide) {
+						width: 60%;
+					}
+					@include breakpoint(mobile) {
+						width: 100%;
+					}
 					img {
 						width: 120px;
 					}
@@ -33,6 +47,10 @@
 				}
 				&.contact-form {
 					width: 30%;
+					@include breakpoint(mobile) {
+						width: 100%;
+						margin-top: 40px;
+					}
 					img {
 						width: 220px;
 					}

@@ -39,9 +39,9 @@
 						i {
 							display: inline;
 							margin-right: 10px;
-							@include font-size(12);
+							@include font-size(10);
 							@include breakpoint(mobile) {
-								@include font-size(8);
+								@include font-size(6);
 							}
 						}
 						h2 {
@@ -69,7 +69,10 @@
 					@include font-size(5);
 				}
 				i {
-					@include font-size(5);
+					@include font-size(7);
+					@include breakpoint(mobile) {
+						@include font-size(3);
+					}
 				}
 			}
 		}

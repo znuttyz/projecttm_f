@@ -19,30 +19,32 @@ const KruathaiElement = () => (
 				</ul>
 			</div>
 			<div className="tabcontent">
-				<div className="description">
-	 				<img src="https://firebasestorage.googleapis.com/v0/b/tummour-original.appspot.com/o/static%2Fimages%2F03-brands%2Fline-kt.png?alt=media&token=dea967f0-3bdc-4eef-a30f-418260cc2658" className="b-logo" />
-	 				<img src="https://firebasestorage.googleapis.com/v0/b/tummour-original.appspot.com/o/static%2Fimages%2F03-brands%2Fline-horizon.png?alt=media&token=2008b37c-b255-4c02-a4c6-888c560fe437" className="b-line" />
-	 				<p></p>
-	 			</div>
-	 			<div className="btn-menu">
-	 				<Link href=""><a>ดูเมนู</a></Link>
-	 			</div>
-	 			<div className="branches">
-	 				<Tabs>
-					    <TabList>
-					    	<Tab>ภาคกลาง</Tab>
-					      	<Tab>ภาคอีสาน</Tab>
-					      	<Tab>ภาคตะวันออก</Tab>
-					      	<Tab>ภาคตะวันตก</Tab>
-					      	<Tab>ภาคเหนือ</Tab>
-					      	<Tab>ภาคใต้</Tab>
-					    </TabList>
+				<div className="detail-info">
+					<div className="description">
+		 				<img src="https://firebasestorage.googleapis.com/v0/b/tummour-original.appspot.com/o/static%2Fimages%2F03-brands%2Fline-kt.png?alt=media&token=dea967f0-3bdc-4eef-a30f-418260cc2658" className="b-logo" />
+		 				<img src="https://firebasestorage.googleapis.com/v0/b/tummour-original.appspot.com/o/static%2Fimages%2F03-brands%2Fline-horizon.png?alt=media&token=2008b37c-b255-4c02-a4c6-888c560fe437" className="b-line" />
+		 				<p></p>
+		 			</div>
+		 			<div className="btn-menu">
+		 				<Link href=""><a>ดูเมนู</a></Link>
+		 			</div>
+		 			<div className="branches">
+		 				<Tabs>
+						    <TabList>
+						    	<Tab>ภาคกลาง</Tab>
+						      	<Tab>ภาคอีสาน</Tab>
+						      	<Tab>ภาคตะวันออก</Tab>
+						      	<Tab>ภาคตะวันตก</Tab>
+						      	<Tab>ภาคเหนือ</Tab>
+						      	<Tab>ภาคใต้</Tab>
+						    </TabList>
 
-					    <TabPanel>
-					      	
-					    </TabPanel>
-					</Tabs>
-	 			</div>
+						    <TabPanel>
+						      	
+						    </TabPanel>
+						</Tabs>
+		 			</div>
+		 		</div>
 	 		</div>
 	 	</div>
 	</div>

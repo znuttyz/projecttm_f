@@ -1,6 +1,6 @@
 .contactsns {
 	background: $gray;
-	padding: 25px 0;
+	padding: 40px 0 20px;
 	text-align: center;
 	.container {
 		@include breakpoint(tablet) {
@@ -13,7 +13,11 @@
 		ul {
 			li.each-sns {
 				display: inline-block;
-				margin: 0 50px;
+				width: calc(100%/3);
+				@include breakpoint(mobile) {
+					display: block;
+					width: 100%;
+				}
 				ul {
 					li {
 						list-style: none;

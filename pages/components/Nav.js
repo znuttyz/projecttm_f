@@ -1,46 +1,58 @@
+import React, { Component } from 'react'
 import Link from 'next/link'
 import { Logo } from './'
 
-const items = ["หน้าแรก", "เกี่ยวกับเรา", "แบรนด์ของเรา", "ข่าวสาร/โปรโมชั่น", "ติดต่อ"]
+class Nav extends Component {
 
-const Nav = ({ isActive }) => (
-	<div className="header">
-		<div className="container">
-			<Logo />
-		</div>
-		<div className="bg-navbar">
-			<div className="container">
-				<div className="navbar desktop">
-					<ul>
-						<li><Link href="/"><a className={(isActive === "home")?"active":""}><div className={(isActive === "home")?"nav-index active":"nav-index"} /></a></Link></li>
-						<li><Link href="/about"><a className={(isActive === "about")?"active":""}><div className={(isActive === "about")?"nav-about active":"nav-about"} /></a></Link></li>
-						<li><Link href="/brands/tummour"><a className={(isActive === "brands")?"active":""}><div className={(isActive === "brands")?"nav-brands active":"nav-brands"} /></a></Link></li>
-						<li><Link href="/news"><a className={(isActive === "news")?"active":""}><div className={(isActive === "news")?"nav-news active":"nav-news"} /></a></Link></li>
-						<li><Link href="/contact"><a className={(isActive === "contact")?"active":""}><div className={(isActive === "contact")?"nav-contact active":"nav-contact"} /></a></Link></li>
-					</ul>
+	constructor(props) {
+		super(props)
+		this.state = {
+			isActive: props.isActive,
+			isMenu: false
+		}
+	}
+
+	render() {
+		return (
+			<div className="header">
+				<div className="container">
+					<Logo />
 				</div>
-				<div className="navbar mobile">
+				<div className="bg-navbar">
 					<div className="container">
-						<div className="hamburger">
-							<span></span>
-							<span></span>
-							<span></span>
-						</div>
-						<div className="navigation">
-							<div className="blur"></div>
+						<div className="navbar desktop">
 							<ul>
-								<li><Link href="/"><a>หน้าแรก</a></Link></li>
-								<li><Link href="/"><a>เกี่ยวกับเรา</a></Link></li>
-								<li><Link href="/"><a>แบรนด์ของเรา</a></Link></li>
-								<li><Link href="/"><a>ข่าวสาร/โปรโมชั่น</a></Link></li>
-								<li><Link href="/"><a>ติดต่อเรา</a></Link></li>
+								<li><Link href="/"><a className={(this.state.isActive === "home")?"active":""}><div className={(this.state.isActive === "home")?"nav-index active":"nav-index"} /></a></Link></li>
+								<li><Link href="/about"><a className={(this.state.isActive === "about")?"active":""}><div className={(this.state.isActive === "about")?"nav-about active":"nav-about"} /></a></Link></li>
+								<li><Link href="/brands/tummour"><a className={(this.state.isActive === "brands")?"active":""}><div className={(this.state.isActive === "brands")?"nav-brands active":"nav-brands"} /></a></Link></li>
+								<li><Link href="/news"><a className={(this.state.isActive === "news")?"active":""}><div className={(this.state.isActive === "news")?"nav-news active":"nav-news"} /></a></Link></li>
+								<li><Link href="/contact"><a className={(this.state.isActive === "contact")?"active":""}><div className={(this.state.isActive === "contact")?"nav-contact active":"nav-contact"} /></a></Link></li>
 							</ul>
+						</div>
+						<div className="navbar mobile">
+							<div className="container">
+								<div className={(this.state.isMenu)? "hamburger open" : "hamburger"} onClick={() => this.setState({isMenu: !this.state.isMenu})}>
+									<span></span>
+									<span></span>
+									<span></span>
+								</div>
+								<div className={(this.state.isMenu)? "navigation open" : "navigation"}>
+									<div className="blur"></div>
+									<ul>
+										<li><Link href="/"><a>หน้าแรก</a></Link></li>
+										<li><Link href="/"><a>เกี่ยวกับเรา</a></Link></li>
+										<li><Link href="/"><a>แบรนด์ของเรา</a></Link></li>
+										<li><Link href="/"><a>ข่าวสาร/โปรโมชั่น</a></Link></li>
+										<li><Link href="/"><a>ติดต่อเรา</a></Link></li>
+									</ul>
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>
 			</div>
-		</div>
-	</div>
-)
+		)
+	}
+}
 
 export { Nav }

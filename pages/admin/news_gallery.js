@@ -34,7 +34,7 @@ class News_gallery extends Component {
 			this.setState({ images: nextProps.images })
 		}
 		if(nextProps.isDelete) {
-			location.reload()
+			window.location = '/admin/news'
 		}
 	}
 

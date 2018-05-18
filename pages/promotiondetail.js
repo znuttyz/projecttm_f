@@ -23,12 +23,11 @@ class PromotionDetail extends Component {
 	}
 
 	render() {
-		console.log(this.state.id)
 		return (
 			<div>
 				<Head title="Tummour Original - Promotion" />
 				<Nav isActive="news" />
-				<PromotionDetailElement promotions={(this.props.promotions && this.props.promotions)}/>
+				{(this.props.promotions && <PromotionDetailElement promotions={this.props.promotions}/>)}
 				<Footer />
 			</div>
 		)

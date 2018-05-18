@@ -20,7 +20,9 @@ const Nav = ({ isActive }) => (
 					</ul>
 				</div>
 				<div className="navbar mobile">
-					
+					<div className="container">
+						
+					</div>
 				</div>
 			</div>
 		</div>

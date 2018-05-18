@@ -4,7 +4,8 @@ import { Head, Nav, AllBanner, NewsDetailElement, Footer } from './components'
 import withRedux from 'next-redux-wrapper'
 import { 
 	initStore, 
-	newsFetchById
+	newsFetchById,
+	newsFetchImageById
 } from './actions'
 
 import '../styles/index.scss'
@@ -20,6 +21,7 @@ class NewsDetail extends Component {
 
 	componentWillMount() {
 		this.props.newsFetchById(this.state.id)
+		this.props.newsFetchImageById(this.state.id)
 	}
 
 	render() {
@@ -27,7 +29,7 @@ class NewsDetail extends Component {
 			<div>
 				<Head title="Tummour Original - News" />
 				<Nav isActive="news" />
-				<NewsDetailElement news={(this.props.news && this.props.news)}/>
+				<NewsDetailElement news={(this.props.news && this.props.news)} images={(this.props.images && this.props.images)}/>
 				<Footer />
 			</div>
 		)
@@ -37,9 +39,10 @@ class NewsDetail extends Component {
 const mapStateToProps = ({ news }) => {
 	return {
 		news: news.news,
+		images: news.images
 	}
 }
 
 export default withRedux(initStore, mapStateToProps, { 
-	newsFetchById
+	newsFetchById, newsFetchImageById
 })(NewsDetail)

@@ -13,6 +13,7 @@ export const NEWS_UPDATE = 'news_update'
 export const NEWS_DELETE = 'news_delete'
 export const NEWS_FETCH_IMAGE = 'news_fetch_image'
 export const NEWS_CREATE_IMAGE = 'news_create_image'
+export const NEWS_DELETE_IMAGE = 'news_delete_image'
 
 export const PROMOTION_FETCH = 'promotion_fetch'
 export const PROMOTION_CREATE = 'promotion_create'

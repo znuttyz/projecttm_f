@@ -17,7 +17,7 @@ const Gallery_form = (props) => {
 
 			<div className="formContainer">
 				<button className="formFile submitBtn" onClick={() => props.submitHandle()}>SUBMIT</button>
-				<div className="fileLoader">{props.loading && props.loading + '%'}</div>
+				<div className="fileLoader">{props.loading && "Progress: " + props.loading + '%'}</div>
 			</div>
 		</div>
 	)

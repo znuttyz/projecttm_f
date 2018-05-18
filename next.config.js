@@ -28,6 +28,8 @@ module.exports = withSass({
 	      '/': { page: '/' },
 	      '/about': { page: '/about' },
 	      '/news': { page: '/news' },
+	      '/newsdetail': { page: '/newsdetail' },
+	      '/promotion': { page: '/promotion' },
 	      '/brands/tummour': { page: '/brands/tummour' },
 	      '/brands/laoyuan': { page: '/brands/laoyuan' },
 	      '/brands/jaewhon': { page: '/brands/jaewhon' },
@@ -35,7 +37,6 @@ module.exports = withSass({
 	      '/brands/granny': { page: '/brands/granny' },
 	      '/brands/kruathai': { page: '/brands/kruathai' },
 	      '/brands/detummour': { page: '/brands/detummour' },
-	      '/promotion': { page: '/promotion' },
 	      '/contact': { page: '/contact' },
 	      '/admin': { page: '/admin' },
 	      '/admin/banner': { page: '/admin/banner' },
@@ -46,7 +47,7 @@ module.exports = withSass({
 	      '/admin/news/galley': { page: '/admin/news_gallery'},
 	      '/admin/news/galley/add': { page: '/admin/news_gallery_add' },
 	      '/admin/promotion': { page: '/admin/promotion' },
-	      '/admin/promotion/add': { page: 'admin/promotion_add' },
+	      '/admin/promotion/add': { page: '/admin/promotion_add' },
 	      '/admin/promotion/edit': { page: '/admin/promotion_edit' }
 	    }
 	},

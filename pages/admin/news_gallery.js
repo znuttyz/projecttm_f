@@ -7,7 +7,8 @@ import {
 	initStore, 
 	loginUserCheck, 
 	logoutUser,
-	newsFetchImageById
+	newsFetchImageById,
+	newsDeleteImageById
 } from '../actions'
 
 
@@ -29,8 +30,16 @@ class News_gallery extends Component {
 
 	componentWillReceiveProps(nextProps) {
 		if(nextProps.images) {
+			console.log('nextProps', nextProps.images)
 			this.setState({ images: nextProps.images })
 		}
+		if(nextProps.isDelete) {
+			location.reload()
+		}
+	}
+
+	_onDeleteImage(id, name) {	
+	  	this.props.newsDeleteImageById(id, name)
 	}
 
 	render() {
@@ -45,7 +54,7 @@ class News_gallery extends Component {
 
 					<Card title={"News's id: " + this.state.id} subTitle="Edit News's Gallery" isEdit={true}>
 
-						<Gallery id={this.state.id} images={this.state.images}/>
+						<Gallery id={this.state.id} images={this.state.images} deleteImage={(id, name) => this._onDeleteImage(id, name)}/>
 
 					</Card>
 
@@ -59,10 +68,11 @@ class News_gallery extends Component {
 const mapStateToProps = ({ auth, news }) => {
 	return {
 		user: auth.user,
-		images: news.images
+		images: news.images,
+		isDelete: news.isDelete
 	}
 }
 
 export default withRedux(initStore, mapStateToProps, { 
-	loginUserCheck, logoutUser, newsFetchImageById
+	loginUserCheck, logoutUser, newsFetchImageById, newsDeleteImageById
 })(News_gallery)

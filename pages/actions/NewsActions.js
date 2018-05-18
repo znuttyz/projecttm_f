@@ -5,7 +5,8 @@ import {
 	NEWS_UPDATE,
 	NEWS_DELETE,
 	NEWS_FETCH_IMAGE,
-	NEWS_CREATE_IMAGE
+	NEWS_CREATE_IMAGE,
+	NEWS_DELETE_IMAGE
 } from './types';
 
 export const newsFetch = () => {
@@ -59,6 +60,7 @@ export const newsCreateImageById = (id, postData) => {
 
 export const newsFetchImageById = (id) => {
 	return (dispatch) => {
+		console.log('newsFetchImageById')
 		let	newsRef = firebase.database().ref('news/'+id+'/images')
 		newsRef.once('value', function(snapshot) {
 			let images = [];
@@ -67,7 +69,6 @@ export const newsFetchImageById = (id) => {
 		      // childData.key = childSnapshot.key;
 		      images.push(childData);
 		    });
-		    console.log("newsFetchImageById", images)
 			dispatch({ type: NEWS_FETCH_IMAGE, payload: images })
 		})
 	}
@@ -76,5 +77,20 @@ export const newsFetchImageById = (id) => {
 export const newsDeleteById = (id) => {
 	return (dispatch) => {
 		firebase.database().ref('news/'+id).remove()
+	}
+}
+
+export const newsDeleteImageById = (id, name) => {
+	return (dispatch) => {
+		let	newsRef = firebase.database().ref('news/'+id+'/images')
+		newsRef.once('value', snapshot => {
+			snapshot.forEach(function(childSnapshot) {
+		    	let childData = childSnapshot.val();
+		    	if(childSnapshot.val() === name) {
+		    		childSnapshot.ref.remove()
+		    		dispatch({ type: NEWS_DELETE_IMAGE, payload: true })
+		    	}
+		    });
+		})
 	}
 }

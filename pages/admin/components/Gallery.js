@@ -1,16 +1,17 @@
 import Link from 'next/link'
 
-const showImages = (images) => {
-	return images.map(src => {
+const showImages = (images, deleteImage, id) => {
+	return images.map((src, index) => {
 		return (
-			<li className="each-promotion">
-				<img src={src} />
+			<li className="each-promotion" key={"news_gallery_"+index}>
+				<img src={src} style={{maxWidth: '90%'}}/>
+				<a href="#" style={{height: 'auto', width: 'intrinsic' }} onClick={() => deleteImage(id, src)}>X Delete</a>
 			</li>
 		)
 	})
 }
 
-const Gallery = ({ id, images = [] }) => {
+const Gallery = ({ id, images = [], deleteImage }) => {
 	return (
 		<div className="promotioninfo">
 			<div className="tab">
@@ -21,7 +22,7 @@ const Gallery = ({ id, images = [] }) => {
 								<a style={styles.addImgStyle}><img src="https://firebasestorage.googleapis.com/v0/b/tummour-original.appspot.com/o/static%2Fimages%2F00-global%2Fadd-img-btn.png?alt=media&token=f7570751-7df9-4d99-a111-ff707e49f3b0" /></a>
 							</Link>
 						</li>
-						{showImages(images)}
+						{showImages(images, deleteImage, id)}
 					</ul>
 				</div>
 			</div>

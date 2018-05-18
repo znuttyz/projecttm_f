@@ -9,7 +9,17 @@ let settings = {
     slidesToScroll: 1
 };
 
-const NewsDetailElement = ({ news }) => {
+const showImg = (images) => {
+	return images.map(item => {
+		return (
+			<div>
+				<img src={item} alt="news_image" />
+			</div>
+		)
+	})
+}
+
+const NewsDetailElement = ({ news, images }) => {
 	const month = ["มกราคม", "กุมภาพันธ์", "มีนาคม", "เมษายน", "พฤษภาคม", "มิถุนายน", "กรกฎาคม", "สิงหาคม", "กันยายน", "ตุลาคม", "พฤศจิกายน", "ธันวาคม"]
 	const date = new Date(news.date)
 	return (
@@ -33,8 +43,10 @@ const NewsDetailElement = ({ news }) => {
 			 			<Slider {...settings} className="image-detail">
 
 					        <div>
-					          	<img src={news.banner_th}/>
+					          	<img src={news.banner_th} />
 					        </div>
+
+					        {showImg(images)}
 					        
 					    </Slider>
 			 			<div className="content-detail">

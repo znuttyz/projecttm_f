@@ -1,15 +1,6 @@
 .home-banner {
 	display: block;
-	@include breakpoint(mobile) {
-		display: none;
-	}
 	img {
 		margin-bottom: -5px;
-	}
-	&.mobile {
-		display: none;
-		@include breakpoint(mobile) {
-			display: block;
-		}
 	}
 }

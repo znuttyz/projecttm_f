@@ -21,7 +21,21 @@ const Nav = ({ isActive }) => (
 				</div>
 				<div className="navbar mobile">
 					<div className="container">
-						
+						<div className="hamburger">
+							<span></span>
+							<span></span>
+							<span></span>
+						</div>
+						<div className="navigation">
+							<div className="blur"></div>
+							<ul>
+								<li><Link href="/"><a>หน้าแรก</a></Link></li>
+								<li><Link href="/"><a>เกี่ยวกับเรา</a></Link></li>
+								<li><Link href="/"><a>แบรนด์ของเรา</a></Link></li>
+								<li><Link href="/"><a>ข่าวสาร/โปรโมชั่น</a></Link></li>
+								<li><Link href="/"><a>ติดต่อเรา</a></Link></li>
+							</ul>
+						</div>
 					</div>
 				</div>
 			</div>

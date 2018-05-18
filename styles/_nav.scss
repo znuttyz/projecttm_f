@@ -13,8 +13,109 @@
 		.navbar {
 			width: 100%;
 			text-align: right;
+			&.desktop {
+				display: block;
+				@include breakpoint(mobile) {
+					display: none;
+				}
+			}
 			&.mobile {
 				display: none;
+				@include breakpoint(mobile) {
+					display: block;
+				}
+				.container {
+					.hamburger {
+						width: 40px;
+						height: 40px;
+						margin: 20px;
+						display: block;
+						cursor: pointer;
+						position: absolute;
+						right: 0;
+						z-index: 1;
+						span {
+							display: block;
+							height: 2px;
+							background: $white;
+							position: absolute;
+							right: 0;
+							opacity: 1;
+							transition: 0.5s;
+							transform-origin: center center;
+							&:nth-child(1) {
+								width: 100%;
+							}
+							&:nth-child(2) {
+								width: 85%;
+								margin: 10px 0;
+							}
+							&:nth-child(3) {
+								width: 60%;
+								margin: 20px 0;
+							}
+						}
+						&.open {
+							span {
+								&:nth-child(1) {
+									width: 80%;
+									-webkit-transform: rotate(315deg) translateY(10px) translateX(-4px);
+								    -moz-transform: rotate(315deg) translateY(10px) translateX(-4px);
+								    -ms-transform: rotate(315deg) translateY(10px) translateX(-4px);
+								    -o-transform: rotate(315deg) translateY(10px) translateX(-4px);
+								    transform: rotate(315deg) translateY(10px) translateX(-4px);
+								}
+								&:nth-child(2) {
+									opacity: 0;
+								}
+								&:nth-child(3) {
+									width: 80%;
+									-webkit-transform: rotate(45deg) translateY(-10px) translateX(-4px);
+								    -moz-transform: rotate(45deg) translateY(-10px) translateX(-4px);
+								    -ms-transform: rotate(45deg) translateY(-10px) translateX(-4px);
+								    -o-transform: rotate(45deg) translateY(-10px) translateX(-4px);
+								    transform: rotate(45deg) translateY(-10px) translateX(-4px);
+								}
+							}
+						}
+					}
+					.navigation {
+						position: absolute;
+						right: 0;
+						margin: 20px;
+						.blur {
+							filter: blur(10px) grayscale(35%);
+						}
+						ul {
+							display: none;
+							li {
+								a {
+									color: $white;
+								}
+							}
+						}
+						&.open {
+							position: fixed;
+							width: 100%;
+							height: 100vh;
+							margin: 0;
+							ul {
+								width: 52%;
+								margin-top: 15%;
+								li {
+									border-bottom: 1px solid $white;
+									padding: 18% 10%;
+									a {
+										color: $white;
+										@include font-size(24);
+										transition: 0.5s;
+										display: block;
+									}
+								}
+							}
+						}
+					}
+				}
 			}
 			ul {
 				margin: 0;

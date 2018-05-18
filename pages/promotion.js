@@ -26,7 +26,6 @@ class Promotion extends Component {
 
 	componentWillReceiveProps(nextProps) {
 		if(nextProps.promotions) {
-			console.log('nextprops',nextProps.promotions)
 			this.setState({
 				promotions: nextProps.promotions
 			})

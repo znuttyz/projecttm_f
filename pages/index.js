@@ -4,7 +4,7 @@ import { Head, Nav, HomeBanner, HomeOurbrands, HomePromotion, Footer } from './c
 import withRedux from 'next-redux-wrapper'
 import { 
 	initStore,
-	bannerFetch
+	bannerFetchHome,
 } from './actions'
 
 import '../styles/index.scss'
@@ -12,7 +12,7 @@ import '../styles/index.scss'
 class Home extends Component {
 
 	componentWillMount() {
-		this.props.bannerFetch()
+		this.props.bannerFetchHome()
 	}
 
 	render() {
@@ -20,9 +20,9 @@ class Home extends Component {
 			<div>
 				<Head title="Tummour Original"/>
 				<Nav isActive="home"/>
-				{(this.props.banner && <HomeBanner image={this.props.banner}/>)}
+				{(this.props.home[0] && <HomeBanner image={this.props.home[0]}/>)}
 				<HomeOurbrands />
-				<HomePromotion />
+				{(this.props.home[1] && <HomePromotion promotions={this.props.home[1]} />)}
 				<Footer />
 			</div>
 		)
@@ -31,9 +31,9 @@ class Home extends Component {
 
 const mapStateToProps = ({ banner }) => {
 	return {
-		banner: banner.banner
+		home: banner.home
 	}
 }
 
 
-export default withRedux(initStore, mapStateToProps, { bannerFetch })(Home)
+export default withRedux(initStore, mapStateToProps, { bannerFetchHome })(Home)

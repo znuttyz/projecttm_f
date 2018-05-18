@@ -43,6 +43,20 @@ export const promotionFetchByBrand = (brand) => {
 	}
 }
 
+export const promotionFetchWithLimit = (limit) => {
+	return (dispatch) => {
+		let	promotionRef = firebase.database().ref('promotion').limitToLast(limit);
+		promotionRef.once('value', function(snapshot) {
+			let data = []
+			snapshot.forEach(childSnapshot => {
+				let item = childSnapshot.val()
+				data.push(item)
+			})
+			dispatch({ type: PROMOTION_FETCH, payload: data });
+		})
+	}
+}
+
 
 export const promotionCreate = (postData) => {
 	return (dispatch) => {

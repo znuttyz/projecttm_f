@@ -6,6 +6,7 @@ export const LOGOUT_USER_SUCCESS = 'logout_user_success'
 
 export const BANNER_FETCH = 'banner_fetch'
 export const BANNER_UPDATE = 'banner_update'
+export const BANNER_FETCH_HOME = 'banner_fetch_home'
 
 export const NEWS_FETCH = 'news_fetch'
 export const NEWS_CREATE = 'news_create'

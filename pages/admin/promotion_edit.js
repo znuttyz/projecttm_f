@@ -20,6 +20,7 @@ class Promotion_edit extends Component {
 		super(props)
 		this.state = {
 			id: props.url.query.id,
+			brand: "",
 			title: "",
 			body: "",
 			selectedFile: [],
@@ -46,6 +47,7 @@ class Promotion_edit extends Component {
 			let sdate = new Date(nextProps.promotion.start_date)
 			let edate = new Date(nextProps.promotion.end_date)
 			this.setState({
+				brand: nextProps.promotion.brand,
 				title: nextProps.promotion.title,
 				body: nextProps.promotion.body,
 				selectedFile: tmp,
@@ -88,6 +90,7 @@ class Promotion_edit extends Component {
 			let sdate = new Date(syear, smonth-1, sday)
 			let edate = new Date(eyear, emonth-1, eday)
 			let postData = {
+				brand: this.state.brand,
 				title: this.state.title,
 				body: this.state.body,
 				start_date: sdate.getTime(),
@@ -117,6 +120,7 @@ class Promotion_edit extends Component {
 				let sdate = new Date(syear, smonth-1, sday)
 				let edate = new Date(eyear, emonth-1, eday)
 				let postData = {
+					brand: this.state.brand,
 					title: this.state.title,
 					body: this.state.body,
 					start_date: sdate.getTime(),
@@ -147,6 +151,17 @@ class Promotion_edit extends Component {
 					<Header title="Promotions" user={(this.props.user && this.props.user.email)} handleLogout={() => this._handleLogout()} />
 
 					<Card title={"Promotion's id: " + this.state.id} subTitle="Edit Promotion" isEdit={true}>
+
+						<div className="formContainer">
+							<label className="formLabel">Select brand </label>
+							<select name="brand" onChange={event => this._onHandleChange(event)} value={this.state.brand}>
+								<option value="Tummour">Tummour</option>
+								<option value="Laoyuan">Laoyuan</option>
+								<option value="Jaewhon">Jaewhon</option>
+								<option value="Pho">Pho</option>
+							</select>
+						</div>
+
 						<Form 
 							title="Promotion"
 							handleChange={(event) => this._onHandleChange(event)} 

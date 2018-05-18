@@ -49,12 +49,20 @@ class Banner extends Component {
 					<Card title="Banners" subTitle="Home page banner">
 						<div className="bannerContainer">
 							<div className="bannerImage" >
-								<h1>TH</h1>
+								<h1>TH - Desktop</h1>
 								{(this.state.imageStatus === "loading") ? <div>Loading...</div>: ""}
 								<img 
-									src={(this.props.banner && this.props.banner.src_th)} 
+									src={(this.props.banner && this.props.banner.src_desktop_th)} 
 									alt={(this.props.banner && this.props.banner.tag)}
-									width="100%"
+									onLoad={() => this._handleImageLoaded()}
+								/>
+							</div>
+							<div className="bannerImage" >
+								<h1>TH - Mobile</h1>
+								{(this.state.imageStatus === "loading") ? <div>Loading...</div>: ""}
+								<img 
+									src={(this.props.banner && this.props.banner.src_mobile_th)} 
+									alt={(this.props.banner && this.props.banner.tag)}
 									onLoad={() => this._handleImageLoaded()}
 								/>
 							</div>

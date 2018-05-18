@@ -1,7 +1,39 @@
 import Link from 'next/link'
 import { PageNumber } from './'
 
-const PromotionInfo = () => (
+const showPromotions = (promotions) => {
+	return promotions.map((item, index) => {
+		const month = ["ม.ค.", "ก.พ.", "มี.ค.", "เม.ย.", "พ.ค.", "มิ.ย.", "ก.ค.", "ส.ค.", "ก.ย.", "ต.ค.", "พ.ย.", "ธ.ค."]
+		const sdate = new Date(item.start_date)
+		const edate = new Date(item.end_date)
+		let brand = ""
+		if(item.brand === "Tummour") {
+			brand = "ตำมั่ว"
+		} else if (item.brand === "Laoyuan") {
+			brand = "ลาวญวณ"
+		} else if (item.brand === "Jaewhon") {
+			brand = "แจ่วฮ้อน"
+		} else if (item.brand === "Pho") {
+			brand = "เฝอ"
+		}
+
+		return (
+			<li className="each-promotion" key={item.brand+""+index}>
+				<Link href="/promotiondetail"><a>
+					<img src={item.banner_th} />
+					<div className="promotion-text">
+						<h3>
+							<span>{brand}</span> {item.title}
+						</h3>
+						<p>{sdate.getDate()+" "+month[sdate.getMonth()]+" "+sdate.getFullYear()+" - "+edate.getDate()+" "+month[edate.getMonth()]+" "+edate.getFullYear()}</p>
+					</div>
+				</a></Link>
+			</li>
+		)
+	})
+}
+
+const PromotionInfo = ({ promotions, handleChange }) => (
 	<div className="promotioninfo clear">
 		<div className="promotionbanner">
 			<img src="https://firebasestorage.googleapis.com/v0/b/tummour-original.appspot.com/o/static%2Fimages%2F00-global%2Fbanner-news.png?alt=media&token=d6a68923-d052-43c3-a510-fe3efca3ed23" />
@@ -14,112 +46,17 @@ const PromotionInfo = () => (
 				</ul>
 			</div>
 			<div className="tabcontent">
-	 			<select className="brands-filter">
-	 				<option value="">ตำมั่ว</option>
-	 				<option value="">ลาวญวณ</option>
-	 				<option value="">แจ่วฮ้อน</option>
-	 				<option value="">เฝอ</option>
+	 			<select className="brands-filter" name="filter" onChange={event=>handleChange(event)}>
+	 				<option value="All">ทุกแบรนด์</option>
+	 				<option value="Tummour">ตำมั่ว</option>
+	 				<option value="Laoyuan">ลาวญวณ</option>
+	 				<option value="Jaewhon">แจ่วฮ้อน</option>
+	 				<option value="Pho">เฝอ</option>
 	 			</select>
 	 			<ul className="all-promotions">
-					<li className="each-promotion">
-						<Link href="/promotiondetail"><a>
-							<img src="/static/images/imgpromo.jpg" />
-							<div className="promotion-text">
-								<h3>
-									<span>ตำมั่ว</span> ฟรีเมนูตำมั่ว เพียงเช็คอินภายในร้าน
-								</h3>
-								<p>30 เม.ย. - 15 พ.ค. 61</p>
-							</div>
-						</a></Link>
-					</li>
-					<li className="each-promotion">
-						<Link href="/promotiondetail"><a>
-							<img src="/static/images/imgpromo.jpg" />
-							<div className="promotion-text">
-								<h3>
-									<span>ตำมั่ว</span> ฟรีเมนูตำมั่ว เพียงเช็คอินภายในร้าน
-								</h3>
-								<p>30 เม.ย. - 15 พ.ค. 61</p>
-							</div>
-						</a></Link>
-					</li>
-					<li className="each-promotion">
-						<Link href="/promotiondetail"><a>
-							<img src="/static/images/imgpromo.jpg" />
-							<div className="promotion-text">
-								<h3>
-									<span>ตำมั่ว</span> ฟรีเมนูตำมั่ว เพียงเช็คอินภายในร้าน
-								</h3>
-								<p>30 เม.ย. - 15 พ.ค. 61</p>
-							</div>
-						</a></Link>
-					</li>
-					<li className="each-promotion">
-						<Link href="/promotiondetail"><a>
-							<img src="/static/images/imgpromo.jpg" />
-							<div className="promotion-text">
-								<h3>
-									<span>ตำมั่ว</span> ฟรีเมนูตำมั่ว เพียงเช็คอินภายในร้าน
-								</h3>
-								<p>30 เม.ย. - 15 พ.ค. 61</p>
-							</div>
-						</a></Link>
-					</li>
-					<li className="each-promotion">
-						<Link href="/promotiondetail"><a>
-							<img src="/static/images/imgpromo.jpg" />
-							<div className="promotion-text">
-								<h3>
-									<span>ตำมั่ว</span> ฟรีเมนูตำมั่ว เพียงเช็คอินภายในร้าน
-								</h3>
-								<p>30 เม.ย. - 15 พ.ค. 61</p>
-							</div>
-						</a></Link>
-					</li>
-					<li className="each-promotion">
-						<Link href="/promotiondetail"><a>
-							<img src="/static/images/imgpromo.jpg" />
-							<div className="promotion-text">
-								<h3>
-									<span>ตำมั่ว</span> ฟรีเมนูตำมั่ว เพียงเช็คอินภายในร้าน
-								</h3>
-								<p>30 เม.ย. - 15 พ.ค. 61</p>
-							</div>
-						</a></Link>
-					</li>
-					<li className="each-promotion">
-						<Link href="/promotiondetail"><a>
-							<img src="/static/images/imgpromo.jpg" />
-							<div className="promotion-text">
-								<h3>
-									<span>ตำมั่ว</span> ฟรีเมนูตำมั่ว เพียงเช็คอินภายในร้าน
-								</h3>
-								<p>30 เม.ย. - 15 พ.ค. 61</p>
-							</div>
-						</a></Link>
-					</li>
-					<li className="each-promotion">
-						<Link href="/promotiondetail"><a>
-							<img src="/static/images/imgpromo.jpg" />
-							<div className="promotion-text">
-								<h3>
-									<span>ตำมั่ว</span> ฟรีเมนูตำมั่ว เพียงเช็คอินภายในร้าน
-								</h3>
-								<p>30 เม.ย. - 15 พ.ค. 61</p>
-							</div>
-						</a></Link>
-					</li>
-					<li className="each-promotion">
-						<Link href="/promotiondetail"><a>
-							<img src="/static/images/imgpromo.jpg" />
-							<div className="promotion-text">
-								<h3>
-									<span>ตำมั่ว</span> ฟรีเมนูตำมั่ว เพียงเช็คอินภายในร้าน
-								</h3>
-								<p>30 เม.ย. - 15 พ.ค. 61</p>
-							</div>
-						</a></Link>
-					</li>
+					
+					{showPromotions(promotions)}
+
 				</ul>
 	 			<PageNumber />
 	 		</div>

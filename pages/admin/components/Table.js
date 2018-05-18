@@ -28,7 +28,7 @@ const showPromotion = (promotions, handleDelete) => {
 		return (
 			<tr key={data.title}>
 				<td>{sdate+" - "+edate}</td>
-				<td>{data.title}</td>
+				<td>{data.brand + " " + data.title}</td>
 				<td>{data.body}</td>
 				<td>
 					<Link href={{ pathname: '/admin/promotion_edit', query: { id: data.id } }}><a>Edit</a></Link>

@@ -29,6 +29,20 @@ export const promotionFetchById = (id) => {
 	}
 }
 
+export const promotionFetchByBrand = (brand) => {
+	return (dispatch) => {
+		let	promotionRef = firebase.database().ref('promotion').orderByChild("brand").equalTo(brand)
+		promotionRef.once('value', function(snapshot) {
+			let data = []
+			snapshot.forEach(childSnapshot => {
+				let item = childSnapshot.val()
+				data.push(item)
+			})
+			dispatch({ type: PROMOTION_FETCH, payload: data.reverse() })
+		})
+	}
+}
+
 
 export const promotionCreate = (postData) => {
 	return (dispatch) => {

@@ -23,9 +23,15 @@ class Banner_edit extends Component {
 			selectedFile1: null,
 			selectedFile2: null,
 			selectedFile3: null,
+			selectedFile4: null,
+			selectedFile5: null,
+			selectedFile6: null,
 			loading1: null,
 			loading2: null,
 			loading3: null,
+			loading4: null,
+			loading5: null,
+			loading6: null,
 			disableInput: false
 		}
 	}
@@ -72,9 +78,10 @@ class Banner_edit extends Component {
 	}
 
 	_onHandleSubmit(id) {
-		this.setState({ disableInput: true })
 		if(id === 1) {
-			this.fileUploadHandler(this.state.selectedFile1, "src_th", "loading1")
+			this.fileUploadHandler(this.state.selectedFile1, "src_desktop_th", "loading1")
+		} else if (id === 2) {
+			this.fileUploadHandler(this.state.selectedFile2, "src_mobile_th", "loading2")
 		}
 	}
 
@@ -95,7 +102,7 @@ class Banner_edit extends Component {
 
 						
 						<div className="formContainer">
-							<label className="formLabel">Browse Image (TH)</label>
+							<label className="formLabel">Browse Image (TH - Desktop)</label>
 							<input 
 								name="selectedFile1"
 								type="file"
@@ -107,7 +114,23 @@ class Banner_edit extends Component {
 							<button onClick={() => this.fileInput.click()} className="formFile">Pick File</button>
 							{this.state.selectedFile1 && this.state.selectedFile1.name}
 							<button className="formFile submitBtn" onClick={() => this._onHandleSubmit(1)}>SUBMIT</button>
-							<div className="fileLoader">{this.state.loading1 && this.state.loading1 + '%'}</div>
+							<div className="fileLoader">{this.state.loading1 && 'Progress: '+this.state.loading1 + '%'}</div>
+						</div>
+
+						<div className="formContainer">
+							<label className="formLabel">Browse Image (TH - Mobile)</label>
+							<input 
+								name="selectedFile2"
+								type="file"
+								style={{display: 'none'}}
+						        onChange={this.fileSelectedHandler}
+						        ref={fileInput2 => this.fileInput2 = fileInput2}
+						        disabled={this.state.disableInput}
+							/>
+							<button onClick={() => this.fileInput2.click()} className="formFile">Pick File</button>
+							{this.state.selectedFile2 && this.state.selectedFile2.name}
+							<button className="formFile submitBtn" onClick={() => this._onHandleSubmit(2)}>SUBMIT</button>
+							<div className="fileLoader">{this.state.loading2 && 'Progress: '+this.state.loading2 + '%'}</div>
 						</div>
 							
 					</Card>	

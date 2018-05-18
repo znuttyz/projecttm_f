@@ -38,6 +38,7 @@ class Promotion extends Component {
 	}
 
 	_handleDelete(id) {
+		console.log("delete",id)
 		let promise = new Promise((resolve, reject) => {
 		  	this.props.promotionDeleteById(id)
 		  	resolve()

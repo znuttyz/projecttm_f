@@ -19,6 +19,7 @@ class Promotion_add extends Component {
 		super(props)
 		const date = new Date()
 		this.state = {
+			brand: "Tummour",
 			title: "",
 			body: "",
 			selectedFile: [],
@@ -87,6 +88,7 @@ class Promotion_add extends Component {
 			let sdate = new Date(syear, smonth-1, sday)
 			let edate = new Date(eyear, emonth-1, eday)
 			let postData = {
+				brand: this.state.brand,
 				title: this.state.title,
 				body: this.state.body,
 				start_date: sdate.getTime(),
@@ -114,6 +116,16 @@ class Promotion_add extends Component {
 					<Header title="Promotions" user={(this.props.user && this.props.user.email)} handleLogout={() => this._handleLogout()} />
 
 					<Card title="Promotion" subTitle="Edit Promotion" isEdit={true}>
+
+						<div className="formContainer">
+							<label className="formLabel">Select brand </label>
+							<select name="brand" onChange={event => this._onHandleChange(event)}>
+								<option value="Tummour">Tummour</option>
+								<option value="Laoyuan">Laoyuan</option>
+								<option value="Jaewhon">Jaewhon</option>
+								<option value="Pho">Pho</option>
+							</select>
+						</div>
 					
 						<Form 
 							title="Promotion"

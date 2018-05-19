@@ -10,6 +10,9 @@
 		background: url('https://firebasestorage.googleapis.com/v0/b/tummour-original.appspot.com/o/static%2Fimages%2F00-global%2Fbg-header.jpg?alt=media&token=690a92ea-6f42-470f-8a90-930210f4a551');
 		background-size: cover;
 		position: relative;
+		@include breakpoint(mobile) {
+			height: 60px;
+		}
 		.navbar {
 			width: 100%;
 			text-align: right;
@@ -56,6 +59,8 @@
 							}
 						}
 						&.open {
+							position: fixed;
+							z-index: 2;
 							span {
 								&:nth-child(1) {
 									width: 80%;
@@ -83,14 +88,11 @@
 						position: absolute;
 						right: 0;
 						margin: 20px;
-						.blur {
-							filter: blur(10px) grayscale(35%);
-						}
 						ul {
 							display: none;
 							li {
-								a {
-									color: $white;
+								&:after {
+									content: "";
 								}
 							}
 						}
@@ -99,17 +101,23 @@
 							width: 100%;
 							height: 100vh;
 							margin: 0;
+							background: $black;
+							opacity: 0.9;
+							z-index: 1;
 							ul {
-								width: 52%;
-								margin-top: 15%;
+								display: block;
+								float: right;
+								width: 45%;
+								margin-top: 16%;
 								li {
+									display: block;
 									border-bottom: 1px solid $white;
-									padding: 18% 10%;
 									a {
 										color: $white;
-										@include font-size(24);
+										@include font-size(22);
 										transition: 0.5s;
 										display: block;
+										padding: 30px 10px 15px 0;
 									}
 								}
 							}
@@ -135,6 +143,9 @@
 						}
 						&:hover {
 							background: #362f2d;
+							@include breakpoint(mobile) {
+								background: transparent;
+							}
 						}
 						&.active {
 							background: #362f2d;
@@ -206,5 +217,17 @@
 				}
 			}
 		}
+	}
+	.wrapper {
+		top: 0;
+		left: 0;
+		height: 100vh;
+		width: 100%;
+		transition: 0.5s;
+		overflow: hidden;
+		position: relative;
+	}
+	.blur {
+		filter: blur(10px) grayscale(35%);
 	}
 }

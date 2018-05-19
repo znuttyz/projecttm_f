@@ -55,8 +55,6 @@
 						vertical-align: top;
 						&.content-img {
 							width: 30%;
-							float: left;
-							margin-right: 25px;
 							@include breakpoint(tablet) {
 								width: 40%;
 							}
@@ -69,6 +67,7 @@
 							.detail-img {
 								width: 300px;
 								height: 200px;
+								margin: 0 auto;
 								@include breakpoint(tablet) {
 									width: 220px;
 									height: 147px;
@@ -84,9 +83,10 @@
 							}
 						}
 						&.content-text {
-							width: 65%;
+							width: 68%;
 							text-align: left;
 							color: $white;
+							padding-left: 20px;
 							@include breakpoint(tablet) {
 								width: 55%;
 							}
@@ -96,6 +96,7 @@
 							@include breakpoint(mobile) {
 								width: 100%;
 								margin-top: 15px;
+								padding: 0;
 							}
 							.detail-info {
 								h2.topic {
@@ -117,13 +118,13 @@
 									margin-top: 10px;
 									@include breakpoint(tablet) {
 										@include font-size(12);
-										height: 85px;
+										height: 62px;
 									}
 									@include breakpoint(tablet-wide) {
-										height: 105px;
+										height: 82px;
 									}
 									@include breakpoint(mobile) {
-										height: 125px;
+										height: 82px;
 									}
 								}
 							}

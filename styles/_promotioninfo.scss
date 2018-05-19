@@ -64,30 +64,64 @@
 				@include breakpoint(tablet) {
 					margin-top: 10px;
 				}
+				@include breakpoint(mobile) {
+					width: 100%;
+					margin: 0 auto;
+				}
 				li.each-promotion {
 					display: inline-block;
 					width: calc(100%/3);
 					margin-top: 20px;
 					@include breakpoint(tablet) {
 						width: calc(100%/2);
+						margin-top: 30px;
+					}
+					@include breakpoint(tablet-wide) {
+						width: calc(100%/3);
+						margin-top: 30px;
 					}
 					@include breakpoint(mobile) {
 						width: 100%;
+						margin: 30px 0;
 					}
 					a {
-						width: 280px;
-						height: 280px;
-						margin: 0 auto;
-						@include breakpoint(tablet) {
-							width: 250px;
-							height: 250px;
+						.box-img {
+							width: 280px;
+							height: 280px;
+							margin: 0 auto;
+							@include breakpoint(tablet) {
+								width: 250px;
+								height: 250px;
+							}
+							@include breakpoint(tablet-wide) {
+								width: 240px;
+								height: 240px;
+							}
+							@include breakpoint(mobile) {
+								width: 325px;
+								height: 325px;
+							}
 						}
 						.promotion-text {
-							margin-top: 10px;
+							padding-top: 20px;
+							width: 280px;
+							margin: 0 auto;
+							@include breakpoint(tablet) {
+								width: 250px;
+							}
+							@include breakpoint(tablet-wide) {
+								width: 240px;
+							}
+							@include breakpoint(mobile) {
+								width: 325px;
+							}
 							h3 {
 								color: $white;
 								text-align: left;
 								@include font-size(14);
+								@include breakpoint(mobile) {
+									@include font-size(16);
+								}
 								span {
 									color: $green;
 								}
@@ -96,6 +130,10 @@
 								color: $red;
 								text-align: left;
 								@include font-size(12);
+								font-weight: bold;
+								@include breakpoint(mobile) {
+									@include font-size(14);
+								}
 							}
 						}
 					}

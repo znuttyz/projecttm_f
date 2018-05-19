@@ -20,7 +20,9 @@ const showPromotions = (promotions) => {
 		return (
 			<li className="each-promotion" key={item.brand+""+index}>
 				<Link href={{ pathname: '/promotiondetail', query: { id: item.id } }}><a>
-					<img src={item.banner_th} />
+					<div className="box-img">
+						<img src={item.banner_th} />
+					</div>
 					<div className="promotion-text">
 						<h3>
 							<span>{brand}</span> {item.title}

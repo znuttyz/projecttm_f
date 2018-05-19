@@ -12,7 +12,7 @@ let settings = {
 const showImg = (images) => {
 	return images.map(item => {
 		return (
-			<div>
+			<div className="box-img">
 				<img src={item} alt="news_image" />
 			</div>
 		)

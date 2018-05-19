@@ -22,18 +22,28 @@
 				text-align: center;
 				li.each-brand {
 					display: inline-block;
-					width: 22%;
+					width: calc(100%/4);
 					margin: 0 auto;
-					padding: 0 8px;
 					@include breakpoint(mobile) {
-						width: 128px;
+						width: calc(100%/2);
 					}
 					ul {
 						li {
 							display: block;
 							overflow: hidden;
 							&.brandname {
+								width: 240px;
+								margin: 0 auto;
 								padding-bottom: 20px;
+								@include breakpoint(tablet) {
+									width: 170px;
+								}
+								@include breakpoint(tablet-wide) {
+									width: 225px;
+								}
+								@include breakpoint(mobile) {
+									width: 165px;
+								}
 								a {
 									img {
 										width: 70%;
@@ -41,6 +51,21 @@
 								}
 							}
 							&.brandimg {
+								width: 240px;
+								height: 344px;
+								margin: 0 auto;
+								@include breakpoint(tablet) {
+									width: 170px;
+									height: 243px;
+								}
+								@include breakpoint(tablet-wide) {
+									width: 225px;
+									height: 322px;
+								}
+								@include breakpoint(mobile) {
+									width: 165px;
+									height: 236px;
+								}
 								a {
 									img {
 										transition: transform 0.5s;

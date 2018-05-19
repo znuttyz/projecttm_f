@@ -6,7 +6,7 @@
 	}
 	.footer-info {
 		position: absolute;
-		top: 90px;
+		top: 86px;
 		width: 100%;
 		margin: 0 auto;
 		@include breakpoint(tablet) {
@@ -27,9 +27,9 @@
 				text-align: center;
 				li {
 					display: inline-block;
-					padding: 0 15px;
+					padding: 0 20px;
 					@include breakpoint(mobile) {
-						padding: 0 10px;
+						padding: 0 8px;
 					}
 					a {
 						color: $white;
@@ -71,7 +71,7 @@
 				i {
 					@include font-size(7);
 					@include breakpoint(mobile) {
-						@include font-size(3);
+						@include font-size(2);
 					}
 				}
 			}

@@ -32,7 +32,7 @@ export const bannerFetchHome = () => {
 			})
 		})
 		promise.then(() => {
-			let	promotionRef = firebase.database().ref('promotion').limitToLast(3);
+			let	promotionRef = firebase.database().ref('promotion').limitToLast(4);
 			promotionRef.once('value', function(snapshot) {
 				let data = []
 				snapshot.forEach(childSnapshot => {

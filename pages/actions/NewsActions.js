@@ -60,7 +60,6 @@ export const newsCreateImageById = (id, postData) => {
 
 export const newsFetchImageById = (id) => {
 	return (dispatch) => {
-		console.log('newsFetchImageById')
 		let	newsRef = firebase.database().ref('news/'+id+'/images')
 		newsRef.once('value', function(snapshot) {
 			let images = [];

@@ -49,8 +49,8 @@
 								height: 210px;
 							}
 							@include breakpoint(mobile) {
-								width: 318px;
-								height: 318px;
+								width: 325px;
+								height: 325px;
 							}
 							img {
 								transition: transform 0.5s;
@@ -62,7 +62,7 @@
 						.promotion-text {
 							width: 92%;
 							margin: 0 auto;
-							padding: 5px 0;
+							padding-top: 20px;
 							@include breakpoint(tablet) {
 								width: 150px;
 							}
@@ -70,7 +70,7 @@
 								width: 210px;
 							}
 							@include breakpoint(mobile) {
-								width: 100%;
+								width: 325px;
 							}
 							h3 {
 								color: $white;
@@ -87,7 +87,7 @@
 									@include font-size(12);
 								}
 								@include breakpoint(mobile) {
-									@include font-size(14);
+									@include font-size(16);
 								}
 								span {
 									color: $green;
@@ -104,7 +104,7 @@
 									@include font-size(10);
 								}
 								@include breakpoint(mobile) {
-									@include font-size(12);
+									@include font-size(14);
 								}
 							}
 						}

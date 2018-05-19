@@ -4,6 +4,19 @@
 		background: url('https://firebasestorage.googleapis.com/v0/b/tummour-original.appspot.com/o/static%2Fimages%2F00-global%2Fbg-about-brands.jpg?alt=media&token=4aaa6781-1c89-43b2-bc1f-0c6fa03b7d4d');
 		background-size: cover;
 		background-attachment: fixed;
+		display: block;
+		@include breakpoint(mobile) {
+			display: none;
+		}
+	}
+	.aboutbanner-mb {
+		background: url('https://firebasestorage.googleapis.com/v0/b/tummour-original.appspot.com/o/static%2Fimages%2F00-global%2Fbg-about-brands.jpg?alt=media&token=4aaa6781-1c89-43b2-bc1f-0c6fa03b7d4d');
+		background-size: cover;
+		background-attachment: fixed;
+		display: none;
+		@include breakpoint(mobile) {
+			display: block;
+		}
 	}
 	.container {
 		@include breakpoint(tablet) {

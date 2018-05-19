@@ -6,6 +6,9 @@ const AboutInfo = () => (
 		<div className="aboutbanner">
 			<img src="https://firebasestorage.googleapis.com/v0/b/tummour-original.appspot.com/o/static%2Fimages%2F00-global%2Fbanner-about.png?alt=media&token=aa6c33a8-47a1-4004-9b63-7d4befe7cd0d" />
 		</div>
+		<div className="aboutbanner-mb">
+			<img src="https://firebasestorage.googleapis.com/v0/b/tummour-original.appspot.com/o/static%2Fimages%2F02-about%2Fbannerabout-mb.png?alt=media&token=fd6f3868-6df6-41b5-9635-067f26f0303f" />
+		</div>
 		<div className="container">
 			<div className="aboutlogo">
 				<img src="https://firebasestorage.googleapis.com/v0/b/tummour-original.appspot.com/o/static%2Fimages%2F00-global%2Ftm.png?alt=media&token=ac35c520-2402-422d-ba6b-c28a94eab001"/>

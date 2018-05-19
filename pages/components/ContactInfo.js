@@ -7,6 +7,9 @@ const ContactInfo = ({ handleChange, onSubmit, error }) => (
 		<div className="contactbanner">
 			<img src="https://firebasestorage.googleapis.com/v0/b/tummour-original.appspot.com/o/static%2Fimages%2F00-global%2Fbanner-contact.png?alt=media&token=193e0b2d-cbbc-49de-9c86-d115d44bcb4e" />
 		</div>
+		<div className="contactbanner-mb">
+			<img src="https://firebasestorage.googleapis.com/v0/b/tummour-original.appspot.com/o/static%2Fimages%2F05-contact%2Fbannercontact-mb.png?alt=media&token=dc80d7c8-f3b1-4da4-9ff7-cc757ac33462" />
+		</div>
 		<div className="container">
 			<ul>
 				<li className="contact-address">

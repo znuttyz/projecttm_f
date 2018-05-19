@@ -4,6 +4,19 @@
 		background: url('https://firebasestorage.googleapis.com/v0/b/tummour-original.appspot.com/o/static%2Fimages%2F00-global%2Fbg-contact.jpg?alt=media&token=191db863-bbb3-47ff-ae1e-ac2113557487');
 		background-size: cover;
 		background-attachment: fixed;
+		display: block;
+		@include breakpoint(mobile) {
+			display: none;
+		}
+	}
+	.contactbanner-mb {
+		background: url('https://firebasestorage.googleapis.com/v0/b/tummour-original.appspot.com/o/static%2Fimages%2F00-global%2Fbg-contact.jpg?alt=media&token=191db863-bbb3-47ff-ae1e-ac2113557487');
+		background-size: cover;
+		background-attachment: fixed;
+		display: none;
+		@include breakpoint(mobile) {
+			display: block;
+		}
 	}
 	.container {
 		@include breakpoint(tablet) {

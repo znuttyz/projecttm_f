@@ -3,6 +3,19 @@
 		background: url('https://firebasestorage.googleapis.com/v0/b/tummour-original.appspot.com/o/static%2Fimages%2F00-global%2Fbg-news.jpg?alt=media&token=12d2a274-09a1-468e-9a10-1167341abdff');
 		background-size: cover;
 		background-attachment: fixed;
+		display: block;
+		@include breakpoint(mobile) {
+			display: none;
+		}
+	}
+	.newsbanner-mb {
+		background: url('https://firebasestorage.googleapis.com/v0/b/tummour-original.appspot.com/o/static%2Fimages%2F00-global%2Fbg-news.jpg?alt=media&token=12d2a274-09a1-468e-9a10-1167341abdff');
+		background-size: cover;
+		background-attachment: fixed;
+		display: none;
+		@include breakpoint(mobile) {
+			display: block;
+		}
 	}
 	.tab {
 		.tabtopic {

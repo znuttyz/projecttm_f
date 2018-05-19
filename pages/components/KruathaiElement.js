@@ -6,6 +6,9 @@ const KruathaiElement = () => (
 		<div className="b-banner">
 			<img src="https://firebasestorage.googleapis.com/v0/b/tummour-original.appspot.com/o/static%2Fimages%2F00-global%2Fbanner-brands.png?alt=media&token=284db74b-0b05-41a4-b034-408be3c54fdd" />
 		</div>
+		<div className="b-banner-mb">
+			<img src="https://firebasestorage.googleapis.com/v0/b/tummour-original.appspot.com/o/static%2Fimages%2F03-brands%2Fbannerbrands-mb%20.png?alt=media&token=244828ef-a1a9-4238-b9d9-93da40d5203d" />
+		</div>
 		<div className="tab">
 			<div className="tabtopic">
 				<ul>

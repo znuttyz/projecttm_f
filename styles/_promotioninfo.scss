@@ -119,6 +119,13 @@
 								color: $white;
 								text-align: left;
 								@include font-size(14);
+								overflow: hidden;
+							   	text-overflow: ellipsis;
+							   	display: -webkit-box;
+							   	-webkit-box-orient: vertical;
+							   	-webkit-line-clamp: 1;
+							   	line-height: 1; 
+							   	max-height: 1*1;
 								@include breakpoint(mobile) {
 									@include font-size(16);
 								}

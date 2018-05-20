@@ -18,6 +18,8 @@
 			}
 		}
 		.home-ourbrands-inner {
+			width: 100%;
+			margin: 0 auto;
 			ul {
 				text-align: center;
 				li.each-brand {
@@ -32,7 +34,7 @@
 							display: block;
 							overflow: hidden;
 							&.brandname {
-								width: 240px;
+								width: 238px;
 								margin: 0 auto;
 								padding-bottom: 20px;
 								@include breakpoint(tablet) {
@@ -51,8 +53,8 @@
 								}
 							}
 							&.brandimg {
-								width: 240px;
-								height: 344px;
+								width: 238px;
+								height: 341px;
 								margin: 0 auto;
 								@include breakpoint(tablet) {
 									width: 170px;

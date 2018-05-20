@@ -53,9 +53,14 @@
 				margin-top: -150px;
 				@include breakpoint(tablet) {
 					margin-top: -90px;
+					width: 390px;
+				}
+				@include breakpoint(tablet-wide) {
+					width: 500px;
 				}
 				@include breakpoint(mobile) {
 					margin-top: -20px;
+					width: 100%;
 				}
 			}
 		}

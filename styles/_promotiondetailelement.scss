@@ -60,7 +60,7 @@
 			.detail-info {
 				padding: 30px 90px 100px;
 				@include breakpoint(mobile) {
-					padding: 30px;
+					padding: 30px 30px 100px;
 				}
 				.head-detail {
 					text-align: left;

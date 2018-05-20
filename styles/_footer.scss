@@ -1,6 +1,9 @@
 .footer {
 	position: relative;
 	margin-top: -56px;
+	@include breakpoint(mobile) {
+		margin-top: -52px;
+	}
 	img {
 		margin-bottom: -5px;
 	}

@@ -24,7 +24,7 @@ const PhoElement = () => (
 			<div className="tabcontent">
 				<div className="detail-info">
 					<div className="description">
-		 				<img src="https://firebasestorage.googleapis.com/v0/b/tummour-original.appspot.com/o/static%2Fimages%2F03-brands%2Fline-ph.png?alt=media&token=397d7f7a-1a5a-44ba-b4e1-3cf2b2d5a123" className="b-logo" />
+		 				<img src="/static/images/03-brands/line-ph.png" className="b-logo" />
 		 				<img src="https://firebasestorage.googleapis.com/v0/b/tummour-original.appspot.com/o/static%2Fimages%2F03-brands%2Fline-horizon.png?alt=media&token=2008b37c-b255-4c02-a4c6-888c560fe437" className="b-line" />
 		 				<p>เฝอ คือก๋วยเตี๋ยวสไตล์เวียดนาม ในแบบฉบับของตำมั่วนั้น เราเน้นเรื่องรสชาติที่กลมกล่อม ปรุงรสให้ถูกปากคนไทย โดยเน้นหนักไปที่เครื่อง ทั้งหมู เนื้อ เครื่องใน ไข่เยิ้ม  เสิร์ฟพร้อมน้ำจิ้มที่ใช้เฉพาะทานกับเฝอ ทานเคียงกับพริกจี่ (พริกหนุ่มลนไฟ) และผักสดอีกมากมายให้คุณได้ครบทุกรสชาติ</p>
 		 				<p>เมนูแนะนำได้แก่ เฝอแห้งหมู เฝอมาม่าไข่เยิ้ม เฝอเนื้อน้ำ เส้นหมี่หมูย่าง ปอเปี๊ยะสด หมูยอทอด ตบท้ายด้วยขนมถ้วย และของหวานเย็นชื่นใจ สูตรเฉพาะของ "เฝอ บายตำมั่ว" เท่านั้น

@@ -24,7 +24,7 @@ const JaewhonElement = () => (
 			<div className="tabcontent">
 				<div className="detail-info">
 					<div className="description">
-		 				<img src="https://firebasestorage.googleapis.com/v0/b/tummour-original.appspot.com/o/static%2Fimages%2F03-brands%2Fline-jh.png?alt=media&token=1a155bcd-6108-4dcc-8c9a-19127edfb3ac" className="b-logo" />
+		 				<img src="/static/images/03-brands/line-jh.png" className="b-logo" />
 		 				<img src="https://firebasestorage.googleapis.com/v0/b/tummour-original.appspot.com/o/static%2Fimages%2F03-brands%2Fline-horizon.png?alt=media&token=2008b37c-b255-4c02-a4c6-888c560fe437" className="b-line" />
 		 				<p>“แจ่วฮ้อน” ตามภาษาที่ชาวอีสานใช้เรียกอาหารประเภทสุกี้ลาว หรือจิ้มจุ่ม หมายถึงการนำน้ำซุป มาผสมกับแจ่ว ใส่ผัก และเนื้อสัตว์ลงไป
 		 				ซึ่งตำมั่วได้นำมาประยุกต์ให้ถูกปากมากยิ่งขึ้นตามแบบฉบับอีสานแท้ๆ ถือเป็นเมนูอีสานที่มีความลงตัวทั้งรสชาติ จัดจ้าน เผ็ดร้อน เข้มข้น

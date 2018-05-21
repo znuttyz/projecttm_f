@@ -24,7 +24,7 @@ const LaoyuanElement = () => (
 			<div className="tabcontent">
 				<div className="detail-info">
 					<div className="description">
-		 				<img src="https://firebasestorage.googleapis.com/v0/b/tummour-original.appspot.com/o/static%2Fimages%2F03-brands%2Fline-ly.png?alt=media&token=f0d794dc-1da8-4445-bce2-8bfe5e0afe0f" className="b-logo" />
+		 				<img src="/static/images/03-brands/line-ly.png" className="b-logo" />
 		 				<img src="https://firebasestorage.googleapis.com/v0/b/tummour-original.appspot.com/o/static%2Fimages%2F03-brands%2Fline-horizon.png?alt=media&token=2008b37c-b255-4c02-a4c6-888c560fe437" className="b-line" />
 		 				<p>วิถีการกินอยู่ของชาวญวน (เวียดนาม) ที่ย้ายถิ่นฐานมาอาศัยอยู่ในประเทศไทยแถบลุ่มแม่น้ำโขง จนกลายมาเป็นกลุ่มชนชั้นนาของจังหวัดนครพนม
 		 				จากเดิมเรียกว่า “ไทยใหม่ – นครพนม” เวียดนามย้ายถิ่นกลุ่มนี้ได้กลายมาเป็นกลุ่มคนที่มีสถานะ และความสำคัญต่อเศรษฐกิจ สังคม

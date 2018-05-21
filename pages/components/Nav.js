@@ -38,11 +38,11 @@ class Nav extends Component {
 								</div>
 								<div className={(this.state.isMenu)? "navigation open" : "navigation"}>
 									<ul>
-										<li className="li"><Link href="/"><a>หน้าแรก</a></Link></li>
-										<li className="li"><Link href="/about"><a>เกี่ยวกับเรา</a></Link></li>
-										<li className="li"><Link href="/brands/tummour"><a>แบรนด์ของเรา</a></Link></li>
-										<li className="li"><Link href="/news"><a>ข่าวสาร/โปรโมชั่น</a></Link></li>
-										<li className="li"><Link href="/contact"><a>ติดต่อเรา</a></Link></li>
+										<li className="li" onClick={() => this.setState({isMenu: !this.state.isMenu})}><Link href="/"><a>หน้าแรก</a></Link></li>
+										<li className="li" onClick={() => this.setState({isMenu: !this.state.isMenu})}><Link href="/about"><a>เกี่ยวกับเรา</a></Link></li>
+										<li className="li" onClick={() => this.setState({isMenu: !this.state.isMenu})}><Link href="/brands/tummour"><a>แบรนด์ของเรา</a></Link></li>
+										<li className="li" onClick={() => this.setState({isMenu: !this.state.isMenu})}><Link href="/news"><a>ข่าวสาร/โปรโมชั่น</a></Link></li>
+										<li className="li" onClick={() => this.setState({isMenu: !this.state.isMenu})}><Link href="/contact"><a>ติดต่อเรา</a></Link></li>
 									</ul>
 								</div>
 							</div>

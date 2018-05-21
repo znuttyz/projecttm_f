@@ -24,7 +24,7 @@ const TummourElement = () => (
 			<div className="tabcontent">
 				<div className="detail-info">
 					<div className="description">
-		 				<img src="https://firebasestorage.googleapis.com/v0/b/tummour-original.appspot.com/o/static%2Fimages%2F03-brands%2Fline-tm.png?alt=media&token=fb29474d-a0ee-4673-abb1-2d702ec3c651" className="b-logo" />
+		 				<img src="/static/images/03-brands/line-tm.png" className="b-logo" />
 		 				<img src="https://firebasestorage.googleapis.com/v0/b/tummour-original.appspot.com/o/static%2Fimages%2F03-brands%2Fline-horizon.png?alt=media&token=2008b37c-b255-4c02-a4c6-888c560fe437" className="b-line" />
 		 				<p>ตำมั่ว ส้มตำพันล้านจากประสบการณ์ผู้นำด้านอาหารไทย เจ้าของสโลแกน <span>“อาหารรสจัด ถนัดเรื่องตำ”</span> อาหารรสชาติจัดจ้านเข้มข้นที่คนไทยตามหา หยิบยกทุกเมนูรสชาติแซ่บจัดจ้านอีสานแท้ และไทยแท้สูตรคุณแม่น้อยตำนานความอร่อยกว่า 30 ปี
 		 				สู่มาตรฐานแห่งรสชาติความอร่อยรสจัดจ้านไม่ออมมือ เพื่อลูกค้าที่รักในรสชาติจัดจ้าน ทุกอย่างภายใต้ตำมั่วต้องดีที่สุด ทำให้เราประสบความสำเร็จ

@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import ReactGA from 'react-ga'
 import { Head, Nav, AllBanner, PromotionDetailElement, Footer } from './components'
 
 import withRedux from 'next-redux-wrapper'
@@ -20,6 +21,11 @@ class PromotionDetail extends Component {
 
 	componentWillMount() {
 		this.props.promotionFetchById(this.state.id)
+	}
+
+	componentDidMount() {
+		ReactGA.initialize('UA-119527300-1')
+		ReactGA.pageview(window.location.pathname + window.location.search)
 	}
 
 	render() {

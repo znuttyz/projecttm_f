@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import ReactGA from 'react-ga'
 import { Head, Nav, AllBanner, NewsInfo, Footer } from './components'
 
 import withRedux from 'next-redux-wrapper'
@@ -28,6 +29,11 @@ class News extends Component {
 				news: nextProps.news
 			})
 		}
+	}
+
+	componentDidMount() {
+		ReactGA.initialize('UA-119527300-1')
+		ReactGA.pageview(window.location.pathname + window.location.search)
 	}
 
 	render() {

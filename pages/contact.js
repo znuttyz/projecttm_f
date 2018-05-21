@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import ReactGA from 'react-ga'
 import { Head, Nav, AllBanner, ContactInfo, ContactSns, ContactFranchise, Footer } from './components'
 
 import withRedux from 'next-redux-wrapper'
@@ -27,6 +28,11 @@ class Contact extends Component {
 		if(nextProps.isCreate) {
 			location.reload()
 		}
+	}
+
+	componentDidMount() {
+		ReactGA.initialize('UA-119527300-1')
+		ReactGA.pageview(window.location.pathname + window.location.search)
 	}
 
 	_onHandleChange(event) {

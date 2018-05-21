@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import ReactGA from 'react-ga'
 import { Head, Nav, AllBanner, NewsDetailElement, Footer } from './components'
 
 import withRedux from 'next-redux-wrapper'
@@ -22,6 +23,11 @@ class NewsDetail extends Component {
 	componentWillMount() {
 		this.props.newsFetchById(this.state.id)
 		this.props.newsFetchImageById(this.state.id)
+	}
+
+	componentDidMount() {
+		ReactGA.initialize('UA-119527300-1')
+		ReactGA.pageview(window.location.pathname + window.location.search)
 	}
 
 	render() {

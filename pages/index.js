@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import ReactGA from 'react-ga'
 import { Head, Nav, HomeBanner, HomeOurbrands, HomePromotion, Footer } from './components'
 
 import withRedux from 'next-redux-wrapper'
@@ -12,7 +13,13 @@ import '../styles/index.scss'
 class Home extends Component {
 
 	componentWillMount() {
+		
 		this.props.bannerFetchHome()
+	}
+
+	componentDidMount() {
+		ReactGA.initialize('UA-119527300-1')
+		ReactGA.pageview(window.location.pathname + window.location.search)
 	}
 
 	render() {

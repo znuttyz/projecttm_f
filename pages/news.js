@@ -32,8 +32,8 @@ class News extends Component {
 	}
 
 	componentDidMount() {
-		ReactGA.initialize('UA-119527300-1')
-		ReactGA.pageview(window.location.pathname + window.location.search)
+		ReactGA.initialize(process.env.GA_ID)
+		setTimeout(()=>ReactGA.pageview(window.location.pathname + window.location.search))
 	}
 
 	render() {

@@ -31,8 +31,8 @@ class Contact extends Component {
 	}
 
 	componentDidMount() {
-		ReactGA.initialize('UA-119527300-1')
-		ReactGA.pageview(window.location.pathname + window.location.search)
+		ReactGA.initialize(process.env.GA_ID)
+		setTimeout(()=>ReactGA.pageview(window.location.pathname + window.location.search))
 	}
 
 	_onHandleChange(event) {
@@ -57,7 +57,7 @@ class Contact extends Component {
 	render() {
 		return (
 			<div>
-				<Head title="tummour original - contact"/>
+				<Head title="Tummour Original - Contact"/>
 				<Nav isActive="contact"/>
 				<ContactInfo 
 					handleChange={(event) => this._onHandleChange(event)}

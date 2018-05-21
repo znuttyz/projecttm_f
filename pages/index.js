@@ -13,7 +13,6 @@ import '../styles/index.scss'
 class Home extends Component {
 
 	componentWillMount() {
-		
 		this.props.bannerFetchHome()
 	}
 

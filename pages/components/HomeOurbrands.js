@@ -12,7 +12,7 @@ const HomeOurbrands = () => (
 						<ul>
 							<li className="brandname"><Link href="/brands/tummour"><a><img src="https://firebasestorage.googleapis.com/v0/b/tummour-original.appspot.com/o/static%2Fimages%2F00-global%2Ftm.png?alt=media&token=ac35c520-2402-422d-ba6b-c28a94eab001" /></a></Link></li>
 							<li className="brandimg"><Link href="/brands/tummour"><a><img src="https://firebasestorage.googleapis.com/v0/b/tummour-original.appspot.com/o/static%2Fimages%2F01-home%2F01.jpg?alt=media&token=838b4a56-fc84-4c31-b4c4-1884cf61da6a" /></a></Link></li>
-						</ul>
+				 		</ul>
 					</li>
 					<li className="each-brand">
 						<ul>

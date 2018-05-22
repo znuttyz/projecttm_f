@@ -19,11 +19,11 @@
 		}
 		.home-ourbrands-inner {
 			text-align: center;
-			vertical-align: top;
 			li.each-brand {
 				display: inline-block;
 				width: calc(100%/4);
 				margin: 0 auto;
+				vertical-align: top;
 				@include breakpoint(mobile) {
 					width: calc(100%/2);
 				}

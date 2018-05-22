@@ -20,7 +20,7 @@
 		.home-ourbrands-inner {
 			text-align: center;
 			li.each-brand {
-				display: inline-block;
+				display: inline-block !important;
 				width: calc(100%/4);
 				margin: 0 auto;
 				@include breakpoint(mobile) {

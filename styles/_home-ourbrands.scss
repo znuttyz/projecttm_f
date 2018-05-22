@@ -21,125 +21,55 @@
 			text-align: center;
 			li.each-brand {
 				display: inline-block;
-				width: 24%;
-				padding: 0 4px;
-				// width: calc(100%/4);
-				// margin: 0 auto;
+				width: calc(100%/4);
+				margin: 0 auto;
 				@include breakpoint(mobile) {
 					width: calc(100%/2);
 				}
-				ul {
-					li {
-						display: block;
-						overflow: hidden;
-						&.brandname {
-							width: 238px;
-							margin: 0 auto;
-							padding-bottom: 20px;
-							@include breakpoint(tablet) {
-								width: 170px;
-							}
-							@include breakpoint(tablet-wide) {
-								width: 225px;
-							}
-							@include breakpoint(mobile) {
-								width: 165px;
-							}
-							a {
-								img {
-									width: 70%;
-								}
-							}
+				a {
+					.brandname {
+						width: 238px;
+						margin: 0 auto;
+						padding-bottom: 20px;
+						@include breakpoint(tablet) {
+							width: 170px;
 						}
-						&.brandimg {
-							width: 238px;
-							height: 341px;
-							margin: 0 auto;
-							@include breakpoint(tablet) {
-								width: 170px;
-								height: 243px;
-							}
-							@include breakpoint(tablet-wide) {
-								width: 225px;
-								height: 322px;
-							}
-							@include breakpoint(mobile) {
-								width: 165px;
-								height: 236px;
-							}
-							a {
-								img {
-									transition: transform 0.5s;
-									&:hover {
-										transform: scale(1.1);
-									}
-								}
+						@include breakpoint(tablet-wide) {
+							width: 225px;
+						}
+						@include breakpoint(mobile) {
+							width: 165px;
+						}
+						img {
+							width: 70%;
+						}
+					}
+					.brandimg {
+						width: 238px;
+						height: 341px;
+						margin: 0 auto;
+						overflow: hidden;
+						@include breakpoint(tablet) {
+							width: 170px;
+							height: 243px;
+						}
+						@include breakpoint(tablet-wide) {
+							width: 225px;
+							height: 322px;
+						}
+						@include breakpoint(mobile) {
+							width: 165px;
+							height: 236px;
+						}
+						img {
+							transition: transform 0.5s;
+							&:hover {
+								transform: scale(1.1);
 							}
 						}
 					}
 				}
 			}
 		}
-			// ul {
-			// 	text-align: center;
-			// 	li.each-brand {
-			// 		display: inline-block;
-			// 		width: calc(100%/4);
-			// 		margin: 0 auto;
-			// 		@include breakpoint(mobile) {
-			// 			width: calc(100%/2);
-			// 		}
-			// 		ul {
-			// 			li {
-			// 				display: block;
-			// 				overflow: hidden;
-			// 				&.brandname {
-			// 					width: 238px;
-			// 					margin: 0 auto;
-			// 					padding-bottom: 20px;
-			// 					@include breakpoint(tablet) {
-			// 						width: 170px;
-			// 					}
-			// 					@include breakpoint(tablet-wide) {
-			// 						width: 225px;
-			// 					}
-			// 					@include breakpoint(mobile) {
-			// 						width: 165px;
-			// 					}
-			// 					a {
-			// 						img {
-			// 							width: 70%;
-			// 						}
-			// 					}
-			// 				}
-			// 				&.brandimg {
-			// 					width: 238px;
-			// 					height: 341px;
-			// 					margin: 0 auto;
-			// 					@include breakpoint(tablet) {
-			// 						width: 170px;
-			// 						height: 243px;
-			// 					}
-			// 					@include breakpoint(tablet-wide) {
-			// 						width: 225px;
-			// 						height: 322px;
-			// 					}
-			// 					@include breakpoint(mobile) {
-			// 						width: 165px;
-			// 						height: 236px;
-			// 					}
-			// 					a {
-			// 						img {
-			// 							transition: transform 0.5s;
-			// 							&:hover {
-			// 								transform: scale(1.1);
-			// 							}
-			// 						}
-			// 					}
-			// 				}
-			// 			}
-			// 		}
-			// 	}
-			// }
 	}
 }

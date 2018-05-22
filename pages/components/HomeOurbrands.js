@@ -8,7 +8,7 @@ const HomeOurbrands = () => (
 			</div>
 			<div className="home-ourbrands-inner">
 				<ul>
-					<li id="each-brand">
+					<li className="each-brand">
 						<Link href="/brands/tummour">
 							<a>
 								<div className="brandname">
@@ -20,7 +20,7 @@ const HomeOurbrands = () => (
 							</a>
 						</Link>
 					</li>
-					<li id="each-brand">
+					<li className="each-brand">
 						<Link href="/brands/laoyuan">
 							<a>
 								<div className="brandname">
@@ -32,7 +32,7 @@ const HomeOurbrands = () => (
 							</a>
 						</Link>
 					</li>
-					<li id="each-brand">
+					<li className="each-brand">
 						<Link href="/brands/jaewhon">
 							<a>
 								<div className="brandname">
@@ -44,7 +44,7 @@ const HomeOurbrands = () => (
 							</a>
 						</Link>
 					</li>
-					<li id="each-brand">
+					<li className="each-brand">
 						<Link href="/brands/pho">
 							<a>
 								<div className="brandname">

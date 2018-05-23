@@ -32,7 +32,8 @@ module.exports = withSass({
 	      '/admin/news/galley/add': { page: '/admin/news_gallery_add' },
 	      '/admin/promotion': { page: '/admin/promotion' },
 	      '/admin/promotion/add': { page: '/admin/promotion_add' },
-	      '/admin/promotion/edit': { page: '/admin/promotion_edit' }
+	      '/admin/promotion/edit': { page: '/admin/promotion_edit' },
+	      '/admin/message': { page: '/admin/message' }
 	    }
 	},
 	webpack(config, options) {

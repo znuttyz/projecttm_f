@@ -19,7 +19,7 @@ const Gallery = ({ id, images = [], deleteImage }) => {
 					<ul className="all-promotions">
 						<li className="each-promotion">
 							<Link href={{ pathname: '/admin/news_gallery_add', query: { id: id } }}>
-								<a style={styles.addImgStyle}><img src="https://firebasestorage.googleapis.com/v0/b/tummour-original.appspot.com/o/static%2Fimages%2F00-global%2Fadd-img-btn.png?alt=media&token=f7570751-7df9-4d99-a111-ff707e49f3b0" /></a>
+								<a style={styles.addImgStyle}><img src="https://firebasestorage.googleapis.com/v0/b/tummour-original.appspot.com/o/static%2Fimages%2F00-global%2Fadd-img-btn.png?alt=media" /></a>
 							</Link>
 						</li>
 						{showImages(images, deleteImage, id)}

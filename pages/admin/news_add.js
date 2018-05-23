@@ -108,7 +108,7 @@ class News_add extends Component {
 				<div className="contentAdmin">
 					<Header title="News" user={(this.props.user && this.props.user.email)} handleLogout={() => this._handleLogout()} />
 
-					<Card title="News" subTitle="Edit News" isEdit={true}>
+					<Card title="News" subTitle="Add News" isEdit={true}>
 						<Form 
 							title="News"
 							handleChange={(event) => this._onHandleChange(event)} 

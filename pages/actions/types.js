@@ -23,3 +23,5 @@ export const PROMOTION_UPDATE = 'promotion_update'
 
 export const MESSAGE_CREATE = 'message_create'
 export const MESSAGE_FETCH = 'message_fetch'
+export const MESSAGE_SET_STATUS = 'message_set_status'
+export const MESSAGE_DELETE = 'message_delete'

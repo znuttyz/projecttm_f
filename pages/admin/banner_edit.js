@@ -102,7 +102,7 @@ class Banner_edit extends Component {
 
 						
 						<div className="formContainer">
-							<label className="formLabel">Browse Image (TH - Desktop)</label>
+							<label className="formLabel">Browse Image (TH - Desktop) <span style={{textTransform:'lowercase'}}>2560 x 960 px</span></label>
 							<input 
 								name="selectedFile1"
 								type="file"
@@ -118,7 +118,7 @@ class Banner_edit extends Component {
 						</div>
 
 						<div className="formContainer">
-							<label className="formLabel">Browse Image (TH - Mobile)</label>
+							<label className="formLabel">Browse Image (TH - Mobile) <span style={{textTransform:'lowercase'}}>414 x 230 px</span></label>
 							<input 
 								name="selectedFile2"
 								type="file"

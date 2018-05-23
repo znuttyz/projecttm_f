@@ -1,7 +1,9 @@
 import * as firebase from 'firebase';
 import {
 	MESSAGE_CREATE,
-	MESSAGE_FETCH
+	MESSAGE_FETCH,
+	MESSAGE_SET_STATUS,
+	MESSAGE_DELETE
 } from './types';
 
 export const messageCreate = (postData) => {
@@ -27,5 +29,19 @@ export const messageFetch = () => {
 			})
 			dispatch({ type: MESSAGE_FETCH, payload: data.reverse() });
 		})
+	}
+}
+
+export const messageSetStatus = (id) => {
+	return (dispatch) => {
+		firebase.database().ref('message/'+id).update({status: 1})
+		.then(res => dispatch({ type: MESSAGE_SET_STATUS, payload: true }))
+	}
+}
+
+export const messageDelete = (id) => {
+	return(dispatch) => {
+		firebase.database().ref('message/'+id).remove()
+		.then(res => dispatch({ type: MESSAGE_DELETE, payload: true }))
 	}
 }

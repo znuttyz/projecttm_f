@@ -6,7 +6,9 @@ import {
 	initStore, 
 	loginUserCheck, 
 	logoutUser,
-	messageFetch
+	messageFetch,
+	messageSetStatus,
+	messageDelete
 } from '../actions'
 
 
@@ -35,6 +37,9 @@ class Message extends Component {
 		if(nextProps.user) {
 			this.setState({ user: nextProps.user })
 		}
+		if(nextProps.isStatus || nextProps.isDelete) {
+			this.props.messageFetch()
+		}
 	}
 
 	_handleLogout() {
@@ -43,8 +48,16 @@ class Message extends Component {
 
 	 showMessages() {
 	 	return this.state.messages.map((data, index) => {
-		let d = new Date(data.date)
-		let date = d.getDate()+"/"+(d.getMonth()+1)+"/"+d.getFullYear()
+			let d = new Date(data.date)
+			let date = d.getDate()+"/"+(d.getMonth()+1)+"/"+d.getFullYear()
+			let status, edit
+			if(data.status === 0 ) {
+				status = <span style={{color: 'rgb(179, 151, 37)'}}>Waiting</span>
+				edit = <a href="#" onClick={()=>this.props.messageSetStatus(data.id)}>Archive</a>
+			} else {
+				status = <span style={{color: 'green'}}>Replied</span>
+				edit = <a href="#" style={{color: 'red'}} onClick={()=>this.props.messageDelete(data.id)}>Delete</a>
+			}
 			return (
 				<tr key={data.topic}>
 					<td>{date}</td>
@@ -53,6 +66,8 @@ class Message extends Component {
 					<td>{data.email}</td>
 					<td>{data.phone}</td>
 					<td>{data.body}</td>
+					<td>{status}</td>
+					<td>{edit}</td>
 				</tr>
 			)
 		})
@@ -82,6 +97,8 @@ class Message extends Component {
 									<th>E-mail</th>
 									<th>Phone</th>
 									<th>Body</th>
+									<th>Status</th>
+									<th>#</th>
 								</tr>
 							</thead>
 							<tbody>
@@ -102,10 +119,12 @@ class Message extends Component {
 const mapStateToProps = ({ auth, message }) => {
 	return {
 		user: auth.user,
-		messages: message.messages
+		messages: message.messages,
+		isStatus: message.isStatus,
+		isDelete: message.isDelete
 	}
 }
 
 export default withRedux(initStore, mapStateToProps, { 
-	loginUserCheck, logoutUser, messageFetch
+	loginUserCheck, logoutUser, messageFetch, messageSetStatus, messageDelete
 })(Message)

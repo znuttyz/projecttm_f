@@ -47,7 +47,7 @@ class Contact extends Component {
 	 	let { topic, name, email, phone, body } = this.state
 	 	let date = Date.now()
 	 	if(topic && name && email && phone && body) {
-	 		let postData = { topic, name, email, phone, body, date }
+	 		let postData = { topic, name, email, phone, body, date, status: 0 }
 	 		this.props.messageCreate(postData)
 	 	} else {
 	 		this.setState({error: true})

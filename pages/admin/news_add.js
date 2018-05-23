@@ -116,7 +116,7 @@ class News_add extends Component {
 						/>
 
 						<div className="formContainer">
-							<label className="formLabel">Browse Image Banner</label>
+							<label className="formLabel">Browse Image Banner <span style={{textTransform:'lowercase'}}>(900 x 490 px)</span></label>
 							<input 
 								type="file"
 								style={{display: 'none'}}

@@ -2,7 +2,7 @@ const Gallery_form = (props) => {
 	return (
 		<div>
 			<div className="formContainer">
-				<label className="formLabel">Browse Image</label>
+				<label className="formLabel">Browse Image <span style={{textTransform:'lowercase'}}>(900 x 490 px)</span></label>
 				<input 
 					name="selectedFile"
 					type="file"

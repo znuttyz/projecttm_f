@@ -1,8 +1,6 @@
 import React, { Component } from 'react'
 import { Card } from './components'
 import Router from 'next/router'
-import ReCAPTCHA from 'react-google-recaptcha'
-import axios from 'axios'
 
 import withRedux from 'next-redux-wrapper'
 import { initStore, loginUser, loginUserCheck } from '../actions'
@@ -31,13 +29,8 @@ class Login extends Component {
 	}
 
 	_onLogin() {
-		const { secret } = this.state
-		axios('https://www.google.com/recaptcha/api/siteverify', {secret})
-		.then(response => {
-			console.log('ReCAPTCHA', response)	
-		})
-		// const { username, password } = this.state;
-		// this.props.loginUser(username, password); 
+		const { username, password } = this.state;
+		this.props.loginUser(username, password); 
 	}
 
 	render() {
@@ -50,6 +43,7 @@ class Login extends Component {
 						<h1>TUMMOUR</h1>
 					</div>
 					<div className="content">
+
 						<div className="formContainer">
 							<input type="text" className="formControl" name="username" onChange={(event) => this._onHandleChange(event)} style={{width: '83%'}} placeholder="username" />
 						</div>
@@ -57,16 +51,7 @@ class Login extends Component {
 							<input type="password" className="formControl" name="password" onChange={(event) => this._onHandleChange(event)} style={{width: '83%'}} placeholder="password" />
 						</div>
 
-						<div className="formContainer" align="center">
-							<ReCAPTCHA
-							    ref="recaptcha"
-							    sitekey={process.env.CAPTCHA_ID}
-							    onChange={val=>this.setState({secret: val})}
-							 />
-						 </div>
-
 						<div className="formContainer" style={{textAlign: 'center'}}>
-							
 							<p style={{color: 'red'}}>{this.props.errorLogin}</p>
 							{
 								(this.props.loading) ?

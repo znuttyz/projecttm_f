@@ -46,6 +46,12 @@ class Message extends Component {
 	 	this.props.logoutUser()
 	 }
 
+	 _handleDelete(id) {
+	 	if(confirm('Are you sure you want to DELETE this message?')) {
+	 		this.props.messageDelete(id)
+	 	}
+	 }
+
 	 showMessages() {
 	 	return this.state.messages.map((data, index) => {
 			let d = new Date(data.date)
@@ -56,7 +62,7 @@ class Message extends Component {
 				edit = <a href="#" onClick={()=>this.props.messageSetStatus(data.id)}>Archive</a>
 			} else {
 				status = <span style={{color: 'green'}}>Replied</span>
-				edit = <a href="#" style={{color: 'red'}} onClick={()=>this.props.messageDelete(data.id)}>Delete</a>
+				edit = <a href="#" style={{color: 'red'}} onClick={()=>this._handleDelete(data.id)}>Delete</a>
 			}
 			return (
 				<tr key={data.topic}>

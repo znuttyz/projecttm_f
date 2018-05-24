@@ -38,14 +38,15 @@ class Promotion extends Component {
 	}
 
 	_handleDelete(id) {
-		console.log("delete",id)
-		let promise = new Promise((resolve, reject) => {
-		  	this.props.promotionDeleteById(id)
-		  	resolve()
-		})
-		promise.then(() => {
-			this.props.promotionFetch()
-		})
+		if(confirm('Are you sure you want to DELETE this promotion?')){
+			let promise = new Promise((resolve, reject) => {
+			  	this.props.promotionDeleteById(id)
+			  	resolve()
+			})
+			promise.then(() => {
+				this.props.promotionFetch()
+			})
+		}
 	}
 
 	_handleLogout() {

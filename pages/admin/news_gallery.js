@@ -39,7 +39,9 @@ class News_gallery extends Component {
 	}
 
 	_onDeleteImage(id, name) {	
-	  	this.props.newsDeleteImageById(id, name)
+		if(confirm('Are you sure you want to DELETE this image?')) {
+	  		this.props.newsDeleteImageById(id, name)
+	  	}
 	}
 
 	render() {

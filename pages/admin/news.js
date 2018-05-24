@@ -39,13 +39,15 @@ class News extends Component {
 	}
 
 	_handleDelete(id) {
-		let promise = new Promise((resolve, reject) => {
-		  	this.props.newsDeleteById(id)
-		  	resolve()
-		})
-		promise.then(() => {
-			this.props.newsFetch()
-		})
+		if(confirm('Are you sure you want to DELETE this news?')){
+			let promise = new Promise((resolve, reject) => {
+			  	this.props.newsDeleteById(id)
+			  	resolve()
+			})
+			promise.then(() => {
+				this.props.newsFetch()
+			})
+		}
 	}
 
 	_handleLogout() {

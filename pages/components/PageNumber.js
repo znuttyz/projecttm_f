@@ -5,23 +5,26 @@ class PageNumber extends Component {
 	constructor(props) {
 		super(props)
 		this.state = {
-			selectedPage: 1,
-			totalPage: 4,
+			selectedPage: props.selectedPage,
+			totalPage: props.totalPage,
 		}
 	}
 
-	_onSelectPage(selectedPage) {
-		this.setState({ selectedPage })
+	_onSelectPage(e) {
+		this.setState({ selectedPage: parseInt(e.target.name) })
+		this.props.selectPage(parseInt(e.target.name))
 	}
 
 	_onSelectNextPage() {
 		let selectedPage = (this.state.selectedPage !== this.state.totalPage)? this.state.selectedPage + 1 : this.state.selectedPage
 		this.setState({ selectedPage })
+		this.props.nextPage(selectedPage)
 	}
 
 	_onSelectPreviousPage() {
 		let selectedPage = (this.state.selectedPage !== 1)? this.state.selectedPage - 1 : this.state.selectedPage
 		this.setState({ selectedPage })
+		this.props.previousPage(selectedPage)
 	}
 
 	nextPage() {
@@ -36,8 +39,33 @@ class PageNumber extends Component {
 
 	showPage() {
 		let pages = []
-		for(let i = 1; i <= this.state.totalPage; i++) {
-			pages.push(<li key={"pagination"+i}><a className={(this.state.selectedPage === i)? "active":""} onClick={()=>this._onSelectPage(i)}>{i}</a></li>)
+		let i = 1
+		let max = this.state.totalPage
+
+		if(this.state.totalPage > 4 && this.state.selectedPage < this.state.totalPage && this.state.selectedPage > 2) {
+			max = this.state.selectedPage + 1
+			i = max - 3	
+			
+		} else if(this.state.totalPage > 4 && this.state.selectedPage < this.state.totalPage && this.state.selectedPage <= 2) {
+			max = 4
+			i = max - 3
+
+		} else if(this.state.selectedPage === this.state.totalPage && this.state.totalPage > 4) {
+			max = this.state.selectedPage
+			i = max - 3
+			
+		} else if(this.state.selectedPage === this.state.totalPage) {
+			max = this.state.selectedPage
+			i = 1
+
+		} else if(this.state.selectedPage < 4) {
+			max = this.state.totalPage
+			i = 1
+			
+		}
+
+		for( i ; i <= max; i++) {
+			pages.push(<li key={"pagination"+i}><a className={(this.state.selectedPage === i)? "active":""} name={i} onClick={(e)=>this._onSelectPage(e)}>{i}</a></li>)
 		}
 		return pages
 	}
@@ -46,7 +74,9 @@ class PageNumber extends Component {
 		return (
 			<div className="pagenumber clear">
 				<ul>
-					
+					{(this.state.totalPage > 4)? this.previousPage():''}
+					{this.showPage()}
+					{(this.state.totalPage > 4)? this.nextPage():''}
 				</ul>
 			</div>
 		)
@@ -54,9 +84,3 @@ class PageNumber extends Component {
 }
 
 export { PageNumber }
-// {this.previousPage()}
-					// {this.showPage()}
-					// {this.nextPage()}
-// <li><a className={(this.state.selectedPage === 1)? "active":""} onClick={()=>this._onSelectPage(1)}>1</a></li>
-// <li><a className={(this.state.selectedPage === 2)? "active":""} onClick={()=>this._onSelectPage(2)}>2</a></li>
-// <li><a className={(this.state.selectedPage === 3)? "active":""} onClick={()=>this._onSelectPage(3)}>3</a></li>

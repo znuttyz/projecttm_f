@@ -34,7 +34,7 @@ const LaoyuanElement = () => (
 		 				เจ้าของสูตรการผสมผสานเมนูอาหารระหว่างสองสัญชาติจากสองต้นตำรับแท้ๆ</p>
 		 			</div>
 		 			<div className="btn-menu">
-		 				<Link href="/static/files/MENU_LAOYUAN.pdf"><a target="_blank">ดูเมนู</a></Link>
+		 				<a href="/static/files/MENU_LAOYUAN.pdf" target="_blank">ดูเมนู</a>
 		 			</div>
 		 			<div className="branches">
 		 				<Tabs>

@@ -31,7 +31,7 @@ const PhoElement = () => (
 		 				การตกแต่งภายในร้าน เราเน้นให้ลูกค้ารู้สึกสบายตา ด้วยภาพเพ้นท์ผนังแบบร่วมสมัย แต่ยังคงกลิ่นอายวิถีชีวิตของชาวเวียดนาม</p>
 		 			</div>
 		 			<div className="btn-menu">
-		 				<Link href="/static/files/MENU_PHO.pdf"><a target="_blank">ดูเมนู</a></Link>
+		 				<a href="/static/files/MENU_PHO.pdf" target="_blank">ดูเมนู</a>
 		 			</div>
 		 			<div className="branches">
 		 				<Tabs>

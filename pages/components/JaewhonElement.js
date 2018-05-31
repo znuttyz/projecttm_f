@@ -31,7 +31,7 @@ const JaewhonElement = () => (
 		 				หอมกรุ่นสมุนไพร เหมาะสำหรับคนรักสุขภาพ และการล้อมวงทานกับเพื่อน และครอบครัว<br/><span>“แซ่บภูธร คักหลาย ไผก็มัก”</span></p>
 		 			</div>
 		 			<div className="btn-menu">
-		 				<Link href="/static/files/MENU_JEAWHON.pdf"><a target="_blank">ดูเมนู</a></Link>
+		 				<a href="/static/files/MENU_JEAWHON.pdf" target="_blank">ดูเมนู</a>
 		 			</div>
 		 			<div className="branches">
 		 				<Tabs>

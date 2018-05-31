@@ -32,7 +32,7 @@ const TummourElement = () => (
 		 				เพื่อตอบสนองความต้องการของผู้บริโภคในหลากหลายประเภท</p>
 		 			</div>
 		 			<div className="btn-menu">
-		 				<Link href=""><a>ดูเมนู</a></Link>
+		 				<Link href="/static/files/MENU_TUMMOUR.pdf"><a target="_blank">ดูเมนู</a></Link>
 		 			</div>
 		 			<div className="branches">
 		 				<Tabs>

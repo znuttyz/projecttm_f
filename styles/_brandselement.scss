@@ -57,7 +57,7 @@
 				width: 100%;
 			}
 			.detail-info {
-				padding: 30px 30px 60px;
+				padding: 30px 30px 125px;
 				.description {
 					img.b-logo {
 						width: 120px;
@@ -165,6 +165,26 @@
 		}
 	}
 	&.b-laoyuan {
+		.b-banner {
+			background: url('https://firebasestorage.googleapis.com/v0/b/tummour-original.appspot.com/o/static%2Fimages%2F03-brands%2Fbg-b-ly.jpg?alt=media&token=56446ece-b96b-4b4a-8324-0c85a8168bbc');
+			background-size: cover;
+			background-attachment: fixed;
+			display: block;
+			background-position: center;
+			@include breakpoint(mobile) {
+				display: none;
+			}
+		}
+		.b-banner-mb {
+			background: url('https://firebasestorage.googleapis.com/v0/b/tummour-original.appspot.com/o/static%2Fimages%2F03-brands%2Fbg-b-ly.jpg?alt=media&token=56446ece-b96b-4b4a-8324-0c85a8168bbc');
+			background-size: cover;
+			background-attachment: fixed;
+			display: none;
+			background-position: center;
+			@include breakpoint(mobile) {
+				display: block;
+			}
+		}
 		.tab {
 			.tabtopic {
 				ul {
@@ -188,6 +208,26 @@
 		}
 	}
 	&.b-jaewhon {
+		.b-banner {
+			background: url('https://firebasestorage.googleapis.com/v0/b/tummour-original.appspot.com/o/static%2Fimages%2F03-brands%2Fbg-b-jh.jpg?alt=media&token=d5365e49-b133-42e6-a11e-0e515d7380cd');
+			background-size: cover;
+			background-attachment: fixed;
+			display: block;
+			background-position: center;
+			@include breakpoint(mobile) {
+				display: none;
+			}
+		}
+		.b-banner-mb {
+			background: url('https://firebasestorage.googleapis.com/v0/b/tummour-original.appspot.com/o/static%2Fimages%2F03-brands%2Fbg-b-jh.jpg?alt=media&token=d5365e49-b133-42e6-a11e-0e515d7380cd');
+			background-size: cover;
+			background-attachment: fixed;
+			display: none;
+			background-position: center;
+			@include breakpoint(mobile) {
+				display: block;
+			}
+		}
 		.tab {
 			.tabtopic {
 				ul {
@@ -211,6 +251,26 @@
 		}
 	}
 	&.b-pho {
+		.b-banner {
+			background: url('https://firebasestorage.googleapis.com/v0/b/tummour-original.appspot.com/o/static%2Fimages%2F03-brands%2Fbg-b-ph.jpg?alt=media&token=e25f1c6f-6853-4e32-84a0-4dbc6eb726d0');
+			background-size: cover;
+			background-attachment: fixed;
+			display: block;
+			background-position: center;
+			@include breakpoint(mobile) {
+				display: none;
+			}
+		}
+		.b-banner-mb {
+			background: url('https://firebasestorage.googleapis.com/v0/b/tummour-original.appspot.com/o/static%2Fimages%2F03-brands%2Fbg-b-ph.jpg?alt=media&token=e25f1c6f-6853-4e32-84a0-4dbc6eb726d0');
+			background-size: cover;
+			background-attachment: fixed;
+			display: none;
+			background-position: center;
+			@include breakpoint(mobile) {
+				display: block;
+			}
+		}
 		.tab {
 			.tabtopic {
 				ul {
@@ -234,6 +294,26 @@
 		}
 	}
 	&.b-granny {
+		.b-banner {
+			background: url('https://firebasestorage.googleapis.com/v0/b/tummour-original.appspot.com/o/static%2Fimages%2F03-brands%2Fbg-b-ky.jpg?alt=media&token=813b6364-1fa7-401f-bd47-17132ff5a711');
+			background-size: cover;
+			background-attachment: fixed;
+			display: block;
+			background-position: center;
+			@include breakpoint(mobile) {
+				display: none;
+			}
+		}
+		.b-banner-mb {
+			background: url('https://firebasestorage.googleapis.com/v0/b/tummour-original.appspot.com/o/static%2Fimages%2F03-brands%2Fbg-b-ky.jpg?alt=media&token=813b6364-1fa7-401f-bd47-17132ff5a711');
+			background-size: cover;
+			background-attachment: fixed;
+			display: none;
+			background-position: center;
+			@include breakpoint(mobile) {
+				display: block;
+			}
+		}
 		.tab {
 			.tabtopic {
 				ul {
@@ -257,6 +337,19 @@
 		}
 	}
 	&.b-kruathai {
+		.b-banner {
+			background: #555555;
+			display: block;
+			@include breakpoint(mobile) {
+				display: none;
+			}
+		}
+		.b-banner-mb {
+			display: none;
+			@include breakpoint(mobile) {
+				display: block;
+			}
+		}
 		.tab {
 			.tabtopic {
 				ul {
@@ -271,15 +364,38 @@
 				}
 			}
 			.tabcontent {
-				.description {
-					img.b-logo {
-						width: 280px;
+				.detail-info {
+					padding: 30px 30px 148px;
+					.description {
+						img.b-logo {
+							width: 280px;
+						}
 					}
 				}
 			}
 		}
 	}
 	&.b-detummour {
+		.b-banner {
+			background: url('https://firebasestorage.googleapis.com/v0/b/tummour-original.appspot.com/o/static%2Fimages%2F03-brands%2Fbg-b-de.jpg?alt=media&token=7b6df0f6-335f-47d0-a1fc-c353d6c38005');
+			background-size: cover;
+			background-attachment: fixed;
+			display: block;
+			background-position: center;
+			@include breakpoint(mobile) {
+				display: none;
+			}
+		}
+		.b-banner-mb {
+			background: url('https://firebasestorage.googleapis.com/v0/b/tummour-original.appspot.com/o/static%2Fimages%2F03-brands%2Fbg-b-de.jpg?alt=media&token=7b6df0f6-335f-47d0-a1fc-c353d6c38005');
+			background-size: cover;
+			background-attachment: fixed;
+			display: none;
+			background-position: center;
+			@include breakpoint(mobile) {
+				display: block;
+			}
+		}
 		.tab {
 			.tabtopic {
 				ul {
@@ -294,9 +410,12 @@
 				}
 			}
 			.tabcontent {
-				.description {
-					img.b-logo {
-						width: 180px;
+				.detail-info {
+					padding: 30px 30px 148px;
+					.description {
+						img.b-logo {
+							width: 180px;
+						}
 					}
 				}
 			}

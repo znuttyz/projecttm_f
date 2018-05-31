@@ -29,7 +29,7 @@ const DetummourElement = () => (
 		 				<p>	De Tummour ร้านอาหารอีสานต้นตำรับระดับพรีเมียม โดดเด่นในเรื่องเอกลักษณ์ของรสชาติ ที่เข้าใจรสนิยมถึงความต้องการทั้งคนไทย และชาวต่างชาติให้ได้ลิ้มรสความอร่อยในแบบรสชาติแท้ๆของความเป็นไทย</p>
 		 			</div>
 		 			<div className="btn-menu">
-		 				<Link href=""><a>ดูเมนู</a></Link>
+		 				<Link href="/static/files/MENU_DE'TUMMOUR.pdf"><a target="_blank">ดูเมนู</a></Link>
 		 			</div>
 		 			<div className="branches">
 		 				<Tabs>

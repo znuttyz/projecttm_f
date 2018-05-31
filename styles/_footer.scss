@@ -4,6 +4,9 @@
 	@include breakpoint(mobile) {
 		margin-top: -52px;
 	}
+	@include breakpoint(over) {
+		margin-top: -80px;
+	}
 	img {
 		margin-bottom: -5px;
 	}
@@ -20,6 +23,9 @@
 		}
 		@include breakpoint(mobile) {
 			top: 7px;
+		}
+		@include breakpoint(over) {
+			top: 135px;
 		}
 		.container {
 			@include breakpoint(tablet) {

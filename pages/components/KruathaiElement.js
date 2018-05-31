@@ -28,9 +28,6 @@ const KruathaiElement = () => (
 		 				<img src="https://firebasestorage.googleapis.com/v0/b/tummour-original.appspot.com/o/static%2Fimages%2F03-brands%2Fline-horizon.png?alt=media&token=2008b37c-b255-4c02-a4c6-888c560fe437" className="b-line" />
 		 				<p></p>
 		 			</div>
-		 			<div className="btn-menu">
-		 				<Link href=""><a>ดูเมนู</a></Link>
-		 			</div>
 		 			<div className="branches">
 		 				<Tabs>
 						    <TabList>

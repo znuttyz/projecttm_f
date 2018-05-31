@@ -60,6 +60,9 @@
 			@include breakpoint(mobile) {
 				width: 100%;
 			}
+			@include breakpoint(over) {
+				padding: 50px 0 150px;
+			}
 			select.brands-filter {
 				font-family: psl_kanda;
 				@include font-size(14);

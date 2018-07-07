@@ -26,6 +26,7 @@ class Contact extends Component {
 
 	componentWillReceiveProps(nextProps) {
 		if(nextProps.isCreate) {
+			alert('ได้รับ ข้อเสนอแนะ/การติดต่อ ของท่านเรียบร้อยแล้ว ขอบคุณค่ะ')
 			location.reload()
 		}
 	}
@@ -41,12 +42,17 @@ class Contact extends Component {
 	    });
 	}
 
+	validateEmail(email) {
+	    var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+	    return re.test(String(email).toLowerCase());
+	}
+
 	_onHandleSubmit(event) {
 		event.preventDefault()
-	 	
+	 	this.setState({error: false})
 	 	let { topic, name, email, phone, body } = this.state
 	 	let date = Date.now()
-	 	if(topic && name && email && phone && body) {
+	 	if(topic && name && email && phone && body && this.validateEmail(email)) {
 	 		let postData = { topic, name, email, phone, body, date, status: 0 }
 	 		this.props.messageCreate(postData)
 	 	} else {

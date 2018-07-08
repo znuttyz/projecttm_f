@@ -26,7 +26,7 @@ const DetummourElement = () => (
 					<div className="description">
 		 				<img src="/static/images/03-brands/line-de.png" className="b-logo" />
 		 				<img src="https://firebasestorage.googleapis.com/v0/b/tummour-original.appspot.com/o/static%2Fimages%2F03-brands%2Fline-horizon.png?alt=media&token=2008b37c-b255-4c02-a4c6-888c560fe437" className="b-line" />
-		 				<p>	De Tummour ร้านอาหารอีสานต้นตำรับระดับพรีเมียม โดดเด่นในเรื่องเอกลักษณ์ของรสชาติ ที่เข้าใจรสนิยมถึงความต้องการทั้งคนไทย และชาวต่างชาติให้ได้ลิ้มรสความอร่อยในแบบรสชาติแท้ๆของความเป็นไทย</p>
+		 				<p>De Tummour ร้านอาหารอีสานต้นตำรับระดับพรีเมียม โดดเด่นในเรื่องเอกลักษณ์ของรสชาติ ที่เข้าใจรสนิยมถึงความต้องการทั้งคนไทย และชาวต่างชาติให้ได้ลิ้มรสความอร่อยในแบบรสชาติแท้ๆของความเป็นไทย</p>
 		 			</div>
 		 			<div className="btn-menu">
 		 				<a href="/static/files/MENU_DE'TUMMOUR.pdf" target="_blank">ดูเมนู</a>

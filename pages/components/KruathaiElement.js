@@ -40,7 +40,22 @@ const KruathaiElement = () => (
 						    </TabList>
 
 						    <TabPanel>
-						      	
+						      	<p>เร็วๆ นี้ ...</p>
+						    </TabPanel>
+						    <TabPanel>
+						      	<p>เร็วๆ นี้ ...</p>
+						    </TabPanel>
+						    <TabPanel>
+						      	<p>เร็วๆ นี้ ...</p>
+						    </TabPanel>
+						    <TabPanel>
+						      	<p>เร็วๆ นี้ ...</p>
+						    </TabPanel>
+						    <TabPanel>
+						      	<p>เร็วๆ นี้ ...</p>
+						    </TabPanel>
+						    <TabPanel>
+						      	<p>เร็วๆ นี้ ...</p>
 						    </TabPanel>
 						</Tabs>
 		 			</div>

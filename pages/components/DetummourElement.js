@@ -35,6 +35,11 @@ const DetummourElement = () => (
 		 				<Tabs>
 						    <TabList>
 						      	<Tab>ภาคกลาง</Tab>
+						      	<Tab>ภาคอีสาน</Tab>
+						      	<Tab>ภาคตะวันออก</Tab>
+						      	<Tab>ภาคตะวันตก</Tab>
+						      	<Tab>ภาคเหนือ</Tab>
+						      	<Tab>ภาคใต้</Tab>
 						    </TabList>
 
 						    <TabPanel>
@@ -44,6 +49,21 @@ const DetummourElement = () => (
 						      			<p>โทร. 02-253-8328</p>
 						      		</li>
 						      	</ul>
+						    </TabPanel>
+						    <TabPanel>
+						      	<p>เร็วๆ นี้ ...</p>
+						    </TabPanel>
+						     <TabPanel>
+						      	<p>เร็วๆ นี้ ...</p>
+						    </TabPanel>
+						     <TabPanel>
+						      	<p>เร็วๆ นี้ ...</p>
+						    </TabPanel>
+						     <TabPanel>
+						      	<p>เร็วๆ นี้ ...</p>
+						    </TabPanel>
+						     <TabPanel>
+						      	<p>เร็วๆ นี้ ...</p>
 						    </TabPanel>
 						</Tabs>
 		 			</div>

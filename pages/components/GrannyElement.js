@@ -32,9 +32,17 @@ const GrannyElement = () => (
 		 			<div className="branches">
 		 				<Tabs>
 						    <TabList>
+						    	<Tab>ภาคกลาง</Tab>
 						      	<Tab>ภาคอีสาน</Tab>
+						      	<Tab>ภาคตะวันออก</Tab>
+						      	<Tab>ภาคตะวันตก</Tab>
+						      	<Tab>ภาคเหนือ</Tab>
+						      	<Tab>ภาคใต้</Tab>
 						    </TabList>
 
+						     <TabPanel>
+						      	<p>เร็วๆ นี้ ...</p>
+						    </TabPanel>
 						    <TabPanel>
 						      	<ul>
 						      		<li>
@@ -42,6 +50,18 @@ const GrannyElement = () => (
 						      			<p>โทร. 095-216-6951</p>
 						      		</li>
 						      	</ul>
+						    </TabPanel>
+						     <TabPanel>
+						      	<p>เร็วๆ นี้ ...</p>
+						    </TabPanel>
+						     <TabPanel>
+						      	<p>เร็วๆ นี้ ...</p>
+						    </TabPanel>
+						     <TabPanel>
+						      	<p>เร็วๆ นี้ ...</p>
+						    </TabPanel>
+						     <TabPanel>
+						      	<p>เร็วๆ นี้ ...</p>
 						    </TabPanel>
 						</Tabs>
 		 			</div>

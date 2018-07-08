@@ -42,6 +42,7 @@ const JaewhonElement = () => (
 						      	<Tab>ภาคตะวันตก</Tab>
 						      	<Tab>ภาคเหนือ</Tab>
 						      	<Tab>ภาคใต้</Tab>
+						      	<Tab>ต่างประเทศ</Tab>
 						    </TabList>
 
 						    <TabPanel>
@@ -128,6 +129,14 @@ const JaewhonElement = () => (
 						      		<li>
 						      			<h4>ภูเก็ต</h4>
 						      			<p>โทร. 076-212-701</p>
+						      		</li>
+						    	</ul>
+						    </TabPanel>
+						    <TabPanel>
+						    	<ul>
+						    		<li>
+						      			<h4>เวียงจันทน์</h4>
+						      			<p>เร็วๆ นี้</p>
 						      		</li>
 						    	</ul>
 						    </TabPanel>

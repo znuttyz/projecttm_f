@@ -21,7 +21,11 @@ class Promotion_add extends Component {
 		this.state = {
 			brand: "Tummour",
 			title: "",
+			title_en: "",
+			title_cn: "",
 			body: "",
+			body_en: "",
+			body_cn: "",
 			selectedFile: [],
 			loading: null,
 			disableInput: false,
@@ -53,7 +57,6 @@ class Promotion_add extends Component {
 		let tmp = this.state.selectedFile
 		tmp[id] = event.target.files[0]
 		this.setState({ selectedFile: tmp })
-		console.log(this.state.selectedFile)
 	};
 
 	_onHandleChange(event) {
@@ -63,7 +66,15 @@ class Promotion_add extends Component {
 	}
 
 	_onHandleSubmit() {
+		if(!this.state.title || !this.state.title_en || !this.state.title_cn ||
+		  !this.state.body || !this.state.body_en || !this.state.body_cn ||
+		  this.state.selectedFile.length !== 3) {
+			alert('Please fill in all form')
+			return;
+		}
+
 		this.setState({ disableInput: true })
+		let filename1, filename2, filename3
 
 		// Handle array file upload
 		const promiseSerial = funcs =>
@@ -72,32 +83,41 @@ class Promotion_add extends Component {
 		    Promise.resolve([]))
 
 		const funcs = this.state.selectedFile.map((file, index) => () => {
+			const filename = Date.now()+"."+file.name.split('.').pop()
 			const fd = new FormData()
-			fd.append('image', file, file.name)
+			fd.append('image', file, filename)
 			this.setState({ loading: Math.round(-100/(index-this.state.selectedFile.length))-20 })
 			return axios.post('https://us-central1-tummour-original.cloudfunctions.net/uploadFile', fd)
+					.then(()=> {
+						if(index == 0) filename1 = filename
+						else if (index == 1) filename2 = filename
+						else if (index == 2) filename3 = filename
+					})
 		})
 
 		promiseSerial(funcs)
 		.then(res => {
-
-			// axios.get('https://us-central1-tummour-original.cloudfunctions.net/getFile?filename='+this.state.selectedFile[0].name)
-			// .then(res => {
-			let src = 'https://firebasestorage.googleapis.com/v0/b/tummour-original.appspot.com/o/upload%2F'+this.state.selectedFile[0].name+'?alt=media'
+			let src_th = 'https://firebasestorage.googleapis.com/v0/b/tummour-original.appspot.com/o/upload%2F'+filename1+'?alt=media'
+			let src_en = 'https://firebasestorage.googleapis.com/v0/b/tummour-original.appspot.com/o/upload%2F'+filename2+'?alt=media'
+			let src_cn = 'https://firebasestorage.googleapis.com/v0/b/tummour-original.appspot.com/o/upload%2F'+filename3+'?alt=media'
 			let { sday, smonth, syear, eday, emonth, eyear } = this.state
 			let sdate = new Date(syear, smonth-1, sday)
 			let edate = new Date(eyear, emonth-1, eday)
 			let postData = {
 				brand: this.state.brand,
 				title: this.state.title,
+				title_en: this.state.title_en,
+				title_cn: this.state.title_cn,
 				body: this.state.body,
+				body_en: this.state.body_en,
+				body_cn: this.state.body_cn,
 				start_date: sdate.getTime(),
 				end_date: edate.getTime(),
-				banner_th: src
+				banner_th: src_th,
+				banner_en: src_en,
+				banner_cn: src_cn
 			}
 			this.props.promotionCreate(postData)
-			// })
-			
 		})
 		.catch(console.error.bind(console))
 	}
@@ -134,7 +154,7 @@ class Promotion_add extends Component {
 						/>
 
 						<div className="formContainer">
-							<label className="formLabel">Browse Image <span style={{textTransform:'lowercase'}}>(500 x 500 px)</span></label>
+							<label className="formLabel">Browse Image (Banner TH)<span style={{textTransform:'lowercase'}}>(500 x 500 px)</span></label>
 							<input 
 								type="file"
 								style={{display: 'none'}}
@@ -143,6 +163,30 @@ class Promotion_add extends Component {
 							/>
 							<button onClick={() => this.fileInput1.click()} className="formFile">Pick File</button>
 							{ this.state.selectedFile[0] && this.state.selectedFile[0].name }
+						</div>
+
+						<div className="formContainer">
+							<label className="formLabel">Browse Image (Banner EN)<span style={{textTransform:'lowercase'}}>(500 x 500 px)</span></label>
+							<input 
+								type="file"
+								style={{display: 'none'}}
+						        onChange={event => this.fileSelectedHandler(event, 1)}
+						        ref={fileInput2 => this.fileInput2 = fileInput2}
+							/>
+							<button onClick={() => this.fileInput2.click()} className="formFile">Pick File</button>
+							{ this.state.selectedFile[1] && this.state.selectedFile[1].name }
+						</div>
+
+						<div className="formContainer">
+							<label className="formLabel">Browse Image (Banner CN)<span style={{textTransform:'lowercase'}}>(500 x 500 px)</span></label>
+							<input 
+								type="file"
+								style={{display: 'none'}}
+						        onChange={event => this.fileSelectedHandler(event, 2)}
+						        ref={fileInput3 => this.fileInput3 = fileInput3}
+							/>
+							<button onClick={() => this.fileInput3.click()} className="formFile">Pick File</button>
+							{ this.state.selectedFile[2] && this.state.selectedFile[2].name }
 						</div>
 
 						<div className="formContainer">

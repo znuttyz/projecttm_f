@@ -22,7 +22,11 @@ class Promotion_edit extends Component {
 			id: props.url.query.id,
 			brand: "",
 			title: "",
+			title_en: "",
+			title_cn: "",
 			body: "",
+			body_en: "",
+			body_cn: "",
 			selectedFile: [],
 			loading: null,
 			disableInput: false,
@@ -44,12 +48,18 @@ class Promotion_edit extends Component {
 		if(nextProps.promotion) {
 			let tmp = []
 			tmp[0] = {name: nextProps.promotion.banner_th}
+			tmp[1] = {name: nextProps.promotion.banner_en}
+			tmp[2] = {name: nextProps.promotion.banner_cn}
 			let sdate = new Date(nextProps.promotion.start_date)
 			let edate = new Date(nextProps.promotion.end_date)
 			this.setState({
 				brand: nextProps.promotion.brand,
 				title: nextProps.promotion.title,
+				title_en: nextProps.promotion.title_en,
+				title_cn: nextProps.promotion.title_cn,
 				body: nextProps.promotion.body,
+				body_en: nextProps.promotion.body_en,
+				body_cn: nextProps.promotion.body_cn,
 				selectedFile: tmp,
 				sday: sdate.getDate(),
 				smonth: sdate.getMonth()+1,
@@ -69,7 +79,6 @@ class Promotion_edit extends Component {
 		let tmp = this.state.selectedFile
 		tmp[id] = event.target.files[0]
 		this.setState({ selectedFile: tmp })
-		console.log(this.state.selectedFile)
 	};
 
 	_onHandleChange(event) {
@@ -84,55 +93,59 @@ class Promotion_edit extends Component {
 
 	_onHandleSubmit() {
 		this.setState({ disableInput: true })
+		let filename1, filename2, filename3
 
-		if(this.state.selectedFile[0].name === this.props.promotion.banner_th) {
+		// Handle array file upload
+		const promiseSerial = funcs =>
+		  funcs.reduce((promise, func) =>
+		    promise.then(result => func().then(Array.prototype.concat.bind(result))),
+		    Promise.resolve([]))
+
+		const funcs = this.state.selectedFile.map((file, index) => () => {
+			if(file.name === this.props.promotion.banner_th) { 
+				filename1 = file.name
+				return new Promise((resolve, reject) => resolve(filename1))
+			} else if (file.name === this.props.promotion.banner_en) {
+				filename2 = file.name
+				return new Promise((resolve, reject) => resolve(filename2))
+			} else if(file.name === this.props.promotion.banner_cn) {
+				filename3 = file.name
+				return new Promise((resolve, reject) => resolve(filename3))
+			}
+			const filename = Date.now()+"."+file.name.split('.').pop()
+			const fd = new FormData()
+			fd.append('image', file, filename)
+			this.setState({ loading: Math.round(-100/(index-this.state.selectedFile.length))-20 })
+			return axios.post('https://us-central1-tummour-original.cloudfunctions.net/uploadFile', fd)
+				.then(()=> {
+					if(index == 0) filename1 = 'https://firebasestorage.googleapis.com/v0/b/tummour-original.appspot.com/o/upload%2F'+filename+'?alt=media'
+					else if (index == 1) filename2 = 'https://firebasestorage.googleapis.com/v0/b/tummour-original.appspot.com/o/upload%2F'+filename+'?alt=media'
+					else if (index == 2) filename3 = 'https://firebasestorage.googleapis.com/v0/b/tummour-original.appspot.com/o/upload%2F'+filename+'?alt=media'
+				})
+		})
+		promiseSerial(funcs)
+		.then(res => {
 			let { sday, smonth, syear, eday, emonth, eyear } = this.state
 			let sdate = new Date(syear, smonth-1, sday)
 			let edate = new Date(eyear, emonth-1, eday)
 			let postData = {
 				brand: this.state.brand,
 				title: this.state.title,
+				title_en: this.state.title_en,
+				title_cn: this.state.title_cn,
 				body: this.state.body,
+				body_en: this.state.body_en,
+				body_cn: this.state.body_cn,
 				start_date: sdate.getTime(),
-				end_date: edate.getTime()
+				end_date: edate.getTime(),
+				banner_th: filename1,
+				banner_en: filename2,
+				banner_cn: filename3
 			}
 			const id = this.state.id
 			this.props.promotionUpdate(id, postData)
-		} else {
-			// Handle array file upload
-			const promiseSerial = funcs =>
-			  funcs.reduce((promise, func) =>
-			    promise.then(result => func().then(Array.prototype.concat.bind(result))),
-			    Promise.resolve([]))
-			const funcs = this.state.selectedFile.map((file, index) => () => {
-				const fd = new FormData()
-				fd.append('image', file, file.name)
-				this.setState({ loading: Math.round(-100/(index-this.state.selectedFile.length))-20 })
-				return axios.post('https://us-central1-tummour-original.cloudfunctions.net/uploadFile', fd)
-			})
-			promiseSerial(funcs)
-			.then(res => {
-
-				// axios.get('https://us-central1-tummour-original.cloudfunctions.net/getFile?filename='+this.state.selectedFile[0].name)
-				// .then(res => {
-				let src = 'https://firebasestorage.googleapis.com/v0/b/tummour-original.appspot.com/o/upload%2F'+this.state.selectedFile[0].name+'?alt=media'
-				let { sday, smonth, syear, eday, emonth, eyear } = this.state
-				let sdate = new Date(syear, smonth-1, sday)
-				let edate = new Date(eyear, emonth-1, eday)
-				let postData = {
-					brand: this.state.brand,
-					title: this.state.title,
-					body: this.state.body,
-					start_date: sdate.getTime(),
-					end_date: edate.getTime(),
-					banner_th: src
-				}
-				const id = this.state.id
-				this.props.promotionUpdate(id, postData)
-				// })
-			})
-			.catch(console.error.bind(console))
-		}
+		})
+		.catch(console.error.bind(console))
 			
 	}
 
@@ -168,12 +181,16 @@ class Promotion_edit extends Component {
 							isDisable={this.state.disableInput}
 							data={{
 								title: this.state.title,
-								body: this.state.body
+								title_en: this.state.title_en,
+								title_cn: this.state.title_cn,
+								body: this.state.body,
+								body_en: this.state.body_en,
+								body_cn: this.state.body_cn
 							}}
 						/>
 
 						<div className="formContainer">
-							<label className="formLabel">Browse Image Banner <span style={{textTransform:'lowercase'}}>(500 x 500 px)</span></label>
+							<label className="formLabel">Browse Image (Banner TH) <span style={{textTransform:'lowercase'}}>(500 x 500 px)</span></label>
 							<input 
 								type="file"
 								style={{display: 'none'}}
@@ -182,6 +199,30 @@ class Promotion_edit extends Component {
 							/>
 							<button onClick={() => this.fileInput1.click()} className="formFile">Pick File</button>
 							{ this.state.selectedFile[0] && this.state.selectedFile[0].name }
+						</div>
+
+						<div className="formContainer">
+							<label className="formLabel">Browse Image (Banner EN) <span style={{textTransform:'lowercase'}}>(500 x 500 px)</span></label>
+							<input 
+								type="file"
+								style={{display: 'none'}}
+						        onChange={event => this.fileSelectedHandler(event, 1)}
+						        ref={fileInput2 => this.fileInput2 = fileInput2}
+							/>
+							<button onClick={() => this.fileInput2.click()} className="formFile">Pick File</button>
+							{ this.state.selectedFile[1] && this.state.selectedFile[1].name }
+						</div>
+
+						<div className="formContainer">
+							<label className="formLabel">Browse Image (Banner CN) <span style={{textTransform:'lowercase'}}>(500 x 500 px)</span></label>
+							<input 
+								type="file"
+								style={{display: 'none'}}
+						        onChange={event => this.fileSelectedHandler(event, 2)}
+						        ref={fileInput3 => this.fileInput3 = fileInput3}
+							/>
+							<button onClick={() => this.fileInput3.click()} className="formFile">Pick File</button>
+							{ this.state.selectedFile[2] && this.state.selectedFile[2].name }
 						</div>
 
 						<div className="formContainer">

@@ -19,3 +19,4 @@ database.rules.json
 firebase.json
 storage.rules
 cors.json
+database.json

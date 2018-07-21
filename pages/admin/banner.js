@@ -47,6 +47,7 @@ class Banner extends Component {
 					<Header title="Banners" user={(this.props.user && this.props.user.email)} handleLogout={() => this._handleLogout()}/>
 
 					<Card title="Banners" subTitle="Home page banner">
+
 						<div className="bannerContainer">
 							<div className="bannerImage" >
 								<h1>TH - Desktop</h1>
@@ -67,6 +68,28 @@ class Banner extends Component {
 								/>
 							</div>
 						</div>
+
+						<div className="bannerContainer">
+							<div className="bannerImage" >
+								<h1>EN - Desktop</h1>
+								{(this.state.imageStatus === "loading") ? <div>Loading...</div>: ""}
+								<img 
+									src={(this.props.banner && this.props.banner.src_desktop_en)} 
+									alt={(this.props.banner && this.props.banner.tag)}
+									onLoad={() => this._handleImageLoaded()}
+								/>
+							</div>
+							<div className="bannerImage" >
+								<h1>EN - Mobile</h1>
+								{(this.state.imageStatus === "loading") ? <div>Loading...</div>: ""}
+								<img 
+									src={(this.props.banner && this.props.banner.src_mobile_en)} 
+									alt={(this.props.banner && this.props.banner.tag)}
+									onLoad={() => this._handleImageLoaded()}
+								/>
+							</div>
+						</div>
+
 					</Card>	
 
 				</div>

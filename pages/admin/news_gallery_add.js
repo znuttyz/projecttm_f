@@ -32,7 +32,7 @@ class News_gallery_add extends Component {
 	}
 
 	fileUploadHandler = () => {
-		this.setState({ loading: 0 })
+		this.setState({ loading: 1 })
 		const filename = Date.now()+"."+this.state.selectedFile.name.split('.').pop();
 	    const fd = new FormData()
 	    fd.append('image', this.state.selectedFile, filename)

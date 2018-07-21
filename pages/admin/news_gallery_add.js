@@ -33,7 +33,7 @@ class News_gallery_add extends Component {
 
 	fileUploadHandler = () => {
 		this.setState({ loading: 1 })
-		const filename = Date.now()+"."+this.state.selectedFile.name.split('.').pop();
+		const filename = Date.now()+"."+this.state.selectedFile.name.split('.').pop()
 	    const fd = new FormData()
 	    fd.append('image', this.state.selectedFile, filename)
 	    axios.post('https://us-central1-tummour-original.cloudfunctions.net/uploadFile', fd, {
@@ -44,15 +44,10 @@ class News_gallery_add extends Component {
 	      }
 	    })
 	    .then(res => {
-	    	// axios.get('https://us-central1-tummour-original.cloudfunctions.net/getFile?filename='+this.state.selectedFile.name)
-	    	// .then(res => {
 	    	let src = 'https://firebasestorage.googleapis.com/v0/b/tummour-original.appspot.com/o/upload%2F'+filename+'?alt=media'
-    		// let src = res.data.url
     		this.props.newsCreateImageById(this.state.id, src)
     		this.setState({ loading: 100 })
     		window.location = "/admin/news"
-	    	// })
-	    	
 	    })
 	}
 

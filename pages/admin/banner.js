@@ -90,6 +90,27 @@ class Banner extends Component {
 							</div>
 						</div>
 
+						<div className="bannerContainer">
+							<div className="bannerImage" >
+								<h1>CN - Desktop</h1>
+								{(this.state.imageStatus === "loading") ? <div>Loading...</div>: ""}
+								<img 
+									src={(this.props.banner && this.props.banner.src_desktop_cn)} 
+									alt={(this.props.banner && this.props.banner.tag)}
+									onLoad={() => this._handleImageLoaded()}
+								/>
+							</div>
+							<div className="bannerImage" >
+								<h1>CN - Mobile</h1>
+								{(this.state.imageStatus === "loading") ? <div>Loading...</div>: ""}
+								<img 
+									src={(this.props.banner && this.props.banner.src_mobile_cn)} 
+									alt={(this.props.banner && this.props.banner.tag)}
+									onLoad={() => this._handleImageLoaded()}
+								/>
+							</div>
+						</div>
+
 					</Card>	
 
 				</div>

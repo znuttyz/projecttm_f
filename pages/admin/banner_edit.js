@@ -7,7 +7,8 @@ import {
 	initStore, 
 	loginUserCheck, 
 	logoutUser, 
-	bannerUpdate 
+	bannerUpdate,
+	bannerFetch
 } from '../actions'
 
 
@@ -36,6 +37,7 @@ class Banner_edit extends Component {
 
 	componentWillMount() {
 		this.props.loginUserCheck()
+		this.props.bannerFetch()
 	}
 
 	_onHandleChange(event) {
@@ -54,7 +56,7 @@ class Banner_edit extends Component {
 	    })
 	};
 
-	fileUploadHandler(file, lang, loading) {
+	fileUploadHandler(file, lang, loading, oldfile) {
 		this.setState({ [loading]: 1 })
 		const filename = Date.now()+"."+file.name.split('.').pop();
 	    const fd = new FormData()
@@ -69,23 +71,34 @@ class Banner_edit extends Component {
 	    .then(res => {
     		let src = 'https://firebasestorage.googleapis.com/v0/b/tummour-original.appspot.com/o/upload%2F'+filename+'?alt=media'
     		this.props.bannerUpdate({ [lang]: src })
-    		this.setState({ [loading]: 100 })
+
+			axios.post('https://us-central1-tummour-original.cloudfunctions.net/deleteFile', { filename: oldfile })
+    		.then(res => {
+    			this.setState({ [loading]: 100 })
+    		})
+	    		
 	    })
 	}
 
 	_onHandleSubmit(id) {
 		if(id === 1) {
-			this.fileUploadHandler(this.state.selectedFile1, "src_desktop_th", "loading1")
+			let oldfile = this.props.banner.src_desktop_th.substr(84, 17);
+			this.fileUploadHandler(this.state.selectedFile1, "src_desktop_th", "loading1", oldfile)
 		} else if (id === 2) {
-			this.fileUploadHandler(this.state.selectedFile2, "src_mobile_th", "loading2")
+			let oldfile = this.props.banner.src_mobile_th.substr(84, 17);
+			this.fileUploadHandler(this.state.selectedFile2, "src_mobile_th", "loading2", oldfile)
 		} else if (id === 3) {
-			this.fileUploadHandler(this.state.selectedFile3, "src_desktop_en", "loading3")
+			let oldfile = this.props.banner.src_desktop_en.substr(84, 17);
+			this.fileUploadHandler(this.state.selectedFile3, "src_desktop_en", "loading3", oldfile)
 		} else if (id === 4) {
-			this.fileUploadHandler(this.state.selectedFile4, "src_mobile_en", "loading4")
+			let oldfile = this.props.banner.src_mobile_en.substr(84, 17);
+			this.fileUploadHandler(this.state.selectedFile4, "src_mobile_en", "loading4", oldfile)
 		} else if (id === 5) {
-			this.fileUploadHandler(this.state.selectedFile5, "src_desktop_cn", "loading5")
+			let oldfile = this.props.banner.src_desktop_cn.substr(84, 17);
+			this.fileUploadHandler(this.state.selectedFile5, "src_desktop_cn", "loading5", oldfile)
 		} else if (id === 6) {
-			this.fileUploadHandler(this.state.selectedFile6, "src_mobile_cn", "loading6")
+			let oldfile = this.props.banner.src_mobile_cn.substr(84, 17);
+			this.fileUploadHandler(this.state.selectedFile6, "src_mobile_cn", "loading6", oldfile)
 		}
 	}
 
@@ -210,11 +223,12 @@ class Banner_edit extends Component {
 const mapStateToProps = ({ auth, banner }) => {
 	return {
 		user: auth.user,
-		isUpdate: banner.isUpdate
+		isUpdate: banner.isUpdate,
+		banner: banner.banner
 	}
 }
 
 
 export default withRedux(initStore, mapStateToProps, { 
-	loginUserCheck, logoutUser, bannerUpdate
+	loginUserCheck, logoutUser, bannerUpdate, bannerFetch
 })(Banner_edit)

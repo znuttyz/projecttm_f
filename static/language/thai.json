@@ -29,10 +29,64 @@
 		}
 	},
 	"about": {
+		"navbar": "thai",
 		"banner": "https://firebasestorage.googleapis.com/v0/b/tummour-original.appspot.com/o/static%2Fimages%2F00-global%2Fbanner-about.png?alt=media&token=aa6c33a8-47a1-4004-9b63-7d4befe7cd0d",
 		"logo": "https://firebasestorage.googleapis.com/v0/b/tummour-original.appspot.com/o/static%2Fimages%2F00-global%2Ftm.png?alt=media&token=ac35c520-2402-422d-ba6b-c28a94eab001",
 		"text1": "เรื่องราวของร้านอาหารไทยอีสาน ซึ่งถือกำเนิดมาเป็นเวลายาวนานตั้งแต่ปี 1989 ถูกปรับปรุง แปลงโฉม และสร้างแบรนด์จนกลายเป็นร้านที่ดูทันสมัย มีเอกลักษณ์ แต่ยังคงรสชาติความเป็นไทยแท้ ๆ เจ้าแรกในตลาดอาหารอีสาน โดยมีการวางจุดยืนของแบรนด์ไว้อย่างชัดเจน ภายใต้สโลแกนของร้านตำมั่ว คือ “อาหารรสจัด ถนัดเรื่องตำ” สานต่อความมุ่งมั่นที่จะพัฒนาอาหารไทยอย่างต่อเนื่องเพื่อให้เป็นที่ยอมรับของทั่วโลก ซึ่งปัจจุบันนี้มีกว่า 150 สาขาใน 4 ประเทศ",
 		"image": "https://firebasestorage.googleapis.com/v0/b/tummour-original.appspot.com/o/static%2Fimages%2F02-about%2F01.png?alt=media&token=5d6861a8-68d5-4347-b874-aa51e7a27f0d",
 		"text2": "ที่กล่าวมานี้คือตำนานของต้นตำรับอาหารไทยอีสานแบบดั้งเดิม \"ตำมั่ว\" จนเริ่มต้นก่อตั้งภายใต้ชื่อ บริษัท Zen & Spicy จำกัด ที่ในปัจจุบันนี้ได้เซ็นสัญญาร่วมธุรกิจกับบริษัทเครือร้านอาหารยักษ์ใหญ่ บริษัทเซ็น คอปอร์เรชั่นกรุ๊ป จำกัดเมื่อปี 2016 กลายมาเป็น บริษัท เซ็นแอนด์สไปซี่ จำกัด ตั้งแต่นั้นเป็นต้นมา"
-	}	
+	},
+	"news": {
+		"navbar": "thai",
+		"banner": "https://firebasestorage.googleapis.com/v0/b/tummour-original.appspot.com/o/static%2Fimages%2F00-global%2Fbanner-news.png?alt=media&token=d6a68923-d052-43c3-a510-fe3efca3ed23",
+		"category": "ข่าวสาร"
+	},
+	"promotion": {
+		"navbar": "thai",
+		"banner": "https://firebasestorage.googleapis.com/v0/b/tummour-original.appspot.com/o/static%2Fimages%2F00-global%2Fbanner-news.png?alt=media&token=d6a68923-d052-43c3-a510-fe3efca3ed23",
+		"category": "โปรโมชั่น",
+		"filter": {
+			"all": "ทุกแบรนด์",
+			"tummour": "ตำมั่ว",
+			"laoyuan": "ลาวญวณ",
+			"jaewhon": "แจ่วฮ้อน",
+			"pho": "เฝอ"
+		}
+	},
+	"contact": {
+		"navbar": "thai",
+		"banner": "https://firebasestorage.googleapis.com/v0/b/tummour-original.appspot.com/o/static%2Fimages%2F00-global%2Fbanner-contact.png?alt=media&token=193e0b2d-cbbc-49de-9c86-d115d44bcb4e",
+		"address": {
+			"title": "https://firebasestorage.googleapis.com/v0/b/tummour-original.appspot.com/o/static%2Fimages%2F05-contact%2Fline-addr.png?alt=media&token=fac8fe87-e7fe-4722-9206-43aac695080d",
+			"text1": "บริษัท เซ็น แอนด์ สไปซี่ จำกัด 782/1 ซอยอ่อนนุช 17 แขวงสวนหลวง เขตสวนหลวง กทม 10250 Tel. 02-719-5000"
+		},
+		"comment": {
+			"title": "https://firebasestorage.googleapis.com/v0/b/tummour-original.appspot.com/o/static%2Fimages%2F05-contact%2Fline-cm.png?alt=media&token=2ea11427-b667-41c0-bf1e-28fc3f0bd061",
+			"input1": "หัวข้อเรื่อง",
+			"input2": "ชื่อของท่าน",
+			"input3": "อีเมล์ของท่าน",
+			"input4": "เบอร์โทรศัพท์ของท่าน",
+			"input5": "เนื้อความ",
+			"button1": "รีเซ็ท",
+			"button2": "ส่ง"
+		},
+		"social": {
+			"title": "https://firebasestorage.googleapis.com/v0/b/tummour-original.appspot.com/o/static%2Fimages%2F05-contact%2Fline-social.png?alt=media&token=07a7af26-e9fe-438c-9405-e68a7a502956",
+			"facebook": "ตำมั่ว ต้นตำรับ",
+			"line": "@tummouroriginal",
+			"ig": "spicygang"
+		},
+		"franchise": {
+			"title": "https://firebasestorage.googleapis.com/v0/b/tummour-original.appspot.com/o/static%2Fimages%2F05-contact%2Fline-fc.png?alt=media&token=42561400-5179-46a6-adc2-1ede152cc1c1",
+			"tel": "สอบถามได้ที่เบอร์โทร 063-2028752-5",
+			"button1": "คุณสมบัติเฟรนไชส์",
+			"button2": "คุณสมบัติเฟรนไชส์",
+			"text1": "หากกรอกข้อมูลในใบสมัครครบถ้วน กรุณาส่งกลับมาที่ franchisebusiness.div@zengroup.co.th"
+		}
+	},
+	"footer": {
+		"facebook": "ตำมั่ว ต้นตำรับ",
+		"line": "@tummouroriginal",
+		"ig": "spicygang"
+	}
 }

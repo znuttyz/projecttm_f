@@ -50,7 +50,7 @@ class NewsInfo extends Component {
 							<ul>
 								<li className="content-img">
 									<div className="detail-img">
-										<img src="https://firebasestorage.googleapis.com/v0/b/tummour-original.appspot.com/o/upload%2Fnews1.jpg?alt=media&token=2a9cec06-12c4-4731-9509-f1a4ebfebfd2" />
+										<img src={item.banner_th} />
 									</div>
 		 						</li>
 		 						<li className="content-text">

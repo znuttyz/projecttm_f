@@ -18,8 +18,6 @@ class Banner_edit extends Component {
 	constructor(props) {
 		super(props)
 		this.state = {
-			// name: "",
-			// tag: "",
 			selectedFile1: null,
 			selectedFile2: null,
 			selectedFile3: null,
@@ -57,8 +55,10 @@ class Banner_edit extends Component {
 	};
 
 	fileUploadHandler(file, lang, loading) {
+		this.setState({ [loading]: 1 })
+		const filename = Date.now()+"."+file.name.split('.').pop();
 	    const fd = new FormData()
-	    fd.append('image', file, file.name)
+	    fd.append('image', file, filename)
 	    axios.post('https://us-central1-tummour-original.cloudfunctions.net/uploadFile', fd, {
 	      onUploadProgress: progressEvent => {
 	      	let progress = Math.round(progressEvent.loaded / progressEvent.total * 100)
@@ -67,13 +67,9 @@ class Banner_edit extends Component {
 	      }
 	    })
 	    .then(res => {
-	    	// const { name, tag } = this.state
-	    	// axios.get('https://us-central1-tummour-original.cloudfunctions.net/getFile?filename='+file.name)
-	    	// .then(res => {
-    		let src = 'https://firebasestorage.googleapis.com/v0/b/tummour-original.appspot.com/o/upload%2F'+file.name+'?alt=media'
+    		let src = 'https://firebasestorage.googleapis.com/v0/b/tummour-original.appspot.com/o/upload%2F'+filename+'?alt=media'
     		this.props.bannerUpdate({ [lang]: src })
     		this.setState({ [loading]: 100 })
-	    	// })
 	    })
 	}
 
@@ -82,6 +78,14 @@ class Banner_edit extends Component {
 			this.fileUploadHandler(this.state.selectedFile1, "src_desktop_th", "loading1")
 		} else if (id === 2) {
 			this.fileUploadHandler(this.state.selectedFile2, "src_mobile_th", "loading2")
+		} else if (id === 3) {
+			this.fileUploadHandler(this.state.selectedFile3, "src_desktop_en", "loading3")
+		} else if (id === 4) {
+			this.fileUploadHandler(this.state.selectedFile4, "src_mobile_en", "loading4")
+		} else if (id === 5) {
+			this.fileUploadHandler(this.state.selectedFile5, "src_desktop_cn", "loading5")
+		} else if (id === 6) {
+			this.fileUploadHandler(this.state.selectedFile6, "src_mobile_cn", "loading6")
 		}
 	}
 
@@ -116,7 +120,6 @@ class Banner_edit extends Component {
 							<button className="formFile submitBtn" onClick={() => this._onHandleSubmit(1)}>SUBMIT</button>
 							<div className="fileLoader">{this.state.loading1 && 'Progress: '+this.state.loading1 + '%'}</div>
 						</div>
-
 						<div className="formContainer">
 							<label className="formLabel">Browse Image (TH - Mobile) <span style={{textTransform:'lowercase'}}>414 x 230 px</span></label>
 							<input 
@@ -131,6 +134,68 @@ class Banner_edit extends Component {
 							{this.state.selectedFile2 && this.state.selectedFile2.name}
 							<button className="formFile submitBtn" onClick={() => this._onHandleSubmit(2)}>SUBMIT</button>
 							<div className="fileLoader">{this.state.loading2 && 'Progress: '+this.state.loading2 + '%'}</div>
+						</div>
+
+						<div className="formContainer">
+							<label className="formLabel">Browse Image (EN - Desktop) <span style={{textTransform:'lowercase'}}>2560 x 960 px</span></label>
+							<input 
+								name="selectedFile3"
+								type="file"
+								style={{display: 'none'}}
+						        onChange={this.fileSelectedHandler}
+						        ref={fileInput3 => this.fileInput3 = fileInput3}
+						        disabled={this.state.disableInput}
+							/>
+							<button onClick={() => this.fileInput3.click()} className="formFile">Pick File</button>
+							{this.state.selectedFile3 && this.state.selectedFile3.name}
+							<button className="formFile submitBtn" onClick={() => this._onHandleSubmit(3)}>SUBMIT</button>
+							<div className="fileLoader">{this.state.loading3 && 'Progress: '+this.state.loading3 + '%'}</div>
+						</div>
+						<div className="formContainer">
+							<label className="formLabel">Browse Image (EN - Mobile) <span style={{textTransform:'lowercase'}}>414 x 230 px</span></label>
+							<input 
+								name="selectedFile4"
+								type="file"
+								style={{display: 'none'}}
+						        onChange={this.fileSelectedHandler}
+						        ref={fileInput4 => this.fileInput4 = fileInput4}
+						        disabled={this.state.disableInput}
+							/>
+							<button onClick={() => this.fileInput4.click()} className="formFile">Pick File</button>
+							{this.state.selectedFile4 && this.state.selectedFile4.name}
+							<button className="formFile submitBtn" onClick={() => this._onHandleSubmit(4)}>SUBMIT</button>
+							<div className="fileLoader">{this.state.loading4 && 'Progress: '+this.state.loading4 + '%'}</div>
+						</div>
+
+						<div className="formContainer">
+							<label className="formLabel">Browse Image (CN - Desktop) <span style={{textTransform:'lowercase'}}>2560 x 960 px</span></label>
+							<input 
+								name="selectedFile5"
+								type="file"
+								style={{display: 'none'}}
+						        onChange={this.fileSelectedHandler}
+						        ref={fileInput5 => this.fileInput5 = fileInput5}
+						        disabled={this.state.disableInput}
+							/>
+							<button onClick={() => this.fileInput5.click()} className="formFile">Pick File</button>
+							{this.state.selectedFile5 && this.state.selectedFile5.name}
+							<button className="formFile submitBtn" onClick={() => this._onHandleSubmit(5)}>SUBMIT</button>
+							<div className="fileLoader">{this.state.loading5 && 'Progress: '+this.state.loading5 + '%'}</div>
+						</div>
+						<div className="formContainer">
+							<label className="formLabel">Browse Image (CN - Mobile) <span style={{textTransform:'lowercase'}}>414 x 230 px</span></label>
+							<input 
+								name="selectedFile6"
+								type="file"
+								style={{display: 'none'}}
+						        onChange={this.fileSelectedHandler}
+						        ref={fileInput6 => this.fileInput6 = fileInput6}
+						        disabled={this.state.disableInput}
+							/>
+							<button onClick={() => this.fileInput6.click()} className="formFile">Pick File</button>
+							{this.state.selectedFile6 && this.state.selectedFile6.name}
+							<button className="formFile submitBtn" onClick={() => this._onHandleSubmit(6)}>SUBMIT</button>
+							<div className="fileLoader">{this.state.loading6 && 'Progress: '+this.state.loading6 + '%'}</div>
 						</div>
 							
 					</Card>	

@@ -33,11 +33,11 @@ const showPromotions = (promotions) => {
 	})
 }
 
-const HomePromotion = ({ promotions }) => (
+const HomePromotion = ({ promotions, content }) => (
 	<div className="home-promotion clear">
 		<div className="container">
 			<div className="title">
-				<img src="https://firebasestorage.googleapis.com/v0/b/tummour-original.appspot.com/o/static%2Fimages%2F01-home%2Fline-p.png?alt=media&token=993eb81d-cdb0-46a1-a799-efc915110158" />
+				<img src={content.title} />
 			</div>
 			<div className="home-promotion-inner">
 				<ul>
@@ -47,7 +47,7 @@ const HomePromotion = ({ promotions }) => (
 				</ul>
 			</div>
 			<div className="home-promotion-btn">
-				<Link href="/promotion"><a>โปรโมชั่นเพิ่มเติม</a></Link>
+				<Link href="/promotion"><a>{content.more}</a></Link>
 			</div>
 		</div>
 	</div>

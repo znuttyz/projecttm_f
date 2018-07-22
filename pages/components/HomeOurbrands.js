@@ -48,10 +48,10 @@ const HomeOurbrands = ({ content }) => (
 						<Link href="/brands/pho">
 							<a>
 								<div className="brandname">
-									<img src={content.jaewhon.name} />
+									<img src={content.pho.name} />
 								</div>
 								<div className="brandimg">
-									<img src={content.jaewhon.image} />
+									<img src={content.pho.image} />
 								</div>
 							</a>
 						</Link>

@@ -1,7 +1,6 @@
 {
 	"home": {
 		"navbar": "thai",
-		"banner": "https://firebasestorage.googleapis.com/v0/b/tummour-original.appspot.com/o/upload%2Fbanner.jpg?alt=media",
 		"banner": "thai",
 		"brand": {
 			"title": "https://firebasestorage.googleapis.com/v0/b/tummour-original.appspot.com/o/static%2Fimages%2F01-home%2Fline-b.png?alt=media&token=5e26063d-4ff3-4ca6-998f-703b4005a86b",
@@ -31,6 +30,7 @@
 	"about": {
 		"navbar": "thai",
 		"banner": "https://firebasestorage.googleapis.com/v0/b/tummour-original.appspot.com/o/static%2Fimages%2F00-global%2Fbanner-about.png?alt=media&token=aa6c33a8-47a1-4004-9b63-7d4befe7cd0d",
+		"bannermb": "https://firebasestorage.googleapis.com/v0/b/tummour-original.appspot.com/o/static%2Fimages%2F02-about%2Fbannerabout-mb.png?alt=media&token=fd6f3868-6df6-41b5-9635-067f26f0303f",
 		"logo": "https://firebasestorage.googleapis.com/v0/b/tummour-original.appspot.com/o/static%2Fimages%2F00-global%2Ftm.png?alt=media&token=ac35c520-2402-422d-ba6b-c28a94eab001",
 		"text1": "เรื่องราวของร้านอาหารไทยอีสาน ซึ่งถือกำเนิดมาเป็นเวลายาวนานตั้งแต่ปี 1989 ถูกปรับปรุง แปลงโฉม และสร้างแบรนด์จนกลายเป็นร้านที่ดูทันสมัย มีเอกลักษณ์ แต่ยังคงรสชาติความเป็นไทยแท้ ๆ เจ้าแรกในตลาดอาหารอีสาน โดยมีการวางจุดยืนของแบรนด์ไว้อย่างชัดเจน ภายใต้สโลแกนของร้านตำมั่ว คือ “อาหารรสจัด ถนัดเรื่องตำ” สานต่อความมุ่งมั่นที่จะพัฒนาอาหารไทยอย่างต่อเนื่องเพื่อให้เป็นที่ยอมรับของทั่วโลก ซึ่งปัจจุบันนี้มีกว่า 150 สาขาใน 4 ประเทศ",
 		"image": "https://firebasestorage.googleapis.com/v0/b/tummour-original.appspot.com/o/static%2Fimages%2F02-about%2F01.png?alt=media&token=5d6861a8-68d5-4347-b874-aa51e7a27f0d",
@@ -39,12 +39,23 @@
 	"news": {
 		"navbar": "thai",
 		"banner": "https://firebasestorage.googleapis.com/v0/b/tummour-original.appspot.com/o/static%2Fimages%2F00-global%2Fbanner-news.png?alt=media&token=d6a68923-d052-43c3-a510-fe3efca3ed23",
-		"category": "ข่าวสาร"
+		"bannermb": "https://firebasestorage.googleapis.com/v0/b/tummour-original.appspot.com/o/static%2Fimages%2F04-promotion%2Fbannernews-mb.png?alt=media&token=35bfd467-2d5f-4e9f-ace7-4b52b0b889cd",
+		"categorynews": "ข่าวสาร",
+		"categorypromotion": "โปรโมชั่น"
+	},
+	"newsdetail": {
+		"navbar": "thai",
+		"banner": "https://firebasestorage.googleapis.com/v0/b/tummour-original.appspot.com/o/static%2Fimages%2F00-global%2Fbanner-news.png?alt=media&token=d6a68923-d052-43c3-a510-fe3efca3ed23",
+		"bannermb": "https://firebasestorage.googleapis.com/v0/b/tummour-original.appspot.com/o/static%2Fimages%2F04-promotion%2Fbannernews-mb.png?alt=media&token=35bfd467-2d5f-4e9f-ace7-4b52b0b889cd",
+		"categorynews": "ข่าวสาร",
+		"categorypromotion": "โปรโมชั่น"
 	},
 	"promotion": {
 		"navbar": "thai",
 		"banner": "https://firebasestorage.googleapis.com/v0/b/tummour-original.appspot.com/o/static%2Fimages%2F00-global%2Fbanner-news.png?alt=media&token=d6a68923-d052-43c3-a510-fe3efca3ed23",
-		"category": "โปรโมชั่น",
+		"bannermb": "https://firebasestorage.googleapis.com/v0/b/tummour-original.appspot.com/o/static%2Fimages%2F04-promotion%2Fbannernews-mb.png?alt=media&token=35bfd467-2d5f-4e9f-ace7-4b52b0b889cd",
+		"categorynews": "ข่าวสาร",
+		"categorypromotion": "โปรโมชั่น",
 		"filter": {
 			"all": "ทุกแบรนด์",
 			"tummour": "ตำมั่ว",
@@ -53,12 +64,20 @@
 			"pho": "เฝอ"
 		}
 	},
+	"promotiondetail": {
+		"navbar": "thai",
+		"banner": "https://firebasestorage.googleapis.com/v0/b/tummour-original.appspot.com/o/static%2Fimages%2F00-global%2Fbanner-news.png?alt=media&token=d6a68923-d052-43c3-a510-fe3efca3ed23",
+		"bannermb": "https://firebasestorage.googleapis.com/v0/b/tummour-original.appspot.com/o/static%2Fimages%2F04-promotion%2Fbannernews-mb.png?alt=media&token=35bfd467-2d5f-4e9f-ace7-4b52b0b889cd",
+		"categorynews": "ข่าวสาร",
+		"categorypromotion": "โปรโมชั่น"
+	},
 	"contact": {
 		"navbar": "thai",
 		"banner": "https://firebasestorage.googleapis.com/v0/b/tummour-original.appspot.com/o/static%2Fimages%2F00-global%2Fbanner-contact.png?alt=media&token=193e0b2d-cbbc-49de-9c86-d115d44bcb4e",
+		"bannermb": "https://firebasestorage.googleapis.com/v0/b/tummour-original.appspot.com/o/static%2Fimages%2F05-contact%2Fbannercontact-mb.png?alt=media&token=dc80d7c8-f3b1-4da4-9ff7-cc757ac33462",
 		"address": {
 			"title": "https://firebasestorage.googleapis.com/v0/b/tummour-original.appspot.com/o/static%2Fimages%2F05-contact%2Fline-addr.png?alt=media&token=fac8fe87-e7fe-4722-9206-43aac695080d",
-			"text1": "บริษัท เซ็น แอนด์ สไปซี่ จำกัด 782/1 ซอยอ่อนนุช 17 แขวงสวนหลวง เขตสวนหลวง กทม 10250 Tel. 02-719-5000"
+			"text": "บริษัท เซ็น แอนด์ สไปซี่ จำกัด\n 782/1 ซอยอ่อนนุช 17 แขวงสวนหลวง\n เขตสวนหลวง กทม 10250\n Tel. 02-719-5000"
 		},
 		"comment": {
 			"title": "https://firebasestorage.googleapis.com/v0/b/tummour-original.appspot.com/o/static%2Fimages%2F05-contact%2Fline-cm.png?alt=media&token=2ea11427-b667-41c0-bf1e-28fc3f0bd061",
@@ -81,7 +100,7 @@
 			"tel": "สอบถามได้ที่เบอร์โทร 063-2028752-5",
 			"button1": "คุณสมบัติเฟรนไชส์",
 			"button2": "คุณสมบัติเฟรนไชส์",
-			"text1": "หากกรอกข้อมูลในใบสมัครครบถ้วน กรุณาส่งกลับมาที่ franchisebusiness.div@zengroup.co.th"
+			"text": "หากกรอกข้อมูลในใบสมัครครบถ้วน กรุณาส่งกลับมาที่ franchisebusiness.div@zengroup.co.th"
 		}
 	},
 	"footer": {

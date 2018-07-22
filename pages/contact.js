@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import ReactGA from 'react-ga'
+import Cookies from 'js-cookie'
 import { Head, Nav, AllBanner, ContactInfo, ContactSns, ContactFranchise, Footer } from './components'
 
 import withRedux from 'next-redux-wrapper'
@@ -14,13 +15,15 @@ class Contact extends Component {
 
 	constructor(props) {
 		super(props)
+		if(!Cookies.get('lang')) Cookies.set('lang', 'th')
 		this.state = {
 			topic: '',
 			name: '',
 			email: '',
 			phone: '',
 			body: '',
-			error: false
+			error: false,
+			lang: Cookies.get('lang')
 		}
 	}
 
@@ -34,6 +37,11 @@ class Contact extends Component {
 	componentDidMount() {
 		ReactGA.initialize(process.env.GA_ID)
 		setTimeout(()=>ReactGA.pageview(window.location.pathname + window.location.search))
+	}
+
+	_handleLang(lang){
+		Cookies.set('lang', lang)
+		this.setState({ lang })
 	}
 
 	_onHandleChange(event) {
@@ -61,6 +69,19 @@ class Contact extends Component {
 	 }
 
 	render() {
+		let content, footer
+		switch(this.state.lang) {
+			case "en":
+				console.log('en')
+				break;
+			case "cn":
+				console.log('cn')
+				break;
+			default:
+				content = require('../static/language/thai.json').contact
+				footer = require('../static/language/thai.json').footer
+		}
+
 		return (
 			<div>
 				<Head title="Tummour Original - Contact"/>
@@ -69,10 +90,11 @@ class Contact extends Component {
 					handleChange={(event) => this._onHandleChange(event)}
 					onSubmit={(event) => this._onHandleSubmit(event)}
 					error={this.state.error}
+					content={content}
 				/>
-				<ContactSns />
-				<ContactFranchise />
-				<Footer />
+				<ContactSns content={content} />
+				<ContactFranchise content={content} />
+				<Footer footer={footer}/>
 			</div>
 		)
 	}

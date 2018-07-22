@@ -9,9 +9,9 @@ const HomeBanner = ({ image, content }) => {
 			desktop = image.src_desktop_en
 			mobile = image.src_mobile_en
 			break;
-		case "english":
-			desktop = image.src_desktop_en
-			mobile = image.src_mobile_en
+		case "chinese":
+			desktop = image.src_desktop_cn
+			mobile = image.src_mobile_cn
 			break;
 		default:
 			break;

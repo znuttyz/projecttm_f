@@ -36,7 +36,7 @@ class Home extends Component {
 	}
 
 	render() {
-		let content
+		let content, footer
 		switch(this.state.lang) {
 			case "en":
 				console.log('en')
@@ -46,6 +46,7 @@ class Home extends Component {
 				break;
 			default:
 				content = require('../static/language/thai.json').home
+				footer = require('../static/language/thai.json').footer
 		}
 
 		return (
@@ -55,7 +56,7 @@ class Home extends Component {
 				{(this.props.home[0] && <HomeBanner image={this.props.home[0]} content={content.banner}/>)}
 				<HomeOurbrands content={content.brand} />
 				{(this.props.home[1] && <HomePromotion promotions={this.props.home[1]} content={content.promotion} />)}
-				<Footer />
+				<Footer footer={footer}/>
 			</div>
 		)
 	}

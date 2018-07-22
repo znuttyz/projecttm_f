@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import ReactGA from 'react-ga'
+import Cookies from 'js-cookie'
 import { Head, Nav, AllBanner, NewsInfo, Footer } from './components'
 
 import withRedux from 'next-redux-wrapper'
@@ -14,8 +15,10 @@ class News extends Component {
 
 	constructor(props) {
 		super(props)
+		if(!Cookies.get('lang')) Cookies.set('lang', 'th')
 		this.state = {
-			news: []
+			news: [],
+			lang: Cookies.get('lang')
 		}
 	}
 
@@ -36,13 +39,31 @@ class News extends Component {
 		setTimeout(()=>ReactGA.pageview(window.location.pathname + window.location.search))
 	}
 
+	_handleLang(lang){
+		Cookies.set('lang', lang)
+		this.setState({ lang })
+	}
+
 	render() {
+		let content, footer
+		switch(this.state.lang) {
+			case "en":
+				console.log('en')
+				break;
+			case "cn":
+				console.log('cn')
+				break;
+			default:
+				content = require('../static/language/thai.json').news
+				footer = require('../static/language/thai.json').footer
+		}
+
 		return (
 			<div>
 				<Head title="Tummour Original - News" />
 				<Nav isActive="news" />
-				<NewsInfo news={this.state.news}/>
-				<Footer />
+				<NewsInfo news={this.state.news} content={content} />
+				<Footer footer={footer}/>
 			</div>
 		)
 	}

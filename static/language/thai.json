@@ -1,20 +1,14 @@
 {
 	"home": {
 		"navbar": "thai",
-<<<<<<< HEAD
 		"banner": "https://firebasestorage.googleapis.com/v0/b/tummour-original.appspot.com/o/upload%2Fbanner.jpg?alt=media",
-=======
 		"banner": "thai",
->>>>>>> nut
 		"brand": {
 			"title": "https://firebasestorage.googleapis.com/v0/b/tummour-original.appspot.com/o/static%2Fimages%2F01-home%2Fline-b.png?alt=media&token=5e26063d-4ff3-4ca6-998f-703b4005a86b",
 			"tummour": {
 				"name": "https://firebasestorage.googleapis.com/v0/b/tummour-original.appspot.com/o/static%2Fimages%2F00-global%2Ftm.png?alt=media&token=ac35c520-2402-422d-ba6b-c28a94eab001",
-<<<<<<< HEAD
 				"image": "https://firebasestorage.googleapis.com/v0/b/tummour-original.appspot.com/o/static%2Fimages%2F01-home%2F01.jpg?alt=media&token=838b4a56-fc84-4c31-b4c4-1884cf61da6a",
-=======
 				"image": "https://firebasestorage.googleapis.com/v0/b/tummour-original.appspot.com/o/static%2Fimages%2F01-home%2F01.jpg?alt=media&token=838b4a56-fc84-4c31-b4c4-1884cf61da6a"
->>>>>>> nut
 			},
 			"laoyuan": {
 				"name": "https://firebasestorage.googleapis.com/v0/b/tummour-original.appspot.com/o/static%2Fimages%2F00-global%2Fly.png?alt=media&token=86762e41-6548-406f-b754-93171fd039dd",

@@ -40,7 +40,10 @@ class News_gallery extends Component {
 
 	_onDeleteImage(id, name) {	
 		if(confirm('Are you sure you want to DELETE this image?')) {
-	  		this.props.newsDeleteImageById(id, name)
+	  		let oldfile = name.substr(84, 17)
+	  		axios.post('https://us-central1-tummour-original.cloudfunctions.net/deleteFile', { filename: oldfile }).then(res => {
+				this.props.newsDeleteImageById(id, name)
+	  		})
 	  	}
 	}
 

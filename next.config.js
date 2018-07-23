@@ -25,6 +25,7 @@ module.exports = withSass({
 	      '/admin': { page: '/admin' },
 	      '/admin/banner': { page: '/admin/banner' },
 	      '/admin/banner/edit': { page: '/admin/banner_edit' },
+	      '/admin/brand': { page: '/admin/brand' },
 	      '/admin/news': { page: '/admin/news' },
 	      '/admin/news/add': { page: '/admin/news_add' },
 	      '/admin/news/edit': { page: '/admin/banner_edit' },

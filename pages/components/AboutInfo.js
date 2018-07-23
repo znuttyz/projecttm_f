@@ -1,5 +1,4 @@
 import Link from 'next/link'
-import React, { Component } from "react";
 
 const AboutInfo = ({ content }) => (
 	<div className="aboutinfo clear">
@@ -14,10 +13,10 @@ const AboutInfo = ({ content }) => (
 				<img src={content.logo}/>
 			</div>
 			<div className="aboutcontent">
-				<p>{content.text1}</p>
+				<p dangerouslySetInnerHTML={{__html: content.text1}} />
 				<img src={content.image} />
 				<div className="lastbox">
-					<p>{content.text1}</p>
+					<p>{content.text2}</p>
 				</div>
 			</div>
 		</div>

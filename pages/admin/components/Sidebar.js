@@ -2,8 +2,9 @@ import Link from 'next/link'
 
 const menu = (active) => {
 	return [
-		{ name: "Banners", href: "/admin/banner" }, 
-		{ name: "News", href: "/admin/news" }, 
+		{ name: "Banners", href: "/admin/banner" },
+		{ name: "Brands", href: "/admin/brand" },
+		{ name: "News", href: "/admin/news" },
 		{ name: "Promotions", href: "/admin/promotion" },
 		{ name: "Messages", href: "/admin/message" }
 	].map(item => 

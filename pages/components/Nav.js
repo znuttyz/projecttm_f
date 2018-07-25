@@ -43,6 +43,11 @@ class Nav extends Component {
 										<li className="li" onClick={() => this.setState({isMenu: !this.state.isMenu})}><Link href="/brands/tummour"><a>แบรนด์ของเรา</a></Link></li>
 										<li className="li" onClick={() => this.setState({isMenu: !this.state.isMenu})}><Link href="/news"><a>ข่าวสาร/โปรโมชั่น</a></Link></li>
 										<li className="li" onClick={() => this.setState({isMenu: !this.state.isMenu})}><Link href="/contact"><a>ติดต่อเรา</a></Link></li>
+										<ul className="lang-mb">
+											<li><Link href="/"><a>ภาษาไทย</a></Link></li>
+											<li><Link href="/"><a>English</a></Link></li>
+											<li><Link href="/"><a>中文</a></Link></li>
+										</ul>
 									</ul>
 								</div>
 							</div>

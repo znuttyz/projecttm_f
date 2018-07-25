@@ -1,7 +1,7 @@
 {
 	"home": {
-		"navbar": "th",
-		"banner": "thai",
+		"navbar": "cn",
+		"banner": "cn",
 		"brand": {
 			"title": "https://firebasestorage.googleapis.com/v0/b/tummour-original.appspot.com/o/static%2Fimages%2F01-home%2Fline-b.png?alt=media&token=5e26063d-4ff3-4ca6-998f-703b4005a86b",
 			"tummour": {
@@ -24,87 +24,87 @@
 		},
 		"promotion": {
 			"title": "https://firebasestorage.googleapis.com/v0/b/tummour-original.appspot.com/o/static%2Fimages%2F01-home%2Fline-p.png?alt=media&token=993eb81d-cdb0-46a1-a799-efc915110158",
-			"more": "โปรโมชั่นเพิ่มเติม"
+			"more": "SEE MORE"
 		}
 	},
 	"about": {
-		"navbar": "th",
+		"navbar": "cn",
 		"banner": "https://firebasestorage.googleapis.com/v0/b/tummour-original.appspot.com/o/static%2Fimages%2F00-global%2Fbanner-about.png?alt=media&token=aa6c33a8-47a1-4004-9b63-7d4befe7cd0d",
 		"bannermb": "https://firebasestorage.googleapis.com/v0/b/tummour-original.appspot.com/o/static%2Fimages%2F02-about%2Fbannerabout-mb.png?alt=media&token=fd6f3868-6df6-41b5-9635-067f26f0303f",
 		"logo": "https://firebasestorage.googleapis.com/v0/b/tummour-original.appspot.com/o/static%2Fimages%2F00-global%2Ftm.png?alt=media&token=ac35c520-2402-422d-ba6b-c28a94eab001",
-		"text1": "เรื่องราวของร้านอาหารไทยอีสาน ซึ่งถือกำเนิดมาเป็นเวลายาวนานตั้งแต่ปี 1989 ถูกปรับปรุง แปลงโฉม และสร้างแบรนด์จนกลายเป็นร้านที่ดูทันสมัย มีเอกลักษณ์ แต่ยังคงรสชาติความเป็นไทยแท้ ๆ เจ้าแรกในตลาดอาหารอีสาน โดยมีการวางจุดยืนของแบรนด์ไว้อย่างชัดเจน ภายใต้สโลแกนของร้านตำมั่ว คือ <span>“อาหารรสจัด ถนัดเรื่องตำ”</span> สานต่อความมุ่งมั่นที่จะพัฒนาอาหารไทยอย่างต่อเนื่องเพื่อให้เป็นที่ยอมรับของทั่วโลก ซึ่งปัจจุบันนี้มีกว่า 150 สาขาใน 4 ประเทศ",
+		"text1": "The history of Zen and Spicy dates back to 1989 with the creation of the first very basic Tummour Restaurant under the Company name of Crazy Spicy. This served authentic Thai-Northeastern (Isaan) food which has reached the hearts of Thais and foreigners.  Nowadays the restaurants are new modern chic and comfortable but still retain their authentic northeastern Thailand (Isaan) taste.",
 		"image": "https://firebasestorage.googleapis.com/v0/b/tummour-original.appspot.com/o/static%2Fimages%2F02-about%2F01.png?alt=media&token=5d6861a8-68d5-4347-b874-aa51e7a27f0d",
-		"text2": "ที่กล่าวมานี้คือตำนานของต้นตำรับอาหารไทยอีสานแบบดั้งเดิม \"ตำมั่ว\" จนเริ่มต้นก่อตั้งภายใต้ชื่อ บริษัท Zen & Spicy จำกัด ที่ในปัจจุบันนี้ได้เซ็นสัญญาร่วมธุรกิจกับบริษัทเครือร้านอาหารยักษ์ใหญ่ บริษัทเซ็น คอปอร์เรชั่นกรุ๊ป จำกัดเมื่อปี 2016 กลายมาเป็น บริษัท เซ็นแอนด์สไปซี่ จำกัด ตั้งแต่นั้นเป็นต้นมา"
+		"text2": "Tummour was the  first generation in the Isaan food market with the slogan “The Original Thai Food”.  Because of our passion andexperience in Thai Food preparation we have as of today branches spread all over Thailand and Internationally with a total of more than 150 units. The authentic taste of Thai food will be served in every single dish, so that everybody will know and appreciate what is truly the Authentic Thai Food. On the back of the success of Tummour many other concepts were created such as Lao Yuan, JaewHon, Pho, Granny’s Chicken, and Krua Thai. Given the growth and success of the Group they formed a partnership with the famous Zen Corporation Group Co Ltd, an innovator of Japanese concepts and created Zen & Spicy Co Ltd."
 	},
 	"news": {
-		"navbar": "th",
+		"navbar": "cn",
 		"banner": "https://firebasestorage.googleapis.com/v0/b/tummour-original.appspot.com/o/static%2Fimages%2F00-global%2Fbanner-news.png?alt=media&token=d6a68923-d052-43c3-a510-fe3efca3ed23",
 		"bannermb": "https://firebasestorage.googleapis.com/v0/b/tummour-original.appspot.com/o/static%2Fimages%2F04-promotion%2Fbannernews-mb.png?alt=media&token=35bfd467-2d5f-4e9f-ace7-4b52b0b889cd",
-		"categorynews": "ข่าวสาร",
-		"categorypromotion": "โปรโมชั่น"
+		"categorynews": "NEWS",
+		"categorypromotion": "PROMOTIONS"
 	},
 	"newsdetail": {
-		"navbar": "th",
+		"navbar": "cn",
 		"banner": "https://firebasestorage.googleapis.com/v0/b/tummour-original.appspot.com/o/static%2Fimages%2F00-global%2Fbanner-news.png?alt=media&token=d6a68923-d052-43c3-a510-fe3efca3ed23",
 		"bannermb": "https://firebasestorage.googleapis.com/v0/b/tummour-original.appspot.com/o/static%2Fimages%2F04-promotion%2Fbannernews-mb.png?alt=media&token=35bfd467-2d5f-4e9f-ace7-4b52b0b889cd",
-		"categorynews": "ข่าวสาร",
-		"categorypromotion": "โปรโมชั่น"
+		"categorynews": "NEWS",
+		"categorypromotion": "PROMOTIONS"
 	},
 	"promotion": {
-		"navbar": "th",
+		"navbar": "cn",
 		"banner": "https://firebasestorage.googleapis.com/v0/b/tummour-original.appspot.com/o/static%2Fimages%2F00-global%2Fbanner-news.png?alt=media&token=d6a68923-d052-43c3-a510-fe3efca3ed23",
 		"bannermb": "https://firebasestorage.googleapis.com/v0/b/tummour-original.appspot.com/o/static%2Fimages%2F04-promotion%2Fbannernews-mb.png?alt=media&token=35bfd467-2d5f-4e9f-ace7-4b52b0b889cd",
-		"categorynews": "ข่าวสาร",
-		"categorypromotion": "โปรโมชั่น",
+		"categorynews": "NEWS",
+		"categorypromotion": "PROMOTIONS",
 		"filter": {
-			"all": "ทุกแบรนด์",
-			"tummour": "ตำมั่ว",
-			"laoyuan": "ลาวญวณ",
-			"jaewhon": "แจ่วฮ้อน",
-			"pho": "เฝอ"
+			"all": "BRANDS",
+			"tummour": "TUMMOUR",
+			"laoyuan": "LAOYUAN",
+			"jaewhon": "JAEWHON",
+			"pho": "PHO"
 		}
 	},
 	"promotiondetail": {
-		"navbar": "th",
+		"navbar": "cn",
 		"banner": "https://firebasestorage.googleapis.com/v0/b/tummour-original.appspot.com/o/static%2Fimages%2F00-global%2Fbanner-news.png?alt=media&token=d6a68923-d052-43c3-a510-fe3efca3ed23",
 		"bannermb": "https://firebasestorage.googleapis.com/v0/b/tummour-original.appspot.com/o/static%2Fimages%2F04-promotion%2Fbannernews-mb.png?alt=media&token=35bfd467-2d5f-4e9f-ace7-4b52b0b889cd",
-		"categorynews": "ข่าวสาร",
-		"categorypromotion": "โปรโมชั่น"
+		"categorynews": "NEWS",
+		"categorypromotion": "PROMOTIONS"
 	},
 	"contact": {
-		"navbar": "th",
+		"navbar": "cn",
 		"banner": "https://firebasestorage.googleapis.com/v0/b/tummour-original.appspot.com/o/static%2Fimages%2F00-global%2Fbanner-contact.png?alt=media&token=193e0b2d-cbbc-49de-9c86-d115d44bcb4e",
 		"bannermb": "https://firebasestorage.googleapis.com/v0/b/tummour-original.appspot.com/o/static%2Fimages%2F05-contact%2Fbannercontact-mb.png?alt=media&token=dc80d7c8-f3b1-4da4-9ff7-cc757ac33462",
 		"address": {
 			"title": "https://firebasestorage.googleapis.com/v0/b/tummour-original.appspot.com/o/static%2Fimages%2F05-contact%2Fline-addr.png?alt=media&token=fac8fe87-e7fe-4722-9206-43aac695080d",
-			"text": "บริษัท เซ็น แอนด์ สไปซี่ จำกัด\n 782/1 ซอยอ่อนนุช 17 แขวงสวนหลวง\n เขตสวนหลวง กทม 10250\n Tel. 02-719-5000"
+			"text": "ZEN & SPICY CO.,LTD 782/1 Soi Onnut 17, Suanluang, Suanluang Bangkok 10250 Tel. (+066)2-719-5000"
 		},
 		"comment": {
 			"title": "https://firebasestorage.googleapis.com/v0/b/tummour-original.appspot.com/o/static%2Fimages%2F05-contact%2Fline-cm.png?alt=media&token=2ea11427-b667-41c0-bf1e-28fc3f0bd061",
-			"input1": "หัวข้อเรื่อง",
-			"input2": "ชื่อของท่าน",
-			"input3": "อีเมล์ของท่าน",
-			"input4": "เบอร์โทรศัพท์ของท่าน",
-			"input5": "เนื้อความ",
-			"button1": "รีเซ็ท",
-			"button2": "ส่ง"
+			"input1": "SUBJECT",
+			"input2": "NAME",
+			"input3": "EMAIL",
+			"input4": "TEL",
+			"input5": "MESSAGE",
+			"button1": "RESET",
+			"button2": "SEND"
 		},
 		"social": {
 			"title": "https://firebasestorage.googleapis.com/v0/b/tummour-original.appspot.com/o/static%2Fimages%2F05-contact%2Fline-social.png?alt=media&token=07a7af26-e9fe-438c-9405-e68a7a502956",
-			"facebook": "ตำมั่ว ต้นตำรับ",
+			"facebook": "tummouroriginal",
 			"line": "@tummouroriginal",
 			"ig": "spicygang"
 		},
 		"franchise": {
 			"title": "https://firebasestorage.googleapis.com/v0/b/tummour-original.appspot.com/o/static%2Fimages%2F05-contact%2Fline-fc.png?alt=media&token=42561400-5179-46a6-adc2-1ede152cc1c1",
-			"tel": "สอบถามได้ที่เบอร์โทร 063-2028752-5",
-			"button1": "คุณสมบัติเฟรนไชส์",
-			"button2": "คุณสมบัติเฟรนไชส์",
-			"text": "หากกรอกข้อมูลในใบสมัครครบถ้วน กรุณาส่งกลับมาที่ franchisebusiness.div@zengroup.co.th"
+			"tel": "TEL. (+66) 63-2028752-5",
+			"button1": "Franchise Qualification",
+			"button2": "Franchise Application Form",
+			"text": "Please send your completed application form to franchisebusiness.div@zengroup.co.th"
 		}
 	},
 	"footer": {
-		"facebook": "ตำมั่ว ต้นตำรับ",
+		"facebook": "tummouroriginal",
 		"line": "@tummouroriginal",
 		"ig": "spicygang"
 	}

@@ -1,8 +1,8 @@
 .footer {
 	position: relative;
-	margin-top: -56px;
+	margin-top: -61px;
 	@include breakpoint(mobile) {
-		margin-top: -52px;
+		margin-top: -18px;
 	}
 	@include breakpoint(over) {
 		margin-top: -80px;
@@ -12,7 +12,7 @@
 	}
 	.footer-info {
 		position: absolute;
-		top: 86px;
+		top: 84px;
 		width: 100%;
 		margin: 0 auto;
 		@include breakpoint(tablet) {
@@ -68,7 +68,7 @@
 				text-transform: uppercase;
 				font-weight: bold;
 				@include breakpoint(tablet) {
-					margin-top: -10px;
+					margin-top: -14px;
 				}
 				@include breakpoint(tablet-wide) {
 					margin-top: -5px;

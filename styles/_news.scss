@@ -81,6 +81,7 @@
 								width: 300px;
 								height: 200px;
 								margin: 0 auto;
+								overflow: hidden;
 								@include breakpoint(tablet) {
 									width: 220px;
 									height: 147px;

@@ -39,20 +39,22 @@ class Home extends Component {
 		let content, footer
 		switch(this.state.lang) {
 			case "en":
-				console.log('en')
+				content = require('../static/language/en.json').home
+				footer = require('../static/language/en.json').footer
 				break;
 			case "cn":
-				console.log('cn')
+				content = require('../static/language/cn.json').home
+				footer = require('../static/language/cn.json').footer
 				break;
 			default:
-				content = require('../static/language/thai.json').home
-				footer = require('../static/language/thai.json').footer
+				content = require('../static/language/th.json').home
+				footer = require('../static/language/th.json').footer
 		}
 
 		return (
 			<div>
 				<Head title="Tummour Original"/>
-				<Nav isActive="home"/>
+				<Nav isActive="home" handleLang={(lang)=>this._handleLang(lang)}/>
 				{(this.props.home[0] && <HomeBanner image={this.props.home[0]} content={content.banner}/>)}
 				<HomeOurbrands content={content.brand} />
 				{(this.props.home[1] && <HomePromotion promotions={this.props.home[1]} content={content.promotion} />)}

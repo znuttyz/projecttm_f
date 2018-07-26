@@ -58,23 +58,26 @@ class Promotion extends Component {
 	}
 
 	render() {
-		let footer
+		let content, footer
 		switch(this.state.lang) {
 			case "en":
-				console.log('en')
+				content = require('../static/language/en.json').promotion
+				footer = require('../static/language/en.json').footer
 				break;
 			case "cn":
-				console.log('cn')
+				content = require('../static/language/cn.json').promotion
+				footer = require('../static/language/cn.json').footer
 				break;
 			default:
-				footer = require('../static/language/thai.json').footer
+				content = require('../static/language/th.json').promotion
+				footer = require('../static/language/th.json').footer
 		}
 
 		return (
 			<div>
 				<Head title="Tummour Original - Promotion" />
-				<Nav isActive="news" />
-				<PromotionInfo promotions={this.state.promotions} handleChange={event=>this._onHandleChange(event)}/>
+				<Nav isActive="news" handleLang={(lang)=>this._handleLang(lang)}/>
+				<PromotionInfo promotions={this.state.promotions} handleChange={event=>this._onHandleChange(event)} content={content}/>
 				<Footer footer={footer}/>
 			</div>
 		)

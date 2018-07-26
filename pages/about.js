@@ -29,20 +29,22 @@ class About extends Component {
 		let content, footer
 		switch(this.state.lang) {
 			case "en":
-				console.log('en')
+				content = require('../static/language/en.json').about
+				footer = require('../static/language/en.json').footer
 				break;
 			case "cn":
-				console.log('cn')
+				content = require('../static/language/cn.json').about
+				footer = require('../static/language/cn.json').footer
 				break;
 			default:
-				content = require('../static/language/thai.json').about
-				footer = require('../static/language/thai.json').footer
+				content = require('../static/language/th.json').about
+				footer = require('../static/language/th.json').footer
 		}
 
 		return (
 			<div>
 				<Head title="Tummour Original - About"/>
-				<Nav isActive="about"/>
+				<Nav isActive="about" handleLang={(lang)=>this._handleLang(lang)}/>
 				<AboutInfo content={content} />
 				<Footer footer={footer}/>
 			</div>

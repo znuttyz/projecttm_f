@@ -48,20 +48,22 @@ class News extends Component {
 		let content, footer
 		switch(this.state.lang) {
 			case "en":
-				console.log('en')
+				content = require('../static/language/en.json').news
+				footer = require('../static/language/en.json').footer
 				break;
 			case "cn":
-				console.log('cn')
+				content = require('../static/language/cn.json').news
+				footer = require('../static/language/cn.json').footer
 				break;
 			default:
-				content = require('../static/language/thai.json').news
-				footer = require('../static/language/thai.json').footer
+				content = require('../static/language/th.json').news
+				footer = require('../static/language/th.json').footer
 		}
 
 		return (
 			<div>
 				<Head title="Tummour Original - News" />
-				<Nav isActive="news" />
+				<Nav isActive="news" handleLang={(lang)=>this._handleLang(lang)}/>
 				<NewsInfo news={this.state.news} content={content} />
 				<Footer footer={footer}/>
 			</div>

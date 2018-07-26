@@ -1,17 +1,17 @@
 import React, { Component } from 'react'
 import Link from 'next/link'
 
-import { Sidebar, Header, Card, Table } from './components'
+import { Sidebar, Header, Card, Table } from '../components'
 
 import withRedux from 'next-redux-wrapper'
 import { 
 	initStore, 
 	loginUserCheck, 
 	logoutUser,
-} from '../actions'
+} from '../../actions'
 
 
-import '../../styles/index.scss'
+import '../../../styles/index.scss'
 
 class Brandlist extends Component {
 

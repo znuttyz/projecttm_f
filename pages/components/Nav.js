@@ -16,7 +16,7 @@ class Nav extends Component {
 		return (
 			<div className="header">
 				<div className="container">
-					<Logo />
+					<Logo handleLang={this.props.handleLang}/>
 				</div>
 				<div className="bg-navbar">
 					<div className="container">
@@ -44,9 +44,9 @@ class Nav extends Component {
 										<li className="li" onClick={() => this.setState({isMenu: !this.state.isMenu})}><Link href="/news"><a>ข่าวสาร/โปรโมชั่น</a></Link></li>
 										<li className="li" onClick={() => this.setState({isMenu: !this.state.isMenu})}><Link href="/contact"><a>ติดต่อเรา</a></Link></li>
 										<ul className="lang-mb">
-											<li><Link href="/"><a>ภาษาไทย</a></Link></li>
-											<li><Link href="/"><a>English</a></Link></li>
-											<li><Link href="/"><a>中文</a></Link></li>
+											<li><a href="#" onClick={()=>this.props.handleLang('th')}>ภาษาไทย</a></li>
+											<li><a href="#" onClick={()=>this.props.handleLang('en')}>English</a></li>
+											<li><a href="#" onClick={()=>this.props.handleLang('cn')}>中文</a></li>
 										</ul>
 									</ul>
 								</div>

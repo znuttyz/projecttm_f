@@ -40,19 +40,19 @@ class PromotionDetail extends Component {
 		let footer
 		switch(this.state.lang) {
 			case "en":
-				console.log('en')
+				footer = require('../static/language/en.json').footer
 				break;
 			case "cn":
-				console.log('cn')
+				footer = require('../static/language/cn.json').footer
 				break;
 			default:
-				footer = require('../static/language/thai.json').footer
+				footer = require('../static/language/th.json').footer
 		}
 
 		return (
 			<div>
 				<Head title="Tummour Original - Promotion" />
-				<Nav isActive="news" />
+				<Nav isActive="news" handleLang={(lang)=>this._handleLang(lang)} />
 				{(this.props.promotions && <PromotionDetailElement promotions={this.props.promotions}/>)}
 				<Footer footer={footer}/>
 			</div>

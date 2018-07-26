@@ -88,17 +88,17 @@ class PromotionInfo extends Component {
 				<div className="tab">
 					<div className="tabtopic">
 						<ul>
-							<li><Link href="/news"><a>ข่าวสาร</a></Link></li>
-							<li><Link href="/promotion"><a>โปรโมชั่น</a></Link></li>
+							<li><Link href="/news"><a>{this.props.content.categorynews}</a></Link></li>
+							<li><Link href="/promotion"><a>{this.props.content.categorypromotion}</a></Link></li>
 						</ul>
 					</div>
 					<div className="tabcontent">
 			 			<select className="brands-filter" name="filter" onChange={event=>this.props.handleChange(event)}>
-			 				<option value="All">ทุกแบรนด์</option>
-			 				<option value="Tummour">ตำมั่ว</option>
-			 				<option value="Laoyuan">ลาวญวณ</option>
-			 				<option value="Jaewhon">แจ่วฮ้อน</option>
-			 				<option value="Pho">เฝอ</option>
+			 				<option value="All">{this.props.content.filter.all}</option>
+			 				<option value="Tummour">{this.props.content.filter.tummour}</option>
+			 				<option value="Laoyuan">{this.props.content.filter.laoyuan}</option>
+			 				<option value="Jaewhon">{this.props.content.filter.jaewhon}</option>
+			 				<option value="Pho">{this.props.content.filter.pho}</option>
 			 			</select>
 			 			<ul className="all-promotions">
 							

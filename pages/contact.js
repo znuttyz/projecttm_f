@@ -72,20 +72,22 @@ class Contact extends Component {
 		let content, footer
 		switch(this.state.lang) {
 			case "en":
-				console.log('en')
+				content = require('../static/language/en.json').contact
+				footer = require('../static/language/en.json').footer
 				break;
 			case "cn":
-				console.log('cn')
+				content = require('../static/language/cn.json').contact
+				footer = require('../static/language/cn.json').footer
 				break;
 			default:
-				content = require('../static/language/thai.json').contact
-				footer = require('../static/language/thai.json').footer
+				content = require('../static/language/th.json').contact
+				footer = require('../static/language/th.json').footer
 		}
 
 		return (
 			<div>
 				<Head title="Tummour Original - Contact"/>
-				<Nav isActive="contact"/>
+				<Nav isActive="contact" handleLang={(lang)=>this._handleLang(lang)}/>
 				<ContactInfo 
 					handleChange={(event) => this._onHandleChange(event)}
 					onSubmit={(event) => this._onHandleSubmit(event)}

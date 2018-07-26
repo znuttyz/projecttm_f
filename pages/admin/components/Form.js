@@ -60,12 +60,31 @@ const promotion = (props) => (
 	</div>
 )
 
+const brand = (props) => (
+	<div>
+		<div className="formContainer">
+			<label className="formLabel">description (TH)</label>
+			<textarea className="formControl textarea" name="desc_th" onChange={(event) => props.handleChange(event)}  rows="5" disabled={props.isDisable} value={(props.data && props.data.desc_th)} />
+		</div>
+		<div className="formContainer">
+			<label className="formLabel">description (EN)</label>
+			<textarea className="formControl textarea" name="desc_en" onChange={(event) => props.handleChange(event)}  rows="5" disabled={props.isDisable} value={(props.data && props.data.desc_en)} />
+		</div>
+		<div className="formContainer">
+			<label className="formLabel">description (CN)</label>
+			<textarea className="formControl textarea" name="desc_cn" onChange={(event) => props.handleChange(event)}  rows="5" disabled={props.isDisable} value={(props.data && props.data.desc_cn)} />
+		</div>
+	</div>
+)
+
 
 const Form = (props) => {
 	if(props.title === "News") {
 		return news(props)
 	} else if (props.title === "Promotion") {
 		return promotion(props)
+	} else if (props.title === "Brand") {
+		return brand(props)
 	}
 	return null;
 }

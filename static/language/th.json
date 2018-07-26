@@ -36,6 +36,82 @@
 		"image": "https://firebasestorage.googleapis.com/v0/b/tummour-original.appspot.com/o/static%2Fimages%2F02-about%2F01.png?alt=media&token=5d6861a8-68d5-4347-b874-aa51e7a27f0d",
 		"text2": "ที่กล่าวมานี้คือตำนานของต้นตำรับอาหารไทยอีสานแบบดั้งเดิม \"ตำมั่ว\" จนเริ่มต้นก่อตั้งภายใต้ชื่อ บริษัท Zen & Spicy จำกัด ที่ในปัจจุบันนี้ได้เซ็นสัญญาร่วมธุรกิจกับบริษัทเครือร้านอาหารยักษ์ใหญ่ บริษัทเซ็น คอปอร์เรชั่นกรุ๊ป จำกัดเมื่อปี 2016 กลายมาเป็น บริษัท เซ็นแอนด์สไปซี่ จำกัด ตั้งแต่นั้นเป็นต้นมา"
 	},
+	"brand": {
+		"sidebar": {
+			"tummour": "/static/images/00-global/tm.png",
+			"laoyuan": "/static/images/00-global/ly.png",
+			"jaewhon": "/static/images/00-global/jh.png",
+			"pho": "/static/images/00-global/ph.png",
+			"granny": "/static/images/00-global/ky.png",
+			"kruathai": "/static/images/00-global/kt.png",
+			"detummour": "/static/images/00-global/tm-en.png"
+		},
+		"tab": {
+			"north": "ภาคเหนือ",
+			"south": "ภาคใต้",
+			"east": "ภาคตะวันออก",
+			"west": "ภาคตะวันตก",
+			"northeast": "ภาคอีสาน",
+			"central": "ภาคกลาง",
+			"foreign": "ต่างประเทศ"
+		},
+		"tummour": {
+			"navbar": "th",
+			"classname": "brands-element b-tummour clear",
+			"banner": "https://firebasestorage.googleapis.com/v0/b/tummour-original.appspot.com/o/static%2Fimages%2F00-global%2Fbanner-brands.png?alt=media&token=284db74b-0b05-41a4-b034-408be3c54fdd",
+			"bannermb": "https://firebasestorage.googleapis.com/v0/b/tummour-original.appspot.com/o/static%2Fimages%2F03-brands%2Fbannerbrands-mb%20.png?alt=media&token=244828ef-a1a9-4238-b9d9-93da40d5203d",
+			"title": "Tummour",
+			"title_img": "/static/images/03-brands/line-tm.png"
+		},
+		"laoyuan": {
+			"navbar": "th",
+			"classname": "brands-element b-laoyuan clear",
+			"banner": "https://firebasestorage.googleapis.com/v0/b/tummour-original.appspot.com/o/static%2Fimages%2F00-global%2Fbanner-brands.png?alt=media&token=284db74b-0b05-41a4-b034-408be3c54fdd",
+			"bannermb": "https://firebasestorage.googleapis.com/v0/b/tummour-original.appspot.com/o/static%2Fimages%2F03-brands%2Fbannerbrands-mb%20.png?alt=media&token=244828ef-a1a9-4238-b9d9-93da40d5203d",
+			"title": "Laoyuan",
+			"title_img": "/static/images/03-brands/line-ly.png"
+		},
+		"jaewhon": {
+			"navbar": "th",
+			"classname": "brands-element b-jaewhon clear",
+			"banner": "https://firebasestorage.googleapis.com/v0/b/tummour-original.appspot.com/o/static%2Fimages%2F00-global%2Fbanner-brands.png?alt=media&token=284db74b-0b05-41a4-b034-408be3c54fdd",
+			"bannermb": "https://firebasestorage.googleapis.com/v0/b/tummour-original.appspot.com/o/static%2Fimages%2F03-brands%2Fbannerbrands-mb%20.png?alt=media&token=244828ef-a1a9-4238-b9d9-93da40d5203d",
+			"title": "Jaewhon",
+			"title_img": "/static/images/03-brands/line-jh.png"
+		},
+		"pho": {
+			"navbar": "th",
+			"classname": "brands-element b-pho clear",
+			"banner": "https://firebasestorage.googleapis.com/v0/b/tummour-original.appspot.com/o/static%2Fimages%2F00-global%2Fbanner-brands.png?alt=media&token=284db74b-0b05-41a4-b034-408be3c54fdd",
+			"bannermb": "https://firebasestorage.googleapis.com/v0/b/tummour-original.appspot.com/o/static%2Fimages%2F03-brands%2Fbannerbrands-mb%20.png?alt=media&token=244828ef-a1a9-4238-b9d9-93da40d5203d",
+			"title": "Pho",
+			"title_img": "/static/images/03-brands/line-ph.png"
+		},
+		"granny": {
+			"navbar": "th",
+			"classname": "brands-element b-granny clear",
+			"banner": "https://firebasestorage.googleapis.com/v0/b/tummour-original.appspot.com/o/static%2Fimages%2F00-global%2Fbanner-brands.png?alt=media&token=284db74b-0b05-41a4-b034-408be3c54fdd",
+			"bannermb": "https://firebasestorage.googleapis.com/v0/b/tummour-original.appspot.com/o/static%2Fimages%2F03-brands%2Fbannerbrands-mb%20.png?alt=media&token=244828ef-a1a9-4238-b9d9-93da40d5203d",
+			"title": "Granny's Chicken Rice",
+			"title_img": "/static/images/03-brands/line-ky.png"
+		},
+		"kruathai": {
+			"navbar": "th",
+			"classname": "brands-element b-kruathai clear",
+			"banner": "https://firebasestorage.googleapis.com/v0/b/tummour-original.appspot.com/o/static%2Fimages%2F00-global%2Fbanner-brands.png?alt=media&token=284db74b-0b05-41a4-b034-408be3c54fdd",
+			"bannermb": "https://firebasestorage.googleapis.com/v0/b/tummour-original.appspot.com/o/static%2Fimages%2F03-brands%2Fbannerbrands-mb%20.png?alt=media&token=244828ef-a1a9-4238-b9d9-93da40d5203d",
+			"title": "Kruathai",
+			"title_img": "/static/images/03-brands/line-kt.png"
+		},
+		"detummour": {
+			"navbar": "th",
+			"classname": "brands-element b-detummour clear",
+			"banner": "https://firebasestorage.googleapis.com/v0/b/tummour-original.appspot.com/o/static%2Fimages%2F00-global%2Fbanner-brands.png?alt=media&token=284db74b-0b05-41a4-b034-408be3c54fdd",
+			"bannermb": "https://firebasestorage.googleapis.com/v0/b/tummour-original.appspot.com/o/static%2Fimages%2F03-brands%2Fbannerbrands-mb%20.png?alt=media&token=244828ef-a1a9-4238-b9d9-93da40d5203d",
+			"title": "De Tummour",
+			"title_img": "/static/images/03-brands/line-de.png"
+		}
+	},
 	"news": {
 		"navbar": "th",
 		"banner": "https://firebasestorage.googleapis.com/v0/b/tummour-original.appspot.com/o/static%2Fimages%2F00-global%2Fbanner-news.png?alt=media&token=d6a68923-d052-43c3-a510-fe3efca3ed23",

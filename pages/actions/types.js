@@ -10,6 +10,7 @@ export const BANNER_FETCH_HOME = 'banner_fetch_home'
 
 export const BRAND_FETCH = 'brand_fetch'
 export const BRAND_FETCH_REGION = 'brand_fetch_region'
+export const BRAND_FETCH_ALL_REGION = 'brand_fetch_all_region'
 export const BRAND_CREATE_REGION = 'brand_create_region'
 export const BRAND_UPDATE = 'brand_update'
 

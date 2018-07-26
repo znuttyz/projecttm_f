@@ -1,6 +1,7 @@
 import {
 	BRAND_FETCH,
 	BRAND_FETCH_REGION,
+	BRAND_FETCH_ALL_REGION,
 	BRAND_CREATE_REGION,
 	BRAND_UPDATE
 } from '../actions/types';
@@ -8,6 +9,7 @@ import {
 const INITIAL_STATE = { 
 	brand: null,
 	region: [],
+	regions: null,
 	isCreate: false,
 	isUpdate: false
 }
@@ -18,6 +20,8 @@ export default (state = INITIAL_STATE, action) => {
 			return { ...state, brand: action.payload }
 		case BRAND_FETCH_REGION:
 			return { ...state, region: action.payload }
+		case BRAND_FETCH_ALL_REGION:
+			return { ...state, regions: action.payload }
 		case BRAND_CREATE_REGION:
 			return { ...state, isCreate: action.payload }
 		case BRAND_UPDATE:

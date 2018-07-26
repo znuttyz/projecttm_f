@@ -2,6 +2,7 @@ import * as firebase from 'firebase';
 import {
 	BRAND_FETCH,
 	BRAND_FETCH_REGION,
+	BRAND_FETCH_ALL_REGION,
 	BRAND_CREATE_REGION,
 	BRAND_UPDATE
 } from './types';
@@ -32,6 +33,29 @@ const brandfetchregion = (brand, region, dispatch) => {
 		})
 		dispatch({ type: BRAND_FETCH_REGION, payload: data.reverse() });
 	})
+}
+
+export const brandFetchAllRegion = (brand) => {
+	return(dispatch) => {
+		let result = {}
+		let	brandRef = firebase.database().ref('brand/'+brand+'/region')
+		brandRef.once('value', function(snapshot) {
+			if(snapshot.val()) {
+				let keys = Object.keys(snapshot.val())
+				let run = 0
+				snapshot.forEach(snapshot2=>{
+					let arr = []
+					snapshot2.forEach(item=>{
+						arr.push(item.val())
+					})	
+					result[keys[run++]] = arr
+				})
+				dispatch({ type: BRAND_FETCH_ALL_REGION, payload: result });
+			} else {
+				dispatch({ type: BRAND_FETCH_ALL_REGION, payload: result });
+			}
+		})
+	}
 }
 
 export const brandFetchRegion = (brand, region) => {

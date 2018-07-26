@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import axios from 'axios'
 import Link from 'next/link'
 
 import { Sidebar, Header, Card, Table, Form } from '../components'
@@ -8,7 +9,8 @@ import {
 	initStore, 
 	loginUserCheck, 
 	logoutUser,
-	brandFetch
+	brandFetch,
+	brandUpdate
 } from '../../actions'
 
 import '../../../styles/index.scss'
@@ -39,11 +41,20 @@ class Brand extends Component {
 			this.setState({ user: nextProps.user })
 		}
 		if(nextProps.brand) {
+			let tmp = []
+			tmp[0] = {name: nextProps.brand.menu_th}
+			tmp[1] = {name: nextProps.brand.menu_en}
+			tmp[2] = {name: nextProps.brand.menu_cn}
 			this.setState({
 				desc_th: nextProps.brand.desc_th,
 				desc_en: nextProps.brand.desc_en,
-				desc_cn: nextProps.brand.desc_cn
+				desc_cn: nextProps.brand.desc_cn,
+				selectedFile: tmp
 			})
+		}
+		if(nextProps.isUpdate) {
+			this.setState({ loading: 100 })
+			window.location = '/admin/brand/'+this.state.brand_url
 		}
 	}
 
@@ -65,6 +76,65 @@ class Brand extends Component {
 
 	 _onHandleSubmit() {
 		this.setState({ disableInput: true })
+		let filename1, filename2, filename3
+
+		// Handle array file upload
+		const promiseSerial = funcs =>
+		  funcs.reduce((promise, func) =>
+		    promise.then(result => func().then(Array.prototype.concat.bind(result))),
+		    Promise.resolve([]))
+
+		const funcs = this.state.selectedFile.map((file, index) => () => {
+			if(file.name === this.props.brand.menu_th && index == 0) { 
+				filename1 = file.name
+				return new Promise((resolve, reject) => resolve(filename1))
+			} else if (file.name === this.props.brand.menu_en && index == 1) {
+				filename2 = file.name
+				return new Promise((resolve, reject) => resolve(filename2))
+			} else if(file.name === this.props.brand.menu_cn && index == 2) {
+				filename3 = file.name
+				return new Promise((resolve, reject) => resolve(filename3))
+			}
+			const filename = Date.now()+"."+file.name.split('.').pop()
+			const fd = new FormData()
+			fd.append('image', file, filename)
+			this.setState({ loading: Math.round(-100/(index-this.state.selectedFile.length))-20 })
+			return axios.post('https://us-central1-tummour-original.cloudfunctions.net/uploadFile', fd)
+			.then(()=> {
+				let oldfile
+				if(index == 0) {
+					oldfile = this.props.brand.menu_th.substr(84, 17);
+					filename1 = 'https://firebasestorage.googleapis.com/v0/b/tummour-original.appspot.com/o/upload%2F'+filename+'?alt=media'
+				} else if (index == 1) { 
+					oldfile = this.props.brand.menu_en.substr(84, 17);
+					filename2 = 'https://firebasestorage.googleapis.com/v0/b/tummour-original.appspot.com/o/upload%2F'+filename+'?alt=media'
+				} else if (index == 2) { 
+					oldfile = this.props.brand.menu_cn.substr(84, 17);
+					filename3 = 'https://firebasestorage.googleapis.com/v0/b/tummour-original.appspot.com/o/upload%2F'+filename+'?alt=media'
+				}
+
+				if(oldfile) {
+					return axios.post('https://us-central1-tummour-original.cloudfunctions.net/deleteFile', { filename: oldfile })
+				}
+			})
+		})
+		promiseSerial(funcs)
+		.then(res => {
+			let { day, month, year } = this.state
+			let date = new Date(year, month-1, day)
+			let postData = {
+				desc_th: this.state.desc_th,
+				desc_en: this.state.desc_en,
+				desc_cn: this.state.desc_cn,
+				menu_th: filename1,
+				menu_en: filename2,
+				menu_cn: filename3
+			}
+			const brand_url = this.state.brand_url
+			console.log('postData',postData)
+			this.props.brandUpdate(brand_url, postData)
+		})
+		.catch(console.error.bind(console))
 
 	}
 
@@ -160,10 +230,11 @@ class Brand extends Component {
 const mapStateToProps = ({ auth, brand }) => {
 	return {
 		user: auth.user,
-		brand: brand.brand
+		brand: brand.brand,
+		isUpdate: brand.isUpdate
 	}
 }
 
 export default withRedux(initStore, mapStateToProps, { 
-	loginUserCheck, logoutUser, brandFetch
+	loginUserCheck, logoutUser, brandFetch, brandUpdate
 })(Brand)

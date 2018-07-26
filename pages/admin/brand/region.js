@@ -8,6 +8,9 @@ import {
 	initStore, 
 	loginUserCheck, 
 	logoutUser,
+	brandCreateRegion,
+	brandFetchRegion,
+	brandDeleteRegion
 } from '../../actions'
 
 import '../../../styles/index.scss'
@@ -18,7 +21,7 @@ class Region extends Component {
 		super(props)
 		this.state = {
 			user: null,
-			brand: props.url.query.brand,
+			brand_url: props.url.query.brand,
 			region: props.url.query.region,
 			isDisable: false,
 			name_th: "",
@@ -27,17 +30,33 @@ class Region extends Component {
 			phone_th: "",
 			phone_en: "",
 			phone_cn: "",
-			add: [],
+			regions: [],
+			add: []
 		}
 	}
 
 	componentWillMount() {
 		this.props.loginUserCheck()
+		this.props.brandFetchRegion(this.state.brand_url, this.state.region)
 	}
 
 	componentWillReceiveProps(nextProps) {
 		if(nextProps.user) {
 			this.setState({ user: nextProps.user })
+		}
+		if(nextProps.region) {
+			this.setState({ regions: nextProps.region })
+		}
+		if(nextProps.isCreate) {
+			this.setState({
+				isDisable: false,
+				name_th: "",
+				name_en: "",
+				name_cn: "",
+				phone_th: "",
+				phone_en: "",
+				phone_cn: "",
+			})
 		}
 	}
 
@@ -48,12 +67,32 @@ class Region extends Component {
 	}
 
 	_handleDelete(id) {
-		console.log('delete', id)
+		if(confirm('Are you sure you want to DELETE this?')){
+			this.props.brandDeleteRegion(this.state.brand_url, this.state.region, id)
+		}
 	}
 
 	_handleLogout() {
 	 	this.props.logoutUser()
 	 }
+
+	 _onHandleSubmit() {
+		if(!this.state.name_th || !this.state.name_en || !this.state.name_cn || !this.state.phone_th || !this.state.phone_en || !this.state.phone_cn) {
+			alert('Please fill in all form')
+			return;
+		}
+
+		this.setState({ isDisable: true })
+		let postData = {
+			name_th: this.state.name_th,
+			name_en: this.state.name_en,
+			name_cn: this.state.name_cn,
+			phone_th: this.state.phone_th,
+			phone_en: this.state.phone_en,
+			phone_cn: this.state.phone_cn
+		}
+		this.props.brandCreateRegion(this.state.brand_url, this.state.region, postData)
+	}
 
 	 render() {
 		if(!this.props.user) return <div></div>;
@@ -67,8 +106,10 @@ class Region extends Component {
 
 				<div className="contentAdmin">
 					<Header title="Brands" user={(this.state.user && this.state.user.email)} handleLogout={() => this._handleLogout()} />
-					<Card title={"Brand: "+this.state.brand+" Region: "+this.state.region} subTitle={this.state.brand}>
-						
+					<Card title={"Brand: "+this.state.brand_url+" Region: "+this.state.region} subTitle={this.state.brand_url}>
+
+						<Link href={"/admin/brand/"+this.state.brand_url}><a style={{fontSize: '22px', textTransform: 'uppercase', width: 'intrinsic'}}>BACK TO {this.state.brand_url}</a></Link>
+
 						<table className="tableAdmin">
 							<thead>
 								<tr>
@@ -79,14 +120,17 @@ class Region extends Component {
 								</tr>
 							</thead>
 							<tbody>
-								<tr key={1}>
-									<td>1</td>
-									<td>test</td>
-									<td>0987665</td>
-									<td>
-										<a href="#" onClick={()=>_handleDelete(1)}>Delete</a>
-									</td>
-								</tr>
+								{ this.state.regions.map((item, index) => (
+									<tr key={index+1}>
+										<td>{index+1}</td>
+										<td>{item.name_th}</td>
+										<td>{item.phone_th}</td>
+										<td>
+											<a href="#" onClick={()=>this._handleDelete(item.id)}>Delete</a>
+										</td>
+									</tr>
+								)) }
+								
 
 
 								<tr>
@@ -129,7 +173,7 @@ class Region extends Component {
 											<input type="text" className="formControl" name="phone_cn" onChange={(event) => this._onHandleChange(event)} disabled={this.state.isDisable} value={this.state.phone_cn} placeholder="PHONE CN" />
 										</div>
 									</td>
-									<td><div className="formContainer"><button className="formFile submitBtn" style={{width: '50%'}}>SUBMIT</button></div></td>
+									<td><div className="formContainer"><button onClick={() => this._onHandleSubmit()} className="formFile submitBtn" style={{width: '50%'}}>SUBMIT</button></div></td>
 								</tr>
 							</tbody>
 						</table>
@@ -144,12 +188,14 @@ class Region extends Component {
 
 }
 
-const mapStateToProps = ({ auth }) => {
+const mapStateToProps = ({ auth, brand }) => {
 	return {
-		user: auth.user
+		user: auth.user,
+		region: brand.region,
+		isCreate: brand.isCreate
 	}
 }
 
 export default withRedux(initStore, mapStateToProps, { 
-	loginUserCheck, logoutUser
+	loginUserCheck, logoutUser, brandCreateRegion, brandFetchRegion, brandDeleteRegion
 })(Region)

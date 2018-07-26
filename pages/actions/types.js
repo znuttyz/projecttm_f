@@ -9,6 +9,9 @@ export const BANNER_UPDATE = 'banner_update'
 export const BANNER_FETCH_HOME = 'banner_fetch_home'
 
 export const BRAND_FETCH = 'brand_fetch'
+export const BRAND_FETCH_REGION = 'brand_fetch_region'
+export const BRAND_CREATE_REGION = 'brand_create_region'
+export const BRAND_UPDATE = 'brand_update'
 
 export const NEWS_FETCH = 'news_fetch'
 export const NEWS_CREATE = 'news_create'

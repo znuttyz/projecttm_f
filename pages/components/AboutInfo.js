@@ -16,7 +16,7 @@ const AboutInfo = ({ content }) => (
 				<p dangerouslySetInnerHTML={{__html: content.text1}} />
 				<img src={content.image} />
 				<div className="lastbox">
-					<p>{content.text2}</p>
+					<p dangerouslySetInnerHTML={{__html: content.text2}} />
 				</div>
 			</div>
 		</div>

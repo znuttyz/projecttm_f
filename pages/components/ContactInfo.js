@@ -14,7 +14,7 @@ const ContactInfo = ({ handleChange, onSubmit, error, content }) => (
 			<ul>
 				<li className="contact-address">
 					<img src={content.address.title} />
-					<h3>{content.address.text}</h3>
+					<h3><p dangerouslySetInnerHTML={{__html: content.address.text}} /></h3>
 					<div className="ggmap">
 						<GMap 
 							isMarkerShown 

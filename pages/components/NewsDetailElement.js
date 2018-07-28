@@ -19,16 +19,38 @@ const showImg = (images) => {
 	})
 }
 
-const NewsDetailElement = ({ news, images }) => {
-	const month = ["มกราคม", "กุมภาพันธ์", "มีนาคม", "เมษายน", "พฤษภาคม", "มิถุนายน", "กรกฎาคม", "สิงหาคม", "กันยายน", "ตุลาคม", "พฤศจิกายน", "ธันวาคม"]
+const NewsDetailElement = ({ news, images, lang, content }) => {
 	const date = new Date(news.date)
+	let month
+	let title, banner, body
+	switch(lang) {
+		case "en":
+			month = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
+			title = news.title_en
+			banner = news.banner_en
+			body = news.body_en
+			break;
+		case "cn":
+			month = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
+			title = news.title_cn
+			banner = news.banner_cn
+			body = news.body_cn
+			break;
+		default:
+			month = ["มกราคม", "กุมภาพันธ์", "มีนาคม", "เมษายน", "พฤษภาคม", "มิถุนายน", "กรกฎาคม", "สิงหาคม", "กันยายน", "ตุลาคม", "พฤศจิกายน", "ธันวาคม"]
+			title = news.title
+			banner = news.banner_th
+			body = news.body
+	}
+
+
 	return (
 		<div className="newsdetailelement clear">
 			<div className="newsdetailbanner">
-				<img src="https://firebasestorage.googleapis.com/v0/b/tummour-original.appspot.com/o/static%2Fimages%2F00-global%2Fbanner-news.png?alt=media&token=d6a68923-d052-43c3-a510-fe3efca3ed23" />
+				<img src={content.banner} />
 			</div>
 			<div className="newsdetailbanner-mb">
-				<img src="https://firebasestorage.googleapis.com/v0/b/tummour-original.appspot.com/o/static%2Fimages%2F00-global%2Fbanner-news.png?alt=media&token=d6a68923-d052-43c3-a510-fe3efca3ed23" />
+				<img src={content.bannermb} />
 			</div>
 			<div className="tab">
 				<div className="tabtopic">
@@ -40,20 +62,20 @@ const NewsDetailElement = ({ news, images }) => {
 				<div className="tabcontent">
 					<div className="detail-info">
 						<div className="head-detail">
-			 				<h1 className="title-detail">{news.title}</h1>
+			 				<h1 className="title-detail">{title}</h1>
 			 				<h3 className="date-detail">{date.getDate()+" "+month[date.getMonth()]+" "+date.getFullYear()}</h3>
 			 			</div>
 			 			<Slider {...settings} className="image-detail">
 
 					        <div>
-					          	<img src={news.banner_th} />
+					          	<img src={banner} />
 					        </div>
 
 					        {showImg(images)}
 					        
 					    </Slider>
 			 			<div className="content-detail">
-			 				<p>{news.body}</p>
+			 				<p>{body}</p>
 			 			</div>
 			 		</div>
 		 		</div>

@@ -64,7 +64,7 @@ class News extends Component {
 			<div>
 				<Head title="Tummour Original - News" />
 				<Nav isActive="news" handleLang={(lang)=>this._handleLang(lang)}/>
-				<NewsInfo news={this.state.news} content={content} />
+				<NewsInfo news={this.state.news} content={content} lang={this.state.lang} />
 				<Footer footer={footer}/>
 			</div>
 		)

@@ -7,6 +7,7 @@ class NewsInfo extends Component {
 	constructor(props) {
 		super(props)
 		this.state = {
+			lang: props.lang,
 			news: [],
 			selectedPage: 1,
 			totalPage: 0
@@ -20,6 +21,9 @@ class NewsInfo extends Component {
 				news: nextProps.news,
 				totalPage
 			})
+		}
+		if(nextProps.lang) {
+			this.setState({ lang: nextProps.lang })
 		}
 	}
 
@@ -39,25 +43,46 @@ class NewsInfo extends Component {
 		let runner = (this.state.selectedPage - 1)*4
 		let max = runner + 4
 		return this.state.news.map((item, index) => {
+			let month
+			let title, banner, body
+			switch(this.state.lang) {
+				case "en":
+					month = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
+					title = item.title_en
+					banner = item.banner_en
+					body = item.body_en
+					break;
+				case "cn":
+					month = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
+					title = item.title_cn
+					banner = item.banner_cn
+					body = item.body_cn
+					break;
+				default:
+					month = ["มกราคม", "กุมภาพันธ์", "มีนาคม", "เมษายน", "พฤษภาคม", "มิถุนายน", "กรกฎาคม", "สิงหาคม", "กันยายน", "ตุลาคม", "พฤศจิกายน", "ธันวาคม"]
+					title = item.title
+					banner = item.banner_th
+					body = item.body
+			}
+
 			if(runner === index && runner < max) {
 				runner++
 
-				const month = ["มกราคม", "กุมภาพันธ์", "มีนาคม", "เมษายน", "พฤษภาคม", "มิถุนายน", "กรกฎาคม", "สิงหาคม", "กันยายน", "ตุลาคม", "พฤศจิกายน", "ธันวาคม"]
 				const date = new Date(item.date)
 				return (
-					<li className="eachcontent" key={item.title}>
+					<li className="eachcontent" key={title+""+index}>
 						<Link href={{ pathname: '/newsdetail', query: { id: item.id } }}><a>
 							<ul>
 								<li className="content-img">
 									<div className="detail-img">
-										<img src={item.banner_th} />
+										<img src={banner} />
 									</div>
 		 						</li>
 		 						<li className="content-text">
 		 							<div className="detail-info">
-			 							<h2 className="topic">{item.title}</h2>
+			 							<h2 className="topic">{title}</h2>
 			 							<h4 className="date">{date.getDate()+" "+month[date.getMonth()]+" "+date.getFullYear()}</h4>
-			 							<p className="sub-content">{item.body}</p>
+			 							<p className="sub-content">{body}</p>
 		 							</div>
 		 						</li>
 		 					</ul>
@@ -76,7 +101,7 @@ class NewsInfo extends Component {
 					<img src={this.props.content.banner} />
 				</div>
 				<div className="newsbanner-mb">
-					<img src="https://firebasestorage.googleapis.com/v0/b/tummour-original.appspot.com/o/static%2Fimages%2F04-promotion%2Fbannernews-mb.png?alt=media&token=35bfd467-2d5f-4e9f-ace7-4b52b0b889cd" />
+					<img src={this.props.content.bannermb} />
 				</div>
 				<div className="tab">
 					<div className="tabtopic">

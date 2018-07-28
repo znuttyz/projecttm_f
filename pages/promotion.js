@@ -77,7 +77,7 @@ class Promotion extends Component {
 			<div>
 				<Head title="Tummour Original - Promotion" />
 				<Nav isActive="news" handleLang={(lang)=>this._handleLang(lang)}/>
-				<PromotionInfo promotions={this.state.promotions} handleChange={event=>this._onHandleChange(event)} content={content}/>
+				<PromotionInfo promotions={this.state.promotions} handleChange={event=>this._onHandleChange(event)} content={content} lang={this.state.lang}/>
 				<Footer footer={footer}/>
 			</div>
 		)

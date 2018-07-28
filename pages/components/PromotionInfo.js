@@ -7,6 +7,7 @@ class PromotionInfo extends Component {
 	constructor(props) {
 		super(props)
 		this.state = {
+			lang: props.lang,
 			promotions: [],
 			selectedPage: 1,
 			totalPage: 0
@@ -20,6 +21,9 @@ class PromotionInfo extends Component {
 				promotions: nextProps.promotions,
 				totalPage
 			})
+		}
+		if(nextProps.lang) {
+			this.setState({ lang: nextProps.lang })
 		}
 	}
 
@@ -42,29 +46,49 @@ class PromotionInfo extends Component {
 			if(runner === index && runner < max) {
 				runner++
 
-				const month = ["ม.ค.", "ก.พ.", "มี.ค.", "เม.ย.", "พ.ค.", "มิ.ย.", "ก.ค.", "ส.ค.", "ก.ย.", "ต.ค.", "พ.ย.", "ธ.ค."]
+				// const month = ["ม.ค.", "ก.พ.", "มี.ค.", "เม.ย.", "พ.ค.", "มิ.ย.", "ก.ค.", "ส.ค.", "ก.ย.", "ต.ค.", "พ.ย.", "ธ.ค."]
+
+				let month
+				let title, banner
+				switch(this.state.lang) {
+					case "en":
+						month = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
+						title = item.title_en
+						banner = item.banner_en
+						break;
+					case "cn":
+						month = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
+						title = item.title_cn
+						banner = item.banner_cn
+						break;
+					default:
+						month = ["มกราคม", "กุมภาพันธ์", "มีนาคม", "เมษายน", "พฤษภาคม", "มิถุนายน", "กรกฎาคม", "สิงหาคม", "กันยายน", "ตุลาคม", "พฤศจิกายน", "ธันวาคม"]
+						title = item.title
+						banner = item.banner_th
+				}
+
 				const sdate = new Date(item.start_date)
 				const edate = new Date(item.end_date)
 				let brand = ""
 				if(item.brand === "Tummour") {
-					brand = "ตำมั่ว"
+					brand = this.props.content.filter.tummour
 				} else if (item.brand === "Laoyuan") {
-					brand = "ลาวญวณ"
+					brand = this.props.content.filter.laoyuan
 				} else if (item.brand === "Jaewhon") {
-					brand = "แจ่วฮ้อน"
+					brand = this.props.content.filter.jaewhon
 				} else if (item.brand === "Pho") {
-					brand = "เฝอ"
+					brand = this.props.content.filter.pho
 				}
 
 				return (
 					<li className="each-promotion" key={item.brand+""+index}>
 						<Link href={{ pathname: '/promotiondetail', query: { id: item.id } }}><a>
 							<div className="box-img">
-								<img src={item.banner_th} />
+								<img src={banner} />
 							</div>
 							<div className="promotion-text">
 								<h3>
-									<span>{brand}</span> {item.title}
+									<span>{brand}</span> {title}
 								</h3>
 								<p>{sdate.getDate()+" "+month[sdate.getMonth()]+" "+sdate.getFullYear()+" - "+edate.getDate()+" "+month[edate.getMonth()]+" "+edate.getFullYear()}</p>
 							</div>

@@ -70,6 +70,7 @@ class PromotionInfo extends Component {
 				const sdate = new Date(item.start_date)
 				const edate = new Date(item.end_date)
 				let brand = ""
+				
 				if(item.brand === "Tummour") {
 					brand = this.props.content.filter.tummour
 				} else if (item.brand === "Laoyuan") {

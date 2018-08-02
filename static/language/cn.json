@@ -24,7 +24,14 @@
 		},
 		"promotion": {
 			"title": "https://firebasestorage.googleapis.com/v0/b/tummour-original.appspot.com/o/static%2Fimages%2F01-home%2Fline-p.png?alt=media&token=993eb81d-cdb0-46a1-a799-efc915110158",
-			"more": "SEE MORE"
+			"more": "SEE MORE",
+			"filter": {
+				"all": "BRANDS",
+				"tummour": "TUMMOUR",
+				"laoyuan": "LAOYUAN",
+				"jaewhon": "JAEWHON",
+				"pho": "PHO"
+			}
 		}
 	},
 	"about": {

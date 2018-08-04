@@ -1,6 +1,6 @@
 {
 	"home": {
-		"navbar": "th",
+		"navbar": "nav-th",
 		"banner": "th",
 		"brand": {
 			"title": "https://firebasestorage.googleapis.com/v0/b/tummour-original.appspot.com/o/static%2Fimages%2F01-home%2Fline-b.png?alt=media&token=5e26063d-4ff3-4ca6-998f-703b4005a86b",
@@ -35,7 +35,7 @@
 		}
 	},
 	"about": {
-		"navbar": "th",
+		"navbar": "nav-th",
 		"banner": "https://firebasestorage.googleapis.com/v0/b/tummour-original.appspot.com/o/static%2Fimages%2F00-global%2Fbanner-about.png?alt=media&token=aa6c33a8-47a1-4004-9b63-7d4befe7cd0d",
 		"bannermb": "https://firebasestorage.googleapis.com/v0/b/tummour-original.appspot.com/o/static%2Fimages%2F02-about%2Fbannerabout-mb.png?alt=media&token=fd6f3868-6df6-41b5-9635-067f26f0303f",
 		"logo": "https://firebasestorage.googleapis.com/v0/b/tummour-original.appspot.com/o/static%2Fimages%2F00-global%2Ftm.png?alt=media&token=ac35c520-2402-422d-ba6b-c28a94eab001",
@@ -63,7 +63,7 @@
 			"foreign": "ต่างประเทศ"
 		},
 		"tummour": {
-			"navbar": "th",
+			"navbar": "nav-th",
 			"classname": "brands-element b-tummour clear",
 			"banner": "https://firebasestorage.googleapis.com/v0/b/tummour-original.appspot.com/o/static%2Fimages%2F00-global%2Fbanner-brands.png?alt=media&token=284db74b-0b05-41a4-b034-408be3c54fdd",
 			"bannermb": "https://firebasestorage.googleapis.com/v0/b/tummour-original.appspot.com/o/static%2Fimages%2F03-brands%2Fbannerbrands-mb%20.png?alt=media&token=244828ef-a1a9-4238-b9d9-93da40d5203d",
@@ -71,7 +71,7 @@
 			"title_img": "/static/images/03-brands/line-tm.png"
 		},
 		"laoyuan": {
-			"navbar": "th",
+			"navbar": "nav-th",
 			"classname": "brands-element b-laoyuan clear",
 			"banner": "https://firebasestorage.googleapis.com/v0/b/tummour-original.appspot.com/o/static%2Fimages%2F00-global%2Fbanner-brands.png?alt=media&token=284db74b-0b05-41a4-b034-408be3c54fdd",
 			"bannermb": "https://firebasestorage.googleapis.com/v0/b/tummour-original.appspot.com/o/static%2Fimages%2F03-brands%2Fbannerbrands-mb%20.png?alt=media&token=244828ef-a1a9-4238-b9d9-93da40d5203d",
@@ -79,7 +79,7 @@
 			"title_img": "/static/images/03-brands/line-ly.png"
 		},
 		"jaewhon": {
-			"navbar": "th",
+			"navbar": "nav-th",
 			"classname": "brands-element b-jaewhon clear",
 			"banner": "https://firebasestorage.googleapis.com/v0/b/tummour-original.appspot.com/o/static%2Fimages%2F00-global%2Fbanner-brands.png?alt=media&token=284db74b-0b05-41a4-b034-408be3c54fdd",
 			"bannermb": "https://firebasestorage.googleapis.com/v0/b/tummour-original.appspot.com/o/static%2Fimages%2F03-brands%2Fbannerbrands-mb%20.png?alt=media&token=244828ef-a1a9-4238-b9d9-93da40d5203d",
@@ -87,7 +87,7 @@
 			"title_img": "/static/images/03-brands/line-jh.png"
 		},
 		"pho": {
-			"navbar": "th",
+			"navbar": "nav-th",
 			"classname": "brands-element b-pho clear",
 			"banner": "https://firebasestorage.googleapis.com/v0/b/tummour-original.appspot.com/o/static%2Fimages%2F00-global%2Fbanner-brands.png?alt=media&token=284db74b-0b05-41a4-b034-408be3c54fdd",
 			"bannermb": "https://firebasestorage.googleapis.com/v0/b/tummour-original.appspot.com/o/static%2Fimages%2F03-brands%2Fbannerbrands-mb%20.png?alt=media&token=244828ef-a1a9-4238-b9d9-93da40d5203d",
@@ -95,7 +95,7 @@
 			"title_img": "/static/images/03-brands/line-ph.png"
 		},
 		"granny": {
-			"navbar": "th",
+			"navbar": "nav-th",
 			"classname": "brands-element b-granny clear",
 			"banner": "https://firebasestorage.googleapis.com/v0/b/tummour-original.appspot.com/o/static%2Fimages%2F00-global%2Fbanner-brands.png?alt=media&token=284db74b-0b05-41a4-b034-408be3c54fdd",
 			"bannermb": "https://firebasestorage.googleapis.com/v0/b/tummour-original.appspot.com/o/static%2Fimages%2F03-brands%2Fbannerbrands-mb%20.png?alt=media&token=244828ef-a1a9-4238-b9d9-93da40d5203d",
@@ -103,7 +103,7 @@
 			"title_img": "/static/images/03-brands/line-ky.png"
 		},
 		"kruathai": {
-			"navbar": "th",
+			"navbar": "nav-th",
 			"classname": "brands-element b-kruathai clear",
 			"banner": "https://firebasestorage.googleapis.com/v0/b/tummour-original.appspot.com/o/static%2Fimages%2F00-global%2Fbanner-brands.png?alt=media&token=284db74b-0b05-41a4-b034-408be3c54fdd",
 			"bannermb": "https://firebasestorage.googleapis.com/v0/b/tummour-original.appspot.com/o/static%2Fimages%2F03-brands%2Fbannerbrands-mb%20.png?alt=media&token=244828ef-a1a9-4238-b9d9-93da40d5203d",
@@ -111,7 +111,7 @@
 			"title_img": "/static/images/03-brands/line-kt.png"
 		},
 		"detummour": {
-			"navbar": "th",
+			"navbar": "nav-th",
 			"classname": "brands-element b-detummour clear",
 			"banner": "https://firebasestorage.googleapis.com/v0/b/tummour-original.appspot.com/o/static%2Fimages%2F00-global%2Fbanner-brands.png?alt=media&token=284db74b-0b05-41a4-b034-408be3c54fdd",
 			"bannermb": "https://firebasestorage.googleapis.com/v0/b/tummour-original.appspot.com/o/static%2Fimages%2F03-brands%2Fbannerbrands-mb%20.png?alt=media&token=244828ef-a1a9-4238-b9d9-93da40d5203d",
@@ -120,21 +120,21 @@
 		}
 	},
 	"news": {
-		"navbar": "th",
+		"navbar": "nav-th",
 		"banner": "https://firebasestorage.googleapis.com/v0/b/tummour-original.appspot.com/o/static%2Fimages%2F00-global%2Fbanner-news.png?alt=media&token=d6a68923-d052-43c3-a510-fe3efca3ed23",
 		"bannermb": "https://firebasestorage.googleapis.com/v0/b/tummour-original.appspot.com/o/static%2Fimages%2F04-promotion%2Fbannernews-mb.png?alt=media&token=35bfd467-2d5f-4e9f-ace7-4b52b0b889cd",
 		"categorynews": "ข่าวสาร",
 		"categorypromotion": "โปรโมชั่น"
 	},
 	"newsdetail": {
-		"navbar": "th",
+		"navbar": "nav-th",
 		"banner": "https://firebasestorage.googleapis.com/v0/b/tummour-original.appspot.com/o/static%2Fimages%2F00-global%2Fbanner-news.png?alt=media&token=d6a68923-d052-43c3-a510-fe3efca3ed23",
 		"bannermb": "https://firebasestorage.googleapis.com/v0/b/tummour-original.appspot.com/o/static%2Fimages%2F04-promotion%2Fbannernews-mb.png?alt=media&token=35bfd467-2d5f-4e9f-ace7-4b52b0b889cd",
 		"categorynews": "ข่าวสาร",
 		"categorypromotion": "โปรโมชั่น"
 	},
 	"promotion": {
-		"navbar": "th",
+		"navbar": "nav-th",
 		"banner": "https://firebasestorage.googleapis.com/v0/b/tummour-original.appspot.com/o/static%2Fimages%2F00-global%2Fbanner-news.png?alt=media&token=d6a68923-d052-43c3-a510-fe3efca3ed23",
 		"bannermb": "https://firebasestorage.googleapis.com/v0/b/tummour-original.appspot.com/o/static%2Fimages%2F04-promotion%2Fbannernews-mb.png?alt=media&token=35bfd467-2d5f-4e9f-ace7-4b52b0b889cd",
 		"categorynews": "ข่าวสาร",
@@ -148,14 +148,14 @@
 		}
 	},
 	"promotiondetail": {
-		"navbar": "th",
+		"navbar": "nav-th",
 		"banner": "https://firebasestorage.googleapis.com/v0/b/tummour-original.appspot.com/o/static%2Fimages%2F00-global%2Fbanner-news.png?alt=media&token=d6a68923-d052-43c3-a510-fe3efca3ed23",
 		"bannermb": "https://firebasestorage.googleapis.com/v0/b/tummour-original.appspot.com/o/static%2Fimages%2F04-promotion%2Fbannernews-mb.png?alt=media&token=35bfd467-2d5f-4e9f-ace7-4b52b0b889cd",
 		"categorynews": "ข่าวสาร",
 		"categorypromotion": "โปรโมชั่น"
 	},
 	"contact": {
-		"navbar": "th",
+		"navbar": "nav-th",
 		"banner": "https://firebasestorage.googleapis.com/v0/b/tummour-original.appspot.com/o/static%2Fimages%2F00-global%2Fbanner-contact.png?alt=media&token=193e0b2d-cbbc-49de-9c86-d115d44bcb4e",
 		"bannermb": "https://firebasestorage.googleapis.com/v0/b/tummour-original.appspot.com/o/static%2Fimages%2F05-contact%2Fbannercontact-mb.png?alt=media&token=dc80d7c8-f3b1-4da4-9ff7-cc757ac33462",
 		"address": {

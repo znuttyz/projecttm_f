@@ -165,58 +165,178 @@
 							background: #362f2d;
 						}
 						.nav-index {
-							background: url('/static/images/00-nav/01.png');
-							width: 90px;
-							height: 79px;
-							&:hover {
-								background: url('/static/images/00-nav/01-h.png');
+							&.nav-th {
+								background: url('/static/images/00-nav/01.png');
+								width: 90px;
+								height: 79px;
+								&:hover {
+									background: url('/static/images/00-nav/01-h.png');
+								}
+								&.active {
+									background: url('/static/images/00-nav/01-h.png');
+								}
 							}
-							&.active {
-								background: url('/static/images/00-nav/01-h.png');
+							&.nav-en {
+								background: url('/static/images/00-nav-en/01.png');
+								width: 90px;
+								height: 79px;
+								&:hover {
+									background: url('/static/images/00-nav-en/01-h.png');
+								}
+								&.active {
+									background: url('/static/images/00-nav-en/01-h.png');
+								}
+							}
+							&.nav-cn {
+								background: url('/static/images/00-nav-cn/01.png');
+								width: 90px;
+								height: 79px;
+								&:hover {
+									background: url('/static/images/00-nav-cn/01-h.png');
+								}
+								&.active {
+									background: url('/static/images/00-nav-cn/01-h.png');
+								}
 							}
 						}
 						.nav-about {
-							background: url('/static/images/00-nav/02.png');
-							width: 90px;
-							height: 79px;
-							&:hover {
-								background: url('/static/images/00-nav/02-h.png');
+							&.nav-th {
+								background: url('/static/images/00-nav/02.png');
+								width: 90px;
+								height: 79px;
+								&:hover {
+									background: url('/static/images/00-nav/02-h.png');
+								}
+								&.active {
+									background: url('/static/images/00-nav/02-h.png');
+								}
 							}
-							&.active {
-								background: url('/static/images/00-nav/02-h.png');
+							&.nav-en {
+								background: url('/static/images/00-nav-en/02.png');
+								width: 90px;
+								height: 79px;
+								&:hover {
+									background: url('/static/images/00-nav-en/02-h.png');
+								}
+								&.active {
+									background: url('/static/images/00-nav-en/02-h.png');
+								}
+							}
+							&.nav-cn {
+								background: url('/static/images/00-nav-cn/02.png');
+								width: 90px;
+								height: 79px;
+								&:hover {
+									background: url('/static/images/00-nav-cn/02-h.png');
+								}
+								&.active {
+									background: url('/static/images/00-nav-cn/02-h.png');
+								}
 							}
 						}
 						.nav-brands {
-							background: url('/static/images/00-nav/03.png');
-							width: 90px;
-							height: 79px;
-							&:hover {
-								background: url('/static/images/00-nav/03-h.png');
+							&.nav-th {
+								background: url('/static/images/00-nav/03.png');
+								width: 90px;
+								height: 79px;
+								&:hover {
+									background: url('/static/images/00-nav/03-h.png');
+								}
+								&.active {
+									background: url('/static/images/00-nav/03-h.png');
+								}
 							}
-							&.active {
-								background: url('/static/images/00-nav/03-h.png');
+							&.nav-en {
+								background: url('/static/images/00-nav-en/03.png');
+								width: 90px;
+								height: 79px;
+								&:hover {
+									background: url('/static/images/00-nav-en/03-h.png');
+								}
+								&.active {
+									background: url('/static/images/00-nav-en/03-h.png');
+								}
+							}
+							&.nav-cn {
+								background: url('/static/images/00-nav-cn/03.png');
+								width: 90px;
+								height: 79px;
+								&:hover {
+									background: url('/static/images/00-nav-cn/03-h.png');
+								}
+								&.active {
+									background: url('/static/images/00-nav-cn/03-h.png');
+								}
 							}
 						}
 						.nav-news {
-							background: url('/static/images/00-nav/04.png');
-							width: 90px;
-							height: 79px;
-							&:hover {
-								background: url('/static/images/00-nav/04-h.png');
+							&.nav-th {
+								background: url('/static/images/00-nav/04.png');
+								width: 90px;
+								height: 79px;
+								&:hover {
+									background: url('/static/images/00-nav/04-h.png');
+								}
+								&.active {
+									background: url('/static/images/00-nav/04-h.png');
+								}
 							}
-							&.active {
-								background: url('/static/images/00-nav/04-h.png');
+							&.nav-en {
+								background: url('/static/images/00-nav-en/04.png');
+								width: 90px;
+								height: 79px;
+								&:hover {
+									background: url('/static/images/00-nav-en/04-h.png');
+								}
+								&.active {
+									background: url('/static/images/00-nav-en/04-h.png');
+								}
+							}
+							&.nav-cn {
+								background: url('/static/images/00-nav-cn/04.png');
+								width: 90px;
+								height: 79px;
+								&:hover {
+									background: url('/static/images/00-nav-cn/04-h.png');
+								}
+								&.active {
+									background: url('/static/images/00-nav-cn/04-h.png');
+								}
 							}
 						}
 						.nav-contact {
-							background: url('/static/images/00-nav/05.png');
-							width: 90px;
-							height: 79px;
-							&:hover {
-								background: url('/static/images/00-nav/05-h.png');
+							&.nav-th {
+								background: url('/static/images/00-nav/05.png');
+								width: 90px;
+								height: 79px;
+								&:hover {
+									background: url('/static/images/00-nav/05-h.png');
+								}
+								&.active {
+									background: url('/static/images/00-nav/05-h.png');
+								}
 							}
-							&.active {
-								background: url('/static/images/00-nav/05-h.png');
+							&.nav-en {
+								background: url('/static/images/00-nav-en/05.png');
+								width: 90px;
+								height: 79px;
+								&:hover {
+									background: url('/static/images/00-nav-en/05-h.png');
+								}
+								&.active {
+									background: url('/static/images/00-nav-en/05-h.png');
+								}
+							}
+							&.nav-cn {
+								background: url('/static/images/00-nav-cn/05.png');
+								width: 90px;
+								height: 79px;
+								&:hover {
+									background: url('/static/images/00-nav-cn/05-h.png');
+								}
+								&.active {
+									background: url('/static/images/00-nav-cn/05-h.png');
+								}
 							}
 						}
 					}

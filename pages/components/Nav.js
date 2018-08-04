@@ -22,11 +22,11 @@ class Nav extends Component {
 					<div className="container">
 						<div className="navbar desktop">
 							<ul>
-								<li><Link href="/"><a className={(this.state.isActive === "home")?"active":""}><div className={(this.state.isActive === "home")?"nav-index active":"nav-index"} /></a></Link></li>
-								<li><Link href="/about"><a className={(this.state.isActive === "about")?"active":""}><div className={(this.state.isActive === "about")?"nav-about active":"nav-about"} /></a></Link></li>
-								<li><Link href="/brands/tummour"><a className={(this.state.isActive === "brands")?"active":""}><div className={(this.state.isActive === "brands")?"nav-brands active":"nav-brands"} /></a></Link></li>
-								<li><Link href="/news"><a className={(this.state.isActive === "news")?"active":""}><div className={(this.state.isActive === "news")?"nav-news active":"nav-news"} /></a></Link></li>
-								<li><Link href="/contact"><a className={(this.state.isActive === "contact")?"active":""}><div className={(this.state.isActive === "contact")?"nav-contact active":"nav-contact"} /></a></Link></li>
+								<li><Link href="/"><a className={(this.state.isActive === "home")?"active":""}><div className={(this.state.isActive === "home")?"nav-index active "+this.props.navbar:"nav-index "+this.props.navbar} /></a></Link></li>
+								<li><Link href="/about"><a className={(this.state.isActive === "about")?"active":""}><div className={(this.state.isActive === "about")?"nav-about active "+this.props.navbar:"nav-about "+this.props.navbar} /></a></Link></li>
+								<li><Link href="/brands/tummour"><a className={(this.state.isActive === "brands")?"active":""}><div className={(this.state.isActive === "brands")?"nav-brands active "+this.props.navbar:"nav-brands "+this.props.navbar} /></a></Link></li>
+								<li><Link href="/news"><a className={(this.state.isActive === "news")?"active":""}><div className={(this.state.isActive === "news")?"nav-news active "+this.props.navbar:"nav-news "+this.props.navbar} /></a></Link></li>
+								<li><Link href="/contact"><a className={(this.state.isActive === "contact")?"active":""}><div className={(this.state.isActive === "contact")?"nav-contact active "+this.props.navbar:"nav-contact "+this.props.navbar} /></a></Link></li>
 							</ul>
 						</div>
 						<div className="navbar mobile">

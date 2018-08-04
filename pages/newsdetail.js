@@ -58,7 +58,7 @@ class NewsDetail extends Component {
 		return (
 			<div>
 				<Head title="Tummour Original - News" />
-				<Nav isActive="news" handleLang={(lang)=>this._handleLang(lang)} navbar={content.navbar} />
+				<Nav isActive="news" handleLang={(lang)=>this._handleLang(lang)} navbar={content.navbar} navbarmb={content.navbarmb} />
 				<NewsDetailElement news={(this.props.news && this.props.news)} images={(this.props.images && this.props.images)} lang={this.state.lang} content={content}/>
 				<Footer footer={footer}/>
 			</div>

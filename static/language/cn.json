@@ -1,6 +1,13 @@
 {
 	"home": {
 		"navbar": "nav-cn",
+		"navbarmb": {
+			"home": "首页",
+			"about": "关于我们",
+			"brands": "我们的品牌",
+			"news": "最新讯息/优惠活动",
+			"contact": "联系我们"
+		},
 		"banner": "cn",
 		"brand": {
 			"title": "https://firebasestorage.googleapis.com/v0/b/tummour-original.appspot.com/o/static%2Fimages%2F01-home-cn%2Fline-b.png?alt=media&token=b78a8143-b79e-4b33-9f62-51add3b847c1",
@@ -35,6 +42,13 @@
 	},
 	"about": {
 		"navbar": "nav-cn",
+		"navbarmb": {
+			"home": "首页",
+			"about": "关于我们",
+			"brands": "我们的品牌",
+			"news": "最新讯息/优惠活动",
+			"contact": "联系我们"
+		},
 		"banner": "https://firebasestorage.googleapis.com/v0/b/tummour-original.appspot.com/o/static%2Fimages%2F02-about-cn%2Fbanner-about.png?alt=media&token=e521388e-0e71-4989-85fe-7074f4ffe8c1",
 		"bannermb": "https://firebasestorage.googleapis.com/v0/b/tummour-original.appspot.com/o/static%2Fimages%2F02-about-cn%2Fbannerabout-mb.png?alt=media&token=0d96dc29-e167-408f-9614-6b090442b994",
 		"logo": "https://firebasestorage.googleapis.com/v0/b/tummour-original.appspot.com/o/static%2Fimages%2F01-home-en%2Ftm.png?alt=media&token=94637e4f-41ff-42c0-a54a-99a0f46281a5",
@@ -43,6 +57,14 @@
 		"text2": "Tummour是第一家以“原汁原味泰国美食”为口号的泰国东北菜系餐厅。我们保持初心，精心挑选 所有食材，并不断扩大经营，目前在泰国以及国际上总共拥有超过150家分店。我们保证每一道泰 国菜饱含泰国美食的纯正口感，并让每一位食客感受到正宗泰国美食的魅力。 Tummour 在成功扩大经营之外，还创造了很多概念型菜品，例如Lao Yuan，JaewHon, Pho, Granny’s Chicken, 和 Krua Thai. 为了使公司得到更好的发展，Crazy Spicy公司和著名的日式 料理概念开创者Zen 有限公司合作成立了Zen &Spicy公司。"
 	},
 	"brand": {
+		"navbar": "nav-cn",
+		"navbarmb": {
+			"home": "首页",
+			"about": "关于我们",
+			"brands": "我们的品牌",
+			"news": "最新讯息/优惠活动",
+			"contact": "联系我们"
+		},
 		"sidebar": {
 			"tummour": "https://firebasestorage.googleapis.com/v0/b/tummour-original.appspot.com/o/static%2Fimages%2F01-home-en%2Ftm.png?alt=media&token=94637e4f-41ff-42c0-a54a-99a0f46281a5",
 			"laoyuan": "https://firebasestorage.googleapis.com/v0/b/tummour-original.appspot.com/o/static%2Fimages%2F01-home-en%2Fly.png?alt=media&token=cce99529-d38c-4014-a8db-aa7aced0a3f4",
@@ -120,6 +142,13 @@
 	},
 	"news": {
 		"navbar": "nav-cn",
+		"navbarmb": {
+			"home": "首页",
+			"about": "关于我们",
+			"brands": "我们的品牌",
+			"news": "最新讯息/优惠活动",
+			"contact": "联系我们"
+		},
 		"banner": "https://firebasestorage.googleapis.com/v0/b/tummour-original.appspot.com/o/static%2Fimages%2F04-promotion-cn%2Fbanner-news.png?alt=media&token=8b5b1c3e-b9ac-490b-9463-a198cbad1794",
 		"bannermb": "https://firebasestorage.googleapis.com/v0/b/tummour-original.appspot.com/o/static%2Fimages%2F04-promotion-cn%2Fbannernews-mb.png?alt=media&token=0eb6d6f6-b2b6-4a9a-a41d-4422b5107c30",
 		"categorynews": "最新讯息",
@@ -127,6 +156,13 @@
 	},
 	"promotion": {
 		"navbar": "nav-cn",
+		"navbarmb": {
+			"home": "首页",
+			"about": "关于我们",
+			"brands": "我们的品牌",
+			"news": "最新讯息/优惠活动",
+			"contact": "联系我们"
+		},
 		"banner": "https://firebasestorage.googleapis.com/v0/b/tummour-original.appspot.com/o/static%2Fimages%2F04-promotion-cn%2Fbanner-news.png?alt=media&token=8b5b1c3e-b9ac-490b-9463-a198cbad1794",
 		"bannermb": "https://firebasestorage.googleapis.com/v0/b/tummour-original.appspot.com/o/static%2Fimages%2F04-promotion-cn%2Fbannernews-mb.png?alt=media&token=0eb6d6f6-b2b6-4a9a-a41d-4422b5107c30",
 		"categorynews": "最新讯息",
@@ -141,6 +177,13 @@
 	},
 	"contact": {
 		"navbar": "nav-cn",
+		"navbarmb": {
+			"home": "首页",
+			"about": "关于我们",
+			"brands": "我们的品牌",
+			"news": "最新讯息/优惠活动",
+			"contact": "联系我们"
+		},
 		"banner": "https://firebasestorage.googleapis.com/v0/b/tummour-original.appspot.com/o/static%2Fimages%2F05-contact-cn%2Fbanner-contact.png?alt=media&token=0da59343-b69c-4e16-9c72-777063dd26f0",
 		"bannermb": "https://firebasestorage.googleapis.com/v0/b/tummour-original.appspot.com/o/static%2Fimages%2F05-contact-cn%2Fbannercontact-mb.png?alt=media&token=b02b6eb4-c492-40a2-a3f0-d17da8e2a819",
 		"address": {

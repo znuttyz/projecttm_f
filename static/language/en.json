@@ -1,6 +1,13 @@
 {
 	"home": {
 		"navbar": "nav-en",
+		"navbarmb": {
+			"home": "Home",
+			"about": "About Us",
+			"brands": "Our Brands",
+			"news": "News/Promotion",
+			"contact": "Contact Us"
+		},
 		"banner": "en",
 		"brand": {
 			"title": "https://firebasestorage.googleapis.com/v0/b/tummour-original.appspot.com/o/static%2Fimages%2F01-home-en%2Fline-b.png?alt=media&token=01e996dd-9c5f-40d6-91ba-954380b91f5f",
@@ -35,6 +42,13 @@
 	},
 	"about": {
 		"navbar": "nav-en",
+		"navbarmb": {
+			"home": "Home",
+			"about": "About Us",
+			"brands": "Our Brands",
+			"news": "News/Promotion",
+			"contact": "Contact Us"
+		},
 		"banner": "https://firebasestorage.googleapis.com/v0/b/tummour-original.appspot.com/o/static%2Fimages%2F02-about-en%2Fbanner-about.png?alt=media&token=adc916e9-793a-40ef-92d9-b5b147b5f6cd",
 		"bannermb": "https://firebasestorage.googleapis.com/v0/b/tummour-original.appspot.com/o/static%2Fimages%2F02-about-en%2Fbannerabout-mb.png?alt=media&token=3733ba19-0306-4795-a458-08152093000d",
 		"logo": "https://firebasestorage.googleapis.com/v0/b/tummour-original.appspot.com/o/static%2Fimages%2F01-home-en%2Ftm.png?alt=media&token=94637e4f-41ff-42c0-a54a-99a0f46281a5",
@@ -43,6 +57,14 @@
 		"text2": "Tummour was the  first generation in the Isaan food market with the slogan “The Original Thai Food”. Because of our passion and experience in Thai Food preparation we have as of today branches spread all over Thailand and Internationally with a total of more than 150 units. The authentic taste of Thai food will be served in every single dish, so that everybody will know and appreciate what is truly the Authentic Thai Food.<br/>On the back of the success of Tummour many other concepts were created such as Lao Yuan, JaewHon, Pho, Granny’s Chicken, and Krua Thai. Given the growth and success of the Group they formed a partnership with the famous Zen Corporation Group Co Ltd, an innovator of Japanese concepts and created Zen & Spicy Co Ltd."
 	},
 	"brand": {
+		"navbar": "nav-en",
+		"navbarmb": {
+			"home": "Home",
+			"about": "About Us",
+			"brands": "Our Brands",
+			"news": "News/Promotion",
+			"contact": "Contact Us"
+		},
 		"sidebar": {
 			"tummour": "https://firebasestorage.googleapis.com/v0/b/tummour-original.appspot.com/o/static%2Fimages%2F01-home-en%2Ftm.png?alt=media&token=94637e4f-41ff-42c0-a54a-99a0f46281a5",
 			"laoyuan": "https://firebasestorage.googleapis.com/v0/b/tummour-original.appspot.com/o/static%2Fimages%2F01-home-en%2Fly.png?alt=media&token=cce99529-d38c-4014-a8db-aa7aced0a3f4",
@@ -99,7 +121,7 @@
 			"banner": "https://firebasestorage.googleapis.com/v0/b/tummour-original.appspot.com/o/static%2Fimages%2F03-brands-en%2Fbanner-brands.png?alt=media&token=015628f6-a77d-409e-95de-d48a0c99fa84",
 			"bannermb": "https://firebasestorage.googleapis.com/v0/b/tummour-original.appspot.com/o/static%2Fimages%2F03-brands-en%2Fbannerbrands-mb.png?alt=media&token=0b42fab2-e139-49db-9dde-dd2437b6ff51",
 			"title": "Granny's Chicken Rice",
-			"title_img": "/static/images/03-brands/line-ky.png"
+			"title_img": "https://firebasestorage.googleapis.com/v0/b/tummour-original.appspot.com/o/static%2Fimages%2F01-home-en%2Fky.png?alt=media&token=426fb623-c85f-4fa5-9e9d-6e99b3ea363e"
 		},
 		"kruathai": {
 			"navbar": "nav-en",
@@ -120,6 +142,13 @@
 	},
 	"news": {
 		"navbar": "nav-en",
+		"navbarmb": {
+			"home": "Home",
+			"about": "About Us",
+			"brands": "Our Brands",
+			"news": "News/Promotion",
+			"contact": "Contact Us"
+		},
 		"banner": "https://firebasestorage.googleapis.com/v0/b/tummour-original.appspot.com/o/static%2Fimages%2F04-promotion-en%2Fbanner-news.png?alt=media&token=220da56a-0be3-425c-967f-fdd354547486",
 		"bannermb": "https://firebasestorage.googleapis.com/v0/b/tummour-original.appspot.com/o/static%2Fimages%2F04-promotion-en%2Fbannernews-mb.png?alt=media&token=98b3f1ec-c136-4efd-9459-7913da26abf2",
 		"categorynews": "NEWS",
@@ -141,6 +170,13 @@
 	},
 	"contact": {
 		"navbar": "nav-en",
+		"navbarmb": {
+			"home": "Home",
+			"about": "About Us",
+			"brands": "Our Brands",
+			"news": "News/Promotion",
+			"contact": "Contact Us"
+		},
 		"banner": "https://firebasestorage.googleapis.com/v0/b/tummour-original.appspot.com/o/static%2Fimages%2F05-contact-en%2Fbanner-contact.png?alt=media&token=aee8fb61-6456-4be7-955c-f8f72e246df1",
 		"bannermb": "https://firebasestorage.googleapis.com/v0/b/tummour-original.appspot.com/o/static%2Fimages%2F05-contact-en%2Fbannercontact-mb.png?alt=media&token=aa8e86dd-3e94-4230-8402-e2783241a615",
 		"address": {

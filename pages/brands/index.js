@@ -53,7 +53,7 @@ class Brands extends Component {
 	}
 	
 	render() {
-		let content, sidebar, tab, footer, brand, navbar
+		let content, sidebar, tab, footer, brand, navbar, navbarmb, menulist
 		switch(this.state.lang) {
 			case "en":
 				content = require('../../static/language/en.json').brand
@@ -89,6 +89,8 @@ class Brands extends Component {
 		sidebar = content.sidebar
 		tab = content.tab
 		navbar = content.navbar
+		navbarmb = content.navbarmb
+		menulist = content.menulist
 		switch(this.state.brand_url) {
 			case "tummour":
 				content = content.tummour
@@ -115,16 +117,17 @@ class Brands extends Component {
 				break;
 		}
 
-
+		if(!this.state.lang) return <div></div>
 		return (
 			<div>
 				<Head title={content.title} />
-				<Nav isActive="brands" handleLang={(lang)=>this._handleLang(lang)} navbar={navbar}/>
+				<Nav isActive="brands" handleLang={(lang)=>this._handleLang(lang)} navbar={navbar} navbarmb={navbarmb} />
 				<BrandElement 
 					content={content} 
 					brand={brand} 
 					regions={this.state.regions} 
-					sidebar={sidebar} 
+					sidebar={sidebar}
+					menulist={menulist} 
 					tab={tab}
 					lang={this.state.lang}
 				/>

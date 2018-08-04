@@ -57,7 +57,7 @@ class Home extends Component {
 		return (
 			<div>
 				<Head title="Tummour Original"/>
-				<Nav isActive="home" handleLang={(lang)=>this._handleLang(lang)} navbar={content.navbar}/>
+				<Nav isActive="home" handleLang={(lang)=>this._handleLang(lang)} navbar={content.navbar} navbarmb={content.navbarmb} />
 				{(this.props.home[0] && <HomeBanner image={this.props.home[0]} content={content.banner}/>)}
 				<HomeOurbrands content={content.brand} />
 				{(this.props.home[1] && <HomePromotion promotions={this.props.home[1]} content={content.promotion} lang={this.state.lang} />)}

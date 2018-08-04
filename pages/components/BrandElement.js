@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 
-const BrandElement = ({ sidebar, tab, content, brand, regions, lang }) => (
+const BrandElement = ({ sidebar, tab, content, brand, regions, lang, menulist }) => (
 	<div className={content.classname}>
 		<div className="b-banner">
 			<img src={content.banner} />
@@ -31,7 +31,7 @@ const BrandElement = ({ sidebar, tab, content, brand, regions, lang }) => (
 
 		 			{
 		 				(brand && 
-		 					(brand.menu === "")? "": <div className="btn-menu"><a href={(brand && brand.menu)} target="_blank">ดูเมนู</a></div>
+		 					(brand.menu === "")? "": <div className="btn-menu"><a href={(brand && brand.menu)} target="_blank">{menulist}</a></div>
 		 				)
 		 			}
 		 			

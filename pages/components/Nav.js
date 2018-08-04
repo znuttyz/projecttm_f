@@ -38,11 +38,11 @@ class Nav extends Component {
 								</div>
 								<div className={(this.state.isMenu)? "navigation open" : "navigation"}>
 									<ul>
-										<li className="li" onClick={() => this.setState({isMenu: !this.state.isMenu})}><Link href="/"><a>หน้าแรก</a></Link></li>
-										<li className="li" onClick={() => this.setState({isMenu: !this.state.isMenu})}><Link href="/about"><a>เกี่ยวกับเรา</a></Link></li>
-										<li className="li" onClick={() => this.setState({isMenu: !this.state.isMenu})}><Link href="/brands/tummour"><a>แบรนด์ของเรา</a></Link></li>
-										<li className="li" onClick={() => this.setState({isMenu: !this.state.isMenu})}><Link href="/news"><a>ข่าวสาร/โปรโมชั่น</a></Link></li>
-										<li className="li" onClick={() => this.setState({isMenu: !this.state.isMenu})}><Link href="/contact"><a>ติดต่อเรา</a></Link></li>
+										<li className="li" onClick={() => this.setState({isMenu: !this.state.isMenu})}><Link href="/"><a>{this.props.navbarmb.home}</a></Link></li>
+										<li className="li" onClick={() => this.setState({isMenu: !this.state.isMenu})}><Link href="/about"><a>{this.props.navbarmb.about}</a></Link></li>
+										<li className="li" onClick={() => this.setState({isMenu: !this.state.isMenu})}><Link href="/brands/tummour"><a>{this.props.navbarmb.brands}</a></Link></li>
+										<li className="li" onClick={() => this.setState({isMenu: !this.state.isMenu})}><Link href="/news"><a>{this.props.navbarmb.news}</a></Link></li>
+										<li className="li" onClick={() => this.setState({isMenu: !this.state.isMenu})}><Link href="/contact"><a>{this.props.navbarmb.contact}</a></Link></li>
 										<ul className="lang-mb">
 											<li><a href="#" onClick={()=>this.props.handleLang('th')}>ภาษาไทย</a></li>
 											<li><a href="#" onClick={()=>this.props.handleLang('en')}>English</a></li>

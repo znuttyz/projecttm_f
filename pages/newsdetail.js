@@ -53,6 +53,8 @@ class NewsDetail extends Component {
 				content = require('../static/language/th.json').news
 				footer = require('../static/language/th.json').footer
 		}
+
+		if(!this.state.lang) return <div></div>
 		return (
 			<div>
 				<Head title="Tummour Original - News" />

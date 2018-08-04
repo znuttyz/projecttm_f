@@ -6,7 +6,6 @@
 			"title": "https://firebasestorage.googleapis.com/v0/b/tummour-original.appspot.com/o/static%2Fimages%2F01-home%2Fline-b.png?alt=media&token=5e26063d-4ff3-4ca6-998f-703b4005a86b",
 			"tummour": {
 				"name": "https://firebasestorage.googleapis.com/v0/b/tummour-original.appspot.com/o/static%2Fimages%2F00-global%2Ftm.png?alt=media&token=ac35c520-2402-422d-ba6b-c28a94eab001",
-				"image": "https://firebasestorage.googleapis.com/v0/b/tummour-original.appspot.com/o/static%2Fimages%2F01-home%2F01.jpg?alt=media&token=838b4a56-fc84-4c31-b4c4-1884cf61da6a",
 				"image": "https://firebasestorage.googleapis.com/v0/b/tummour-original.appspot.com/o/static%2Fimages%2F01-home%2F01.jpg?alt=media&token=838b4a56-fc84-4c31-b4c4-1884cf61da6a"
 			},
 			"laoyuan": {
@@ -126,13 +125,6 @@
 		"categorynews": "ข่าวสาร",
 		"categorypromotion": "โปรโมชั่น"
 	},
-	"newsdetail": {
-		"navbar": "nav-th",
-		"banner": "https://firebasestorage.googleapis.com/v0/b/tummour-original.appspot.com/o/static%2Fimages%2F00-global%2Fbanner-news.png?alt=media&token=d6a68923-d052-43c3-a510-fe3efca3ed23",
-		"bannermb": "https://firebasestorage.googleapis.com/v0/b/tummour-original.appspot.com/o/static%2Fimages%2F04-promotion%2Fbannernews-mb.png?alt=media&token=35bfd467-2d5f-4e9f-ace7-4b52b0b889cd",
-		"categorynews": "ข่าวสาร",
-		"categorypromotion": "โปรโมชั่น"
-	},
 	"promotion": {
 		"navbar": "nav-th",
 		"banner": "https://firebasestorage.googleapis.com/v0/b/tummour-original.appspot.com/o/static%2Fimages%2F00-global%2Fbanner-news.png?alt=media&token=d6a68923-d052-43c3-a510-fe3efca3ed23",
@@ -146,13 +138,6 @@
 			"jaewhon": "แจ่วฮ้อน",
 			"pho": "เฝอ"
 		}
-	},
-	"promotiondetail": {
-		"navbar": "nav-th",
-		"banner": "https://firebasestorage.googleapis.com/v0/b/tummour-original.appspot.com/o/static%2Fimages%2F00-global%2Fbanner-news.png?alt=media&token=d6a68923-d052-43c3-a510-fe3efca3ed23",
-		"bannermb": "https://firebasestorage.googleapis.com/v0/b/tummour-original.appspot.com/o/static%2Fimages%2F04-promotion%2Fbannernews-mb.png?alt=media&token=35bfd467-2d5f-4e9f-ace7-4b52b0b889cd",
-		"categorynews": "ข่าวสาร",
-		"categorypromotion": "โปรโมชั่น"
 	},
 	"contact": {
 		"navbar": "nav-th",

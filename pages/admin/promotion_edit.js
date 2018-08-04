@@ -120,17 +120,18 @@ class Promotion_edit extends Component {
 				.then(()=> {
 					let oldfile
 					if(index == 0) {
-						oldfile = this.props.promotion.banner_th.substr(84, 17);
+						oldfile = this.props.promotion.banner_th.substr(84)
 						filename1 = 'https://firebasestorage.googleapis.com/v0/b/tummour-original.appspot.com/o/upload%2F'+filename+'?alt=media'
 					} else if (index == 1) {
-						oldfile = this.props.promotion.banner_en.substr(84, 17);
+						oldfile = this.props.promotion.banner_en.substr(84)
 						filename2 = 'https://firebasestorage.googleapis.com/v0/b/tummour-original.appspot.com/o/upload%2F'+filename+'?alt=media'
 					} else if (index == 2) { 
-						oldfile = this.props.promotion.banner_cn.substr(84, 17);
+						oldfile = this.props.promotion.banner_cn.substr(84)
 						filename3 = 'https://firebasestorage.googleapis.com/v0/b/tummour-original.appspot.com/o/upload%2F'+filename+'?alt=media'
 					}
 
-					return axios.post('https://us-central1-tummour-original.cloudfunctions.net/deleteFile', { filename: oldfile })
+					oldfile = oldfile.split('?')
+					return axios.post('https://us-central1-tummour-original.cloudfunctions.net/deleteFile', { filename: oldfile[0] })
 				})
 		})
 		promiseSerial(funcs)

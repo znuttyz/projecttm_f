@@ -41,6 +41,7 @@ class About extends Component {
 				footer = require('../static/language/th.json').footer
 		}
 
+		if(!this.state.lang) return <div></div>
 		return (
 			<div>
 				<Head title="Tummour Original - About"/>

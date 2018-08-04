@@ -17,7 +17,9 @@ class Home extends Component {
 		super(props)
 		if(!Cookies.get('lang')) Cookies.set('lang', 'th')
 		this.state = {
-			lang: Cookies.get('lang')
+			lang: Cookies.get('lang'),
+			content: null,
+			footer: null
 		}
 	}
 
@@ -51,6 +53,7 @@ class Home extends Component {
 				footer = require('../static/language/th.json').footer
 		}
 
+		if(!this.state.lang) return <div></div>
 		return (
 			<div>
 				<Head title="Tummour Original"/>

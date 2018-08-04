@@ -125,13 +125,6 @@
 		"categorynews": "NEWS",
 		"categorypromotion": "PROMOTIONS"
 	},
-	"newsdetail": {
-		"navbar": "cn",
-		"banner": "https://firebasestorage.googleapis.com/v0/b/tummour-original.appspot.com/o/static%2Fimages%2F04-promotion-cn%2Fbanner-news.png?alt=media&token=8b5b1c3e-b9ac-490b-9463-a198cbad1794",
-		"bannermb": "https://firebasestorage.googleapis.com/v0/b/tummour-original.appspot.com/o/static%2Fimages%2F04-promotion%2Fbannernews-mb.png?alt=media&token=35bfd467-2d5f-4e9f-ace7-4b52b0b889cd",
-		"categorynews": "NEWS",
-		"categorypromotion": "PROMOTIONS"
-	},
 	"promotion": {
 		"navbar": "cn",
 		"banner": "https://firebasestorage.googleapis.com/v0/b/tummour-original.appspot.com/o/static%2Fimages%2F04-promotion-cn%2Fbanner-news.png?alt=media&token=8b5b1c3e-b9ac-490b-9463-a198cbad1794",
@@ -145,13 +138,6 @@
 			"jaewhon": "JAEWHON",
 			"pho": "PHO"
 		}
-	},
-	"promotiondetail": {
-		"navbar": "cn",
-		"banner": "https://firebasestorage.googleapis.com/v0/b/tummour-original.appspot.com/o/static%2Fimages%2F04-promotion-cn%2Fbanner-news.png?alt=media&token=8b5b1c3e-b9ac-490b-9463-a198cbad1794",
-		"bannermb": "https://firebasestorage.googleapis.com/v0/b/tummour-original.appspot.com/o/static%2Fimages%2F04-promotion%2Fbannernews-mb.png?alt=media&token=35bfd467-2d5f-4e9f-ace7-4b52b0b889cd",
-		"categorynews": "NEWS",
-		"categorypromotion": "PROMOTIONS"
 	},
 	"contact": {
 		"navbar": "cn",

@@ -45,7 +45,7 @@ class About extends Component {
 		return (
 			<div>
 				<Head title="Tummour Original - About"/>
-				<Nav isActive="about" handleLang={(lang)=>this._handleLang(lang)}/>
+				<Nav isActive="about" handleLang={(lang)=>this._handleLang(lang)} navbar={content.navbar}/>
 				<AboutInfo content={content} />
 				<Footer footer={footer}/>
 			</div>

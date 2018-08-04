@@ -56,7 +56,7 @@ class PromotionDetail extends Component {
 		return (
 			<div>
 				<Head title="Tummour Original - Promotion" />
-				<Nav isActive="news" handleLang={(lang)=>this._handleLang(lang)} />
+				<Nav isActive="news" handleLang={(lang)=>this._handleLang(lang)} navbar={content.navbar} />
 				{(this.props.promotions && <PromotionDetailElement promotions={this.props.promotions} content={content} lang={this.state.lang} />)}
 				<Footer footer={footer}/>
 			</div>

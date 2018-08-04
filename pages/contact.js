@@ -88,7 +88,7 @@ class Contact extends Component {
 		return (
 			<div>
 				<Head title="Tummour Original - Contact"/>
-				<Nav isActive="contact" handleLang={(lang)=>this._handleLang(lang)}/>
+				<Nav isActive="contact" handleLang={(lang)=>this._handleLang(lang)} navbar={content.navbar}/>
 				<ContactInfo 
 					handleChange={(event) => this._onHandleChange(event)}
 					onSubmit={(event) => this._onHandleSubmit(event)}

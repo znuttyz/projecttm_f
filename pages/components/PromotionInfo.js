@@ -105,10 +105,10 @@ class PromotionInfo extends Component {
 		return (
 			<div className="promotioninfo clear">
 				<div className="promotionbanner">
-					<img src="https://firebasestorage.googleapis.com/v0/b/tummour-original.appspot.com/o/static%2Fimages%2F00-global%2Fbanner-news.png?alt=media&token=d6a68923-d052-43c3-a510-fe3efca3ed23" />
+					<img src={this.props.content.banner} />
 				</div>
 				<div className="promotionbanner-mb">
-					<img src="https://firebasestorage.googleapis.com/v0/b/tummour-original.appspot.com/o/static%2Fimages%2F04-promotion%2Fbannernews-mb.png?alt=media&token=35bfd467-2d5f-4e9f-ace7-4b52b0b889cd" />
+					<img src={this.props.content.bannermb} />
 				</div>
 				<div className="tab">
 					<div className="tabtopic">

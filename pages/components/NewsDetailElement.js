@@ -55,8 +55,8 @@ const NewsDetailElement = ({ news, images, lang, content }) => {
 			<div className="tab">
 				<div className="tabtopic">
 					<ul>
-						<li><Link href="/news"><a>ข่าวสาร</a></Link></li>
-						<li><Link href="/promotion"><a>โปรโมชั่น</a></Link></li>
+						<li><Link href="/news"><a>{content.categorynews}</a></Link></li>
+						<li><Link href="/promotion"><a>{content.categorypromotion}</a></Link></li>
 					</ul>
 				</div>
 				<div className="tabcontent">

@@ -157,6 +157,13 @@
 	},
 	"promotion": {
 		"navbar": "nav-en",
+		"navbarmb": {
+			"home": "Home",
+			"about": "About Us",
+			"brands": "Our Brands",
+			"news": "News/Promotion",
+			"contact": "Contact Us"
+		},
 		"banner": "https://firebasestorage.googleapis.com/v0/b/tummour-original.appspot.com/o/static%2Fimages%2F04-promotion-en%2Fbanner-news.png?alt=media&token=220da56a-0be3-425c-967f-fdd354547486",
 		"bannermb": "https://firebasestorage.googleapis.com/v0/b/tummour-original.appspot.com/o/static%2Fimages%2F04-promotion-en%2Fbannernews-mb.png?alt=media&token=98b3f1ec-c136-4efd-9459-7913da26abf2",
 		"categorynews": "NEWS",

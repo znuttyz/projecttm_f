@@ -87,58 +87,58 @@
 		"tummour": {
 			"navbar": "th",
 			"classname": "brands-element b-tummour clear",
-			"banner": "https://firebasestorage.googleapis.com/v0/b/tummour-original.appspot.com/o/static%2Fimages%2F00-global%2Fbanner-brands.png?alt=media&token=284db74b-0b05-41a4-b034-408be3c54fdd",
+			"banner": "https://firebasestorage.googleapis.com/v0/b/tummour-original.appspot.com/o/static%2Fimages%2F03-brands-en%2Fbanner-brands.png?alt=media&token=015628f6-a77d-409e-95de-d48a0c99fa84",
 			"bannermb": "https://firebasestorage.googleapis.com/v0/b/tummour-original.appspot.com/o/static%2Fimages%2F03-brands-en%2Fbannerbrands-mb.png?alt=media&token=0b42fab2-e139-49db-9dde-dd2437b6ff51",
 			"title": "Tummour",
-			"title_img": "/static/images/03-brands/line-tm.png"
+			"title_img": "https://firebasestorage.googleapis.com/v0/b/tummour-original.appspot.com/o/static%2Fimages%2F01-home-en%2Ftm.png?alt=media&token=94637e4f-41ff-42c0-a54a-99a0f46281a5"
 		},
 		"laoyuan": {
 			"navbar": "th",
 			"classname": "brands-element b-laoyuan clear",
-			"banner": "https://firebasestorage.googleapis.com/v0/b/tummour-original.appspot.com/o/static%2Fimages%2F00-global%2Fbanner-brands.png?alt=media&token=284db74b-0b05-41a4-b034-408be3c54fdd",
+			"banner": "https://firebasestorage.googleapis.com/v0/b/tummour-original.appspot.com/o/static%2Fimages%2F03-brands-en%2Fbanner-brands.png?alt=media&token=015628f6-a77d-409e-95de-d48a0c99fa84",
 			"bannermb": "https://firebasestorage.googleapis.com/v0/b/tummour-original.appspot.com/o/static%2Fimages%2F03-brands-en%2Fbannerbrands-mb.png?alt=media&token=0b42fab2-e139-49db-9dde-dd2437b6ff51",
 			"title": "Laoyuan",
-			"title_img": "/static/images/03-brands/line-ly.png"
+			"title_img": "https://firebasestorage.googleapis.com/v0/b/tummour-original.appspot.com/o/static%2Fimages%2F01-home-en%2Fly.png?alt=media&token=cce99529-d38c-4014-a8db-aa7aced0a3f4"
 		},
 		"jaewhon": {
 			"navbar": "th",
 			"classname": "brands-element b-jaewhon clear",
-			"banner": "https://firebasestorage.googleapis.com/v0/b/tummour-original.appspot.com/o/static%2Fimages%2F00-global%2Fbanner-brands.png?alt=media&token=284db74b-0b05-41a4-b034-408be3c54fdd",
+			"banner": "https://firebasestorage.googleapis.com/v0/b/tummour-original.appspot.com/o/static%2Fimages%2F03-brands-en%2Fbanner-brands.png?alt=media&token=015628f6-a77d-409e-95de-d48a0c99fa84",
 			"bannermb": "https://firebasestorage.googleapis.com/v0/b/tummour-original.appspot.com/o/static%2Fimages%2F03-brands-en%2Fbannerbrands-mb.png?alt=media&token=0b42fab2-e139-49db-9dde-dd2437b6ff51",
 			"title": "Jaewhon",
-			"title_img": "/static/images/03-brands/line-jh.png"
+			"title_img": "https://firebasestorage.googleapis.com/v0/b/tummour-original.appspot.com/o/static%2Fimages%2F01-home-en%2Fjh.png?alt=media&token=f172a4bc-8adc-4609-a918-5049e61648e0"
 		},
 		"pho": {
 			"navbar": "th",
 			"classname": "brands-element b-pho clear",
-			"banner": "https://firebasestorage.googleapis.com/v0/b/tummour-original.appspot.com/o/static%2Fimages%2F00-global%2Fbanner-brands.png?alt=media&token=284db74b-0b05-41a4-b034-408be3c54fdd",
+			"banner": "https://firebasestorage.googleapis.com/v0/b/tummour-original.appspot.com/o/static%2Fimages%2F03-brands-en%2Fbanner-brands.png?alt=media&token=015628f6-a77d-409e-95de-d48a0c99fa84",
 			"bannermb": "https://firebasestorage.googleapis.com/v0/b/tummour-original.appspot.com/o/static%2Fimages%2F03-brands-en%2Fbannerbrands-mb.png?alt=media&token=0b42fab2-e139-49db-9dde-dd2437b6ff51",
 			"title": "Pho",
-			"title_img": "/static/images/03-brands/line-ph.png"
+			"title_img": "https://firebasestorage.googleapis.com/v0/b/tummour-original.appspot.com/o/static%2Fimages%2F01-home-en%2Fph.png?alt=media&token=1ed6be4c-718f-43d6-9d96-380cad320d97"
 		},
 		"granny": {
 			"navbar": "th",
 			"classname": "brands-element b-granny clear",
-			"banner": "https://firebasestorage.googleapis.com/v0/b/tummour-original.appspot.com/o/static%2Fimages%2F00-global%2Fbanner-brands.png?alt=media&token=284db74b-0b05-41a4-b034-408be3c54fdd",
+			"banner": "https://firebasestorage.googleapis.com/v0/b/tummour-original.appspot.com/o/static%2Fimages%2F03-brands-en%2Fbanner-brands.png?alt=media&token=015628f6-a77d-409e-95de-d48a0c99fa84",
 			"bannermb": "https://firebasestorage.googleapis.com/v0/b/tummour-original.appspot.com/o/static%2Fimages%2F03-brands-en%2Fbannerbrands-mb.png?alt=media&token=0b42fab2-e139-49db-9dde-dd2437b6ff51",
 			"title": "Granny's Chicken Rice",
-			"title_img": "/static/images/03-brands/line-ky.png"
+			"title_img": "https://firebasestorage.googleapis.com/v0/b/tummour-original.appspot.com/o/static%2Fimages%2F01-home-en%2Fky.png?alt=media&token=426fb623-c85f-4fa5-9e9d-6e99b3ea363e"
 		},
 		"kruathai": {
 			"navbar": "th",
 			"classname": "brands-element b-kruathai clear",
-			"banner": "https://firebasestorage.googleapis.com/v0/b/tummour-original.appspot.com/o/static%2Fimages%2F00-global%2Fbanner-brands.png?alt=media&token=284db74b-0b05-41a4-b034-408be3c54fdd",
+			"banner": "https://firebasestorage.googleapis.com/v0/b/tummour-original.appspot.com/o/static%2Fimages%2F03-brands-en%2Fbanner-brands.png?alt=media&token=015628f6-a77d-409e-95de-d48a0c99fa84",
 			"bannermb": "https://firebasestorage.googleapis.com/v0/b/tummour-original.appspot.com/o/static%2Fimages%2F03-brands-en%2Fbannerbrands-mb.png?alt=media&token=0b42fab2-e139-49db-9dde-dd2437b6ff51",
 			"title": "Kruathai",
-			"title_img": "/static/images/03-brands/line-kt.png"
+			"title_img": "/static/images/00-global/kt.png"
 		},
 		"detummour": {
 			"navbar": "th",
 			"classname": "brands-element b-detummour clear",
-			"banner": "https://firebasestorage.googleapis.com/v0/b/tummour-original.appspot.com/o/static%2Fimages%2F00-global%2Fbanner-brands.png?alt=media&token=284db74b-0b05-41a4-b034-408be3c54fdd",
+			"banner": "https://firebasestorage.googleapis.com/v0/b/tummour-original.appspot.com/o/static%2Fimages%2F03-brands-en%2Fbanner-brands.png?alt=media&token=015628f6-a77d-409e-95de-d48a0c99fa84",
 			"bannermb": "https://firebasestorage.googleapis.com/v0/b/tummour-original.appspot.com/o/static%2Fimages%2F03-brands-en%2Fbannerbrands-mb.png?alt=media&token=0b42fab2-e139-49db-9dde-dd2437b6ff51",
 			"title": "De Tummour",
-			"title_img": "/static/images/03-brands/line-de.png"
+			"title_img": "/static/images/00-global/tm-en.png"
 		}
 	},
 	"news": {

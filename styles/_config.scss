@@ -7,8 +7,16 @@
     font-style: normal;
 }
 
+@font-face {
+	font-family: 'heiti';
+	src: url('https://firebasestorage.googleapis.com/v0/b/tummour-original.appspot.com/o/static%2Ffonts%2FSTHeitiSC-Light-02.woff?alt=media&token=e2d47da3-0e9d-4bf6-9c3d-b1cebdfaa041') format('woff'),
+         url('https://firebasestorage.googleapis.com/v0/b/tummour-original.appspot.com/o/static%2Ffonts%2FSTHeitiTC-Light-01.woff?alt=media&token=a886d399-7938-40ff-8f70-0b35b3ce563a') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
 html {
-	font-family: 'psl_kanda', sans-serif;
+	font-family: 'psl_kanda', 'heiti', sans-serif;
 	text-rendering: optimizeLegibility;
 	body {
 		margin: 0;

@@ -74,6 +74,7 @@
 			"kruathai": "/static/images/00-global/kt.png",
 			"detummour": "/static/images/00-global/tm-en.png"
 		},
+		"menulist": "Menu",
 		"tab": {
 			"north": "North",
 			"south": "South",

@@ -49,8 +49,8 @@
 			"news": "News/Promotion",
 			"contact": "Contact Us"
 		},
-		"banner": "https://firebasestorage.googleapis.com/v0/b/tummour-original.appspot.com/o/static%2Fimages%2F02-about-en%2Fbanner-about.png?alt=media&token=adc916e9-793a-40ef-92d9-b5b147b5f6cd",
-		"bannermb": "https://firebasestorage.googleapis.com/v0/b/tummour-original.appspot.com/o/static%2Fimages%2F02-about-en%2Fbannerabout-mb.png?alt=media&token=3733ba19-0306-4795-a458-08152093000d",
+		"banner": "https://firebasestorage.googleapis.com/v0/b/tummour-original.appspot.com/o/static%2Fimages%2F02-about-en%2Fbanner-about.png?alt=media&token=240a06ed-0cd4-450d-a67f-f42c1cef7e00",
+		"bannermb": "https://firebasestorage.googleapis.com/v0/b/tummour-original.appspot.com/o/static%2Fimages%2F02-about-en%2Fbanner-about-mb.png?alt=media&token=3698a9c4-e7d2-4257-918a-b9227b39f898",
 		"logo": "https://firebasestorage.googleapis.com/v0/b/tummour-original.appspot.com/o/static%2Fimages%2F01-home-en%2Ftm.png?alt=media&token=94637e4f-41ff-42c0-a54a-99a0f46281a5",
 		"text1": "The history of Zen and Spicy dates back to 1989 with the creation of the first very basic Tummour Restaurant under the Company name of Crazy Spicy. This served authentic Thai-Northeastern (Isaan) food which has reached the hearts of Thais and foreigners.  Nowadays the restaurants are new modern chic and comfortable but still retain their authentic northeastern Thailand (Isaan) taste.",
 		"image": "https://firebasestorage.googleapis.com/v0/b/tummour-original.appspot.com/o/static%2Fimages%2F02-about-en%2F01.png?alt=media&token=aeaea2a5-fe9c-48f3-9aaf-8cd605da9ca4",
@@ -150,8 +150,8 @@
 			"news": "News/Promotion",
 			"contact": "Contact Us"
 		},
-		"banner": "https://firebasestorage.googleapis.com/v0/b/tummour-original.appspot.com/o/static%2Fimages%2F04-promotion-en%2Fbanner-news.png?alt=media&token=220da56a-0be3-425c-967f-fdd354547486",
-		"bannermb": "https://firebasestorage.googleapis.com/v0/b/tummour-original.appspot.com/o/static%2Fimages%2F04-promotion-en%2Fbannernews-mb.png?alt=media&token=98b3f1ec-c136-4efd-9459-7913da26abf2",
+		"banner": "https://firebasestorage.googleapis.com/v0/b/tummour-original.appspot.com/o/static%2Fimages%2F04-promotion-en%2Fbanner-news.png?alt=media&token=fac43af7-edcb-4ee5-a89a-5bdc89496841",
+		"bannermb": "https://firebasestorage.googleapis.com/v0/b/tummour-original.appspot.com/o/static%2Fimages%2F04-promotion-en%2Fbanner-news-mb.png?alt=media&token=c80816e1-3fb5-400d-81f1-e6c11a7c3bdd",
 		"categorynews": "NEWS",
 		"categorypromotion": "PROMOTIONS"
 	},
@@ -164,8 +164,8 @@
 			"news": "News/Promotion",
 			"contact": "Contact Us"
 		},
-		"banner": "https://firebasestorage.googleapis.com/v0/b/tummour-original.appspot.com/o/static%2Fimages%2F04-promotion-en%2Fbanner-news.png?alt=media&token=220da56a-0be3-425c-967f-fdd354547486",
-		"bannermb": "https://firebasestorage.googleapis.com/v0/b/tummour-original.appspot.com/o/static%2Fimages%2F04-promotion-en%2Fbannernews-mb.png?alt=media&token=98b3f1ec-c136-4efd-9459-7913da26abf2",
+		"banner": "https://firebasestorage.googleapis.com/v0/b/tummour-original.appspot.com/o/static%2Fimages%2F04-promotion-en%2Fbanner-news.png?alt=media&token=fac43af7-edcb-4ee5-a89a-5bdc89496841",
+		"bannermb": "https://firebasestorage.googleapis.com/v0/b/tummour-original.appspot.com/o/static%2Fimages%2F04-promotion-en%2Fbanner-news-mb.png?alt=media&token=c80816e1-3fb5-400d-81f1-e6c11a7c3bdd",
 		"categorynews": "NEWS",
 		"categorypromotion": "PROMOTIONS",
 		"filter": {
@@ -185,8 +185,8 @@
 			"news": "News/Promotion",
 			"contact": "Contact Us"
 		},
-		"banner": "https://firebasestorage.googleapis.com/v0/b/tummour-original.appspot.com/o/static%2Fimages%2F05-contact-en%2Fbanner-contact.png?alt=media&token=aee8fb61-6456-4be7-955c-f8f72e246df1",
-		"bannermb": "https://firebasestorage.googleapis.com/v0/b/tummour-original.appspot.com/o/static%2Fimages%2F05-contact-en%2Fbannercontact-mb.png?alt=media&token=aa8e86dd-3e94-4230-8402-e2783241a615",
+		"banner": "https://firebasestorage.googleapis.com/v0/b/tummour-original.appspot.com/o/static%2Fimages%2F05-contact-en%2Fbanner-contact.png?alt=media&token=7d47f846-c618-412c-bea5-4e5f0521b359",
+		"bannermb": "https://firebasestorage.googleapis.com/v0/b/tummour-original.appspot.com/o/static%2Fimages%2F05-contact-en%2Fbanner-contact-mb.png?alt=media&token=666b8218-8e07-472e-8fba-dfe245f08c8e",
 		"address": {
 			"title": "https://firebasestorage.googleapis.com/v0/b/tummour-original.appspot.com/o/static%2Fimages%2F05-contact-en%2Fline-addr.png?alt=media&token=ffa972d9-7842-4343-bf1c-9e9b324ddf53",
 			"text": "ZEN & SPICY CO.,LTD<br/>782/1 Soi Onnut 17, Suanluang,<br/>Suanluang Bangkok 10250<br/>Tel. (+66) 2-719-5000"

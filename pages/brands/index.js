@@ -119,7 +119,7 @@ class Brands extends Component {
 		if(!this.state.lang) return <div></div>
 		return (
 			<div>
-				<Head title={content.title} />
+				<Head title={"Tummour Original - "+content.title} />
 				<Nav isActive="brands" handleLang={(lang)=>this._handleLang(lang)} navbar={navbar} navbarmb={navbarmb} />
 				<BrandElement 
 					content={content} 

@@ -6,7 +6,8 @@ import { Head, Nav, HomeBanner, HomeOurbrands, HomePromotion, Footer } from './c
 import withRedux from 'next-redux-wrapper'
 import { 
 	initStore,
-	bannerFetchHome,
+	bannerFetch,
+	promotionFetchWithLimit
 } from './actions'
 
 import '../styles/index.scss'
@@ -19,12 +20,20 @@ class Home extends Component {
 		this.state = {
 			lang: Cookies.get('lang'),
 			content: null,
-			footer: null
+			footer: null,
+			banner: null,
+			promotions: null
 		}
 	}
 
 	componentWillMount() {
-		this.props.bannerFetchHome()
+		this.props.bannerFetch()
+		this.props.promotionFetchWithLimit(4)
+	}
+
+	componentWillReceiveProps(nextProps) {
+		if(nextProps.banner) this.setState({ banner: nextProps.banner })
+		if(nextProps.promotions) this.setState({ promotions: nextProps.promotions })
 	}
 
 	componentDidMount() {
@@ -58,20 +67,21 @@ class Home extends Component {
 			<div>
 				<Head title="Tummour Original"/>
 				<Nav isActive="home" handleLang={(lang)=>this._handleLang(lang)} navbar={content.navbar} navbarmb={content.navbarmb} />
-				{(this.props.home[0] && <HomeBanner image={this.props.home[0]} content={content.banner}/>)}
+				{(this.state.banner && <HomeBanner image={this.state.banner} content={content.banner}/>)}
 				<HomeOurbrands content={content.brand} />
-				{(this.props.home[1] && <HomePromotion promotions={this.props.home[1]} content={content.promotion} lang={this.state.lang} />)}
+				{(this.state.promotions && <HomePromotion promotions={this.state.promotions} content={content.promotion} lang={this.state.lang} />)}
 				<Footer footer={footer}/>
 			</div>
 		)
 	}
 }
 
-const mapStateToProps = ({ banner }) => {
+const mapStateToProps = ({ banner, promotion }) => {
 	return {
-		home: banner.home
+		banner: banner.banner,
+		promotions: promotion.promotions
 	}
 }
 
 
-export default withRedux(initStore, mapStateToProps, { bannerFetchHome })(Home)
+export default withRedux(initStore, mapStateToProps, { promotionFetchWithLimit, bannerFetch })(Home)

@@ -38,7 +38,6 @@ class Brands extends Component {
 		}
 		if(nextProps.regions){
 			this.setState({ regions: nextProps.regions })
-			console.log(nextProps.regions)
 		}
 	}
 

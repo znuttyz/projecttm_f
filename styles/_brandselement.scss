@@ -60,7 +60,8 @@
 				padding: 30px 30px 125px;
 				.description {
 					img.b-logo {
-						width: 120px;
+						height: 40px;
+						width: auto;
 						display: block;
 					}
 					img.b-line {
@@ -198,13 +199,6 @@
 					}
 				}
 			}
-			.tabcontent {
-				.description {
-					img.b-logo {
-						width: 300px;
-					}
-				}
-			}
 		}
 	}
 	&.b-jaewhon {
@@ -238,13 +232,6 @@
 						&:nth-child(3) {
 							background: $gray;
 						}
-					}
-				}
-			}
-			.tabcontent {
-				.description {
-					img.b-logo {
-						width: 290px;
 					}
 				}
 			}
@@ -284,13 +271,6 @@
 					}
 				}
 			}
-			.tabcontent {
-				.description {
-					img.b-logo {
-						width: 225px;
-					}
-				}
-			}
 		}
 	}
 	&.b-granny {
@@ -327,13 +307,6 @@
 					}
 				}
 			}
-			.tabcontent {
-				.description {
-					img.b-logo {
-						width: 240px;
-					}
-				}
-			}
 		}
 	}
 	&.b-kruathai {
@@ -362,15 +335,6 @@
 						}
 						&:nth-child(6) {
 							background: $gray;
-						}
-					}
-				}
-			}
-			.tabcontent {
-				.detail-info {
-					.description {
-						img.b-logo {
-							width: 280px;
 						}
 					}
 				}
@@ -407,15 +371,6 @@
 						}
 						&:last-child {
 							background: $gray;
-						}
-					}
-				}
-			}
-			.tabcontent {
-				.detail-info {
-					.description {
-						img.b-logo {
-							width: 180px;
 						}
 					}
 				}

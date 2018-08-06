@@ -130,6 +130,7 @@
 								color: $white;
 								width: calc(100%/5 - 10px);
 								margin: 10px 5px;
+								vertical-align: top;
 								outline: none;
 								@include breakpoint(tablet) {
 									width: calc(100%/3 - 10px);

@@ -30,6 +30,7 @@
 				li.each-promotion {
 					display: inline-block;
 					width: calc(100%/4);
+					vertical-align: top;
 					@include breakpoint(mobile) {
 						width: 100%;
 						margin: 15px 0;

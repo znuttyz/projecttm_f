@@ -30,9 +30,7 @@ const BrandElement = ({ sidebar, tab, content, brand, regions, lang, menulist })
 		 			</div>
 
 		 			{
-		 				(brand && 
-		 					(brand.menu === "")? "": <div className="btn-menu"><a href={(brand && brand.menu)} target="_blank">{menulist}</a></div>
-		 				)
+		 				(brand && <div className="btn-menu"><a href={(brand && brand.menu)} target="_blank">{menulist}</a></div> )
 		 			}
 		 			
 		 			<div className="branches">
@@ -51,7 +49,7 @@ const BrandElement = ({ sidebar, tab, content, brand, regions, lang, menulist })
 						    	<ul>
 						      	{
 						      		(regions && (regions.central)?
-						      		regions.central.map(item=>{
+						      		regions.central.map((item, index)=>{
 						      			let name, phone
 						      			if(lang === "th") {
 						      				name = item.name_th
@@ -64,7 +62,7 @@ const BrandElement = ({ sidebar, tab, content, brand, regions, lang, menulist })
 						      				phone = "Call "+item.phone_cn
 						      			}
 						      			return (
-						      				<li>
+						      				<li key={item+index}>
 								      			<h4>{name}</h4>
 								      			<p>{phone}</p>
 								      		</li>
@@ -78,7 +76,7 @@ const BrandElement = ({ sidebar, tab, content, brand, regions, lang, menulist })
 						      	<ul>
 						      	{
 						      		(regions && (regions.northeast)?
-						      		regions.northeast.map(item=>{
+						      		regions.northeast.map((item, index)=>{
 						      			let name, phone
 						      			if(lang === "th") {
 						      				name = item.name_th
@@ -91,7 +89,7 @@ const BrandElement = ({ sidebar, tab, content, brand, regions, lang, menulist })
 						      				phone = "Call "+item.phone_cn
 						      			}
 						      			return (
-						      				<li>
+						      				<li key={item+index}>
 								      			<h4>{name}</h4>
 								      			<p>{phone}</p>
 								      		</li>
@@ -105,7 +103,7 @@ const BrandElement = ({ sidebar, tab, content, brand, regions, lang, menulist })
 						    	<ul>
 						    	{
 						      		(regions && (regions.east)?
-						      		regions.east.map(item=>{
+						      		regions.east.map((item, index)=>{
 						      			let name, phone
 						      			if(lang === "th") {
 						      				name = item.name_th
@@ -118,7 +116,7 @@ const BrandElement = ({ sidebar, tab, content, brand, regions, lang, menulist })
 						      				phone = "Call "+item.phone_cn
 						      			}
 						      			return (
-						      				<li>
+						      				<li key={item+index}>
 								      			<h4>{name}</h4>
 								      			<p>{phone}</p>
 								      		</li>
@@ -132,7 +130,7 @@ const BrandElement = ({ sidebar, tab, content, brand, regions, lang, menulist })
 						    	<ul>
 						    	{
 						      		(regions && (regions.west)?
-						      		regions.west.map(item=>{
+						      		regions.west.map((item, index)=>{
 						      			let name, phone
 						      			if(lang === "th") {
 						      				name = item.name_th
@@ -145,7 +143,7 @@ const BrandElement = ({ sidebar, tab, content, brand, regions, lang, menulist })
 						      				phone = "Call "+item.phone_cn
 						      			}
 						      			return (
-						      				<li>
+						      				<li key={item+index}>
 								      			<h4>{name}</h4>
 								      			<p>{phone}</p>
 								      		</li>
@@ -159,7 +157,7 @@ const BrandElement = ({ sidebar, tab, content, brand, regions, lang, menulist })
 						    	<ul>
 						    	{
 						      		(regions && (regions.north)?
-						      		regions.north.map(item=>{
+						      		regions.north.map((item, index)=>{
 						      			let name, phone
 						      			if(lang === "th") {
 						      				name = item.name_th
@@ -172,7 +170,7 @@ const BrandElement = ({ sidebar, tab, content, brand, regions, lang, menulist })
 						      				phone = "Call "+item.phone_cn
 						      			}
 						      			return (
-						      				<li>
+						      				<li key={item+index}>
 								      			<h4>{name}</h4>
 								      			<p>{phone}</p>
 								      		</li>
@@ -186,7 +184,7 @@ const BrandElement = ({ sidebar, tab, content, brand, regions, lang, menulist })
 						    	<ul>
 						    	{
 						      		(regions && (regions.south)?
-						      		regions.south.map(item=>{
+						      		regions.south.map((item, index)=>{
 						      			let name, phone
 						      			if(lang === "th") {
 						      				name = item.name_th
@@ -199,7 +197,7 @@ const BrandElement = ({ sidebar, tab, content, brand, regions, lang, menulist })
 						      				phone = "Call "+item.phone_cn
 						      			}
 						      			return (
-						      				<li>
+						      				<li key={item+index}>
 								      			<h4>{name}</h4>
 								      			<p>{phone}</p>
 								      		</li>
@@ -213,7 +211,7 @@ const BrandElement = ({ sidebar, tab, content, brand, regions, lang, menulist })
 						    	<ul>
 						    	{
 						      		(regions && (regions.foreign)?
-						      		regions.foreign.map(item=>{
+						      		regions.foreign.map((item, index)=>{
 						      			let name, phone
 						      			if(lang === "th") {
 						      				name = item.name_th
@@ -226,7 +224,7 @@ const BrandElement = ({ sidebar, tab, content, brand, regions, lang, menulist })
 						      				phone = "Call "+item.phone_cn
 						      			}
 						      			return (
-						      				<li>
+						      				<li key={item+index}>
 								      			<h4>{name}</h4>
 								      			<p>{phone}</p>
 								      		</li>

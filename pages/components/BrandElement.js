@@ -24,8 +24,6 @@ const BrandElement = ({ sidebar, tab, content, brand, regions, lang, menulist })
 			<div className="tabcontent">
 				<div className="detail-info">
 					<div className="description">
-		 				<img src={content.title_img} className="b-logo" />
-		 				<img src="https://firebasestorage.googleapis.com/v0/b/tummour-original.appspot.com/o/static%2Fimages%2F03-brands%2Fline-horizon.png?alt=media&token=2008b37c-b255-4c02-a4c6-888c560fe437" className="b-line" />
 		 				<p>{(brand && brand.desc)}</p>
 		 			</div>
 
@@ -243,3 +241,6 @@ const BrandElement = ({ sidebar, tab, content, brand, regions, lang, menulist })
 )
 
 export { BrandElement }
+
+// <img src={content.title_img} className="b-logo" />
+// <img src="https://firebasestorage.googleapis.com/v0/b/tummour-original.appspot.com/o/static%2Fimages%2F03-brands%2Fline-horizon.png?alt=media&token=2008b37c-b255-4c02-a4c6-888c560fe437" className="b-line" />

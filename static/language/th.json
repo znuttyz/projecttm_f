@@ -211,7 +211,9 @@
 			"title": "https://firebasestorage.googleapis.com/v0/b/tummour-original.appspot.com/o/static%2Fimages%2F05-contact%2Fline-fc.png?alt=media&token=42561400-5179-46a6-adc2-1ede152cc1c1",
 			"tel": "สอบถามได้ที่เบอร์โทร 063-2028752-5",
 			"button1": "คุณสมบัติเฟรนไชส์",
-			"button2": "แบบฟอร์มสมัครเฟรนไชส์",
+			"button2": "ใบสมัครแฟรนไชส์",
+			"button1_url": "http://www.zengroup.co.th/Franchise/คุณสมบัติแฟรนไชส์%20(Qualified%20Franchise)%20TH_EN%202017.pdf",
+			"button2_url": "http://www.zengroup.co.th/Franchise/ใบสมัครแฟรนไชส์%20ฉบับภาษาไทย%20(Franchisee%20Application%20Form%20Thai%20Version)%202017.pdf",
 			"text": "หากกรอกข้อมูลในใบสมัครครบถ้วน กรุณาส่งกลับมาที่ franchisebusiness.div@zengroup.co.th"
 		}
 	},

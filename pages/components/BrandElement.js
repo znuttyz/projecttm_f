@@ -30,7 +30,7 @@ const BrandElement = ({ sidebar, tab, content, brand, regions, lang, menulist })
 		 			</div>
 
 		 			{
-		 				(brand && <div className="btn-menu"><a href={(brand && brand.menu)} target="_blank">{menulist}</a></div> )
+		 				(brand && ( brand.menu && <div className="btn-menu"><a href={brand.menu} target="_blank">{menulist}</a></div>) )
 		 			}
 		 			
 		 			<div className="branches">

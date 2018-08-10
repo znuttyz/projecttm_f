@@ -52,6 +52,7 @@ class Brands extends Component {
 	}
 	
 	render() {
+		console.log("brand",this.state.brand_url)
 		let content, sidebar, tab, footer, brand, navbar, navbarmb, menulist
 		switch(this.state.lang) {
 			case "en":

@@ -12,13 +12,13 @@ const BrandElement = ({ sidebar, tab, content, brand, regions, lang, menulist })
 		<div className="tab">
 			<div className="tabtopic">
 				<ul>
-					<li><Link href="/brands/tummour"><a><img src={sidebar.tummour}/></a></Link></li>
-					<li><Link href="/brands/laoyuan"><a><img src={sidebar.laoyuan}/></a></Link></li>
-					<li><Link href="/brands/jaewhon"><a><img src={sidebar.jaewhon}/></a></Link></li>
-					<li><Link href="/brands/pho"><a><img src={sidebar.pho}/></a></Link></li>
-					<li><Link href="/brands/granny"><a><img src={sidebar.granny}/></a></Link></li>
-					<li><Link href="/brands/kruathai"><a><img src={sidebar.kruathai}/></a></Link></li>
-					<li><Link href="/brands/detummour"><a><img src={sidebar.detummour}/></a></Link></li>
+					<li><Link href={{ pathname: '/brands', query: { brand: 'tummour' } }} as="/brands/tummour"><a><img src={sidebar.tummour}/></a></Link></li>
+					<li><Link href={{ pathname: '/brands', query: { brand: 'laoyuan' } }} as="/brands/laoyuan"><a><img src={sidebar.laoyuan}/></a></Link></li>
+					<li><Link href={{ pathname: '/brands', query: { brand: 'jaewhon' } }} as="/brands/jaewhon"><a><img src={sidebar.jaewhon}/></a></Link></li>
+					<li><Link href={{ pathname: '/brands', query: { brand: 'pho' } }} as="/brands/pho"><a><img src={sidebar.pho}/></a></Link></li>
+					<li><Link href={{ pathname: '/brands', query: { brand: 'granny' } }} as="/brands/granny"><a><img src={sidebar.granny}/></a></Link></li>
+					<li><Link href={{ pathname: '/brands', query: { brand: 'kruathai' } }} as="/brands/kruathai"><a><img src={sidebar.kruathai}/></a></Link></li>
+					<li><Link href={{ pathname: '/brands', query: { brand: 'detummour' } }} as="/brands/detummour"><a><img src={sidebar.detummour}/></a></Link></li>
 				</ul>
 			</div>
 			<div className="tabcontent">

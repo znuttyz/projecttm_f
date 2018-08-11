@@ -2,7 +2,7 @@
 	position: relative;
 	margin-top: -61px;
 	@include breakpoint(mobile) {
-		margin-top: -18px;
+		margin-top: -16px;
 	}
 	@include breakpoint(over) {
 		margin-top: -80px;

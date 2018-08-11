@@ -108,7 +108,7 @@ class Region extends Component {
 					<Header title="Brands" user={(this.state.user && this.state.user.email)} handleLogout={() => this._handleLogout()} />
 					<Card title={"Brand: "+this.state.brand_url+" Region: "+this.state.region} subTitle={this.state.brand_url}>
 
-						<Link href={"/admin/brand/"+this.state.brand_url}><a style={{fontSize: '22px', textTransform: 'uppercase', width: 'intrinsic'}}>BACK TO {this.state.brand_url}</a></Link>
+						<Link href={{ pathname: "/admin/brand", query: { brand: this.state.brand_url }}} as={"/admin/brand/"+this.state.brand_url}><a style={{fontSize: '22px', textTransform: 'uppercase', width: 'intrinsic'}}>BACK TO {this.state.brand_url}</a></Link>
 
 						<table className="tableAdmin">
 							<thead>

@@ -66,7 +66,7 @@ class Brandlist extends Component {
 										
 										{brands.map((brand, index) => (
 											<li className="each-promotion" key={index}>
-												<Link href={"/admin/brand/"+brand.name}><a style={{width: '88%', textAlign: "center"}}>
+												<Link href={{ pathname: "/admin/brand", query: { brand: brand.name }}} as={"/admin/brand/"+brand.name}><a style={{width: '88%', textAlign: "center"}}>
 													<img src={brand.img} style={{maxWidth: '90%', border: 'solid 1px grey', backgroundColor: 'black'}} alt={brand.name}/>
 												</a></Link>
 											</li>

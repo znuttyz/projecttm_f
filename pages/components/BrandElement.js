@@ -244,12 +244,3 @@ export { BrandElement }
 
 // <img src={content.title_img} className="b-logo" />
 // <img src="https://firebasestorage.googleapis.com/v0/b/tummour-original.appspot.com/o/static%2Fimages%2F03-brands%2Fline-horizon.png?alt=media&token=2008b37c-b255-4c02-a4c6-888c560fe437" className="b-line" />
-
-
-// <li><Link href={{ pathname: '/brands', query: { brand: 'tummour' } }} as="/brands/tummour"><a><img src={sidebar.tummour}/></a></Link></li>
-// 					<li><Link href={{ pathname: '/brands', query: { brand: 'laoyuan' } }} as="/brands/laoyuan"><a><img src={sidebar.laoyuan}/></a></Link></li>
-// 					<li><Link href={{ pathname: '/brands', query: { brand: 'jaewhon' } }} as="/brands/jaewhon"><a><img src={sidebar.jaewhon}/></a></Link></li>
-// 					<li><Link href={{ pathname: '/brands', query: { brand: 'pho' } }} as="/brands/pho"><a><img src={sidebar.pho}/></a></Link></li>
-// 					<li><Link href={{ pathname: '/brands', query: { brand: 'granny' } }} as="/brands/granny"><a><img src={sidebar.granny}/></a></Link></li>
-// 					<li><Link href={{ pathname: '/brands', query: { brand: 'kruathai' } }} as="/brands/kruathai"><a><img src={sidebar.kruathai}/></a></Link></li>
-// 					<li><Link href={{ pathname: '/brands', query: { brand: 'detummour' } }} as="/brands/detummour"><a><img src={sidebar.detummour}/></a></Link></li>

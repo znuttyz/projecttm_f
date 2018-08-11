@@ -202,13 +202,13 @@ class Brand extends Component {
 						<div>
 							<div className="formContainer" style={{fontSize: '24px'}}>
 								REGION
-								<Link href={"/admin/brand/"+this.state.brand_url+"/north"}><button className="formFile">NORTH</button></Link>
-								<Link href={"/admin/brand/"+this.state.brand_url+"/south"}><button className="formFile">SOUTH</button></Link>
-								<Link href={"/admin/brand/"+this.state.brand_url+"/east"}><button className="formFile">EAST</button></Link>
-								<Link href={"/admin/brand/"+this.state.brand_url+"/west"}><button className="formFile">WEST</button></Link>
-								<Link href={"/admin/brand/"+this.state.brand_url+"/central"}><button className="formFile">CENTRAL</button></Link>
-								<Link href={"/admin/brand/"+this.state.brand_url+"/northeast"}><button className="formFile">NORTHEAST</button></Link>
-								<Link href={"/admin/brand/"+this.state.brand_url+"/foreign"}><button className="formFile">FOREIGN</button></Link>
+								<Link href={{ pathname: '/admin/brand/region', query: { brand: this.state.brand_url, region: 'north' } }} as={"/admin/brand/"+this.state.brand_url+"/north"}><button className="formFile">NORTH</button></Link>
+								<Link href={{ pathname: '/admin/brand/region', query: { brand: this.state.brand_url, region: 'south' } }} as={"/admin/brand/"+this.state.brand_url+"/south"}><button className="formFile">SOUTH</button></Link>
+								<Link href={{ pathname: '/admin/brand/region', query: { brand: this.state.brand_url, region: 'east' } }} as={"/admin/brand/"+this.state.brand_url+"/east"}><button className="formFile">EAST</button></Link>
+								<Link href={{ pathname: '/admin/brand/region', query: { brand: this.state.brand_url, region: 'west' } }} as={"/admin/brand/"+this.state.brand_url+"/west"}><button className="formFile">WEST</button></Link>
+								<Link href={{ pathname: '/admin/brand/region', query: { brand: this.state.brand_url, region: 'central' } }} as={"/admin/brand/"+this.state.brand_url+"/central"}><button className="formFile">CENTRAL</button></Link>
+								<Link href={{ pathname: '/admin/brand/region', query: { brand: this.state.brand_url, region: 'northeast' } }} as={"/admin/brand/"+this.state.brand_url+"/northeast"}><button className="formFile">NORTHEAST</button></Link>
+								<Link href={{ pathname: '/admin/brand/region', query: { brand: this.state.brand_url, region: 'foreign' } }} as={"/admin/brand/"+this.state.brand_url+"/foreign"}><button className="formFile">FOREIGN</button></Link>
 							</div>
 						</div>
 

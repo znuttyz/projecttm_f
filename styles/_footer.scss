@@ -2,13 +2,13 @@
 	position: relative;
 	margin-top: -61px;
 	@include breakpoint(mobile) {
-		margin-top: -16px;
+		margin-top: -18px;
 	}
 	@include breakpoint(over) {
 		margin-top: -80px;
 	}
 	img {
-		margin-bottom: -5px;
+		display: block;
 	}
 	.footer-info {
 		position: absolute;

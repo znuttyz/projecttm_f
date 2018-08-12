@@ -1,16 +1,16 @@
 @font-face {
     font-family: 'psl_kanda';
-    src: url('https://firebasestorage.googleapis.com/v0/b/tummour-original.appspot.com/o/static%2Ffonts%2FPSL-Kanda.eot?alt=media&token=7dfbb30f-dceb-42a1-b917-f5cfbd874322') format('eot'),
-         url('https://firebasestorage.googleapis.com/v0/b/tummour-original.appspot.com/o/static%2Ffonts%2FPSL-Kanda.woff?alt=media&token=cbf2da74-a3fe-4e85-8bd2-ef4f53acb0a7') format('woff'),
-         url('https://firebasestorage.googleapis.com/v0/b/tummour-original.appspot.com/o/static%2Ffonts%2FPSL-Kanda.svg?alt=media&token=3c6978e4-6356-4c9b-919e-400c55267d99') format('svg');
+    src: url('/static/fonts/PSL-Kanda.eot') format('eot'),
+         url('/static/fonts/PSL-Kanda.woff') format('woff'),
+         url('/static/fonts/PSL-Kanda.svg') format('svg');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
 	font-family: 'heiti';
-	src: url('https://firebasestorage.googleapis.com/v0/b/tummour-original.appspot.com/o/static%2Ffonts%2FSTHeitiSC-Light-02.woff?alt=media&token=e2d47da3-0e9d-4bf6-9c3d-b1cebdfaa041') format('woff'),
-         url('https://firebasestorage.googleapis.com/v0/b/tummour-original.appspot.com/o/static%2Ffonts%2FSTHeitiTC-Light-01.woff?alt=media&token=a886d399-7938-40ff-8f70-0b35b3ce563a') format('woff');
+	src: url('/static/fonts/STHeitiTC-Light-01.woff') format('woff'),
+         url('/static/fonts/STHeitiSC-Light-02.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }

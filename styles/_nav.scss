@@ -107,14 +107,16 @@
 							ul {
 								display: block;
 								float: right;
-								width: 54%;
+								width: 100%;
 								margin-top: 15%;
 								&.lang-mb {
 									width: 100%;
 									margin-top: 0;
+									text-align: center;
 									li {
 										display: inline-block;
 										border-bottom: 0;
+										padding: 0 15px;
 										a {
 											@include font-size(12);
 										}
@@ -122,6 +124,7 @@
 								}
 								li {
 									display: block;
+									text-align: center;
 									border-bottom: 1px solid $white;
 									&:last-child {
 										border: 0;
@@ -131,7 +134,7 @@
 										@include font-size(22);
 										transition: 0.5s;
 										display: block;
-										padding: 30px 20px 25px 0;
+										padding: 30px 0 25px;
 									}
 								}
 							}

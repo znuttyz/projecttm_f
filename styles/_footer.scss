@@ -22,7 +22,10 @@
 			top: 55px;
 		}
 		@include breakpoint(mobile) {
-			top: 7px;
+			top: 7px !important;
+		}
+		@include breakpoint(mobile-wide) {
+			top: 31px;
 		}
 		@include breakpoint(over) {
 			top: 135px;
@@ -72,6 +75,9 @@
 				}
 				@include breakpoint(tablet-wide) {
 					margin-top: -5px;
+				}
+				@include breakpoint(mobile-wide) {
+					margin-top: -17px;
 				}
 				@include breakpoint(mobile) {
 					margin-top: -16px;

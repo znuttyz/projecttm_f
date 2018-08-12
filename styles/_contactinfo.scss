@@ -43,7 +43,10 @@
 						width: 60%;
 					}
 					@include breakpoint(mobile) {
-						width: 100%;
+						width: 100% !important;
+					}
+					@include breakpoint(mobile-wide) {
+						width: 53%;
 					}
 					img {
 						width: 120px;
@@ -62,8 +65,11 @@
 				&.contact-form {
 					width: 30%;
 					@include breakpoint(mobile) {
-						width: 100%;
+						width: 100% !important;
 						margin-top: 40px;
+					}
+					@include breakpoint(mobile-wide) {
+						width: 32%;
 					}
 					img {
 						width: 220px;

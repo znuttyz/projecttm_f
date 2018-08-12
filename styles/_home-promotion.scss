@@ -6,7 +6,7 @@
 	@include breakpoint(tablet) {
 		padding: 0 0 110px 0;
 	}
-	@include breakpoint(mobile) {
+	@include breakpoint(mobile-wide) {
 		padding: 0 0 100px 0;
 	}
 	.container {
@@ -17,6 +17,9 @@
 		.title {
 			width: 15%;
 			margin: 0 auto;
+			@include breakpoint(mobile-wide) {
+				width: 21%;
+			}
 			@include breakpoint(mobile) {
 				width: 40%;
 			}
@@ -31,6 +34,9 @@
 					display: inline-block;
 					width: calc(100%/4);
 					vertical-align: top;
+					@include breakpoint(mobile-wide) {
+						width: calc(100%/2);
+					}
 					@include breakpoint(mobile) {
 						width: 100%;
 						margin: 15px 0;
@@ -48,6 +54,10 @@
 							@include breakpoint(tablet-wide) {
 								width: 210px;
 								height: 210px;
+							}
+							@include breakpoint(mobile-wide) {
+								width: 250px;
+								height: 250px;
 							}
 							@include breakpoint(mobile) {
 								width: 325px;
@@ -69,6 +79,10 @@
 							}
 							@include breakpoint(tablet-wide) {
 								width: 210px;
+							}
+							@include breakpoint(mobile-wide) {
+								width: 250px;
+								margin-bottom: 20px;
 							}
 							@include breakpoint(mobile) {
 								width: 325px;

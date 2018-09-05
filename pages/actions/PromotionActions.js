@@ -52,7 +52,7 @@ export const promotionFetchWithLimit = (limit) => {
 				let item = childSnapshot.val()
 				data.push(item)
 			})
-			dispatch({ type: PROMOTION_FETCH, payload: data });
+			dispatch({ type: PROMOTION_FETCH, payload: data.reverse() });
 		})
 	}
 }

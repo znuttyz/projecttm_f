@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
-import ReactGA from 'react-ga'
 import Cookies from 'js-cookie'
-import { Head, Nav, AllBanner, PromotionInfo, Footer } from './components'
+import { Head, Nav, AllBanner, PromotionInfo, Footer, Analytics } from './components'
 
 import withRedux from 'next-redux-wrapper'
 import { 
@@ -35,12 +34,7 @@ class Promotion extends Component {
 			})
 		}
 	}
-
-	componentDidMount() {
-		ReactGA.initialize(process.env.GA_ID)
-		setTimeout(()=>ReactGA.pageview(window.location.pathname + window.location.search))
-	}
-
+	
 	_handleLang(lang){
 		Cookies.set('lang', lang)
 		this.setState({ lang })
@@ -77,6 +71,7 @@ class Promotion extends Component {
 		return (
 			<div>
 				<Head title="Tummour Original - Promotion" />
+				<Analytics />
 				<Nav isActive="news" handleLang={(lang)=>this._handleLang(lang)} navbar={content.navbar} navbarmb={content.navbarmb} />
 				<PromotionInfo promotions={this.state.promotions} handleChange={event=>this._onHandleChange(event)} content={content} lang={this.state.lang}/>
 				<Footer footer={footer}/>

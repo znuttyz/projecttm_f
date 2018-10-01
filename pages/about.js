@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
-import ReactGA from 'react-ga'
 import Cookies from 'js-cookie'
-import { Head, Nav, AllBanner, AboutInfo, Footer } from './components'
+import { Head, Nav, AllBanner, AboutInfo, Footer, Analytics } from './components'
 
 import '../styles/index.scss'
 
@@ -13,11 +12,6 @@ class About extends Component {
 		this.state = {
 			lang: Cookies.get('lang')
 		}
-	}
-
-	componentDidMount() {
-		ReactGA.initialize(process.env.GA_ID)
-		setTimeout(()=>ReactGA.pageview(window.location.pathname + window.location.search))
 	}
 
 	_handleLang(lang){
@@ -45,6 +39,7 @@ class About extends Component {
 		return (
 			<div>
 				<Head title="Tummour Original - About"/>
+				<Analytics />
 				<Nav isActive="about" handleLang={(lang)=>this._handleLang(lang)} navbar={content.navbar} navbarmb={content.navbarmb} />
 				<AboutInfo content={content} />
 				<Footer footer={footer}/>

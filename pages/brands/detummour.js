@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
-import ReactGA from 'react-ga'
 import Cookies from 'js-cookie'
-import { Head, Nav, AllBanner, BrandElement, Footer } from '../components'
+import { Head, Nav, AllBanner, BrandElement, Footer, Analytics } from '../components'
 
 import withRedux from 'next-redux-wrapper'
 import { 
@@ -39,11 +38,6 @@ class Detummour extends Component {
 		if(nextProps.regions){
 			this.setState({ regions: nextProps.regions })
 		}
-	}
-
-	componentDidMount() {
-		ReactGA.initialize(process.env.GA_ID)
-		setTimeout(()=>ReactGA.pageview(window.location.pathname + window.location.search))
 	}
 
 	_handleLang(lang){
@@ -120,6 +114,7 @@ class Detummour extends Component {
 		return (
 			<div>
 				<Head title={"Tummour Original - "+content.title} />
+				<Analytics />
 				<Nav isActive="brands" handleLang={(lang)=>this._handleLang(lang)} navbar={navbar} navbarmb={navbarmb} />
 				<BrandElement 
 					content={content} 

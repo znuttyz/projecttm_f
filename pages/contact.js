@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
-import ReactGA from 'react-ga'
 import Cookies from 'js-cookie'
-import { Head, Nav, AllBanner, ContactInfo, ContactSns, ContactFranchise, Footer } from './components'
+import { Head, Nav, AllBanner, ContactInfo, ContactSns, ContactFranchise, Footer, Analytics } from './components'
 
 import withRedux from 'next-redux-wrapper'
 import { 
@@ -32,11 +31,6 @@ class Contact extends Component {
 			alert('ได้รับ ข้อเสนอแนะ/การติดต่อ ของท่านเรียบร้อยแล้ว ขอบคุณค่ะ')
 			location.reload()
 		}
-	}
-
-	componentDidMount() {
-		ReactGA.initialize(process.env.GA_ID)
-		setTimeout(()=>ReactGA.pageview(window.location.pathname + window.location.search))
 	}
 
 	_handleLang(lang){
@@ -88,6 +82,7 @@ class Contact extends Component {
 		return (
 			<div>
 				<Head title="Tummour Original - Contact"/>
+				<Analytics />
 				<Nav isActive="contact" handleLang={(lang)=>this._handleLang(lang)} navbar={content.navbar} navbarmb={content.navbarmb} />
 				<ContactInfo 
 					handleChange={(event) => this._onHandleChange(event)}

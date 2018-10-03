@@ -94,6 +94,7 @@
 						text-align: left;
 						@include font-size(14);
 						margin-top: 40px;
+						white-space: pre-line;
 					}
 					ul {
 						li {
